@@ -1,0 +1,32 @@
+export enum Colors {
+  PRIMARY = "#1C4282", 
+  SECONDARY = "#E31837", 
+  WHITE = "#FFFFFF",
+  BLACK = "#000000",
+  GRAY_LIGHT = "#F5F5F5",
+  GRAY_DARK = "#333333",
+  TEXT_MUTED = "#666666",
+  TEXT_SUBTLE = "#888888",
+  NAV_BG = "rgba(255, 255, 255, 0.50)",
+  BORDER = "rgba(0, 0, 0, 0.10)",
+  DIVIDER = "#EEEEEE",
+  ACCENT_SOFT = "#ECF2F9",
+  FOOTER_BG = "#101010",
+  FOOTER_TEXT = "#E1E1E1",
+  FOOTER_DIVIDER = "rgba(152, 152, 152, 0.6)",
+  CHALLENGE_FADE_L1 = "#37569E",
+  CHALLENGE_FADE_L3 = "#F2787F",
+  SUBMIT_ACCENT = "#DC1D40",
+  SUBMIT_ACCENT_BG = "#FCECEF",
+  SOCIAL_ICON = "#D60E34",
+  SOCIAL_ICON_SOFT = "#FFF0F3",
+  SOCIAL_ICON_BORDER = "rgba(214, 14, 52, 0.15)",
+}
+
+export const COLORS = Colors;
+
+
+export const CONSTANTS = {
+  NAV_HEIGHT: 100,
+  MAX_WIDTH: 1322,
+};

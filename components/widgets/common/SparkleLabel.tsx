@@ -1,0 +1,68 @@
+import React from "react";
+import Image from "next/image";
+import { Stack, Typography, Box } from "@mui/material";
+import { ibmPlexSans } from "@/utils/fonts";
+import { Colors } from "@/utils/enum";
+import { ISparkleText } from "@/utils/types";
+import { ASSETS } from "@/utils/assets";
+
+interface SparkleLabelProps {
+  text: string | ISparkleText;
+  color?: string;
+  sparkleColor?: string;
+  sparklePosition?: "left" | "right" | "both";
+  sparkleSize?: number | string;
+  fontSize?: string | number;
+  type?: "diamond" | "flower" | "red-star" | "blue-star";
+  customIcon?: React.ReactNode;
+}
+
+const SparkleLabel: React.FC<SparkleLabelProps> = ({ 
+  text, 
+  color: propColor,
+  sparklePosition: propSparklePosition,
+  sparkleSize = 14,
+  fontSize = "14px",
+  type = "flower",
+  customIcon
+}) => {
+  const isObject = typeof text !== "string";
+  const displayText = isObject ? text.text : text;
+  const color = propColor || (isObject && text.color ? text.color : Colors.PRIMARY);
+  const sparklePosition = propSparklePosition || (isObject && text.sparklePosition ? text.sparklePosition : "both");
+  const iconSrc = 
+    type === "flower" ? ASSETS.IMAGES.ICON_FLOWER :
+    type === "red-star" ? ASSETS.IMAGES.ICON_RED_STAR :
+    type === "blue-star" ? ASSETS.IMAGES.ICON_BLUESTAR :
+    ASSETS.IMAGES.ICON_BLUESTAR;
+
+  const renderIcon = () => {
+    if (customIcon) return customIcon;
+    const size = typeof sparkleSize === "number" ? sparkleSize : parseInt(sparkleSize as string) || 14;
+    return (
+      <Box sx={{ width: size, height: size, position: "relative" }}>
+        <Image src={iconSrc} alt="*" fill style={{ objectFit: "contain" }} />
+      </Box>
+    );
+  };
+
+  return (
+    <Stack direction="row" alignItems="center" spacing={1.5}>
+      {(sparklePosition === "left" || sparklePosition === "both") && renderIcon()}
+      <Typography
+        sx={{
+          fontFamily: ibmPlexSans.style.fontFamily,
+          fontWeight: 600, 
+          fontSize: fontSize,
+          color: color,
+          letterSpacing: "0.5px"
+        }}
+      >
+        {displayText}
+      </Typography>
+      {(sparklePosition === "right" || sparklePosition === "both") && renderIcon()}
+    </Stack>
+  );
+};
+
+export default SparkleLabel;
