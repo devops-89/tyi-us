@@ -11,17 +11,17 @@ import { ASSETS } from "@/utils/assets";
 const featuresLeft = [
   {
     title: "Innovation Camp Learning",
-    desc: "Attend the FREE Innovation Camp to learn the process of developing ideas and solutions.",
+    desc: " Attend the FREE Innovation Camp to learn the process of developing ideas and solutions.",
     icon: "/images/icons/ai-innovation.png"
   },
   {
     title: "Solve Real-World Problems",
-    desc: "Identify a real-world problem and come up with an innovative solution.",
+    desc: " Identify a real-world problem and come up with an innovative solution.",
     icon: "/images/icons/fluent_search-info-24-filled.png"
   },
   {
     title: "Earn a Prestigious Title",
-    desc: 'Win the prestigious title of the "America\'s Top Young Innovator".',
+    desc: ' Win the prestigious title of "America\'s Top Young Innovator".',
     icon: "/images/icons/marketeq_reward.png"
   }
 ];
@@ -34,7 +34,7 @@ const featuresRight = [
   },
   {
     title: "Opportunity for a US Patent",
-    desc: "Get the chance to own a US patent for your innovation.",
+    desc: "Get the chance to own a US Patent for your innovation.",
     icon: "/images/icons/streamline-ultimate_human-resources-search-men.png"
   },
   {

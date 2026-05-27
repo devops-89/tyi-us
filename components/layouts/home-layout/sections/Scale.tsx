@@ -85,7 +85,8 @@ const ScaleSection = () => {
                   lineHeight: 1.55,
                 }}
               >
-                Unlock your creativity and join the world&apos;s most exciting STEM challenge for students an opportunity to explore your passion for science, build groundbreaking ideas, and gain recognition for your innovation.
+                Unlock your creativity and join the world&apos;s most exciting STEM challenge for students. Explore your passion for science, build groundbreaking ideas, and gain recognition for your innovation.
+
               </Typography>
 
               <Stack direction={{ xs: "column", sm: "row" }} spacing={2} sx={{ mb: 3 }}>

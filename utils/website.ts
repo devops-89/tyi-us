@@ -8,17 +8,17 @@ export const WEBSITE_DATA: IWebsiteData = {
   home: {
     hero: {
       sparkle: {
-        text: "Welcome to the Grand Finale of",
+        text: "Welcome to",
         sparklePosition: "right" as const,
         color: "#37569E",
         sparkleColor: Colors.SECONDARY,
       },
       secondaryTitle: "America's",
       tertiaryTitle: "Top Young",
-      title: "Innovators 2025",
+      title: "Innovators",
       subtitle: "— Grand Finale",
-      description: "Join us to celebrate the Winners of America's Top Young Innovators. Receive Prestigious Awards and 80+ Young Students get Patent Certificates.",
-      description2: "Top Young Innovators is a global platform dedicated to discovering and nurturing the most creative, inventive, and forward-thinking young minds from around the world. Our mission is to cultivate a generation of children who think differently—who question, create, and solve the most pressing real-world problems.",
+      description: "We celebrate the young minds who dare to dream big and make a difference. Join us as young geniuses on America’s Top Young Innovators present their bold ideas to the world and receive prestigious awards and patent certificates.",
+      description2: "Top Young Innovators is a global platform dedicated to discovering and nurturing the most creative, inventive, and forward-thinking young minds from around the world. Our mission is to cultivate a generation of children who think differently who question, create, and solve the most pressing real-world problems.",
       cta1Text: "Submit Your Entry",
       cta1Href: "/submit",
       cta2Text: "About",
@@ -31,30 +31,47 @@ export const WEBSITE_DATA: IWebsiteData = {
     participation: {
       sparkle: "Participation Journey",
       title: "A Simple 6-Step Path to the Grand Finale",
-      description: "From signing up to presenting your breakthrough idea at the finale, this journey helps you build confidence, gain mentorship, and move closer to becoming America’s Top Young Innovator.",
+      description: "From your very first step to standing on the grand finale stage, Top Young Innovators journey helps you build confidence, gain mentorship, and experience how global competitions work.",
       steps: [
         {
           stepLabel: "Step - 01",
           title: "Registration",
-          description: "You can register in the 'America’s Top Young Innovators' as an individual or as a team. Click here to know more about the registration process.",
+          description: 'You can register in the "America’s Top Young Innovators" as an individual or as a team. Click here to know more about the registration process.',
         },
         {
           stepLabel: "Step - 02",
-          title: "Attend Free Innovation Camp",
-          description: "Develop a new innovation idea with expert mentorship or build your existing idea further with step-by-step guidance. Request to Register for our optional 14 hours FREE Innovation Camp sponsored by our partner Discover STEM Foundation. Learn More about the Innovation Camp.",
+          title: "Attend FREE Innovation Camp (Optional)",
+          description: "Develop a new innovation idea with expert mentorship or build your existing idea further with step-by-step guidance. Request to Register for our optional 15 hours FREE Innovation Camp sponsored by our partner DiscoverSTEM Foundation. Learn More about the Innovation Camp.",
         },
         {
           stepLabel: "Step - 03",
           title: "Submit Your Innovation",
-          description: "Submit your innovation by filling out the Entry Submission Form. Click here to know more about the entry submission process.",
+          description: "Submit your innovation by filling out the Entry Submission Form.",
         },
+         {
+          stepLabel: "Step - 04",
+          title: "Evaluation of Entries",
+          description: "A distinguished panel of judges, including experts from NASA, will evaluate the entries and shortlist individuals and teams based on the judging criteria.",
+        },
+        {
+          stepLabel: "Step - 05",
+          title: "Results Announcement",
+          description: "The results of the competition will be announced at the Grand Finale of America's Top Young Innovators.",
+        },
+        {
+          stepLabel: "Step - 06",
+          title: "Win Prestigious Awards",
+          description: `The winner will receive the title of "America's Top Young Innovator" along with awards in other categories, giving them the opportunity to shine on the global stage. `,
+        },
+        
       ],
     },
   },
   submit: {
     hero: {
       title: "Join the FREE\nInnovation Camp",
-      description: "A free learning experience where young minds explore, create, and innovate with expert support.",
+      description: `A free learning experience where young minds develop new ideas or build on existing ones with our expert, step-by-step guidance.
+                    Request to register for our optional FREE Innovation Camp.`,
       cta1Text: "Register Now",
       cta1Href: "https://topyounginnovators.org/innovation-camp/",
       cta2Text: "Learn More",
@@ -64,12 +81,12 @@ export const WEBSITE_DATA: IWebsiteData = {
     howToParticipate: {
       sparkle: "How to Participate",
       header: "Register & Submit Your Entry",
-      description: "Entry submission for America’s Top Young Innovators 2025 challenge is closed. Stay tuned for updates on the 2026 challenge!",
+      description: "Entry submission for America's Top Young Innovators 2025 challenge is closed. Stay tuned for updates on the 2026 challenge!",
       steps: [
         {
           image: ASSETS.IMAGES.SUBMIT_STEP_1,
           title: "Register as a Participant",
-          desc: "Sign up, fill in the required details, and you’re good to go.",
+          desc: "Sign up, fill in the details and you are good to go.",
           cta: "Click Here to Register",
           href: "#",
           width: 348,
@@ -77,15 +94,15 @@ export const WEBSITE_DATA: IWebsiteData = {
         {
           image: ASSETS.IMAGES.SUBMIT_STEP_2,
           title: "Submit Your Entry",
-          desc: "Log in with your User ID and submit your entry for the competition.",
+          desc: "Log in with your User ID and submit your innovation for the competition.",
           cta: "Click Here to Submit Entry",
           href: "#",
           width: 383,
         },
         {
           image: ASSETS.IMAGES.SUBMIT_STEP_3,
-          title: "Result Announcement",
-          desc: "UAE’s Top Young Innovators and award winners will be announced on our website.",
+          title: "Results Announcement",
+          desc: "Find out if your innovation made it to the finals. Results are published on our website.",
           cta: undefined,
           href: "#",
           width: 0,
@@ -97,7 +114,7 @@ export const WEBSITE_DATA: IWebsiteData = {
     hero: {
       sparkle: "About Us",
       title: "Who We Are",
-      description: `Top Young Innovators is a global platform dedicated to discovering and nurturing the most creative, inventive, and forward-thinking young minds from around the world. Our mission is to cultivate a generation of children who think differently—who question, create, and solve the most pressing real-world problems.
+      description: `Top Young Innovators is a global platform dedicated to discovering and nurturing the most creative, inventive, and forward-thinking young minds from around the world. Our mission is to cultivate a generation of children who think differently - who question, create, and solve the most pressing real-world problems.
 
 Through this competition, we provide a powerful launchpad and a supportive innovation ecosystem that empowers young inventors to transform bold ideas into practical and viable solutions for today’s most urgent challenges.
 
@@ -108,7 +125,7 @@ To help participants bring their ideas to life, we’ve partnered with one of th
     competitions: {
       sparkle: "Global Stages",
       title: "Our Global Competitions",
-      description: "Celebrating young innovators through competitions across the globe, providing a platform for creativity, innovation, and real-world problem solving.",
+      description: "Celebrating young innovators through competitions across the globe, providing them with a platform for creativity, innovation, and real-world problem solving.",
       buttonText: "Explore More",
       items: [
         {
@@ -133,20 +150,20 @@ To help participants bring their ideas to life, we’ve partnered with one of th
       ],
       features: [
         {
-          title: "Who is DiscoverSTEM?",
-          desc: "DiscoverSTEM, based in Texas, USA, helps young minds turn ideas into innovations through expert guidance and mentorship.",
+          title: "What is DiscoverSTEM?",
+          desc: "DiscoverSTEM, based in Texas, USA, is an educational initiative that helps young minds turn ideas into innovations through expert guidance and mentorship.",
         },
         {
           title: "Proven Track Record",
-          desc: "Guided 830+ students (ages 5–18) in real-world problem solving and helped students create patent-ready innovations. Supported 376+ students in realising patents worldwide in just 5 years.",
+          desc: "DiscoverSTEM has an outstanding track record of guiding over 700 children aged 5 to 18 in identifying global problems and developing patentable solutions. In just the last five years alone, more than 330 students have been granted patents in the United States and other countries.",
         },
         {
-          title: "National Recognition",
-          desc: "Honored by the Texas State Capitol (March 2025), awarded House Resolution #403.",
+          title: "Nationally Recognized for Excellence in Education  ",
+          desc: "Recognized by the Texas State Capitol in March 2025 through House Resolution #403, honoring DiscoverSTEM’s role in shaping the next generation of innovators, researchers, and entrepreneurs.",
         },
         {
-          title: "Prestigious Awards",
-          desc: "Winners of the George Washington Honor Medal, nationally recognized for education innovation.",
+          title: "Award-Winning Leadership ",
+          desc: "The founders of DiscoverSTEM were awarded the prestigious George Washington Honor Medal, a U.S. National Award celebrating their revolutionary contributions to education.",
         },
       ],
     },
@@ -158,7 +175,7 @@ To help participants bring their ideas to life, we’ve partnered with one of th
         sparklePosition: "right" as const,
         color: Colors.PRIMARY,
       },
-      title: "The Global Search for the Brightest Young\nInnovators Begins Again in 2025",
+      title: "The Global Search for the Brightest Young\nInnovators Begins Are You the One?",
       description: "Step into a world where creativity meets real-world impact. Present your groundbreaking idea, compete \n with brilliant young minds, and become the next global changemaker.",
       primaryCta: "Join the Challenge",
       secondaryCta: "Explore Past Winners",
@@ -174,8 +191,8 @@ To help participants bring their ideas to life, we’ve partnered with one of th
       title: "Key Rules & Requirements",
       description: "Please review these rules carefully to ensure your entry is valid and accepted.",
       rules: [
-        "Participants aged 10-22 years from across the world can participate.",
-        "Entry is FREE for all.",
+        "Participants aged 10–22 years from across the world can participate.",
+        "Entry is FREE for all",
         "Participants must submit an original innovation idea.",
         "We strongly recommend you file a provisional or non-provisional patent application before submitting your entry to protect your innovations. If you need support in filing a patent application, please contact us.",
         "The competition reserves the right to approve or disapprove any participating entries.",
@@ -187,20 +204,20 @@ To help participants bring their ideas to life, we’ve partnered with one of th
     },
     awards: {
       sparkle: "Celebrating Innovation",
-      title: "Awards For The Innovators",
+      title: "Awards for the Innovators",
       description: "Celebrating the exceptional achievements of young innovators across the nation.",
       items: [
         { 
           index: "01", 
           labelTop: "Win The Prestigious Title of", 
-          labelMain: "AMERICA’S TOP YOUNG INNOVATOOR", 
+          labelMain: "AMERICA'S TOP YOUNG INNOVATOR", 
           Icon: ASSETS.IMAGES.ICON_CROWN 
         },
         { 
           index: "02", 
           labelTop: "Cash Prize Worth", 
           labelMain: "USD 3,000", 
-          labelBottom: "for the winning individual or team", 
+          labelBottom: " for the winning individual/ team", 
           Icon: ASSETS.IMAGES.ICON_CASH 
         },
         { 
@@ -212,24 +229,24 @@ To help participants bring their ideas to life, we’ve partnered with one of th
         },
         { 
           index: "04", 
-          labelMain: "AWARDS", 
-          labelBottom: "for the winners in different categories", 
+          labelMain: "Awards", 
+          labelBottom: "for the Winners in Different Categories", 
           Icon: ASSETS.IMAGES.ICON_TROPHY 
         },
       ],
     },
     youngMinds: {
       sparkle: "Young Minds Can Solve Big Challenges",
-      title: "Young Minds Can Solve the Most Pressing World Problems",
-      description: "And they must get a global platform to showcase their innovation.",
+      title: "Young Minds Can Solve the World's Biggest Problems",
+      description: "And Top Young Innovators gives them the global platform to showcase their innovations.",
       images: [
         ASSETS.IMAGES.CHALLENGE_CTA,
         ASSETS.IMAGES.CHALLENGE_HERO_MID_BOTTOM,
       ],
       paragraphs: [
-        "America's Top Young Innovators is a global hunt to find the best and brightest young minds. In this competition, children from across the world will present their unique ideas and innovations to solve present-day challenges facing humanity.",
-        "At Top Young Innovators, we understand that not every young innovator begins with a big idea. What matters is curiosity, creativity, and the right mentorship. To support every child's journey, participants will also have access to attend an optional 14-hour FREE Innovation Camp, sponsored by our partner, the DiscoverSTEM Foundation. Through expert mentoring, students will explore problems worth solving and shape their ideas into impactful innovations—whether starting fresh or building on something they've already imagined.",
-        "The finalists of America's Top Young Innovators will earn global recognition, media exposure, and the opportunity to present their innovations to highly acclaimed thought leaders, industry experts, and changemakers.",
+        "America's Top Young Innovators is a global hunt to find the best and brightest young minds. In this competition, children from across the world present their unique ideas and innovations to solve the most pressing real-world challenges.",
+        "At Top Young Innovators, we understand that not every young innovator begins with a big idea. What matters is curiosity, creativity, and the right mentorship. To support every child’s journey, participants have access to attend an optional 14-hour FREE Innovation Camp, sponsored by our partner, the DiscoverSTEM Foundation. Through expert mentoring, students explore problems worth solving and shape their ideas into impactful innovations, whether starting fresh or building on something they’ve already imagined.",
+        "The finalists of America's Top Young Innovators earn global recognition, media exposure, and the opportunity to present their innovations to highly acclaimed thought leaders and industry experts.",
       ],
     },
     scoreBreakdown: {
@@ -247,7 +264,7 @@ To help participants bring their ideas to life, we’ve partnered with one of th
         },
         {
           number: "02",
-          title: "Scientific & technical Knowledge",
+          title: "Scientific & Technical Knowledge",
           subtitle: "Behind Idea",
           marks: "30 marks",
           image: ASSETS.IMAGES.CHALLENGE_SCORE_2,
@@ -264,7 +281,7 @@ To help participants bring their ideas to life, we’ve partnered with one of th
     },
     cta: {
       sparkle: "Step into the future",
-      title: "Begin Your Path to Becoming America’s Top Young Innovator",
+      title: "Your Path to America's Top Young Innovator ",
       description: "Transform your ideas into real-world solutions and gain national recognition.",
       buttonText: "Participate Now",
       image: ASSETS.IMAGES.STEP_INTO_FUTURE,
@@ -278,16 +295,17 @@ To help participants bring their ideas to life, we’ve partnered with one of th
   contact: {
     sparkle: "Get In Touch",
     title: "Contact Us",
-    description: "If you have any questions about the competition, participation, US patents, or the Free Innovation Camp with DiscoverSTEM, please fill out the form below.\n\nOur team will get back to you as soon as possible.",
+    description: "If you have any questions about the competition, innovation camp, or obtaining a US patent, please fill out the form below with your details and inquiry.\n\nOur team will get back to you as soon as possible.",
     subjects: [
       { id: "general-1", label: "General Inquiry" },
       { id: "general-2", label: "General Inquiry" },
       { id: "general-3", label: "General Inquiry" },
     ],
     infoSnippets: [
-      "I am contacting to convert my idea into a US patent",
-      "I want to register for a FREE Innovation Camp to prepare myself for America's Top Young Innovators",
+      "I want to convert my idea into a US patent.",
+      "I want to register for the FREE Innovation Camp to prepare for the America's Top Young Innovators Challenge.",
     ],
+     newUpdate:"Enrollment for the FREE Innovation Camp 2025 is now closed. Stay tuned for 2026 registration updates.",
     form: {
       firstName: "First Name",
       lastName: "Last Name",
@@ -432,15 +450,15 @@ To help participants bring their ideas to life, we’ve partnered with one of th
       items: [
         {
           question: "Is team participation allowed?",
-          answer: "Yes, you can form a team and participate. Maximum of 5 members per team allowed.",
+          answer: "Yes, you can participate as a team of up to 5 members.",
         },
         { 
           question: "Can an individual submit more than one entry?",
-          answer: "Yes, an individual or a team can submit multiple entries, provided each entry showcases a unique innovation."
+          answer: "Yes. A participant can submit up to three entries."
         },
         { 
           question: "On what criteria are submissions evaluated?",
-          answer: "Submissions are evaluated based on three main criteria: Unique Idea (50%), Scientific & Technical Knowledge (30%), and Quality of Entry & Presentation (20%)."
+          answer: "Submissions are evaluated based on three main criteria - Unique Idea (50%), Scientific & Technical Knowledge (30%), and Quality of Entry & Presentation (20%)."
         },
       ],
     },

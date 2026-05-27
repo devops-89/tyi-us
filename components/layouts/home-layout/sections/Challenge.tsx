@@ -41,9 +41,7 @@ const ChallengeSection = () => {
                   textAlign: "justify",
                 }}
               >
-                Top Young Innovators brings an exciting innovation competition –
-                "America's Top Young Innovators" to hunt the most innovative and
-                creative young minds in the world.
+                Top Young Innovators brings an exciting innovation competition "America's Top Young Innovator" to hunt the most innovative and creative young minds.
               </Typography>
               <AppButton pill sx={{ mb: 8, fontSize: "18px" }}>
                 Explore the Competition
@@ -82,9 +80,8 @@ const ChallengeSection = () => {
                   lineHeight: 1.25,
                 }}
               >
-                Participate and Showcase
-                <br />
-                Your BIG IDEA to the World!
+                Got a Big Idea? Show It to the World!
+                
               </Typography>
 
               <Typography
@@ -98,10 +95,7 @@ const ChallengeSection = () => {
                   textAlign: "justify",
                 }}
               >
-                If you are aged between 10 to 22 years and have an idea that
-                you think has the power to change the world, participate to
-                win the prestigious title of the "America's Top Young
-                Innovator".
+                If you are aged between 10 to 22 years and have an idea that you think has the power to change the world, participate in “America’s Top Young Innovator”, win the title, and get global recognition.
               </Typography>
             </Box>
 

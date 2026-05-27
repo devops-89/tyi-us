@@ -222,6 +222,7 @@ export interface IWebsiteData {
     description: string;
     subjects: { id: string; label: string }[];
     infoSnippets: string[];
+    newUpdate:string;
     form: {
       firstName: string;
       lastName: string;

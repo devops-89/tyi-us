@@ -83,6 +83,19 @@ const ContactSection = () => {
                 </Stack>
               ))}
             </Stack>
+             <Typography
+  sx={{
+    fontFamily: ibmPlexSans.style.fontFamily,
+    fontSize: 18,
+    color: Colors.TEXT_MUTED,
+    lineHeight: "35px",
+    mb: 4,
+    whiteSpace: "pre-line",
+    mt: { xs: 4, md: 6 },
+  }}
+>
+  {contact.newUpdate}
+</Typography>
           </Grid>
 
           <Grid size={{ xs: 12, md: 7 }}>
