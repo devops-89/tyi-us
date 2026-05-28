@@ -11,7 +11,9 @@ interface IAppButtonProps extends ButtonProps {
   showIcon?: boolean;
 }
 
-const StyledButton = styled(MuiButton)<IAppButtonProps>(({ variant, pill }) => ({
+const StyledButton = styled(MuiButton, {
+  shouldForwardProp: (prop) => prop !== "pill",
+})<IAppButtonProps>(({ variant, pill }) => ({
   borderRadius: pill ? "100px" : "8px",
   padding: pill ? "12px 32px" : "10px 24px",
   fontSize: "0.95rem",
@@ -19,7 +21,7 @@ const StyledButton = styled(MuiButton)<IAppButtonProps>(({ variant, pill }) => (
   textTransform: "none",
   fontFamily: ibmPlexSans.style.fontFamily,
   transition: "all 0.3s cubic-bezier(0.4, 0, 0.2, 1)",
-  
+
   ...(variant === "contained" && {
     backgroundColor: COLORS.SECONDARY,
     color: COLORS.WHITE,
@@ -42,11 +44,16 @@ const StyledButton = styled(MuiButton)<IAppButtonProps>(({ variant, pill }) => (
   }),
 }));
 
-const AppButton: React.FC<IAppButtonProps> = ({ children, pill = true, showIcon = true, ...props }) => {
+const AppButton: React.FC<IAppButtonProps> = ({
+  children,
+  pill = true,
+  showIcon = true,
+  ...props
+}) => {
   return (
-    <StyledButton 
-      variant="contained" 
-      disableElevation 
+    <StyledButton
+      variant="contained"
+      disableElevation
       pill={pill}
       endIcon={showIcon ? <ArrowUpRight size={18} /> : null}
       {...props}

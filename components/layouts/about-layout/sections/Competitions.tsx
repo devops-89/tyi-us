@@ -2,7 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
-import { Box, Container, Grid, Stack, Typography, Button } from "@mui/material";
+import { Box, Container, Grid, Typography, Button } from "@mui/material";
 import { ArrowUpRight } from "lucide-react";
 
 import { Colors, CONSTANTS } from "@/utils/enum";
@@ -14,83 +14,130 @@ const { competitions } = WEBSITE_DATA.about;
 
 const AboutCompetitionsSection = () => {
   return (
-    <Box sx={{ backgroundColor: Colors.WHITE, py: { xs: 10, md: 12 } }}>
-      <Container maxWidth={false} sx={{ maxWidth: CONSTANTS.MAX_WIDTH }}>
-        <Box sx={{ mb: 2 }}>
+    <Box
+      sx={{
+        backgroundColor: Colors.WHITE,
+        py: { xs: 6, md: 12 },
+      }}
+    >
+      <Container
+        maxWidth={false}
+        sx={{
+          maxWidth: CONSTANTS.MAX_WIDTH,
+          px: { xs: 2, sm: 3, md: 4 },
+        }}
+      >
+        <Box
+          sx={{
+            mb: 2,
+            display: "flex",
+            justifyContent: { xs: "center", md: "flex-start" },
+          }}
+        >
           <SparkleLabel text={competitions.sparkle} />
         </Box>
 
-        <Grid container spacing={6} alignItems="center">
+        <Grid container spacing={{ xs: 5, md: 6 }} alignItems="center">
           <Grid size={{ xs: 12, md: 5 }}>
             <Typography
               sx={{
                 fontFamily: poppins.style.fontFamily,
                 fontWeight: 700,
-                fontSize: { xs: 26, md: 32 },
+                fontSize: { xs: 24, sm: 28, md: 32 },
                 color: Colors.BLACK,
                 mb: 2,
+                lineHeight: { xs: 1.3, md: 1.2 },
+                textAlign: { xs: "center", md: "left" },
               }}
             >
               {competitions.title}
             </Typography>
+
             <Typography
               sx={{
                 fontFamily: ibmPlexSans.style.fontFamily,
-                fontSize: 18,
+                fontSize: { xs: 16, md: 18 },
                 color: Colors.TEXT_MUTED,
-                lineHeight: "32px",
-                mb: 4,
+                lineHeight: { xs: "28px", md: "32px" },
+                mb: { xs: 3, md: 4 },
+                textAlign: { xs: "center", md: "left" },
               }}
             >
               {competitions.description}
             </Typography>
 
-            <Button
-              variant="outlined"
-              endIcon={<ArrowUpRight size={18} />}
+            <Box
               sx={{
-                borderRadius: "50px",
-                px: 3,
-                py: 1.6,
-                borderColor: Colors.SECONDARY,
-                color: Colors.SECONDARY,
-                backgroundColor: "rgba(214,14,52,0.08)",
-                textTransform: "none",
-                fontFamily: poppins.style.fontFamily,
-                fontWeight: 600,
-                "&:hover": {
-                  borderColor: Colors.SECONDARY,
-                  backgroundColor: "rgba(214,14,52,0.12)",
-                },
+                display: "flex",
+                justifyContent: { xs: "center", md: "flex-start" },
               }}
             >
-              {competitions.buttonText}
-            </Button>
+              <Button
+                variant="outlined"
+                endIcon={<ArrowUpRight size={18} />}
+                sx={{
+                  borderRadius: "50px",
+                  px: { xs: 3, md: 3 },
+                  py: 1.6,
+                  width: { xs: "100%", sm: "auto" },
+                  borderColor: Colors.SECONDARY,
+                  color: Colors.SECONDARY,
+                  backgroundColor: "rgba(214,14,52,0.08)",
+                  textTransform: "none",
+                  fontFamily: poppins.style.fontFamily,
+                  fontWeight: 600,
+                  fontSize: { xs: 15, md: 16 },
+                  "&:hover": {
+                    borderColor: Colors.SECONDARY,
+                    backgroundColor: "rgba(214,14,52,0.12)",
+                  },
+                }}
+              >
+                {competitions.buttonText}
+              </Button>
+            </Box>
           </Grid>
 
           <Grid size={{ xs: 12, md: 7 }}>
-            <Grid container spacing={4}>
+            <Grid container spacing={{ xs: 3, md: 4 }}>
               {competitions.items.map((item) => (
-                <Grid key={item.title} size={{ xs: 12, md: 6 }}>
-                  <Box sx={{ position: "relative", width: "100%", height: 260, borderRadius: 3, overflow: "hidden" }}>
-                    <Image src={item.image} alt={item.title} fill style={{ objectFit: "cover" }} />
+                <Grid key={item.title} size={{ xs: 12, sm: 6, md: 6 }}>
+                  <Box
+                    sx={{
+                      position: "relative",
+                      width: "100%",
+                      height: { xs: 220, sm: 240, md: 260 },
+                      borderRadius: 3,
+                      overflow: "hidden",
+                    }}
+                  >
+                    <Image
+                      src={item.image}
+                      alt={item.title}
+                      fill
+                      style={{ objectFit: "cover" }}
+                    />
+
                     <Box
                       sx={{
                         position: "absolute",
                         inset: 0,
-                        background: "linear-gradient(180deg, rgba(0,0,0,0) 40%, rgba(0,0,0,0.4) 100%)",
+                        background:
+                          "linear-gradient(180deg, rgba(0,0,0,0) 40%, rgba(0,0,0,0.4) 100%)",
                       }}
                     />
+
                     <Typography
                       sx={{
                         position: "absolute",
-                        bottom: 20,
-                        left: 20,
-                        right: 20,
+                        bottom: { xs: 16, md: 20 },
+                        left: { xs: 16, md: 20 },
+                        right: { xs: 16, md: 20 },
                         fontFamily: poppins.style.fontFamily,
                         fontWeight: 600,
-                        fontSize: 16,
+                        fontSize: { xs: 15, md: 16 },
                         color: Colors.WHITE,
+                        lineHeight: 1.4,
                       }}
                     >
                       {item.title}
@@ -107,4 +154,3 @@ const AboutCompetitionsSection = () => {
 };
 
 export default AboutCompetitionsSection;
-

@@ -1,63 +1,87 @@
 "use client";
 
 import React from "react";
-import { Box, Container, Typography, Stack, Grid } from "@mui/material";
+import { Box, Container, Typography, Grid } from "@mui/material";
 import { COLORS, CONSTANTS } from "@/utils/enum";
 import { poppins, ibmPlexSans } from "@/utils/fonts";
 import AppButton from "@/components/widgets/Button";
 import Image from "next/image";
 import { ASSETS } from "@/utils/assets";
-import SparkleLabel from "@/components/widgets/common/SparkleLabel";
 
 const ChallengeSection = () => {
   return (
-    <Box sx={{ pt: 10, pb: 10, backgroundColor: COLORS.WHITE }}>
-      <Container maxWidth={false} sx={{ maxWidth: CONSTANTS.MAX_WIDTH }}>
-        <Grid container spacing={6} alignItems="stretch">
+    <Box
+      sx={{
+        pt: { xs: 6, md: 10 },
+        pb: { xs: 6, md: 10 },
+        backgroundColor: COLORS.WHITE,
+      }}
+    >
+      <Container
+        maxWidth={false}
+        sx={{
+          maxWidth: CONSTANTS.MAX_WIDTH,
+          px: { xs: 2, sm: 3, md: 4 },
+        }}
+      >
+        <Grid container spacing={{ xs: 5, md: 6 }} alignItems="stretch">
           {/* Left Side Content */}
-          <Grid size={{ xs: 12, md: 6 }} sx={{ display: "flex", flexDirection: "column" }}>
-            <Box sx={{ pr: { md: 10 }, flex: 1 }}>
+          <Grid
+            size={{ xs: 12, md: 6 }}
+            sx={{ display: "flex", flexDirection: "column" }}
+          >
+            <Box sx={{ pr: { xs: 0, md: 10 }, flex: 1 }}>
               <Typography
                 variant="h3"
                 sx={{
                   fontFamily: poppins.style.fontFamily,
                   fontWeight: 400,
-                  fontSize: "28px",
+                  fontSize: { xs: "24px", sm: "26px", md: "28px" },
                   color: COLORS.BLACK,
                   mb: 2,
-                  lineHeight: 1.1,
+                  lineHeight: { xs: 1.25, md: 1.1 },
                 }}
               >
                 The Ultimate Innovation Challenge for Young Creators
               </Typography>
+
               <Typography
                 sx={{
                   fontFamily: ibmPlexSans.style.fontFamily,
-                  fontSize: "20px",
+                  fontSize: { xs: "16px", md: "20px" },
                   color: COLORS.TEXT_MUTED,
-                  lineHeight: 1.8,
-                  mb: 4,
+                  lineHeight: { xs: 1.6, md: 1.8 },
+                  mb: { xs: 3, md: 4 },
                   maxWidth: "600px",
-                  textAlign: "justify",
+                  textAlign: { xs: "left", md: "justify" },
                 }}
               >
-                Top Young Innovators brings an exciting innovation competition "America's Top Young Innovator" to hunt the most innovative and creative young minds.
+                Top Young Innovators brings an exciting innovation competition
+                "America's Top Young Innovator" to hunt the most innovative and
+                creative young minds.
               </Typography>
-              <AppButton pill sx={{ mb: 8, fontSize: "18px" }}>
+
+              <AppButton
+                pill
+                sx={{
+                  mb: { xs: 4, md: 8 },
+                  fontSize: { xs: "16px", md: "18px" },
+                }}
+              >
                 Explore the Competition
               </AppButton>
             </Box>
 
-              <Box
-                sx={{
-                  borderRadius: "32px",
-                  overflow: "hidden",
-                  position: "relative",
-                  height: { xs: "350px", md: "520px" },
-                  mt: "auto",
-                  border: "1px solid #EAEAEA",
-                }}
-              >
+            <Box
+              sx={{
+                borderRadius: { xs: "20px", md: "32px" },
+                overflow: "hidden",
+                position: "relative",
+                height: { xs: "280px", sm: "350px", md: "520px" },
+                mt: "auto",
+                border: "1px solid #EAEAEA",
+              }}
+            >
               <Image
                 src={ASSETS.IMAGES.HERO2}
                 alt="Students innovating"
@@ -68,44 +92,56 @@ const ChallengeSection = () => {
           </Grid>
 
           {/* Right Side Content */}
-          <Grid size={{ xs: 12, md: 6 }} sx={{ display: "flex", flexDirection: "column" }}>
-            <Box sx={{ flex: 1, pt: { md: 24 }, ml: { md: "auto" }, maxWidth: { md: "520px" } }}>
+          <Grid
+            size={{ xs: 12, md: 6 }}
+            sx={{ display: "flex", flexDirection: "column" }}
+          >
+            <Box
+              sx={{
+                flex: 1,
+                pt: { xs: 0, md: 24 },
+                ml: { xs: 0, md: "auto" },
+                maxWidth: { xs: "100%", md: "520px" },
+              }}
+            >
               <Typography
                 sx={{
                   fontFamily: poppins.style.fontFamily,
                   fontWeight: 400,
-                  fontSize: "28px",
+                  fontSize: { xs: "24px", sm: "26px", md: "28px" },
                   color: COLORS.BLACK,
                   mb: 2,
-                  lineHeight: 1.25,
+                  lineHeight: { xs: 1.25, md: 1.25 },
                 }}
               >
                 Got a Big Idea? Show It to the World!
-                
               </Typography>
 
               <Typography
                 sx={{
                   fontFamily: ibmPlexSans.style.fontFamily,
-                  fontSize: "20px",
+                  fontSize: { xs: "16px", md: "20px" },
                   color: COLORS.TEXT_MUTED,
-                  lineHeight: 1.6,
-                  mb: 4,
-                  maxWidth: "520px",
-                  textAlign: "justify",
+                  lineHeight: { xs: 1.6, md: 1.6 },
+                  mb: { xs: 3, md: 4 },
+                  maxWidth: { xs: "100%", md: "520px" },
+                  textAlign: { xs: "left", md: "justify" },
                 }}
               >
-                If you are aged between 10 to 22 years and have an idea that you think has the power to change the world, participate in “America’s Top Young Innovator”, win the title, and get global recognition.
+                If you are aged between 10 to 22 years and have an idea that
+                you think has the power to change the world, participate in
+                “America’s Top Young Innovator”, win the title, and get global
+                recognition.
               </Typography>
             </Box>
 
             <Box
               sx={{
-                borderRadius: "32px",
+                borderRadius: { xs: "20px", md: "32px" },
                 overflow: "hidden",
                 position: "relative",
-                height: { xs: "350px", md: "460px" },
-                mt: { xs: 4, md: 0 },
+                height: { xs: "280px", sm: "350px", md: "460px" },
+                mt: { xs: 0, md: 0 },
                 border: "1px solid #EAEAEA",
               }}
             >

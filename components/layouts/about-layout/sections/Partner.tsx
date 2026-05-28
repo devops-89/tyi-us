@@ -13,9 +13,26 @@ const { partner } = WEBSITE_DATA.about;
 
 const AboutPartnerSection = () => {
   return (
-    <Box sx={{ backgroundColor: Colors.WHITE, py: { xs: 10, md: 12 } }}>
-      <Container maxWidth={false} sx={{ maxWidth: CONSTANTS.MAX_WIDTH }}>
-        <Box sx={{ mb: 3 }}>
+    <Box
+      sx={{
+        backgroundColor: Colors.WHITE,
+        py: { xs: 6, md: 12 },
+      }}
+    >
+      <Container
+        maxWidth={false}
+        sx={{
+          maxWidth: CONSTANTS.MAX_WIDTH,
+          px: { xs: 2, sm: 3, md: 4 },
+        }}
+      >
+        <Box
+          sx={{
+            mb: 3,
+            display: "flex",
+            justifyContent: { xs: "center", md: "flex-start" },
+          }}
+        >
           <SparkleLabel text={partner.sparkle} />
         </Box>
 
@@ -23,9 +40,11 @@ const AboutPartnerSection = () => {
           sx={{
             fontFamily: poppins.style.fontFamily,
             fontWeight: 700,
-            fontSize: { xs: 26, md: 32 },
+            fontSize: { xs: 24, sm: 28, md: 32 },
             color: Colors.BLACK,
             mb: 1,
+            lineHeight: { xs: 1.3, md: 1.2 },
+            textAlign: { xs: "center", md: "left" },
           }}
         >
           {partner.titlePre}
@@ -33,54 +52,109 @@ const AboutPartnerSection = () => {
             {partner.titleAccent}
           </Box>
         </Typography>
+
         <Typography
           sx={{
             fontFamily: ibmPlexSans.style.fontFamily,
-            fontSize: 18,
+            fontSize: { xs: 16, md: 18 },
             color: Colors.TEXT_MUTED,
-            mb: 4,
+            mb: { xs: 4, md: 4 },
+            lineHeight: { xs: "28px", md: "normal" },
+            textAlign: { xs: "center", md: "left" },
           }}
         >
           {partner.description}
         </Typography>
 
-        <Grid container spacing={6}>
+        <Grid container spacing={{ xs: 4, md: 6 }}>
           <Grid size={{ xs: 12, md: 5 }}>
-            <Grid container spacing={3}>
+            <Grid container spacing={{ xs: 2, md: 3 }}>
               <Grid size={{ xs: 6, md: 6 }}>
-                <Box sx={{ position: "relative", width: "100%", height: 288, borderRadius: 2, overflow: "hidden" }}>
-                  <Image src={partner.images[0]} alt="Students" fill style={{ objectFit: "cover" }} />
+                <Box
+                  sx={{
+                    position: "relative",
+                    width: "100%",
+                    height: { xs: 180, sm: 240, md: 288 },
+                    borderRadius: 2,
+                    overflow: "hidden",
+                  }}
+                >
+                  <Image
+                    src={partner.images[0]}
+                    alt="Students"
+                    fill
+                    style={{ objectFit: "cover" }}
+                  />
                 </Box>
               </Grid>
+
               <Grid size={{ xs: 6, md: 6 }}>
-                <Box sx={{ position: "relative", width: "100%", height: 288, borderRadius: 2, overflow: "hidden" }}>
-                  <Image src={partner.images[1]} alt="Students" fill style={{ objectFit: "cover" }} />
+                <Box
+                  sx={{
+                    position: "relative",
+                    width: "100%",
+                    height: { xs: 180, sm: 240, md: 288 },
+                    borderRadius: 2,
+                    overflow: "hidden",
+                  }}
+                >
+                  <Image
+                    src={partner.images[1]}
+                    alt="Students"
+                    fill
+                    style={{ objectFit: "cover" }}
+                  />
                 </Box>
               </Grid>
+
               <Grid size={{ xs: 12 }}>
-                <Box sx={{ position: "relative", width: "100%", height: 323, borderRadius: 2, overflow: "hidden" }}>
-                  <Image src={partner.images[2]} alt="Group study" fill style={{ objectFit: "cover" }} />
+                <Box
+                  sx={{
+                    position: "relative",
+                    width: "100%",
+                    height: { xs: 220, sm: 300, md: 323 },
+                    borderRadius: 2,
+                    overflow: "hidden",
+                  }}
+                >
+                  <Image
+                    src={partner.images[2]}
+                    alt="Group study"
+                    fill
+                    style={{ objectFit: "cover" }}
+                  />
                 </Box>
               </Grid>
             </Grid>
           </Grid>
 
           <Grid size={{ xs: 12, md: 7 }}>
-            <Stack spacing={4}>
+            <Stack spacing={{ xs: 3, md: 4 }}>
               {partner.features.map((f) => (
                 <Box key={f.title}>
                   <Typography
                     sx={{
                       fontFamily: poppins.style.fontFamily,
                       fontWeight: 700,
-                      fontSize: 24,
+                      fontSize: { xs: 20, sm: 22, md: 24 },
                       color: Colors.BLACK,
                       mb: 1,
+                      lineHeight: { xs: 1.3, md: 1.2 },
+                      textAlign: { xs: "center", md: "left" },
                     }}
                   >
                     {f.title}
                   </Typography>
-                  <Typography sx={{ fontFamily: ibmPlexSans.style.fontFamily, fontSize: 18, color: Colors.TEXT_MUTED, lineHeight: "32px" }}>
+
+                  <Typography
+                    sx={{
+                      fontFamily: ibmPlexSans.style.fontFamily,
+                      fontSize: { xs: 16, md: 18 },
+                      color: Colors.TEXT_MUTED,
+                      lineHeight: { xs: "28px", md: "32px" },
+                      textAlign: { xs: "center", md: "left" },
+                    }}
+                  >
                     {f.desc}
                   </Typography>
                 </Box>
@@ -94,4 +168,3 @@ const AboutPartnerSection = () => {
 };
 
 export default AboutPartnerSection;
-

@@ -12,51 +12,65 @@ const featuresLeft = [
   {
     title: "Innovation Camp Learning",
     desc: " Attend the FREE Innovation Camp to learn the process of developing ideas and solutions.",
-    icon: "/images/icons/ai-innovation.png"
+    icon: "/images/icons/ai-innovation.png",
   },
   {
     title: "Solve Real-World Problems",
     desc: " Identify a real-world problem and come up with an innovative solution.",
-    icon: "/images/icons/fluent_search-info-24-filled.png"
+    icon: "/images/icons/fluent_search-info-24-filled.png",
   },
   {
     title: "Earn a Prestigious Title",
     desc: ' Win the prestigious title of "America\'s Top Young Innovator".',
-    icon: "/images/icons/marketeq_reward.png"
-  }
+    icon: "/images/icons/marketeq_reward.png",
+  },
 ];
 
 const featuresRight = [
   {
     title: "Showcase to the World",
     desc: "Present your innovation to the world and attract potential investors.",
-    icon: "/images/icons/hugeicons_save-money-dollar.png"
+    icon: "/images/icons/hugeicons_save-money-dollar.png",
   },
   {
     title: "Opportunity for a US Patent",
     desc: "Get the chance to own a US Patent for your innovation.",
-    icon: "/images/icons/streamline-ultimate_human-resources-search-men.png"
+    icon: "/images/icons/streamline-ultimate_human-resources-search-men.png",
   },
   {
     title: "Gain Global Recognition",
     desc: "Receive recognition on a global platform for your innovative work.",
-    icon: "/images/icons/marketeq_reward.png"
-  }
+    icon: "/images/icons/marketeq_reward.png",
+  },
 ];
 
-const FeatureItem = ({ align, item }: { align: "left" | "right"; item: any }) => (
-  <Box sx={{ textAlign: { xs: "center", md: align } }}>
+const FeatureItem = ({
+  align,
+  item,
+}: {
+  align: "left" | "right";
+  item: any;
+}) => (
+  <Box
+    sx={{
+      textAlign: { xs: "center", md: align },
+      mb: { xs: 4, md: 0 },
+    }}
+  >
     <Box
       sx={{
         display: "flex",
-        justifyContent: { xs: "center", md: align === "right" ? "flex-end" : "flex-start" },
-        mb: 2,
+        justifyContent: {
+          xs: "center",
+          md: align === "right" ? "flex-end" : "flex-start",
+        },
+        mb: { xs: 1.5, md: 2 },
       }}
     >
       <Box
         sx={{
-          width: 48,
-          height: 48,
+          width: { xs: 44, md: 48 },
+          height: { xs: 44, md: 48 },
           borderRadius: "50%",
           backgroundColor: Colors.SECONDARY,
           display: "flex",
@@ -64,26 +78,35 @@ const FeatureItem = ({ align, item }: { align: "left" | "right"; item: any }) =>
           justifyContent: "center",
         }}
       >
-        <Image src={item.icon} alt={item.title} width={24} height={24} style={{ objectFit: "contain" }} />
+        <Image
+          src={item.icon}
+          alt={item.title}
+          width={24}
+          height={24}
+          style={{ objectFit: "contain" }}
+        />
       </Box>
     </Box>
+
     <Typography
       sx={{
         fontFamily: poppins.style.fontFamily,
         fontWeight: 400,
-        fontSize: "28px",
+        fontSize: { xs: "22px", sm: "24px", md: "28px" },
         color: Colors.BLACK,
         mb: 1,
+        lineHeight: { xs: 1.25, md: 1.3 },
       }}
     >
       {item.title}
     </Typography>
+
     <Typography
       sx={{
         fontFamily: ibmPlexSans.style.fontFamily,
-        fontSize: "20px",
+        fontSize: { xs: "16px", md: "20px" },
         color: Colors.TEXT_MUTED,
-        lineHeight: 1.5,
+        lineHeight: { xs: 1.6, md: 1.5 },
       }}
     >
       {item.desc}
@@ -93,55 +116,96 @@ const FeatureItem = ({ align, item }: { align: "left" | "right"; item: any }) =>
 
 const WhyParticipateSection = () => {
   return (
-    <Box sx={{ pt: { xs: 8, md: 10 }, pb: { xs: 12, md: 18 }, backgroundColor: Colors.WHITE }}>
-      <Container maxWidth={false} sx={{ maxWidth: CONSTANTS.MAX_WIDTH }}>
-        <Stack spacing={2} sx={{ mb: 2 }}>
-          <SparkleLabel 
-            text="Why Participate in the Challenge?" 
-            sparklePosition="both" 
-            type="diamond" 
-            color={Colors.PRIMARY} 
-            fontSize={18} 
+    <Box
+      sx={{
+        pt: { xs: 6, md: 10 },
+        pb: { xs: 8, md: 18 },
+        backgroundColor: Colors.WHITE,
+      }}
+    >
+      <Container
+        maxWidth={false}
+        sx={{
+          maxWidth: CONSTANTS.MAX_WIDTH,
+          px: { xs: 2, sm: 3, md: 4 },
+        }}
+      >
+        <Stack spacing={2} sx={{ mb: { xs: 3, md: 2 } }}>
+          <SparkleLabel
+            text="Why Participate in the Challenge?"
+            sparklePosition="both"
+            type="diamond"
+            color={Colors.PRIMARY}
+            fontSize={18}
           />
         </Stack>
 
-        <Grid container spacing={{ xs: 4, md: 10 }} alignItems="flex-start">
+        <Grid container spacing={{ xs: 3, md: 10 }} alignItems="flex-start">
           <Grid size={{ xs: 12, md: 6 }}>
             <Typography
               sx={{
                 fontFamily: poppins.style.fontFamily,
                 fontWeight: 400,
-                fontSize: "28px",
+                fontSize: { xs: "26px", sm: "28px", md: "28px" },
                 color: Colors.BLACK,
-                lineHeight: 1.3,
+                lineHeight: { xs: 1.25, md: 1.3 },
+                textAlign: { xs: "center", md: "left" },
               }}
             >
               What Makes This Challenge <br /> Worth It?
             </Typography>
           </Grid>
+
           <Grid size={{ xs: 12, md: 6 }}>
             <Typography
               sx={{
                 fontFamily: ibmPlexSans.style.fontFamily,
-                fontSize: "20px",
+                fontSize: { xs: "16px", md: "20px" },
                 fontWeight: 400,
                 color: Colors.TEXT_MUTED,
                 lineHeight: 1.6,
-                textAlign: { md: "right" },
+                textAlign: { xs: "center", md: "right" },
                 mb: 1.5,
               }}
             >
-              Gain exposure, mentorship, and the chance to become a globally celebrated young innovator.
+              Gain exposure, mentorship, and the chance to become a globally
+              celebrated young innovator.
             </Typography>
           </Grid>
         </Grid>
 
-        <Grid container spacing={{ xs: 6, md: 4 }} alignItems="stretch" sx={{ mt: { xs: 10, md: 16 } }}>
+        <Grid
+          container
+          spacing={{ xs: 4, md: 4 }}
+          alignItems="stretch"
+          sx={{ mt: { xs: 5, md: 16 } }}
+        >
           {/* Left Features */}
-          <Grid size={{ xs: 12, md: 4 }}>
-            <Box sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', height: '100%', py: { md: 2 } }}>
+          <Grid size={{ xs: 12, md: 4 }} order={{ xs: 2, md: 1 }}>
+            <Box
+              sx={{
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "space-between",
+                height: "100%",
+                py: { md: 2 },
+              }}
+            >
               {featuresLeft.map((item, index) => (
-                <Box key={index} sx={{ flex: 1, display: 'flex', flexDirection: 'column', justifyContent: index === 0 ? 'flex-start' : index === 1 ? 'center' : 'flex-end' }}>
+                <Box
+                  key={index}
+                  sx={{
+                    flex: 1,
+                    display: "flex",
+                    flexDirection: "column",
+                    justifyContent:
+                      index === 0
+                        ? "flex-start"
+                        : index === 1
+                        ? "center"
+                        : "flex-end",
+                  }}
+                >
                   <FeatureItem align="right" item={item} />
                 </Box>
               ))}
@@ -149,31 +213,53 @@ const WhyParticipateSection = () => {
           </Grid>
 
           {/* Center Image */}
-          <Grid size={{ xs: 12, md: 4 }}>
+          <Grid size={{ xs: 12, md: 4 }} order={{ xs: 1, md: 2 }}>
             <Box
               sx={{
                 position: "relative",
                 width: "100%",
-                height: { xs: 380, md: 600 },
+                height: { xs: 320, sm: 380, md: 600 },
                 display: "flex",
                 justifyContent: "center",
-                transform: { md: "scale(1.15)" },
+                transform: { xs: "none", md: "scale(1.15)" },
+                mb: { xs: 2, md: 0 },
               }}
             >
               <Image
                 src={ASSETS.IMAGES.IMAGE37}
                 alt="Young Innovator"
                 fill
-                style={{ objectFit: "contain" }}
+                style={{ objectFit: "contain", objectPosition: "center" }}
               />
             </Box>
           </Grid>
 
           {/* Right Features */}
-          <Grid size={{ xs: 12, md: 4 }}>
-            <Box sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', height: '100%', py: { md: 2 } }}>
+          <Grid size={{ xs: 12, md: 4 }} order={{ xs: 3, md: 3 }}>
+            <Box
+              sx={{
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "space-between",
+                height: "100%",
+                py: { md: 2 },
+              }}
+            >
               {featuresRight.map((item, index) => (
-                <Box key={index} sx={{ flex: 1, display: 'flex', flexDirection: 'column', justifyContent: index === 0 ? 'flex-start' : index === 1 ? 'center' : 'flex-end' }}>
+                <Box
+                  key={index}
+                  sx={{
+                    flex: 1,
+                    display: "flex",
+                    flexDirection: "column",
+                    justifyContent:
+                      index === 0
+                        ? "flex-start"
+                        : index === 1
+                        ? "center"
+                        : "flex-end",
+                  }}
+                >
                   <FeatureItem align="left" item={item} />
                 </Box>
               ))}

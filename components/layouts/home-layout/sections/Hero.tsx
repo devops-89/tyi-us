@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Box, Container, Stack, Typography, Button } from "@mui/material";
 import { ArrowUpRight } from "lucide-react";
+
 import { Colors, CONSTANTS } from "@/utils/enum";
 import { poppins, ibmPlexSans } from "@/utils/fonts";
 import { WEBSITE_DATA } from "@/utils/website";
@@ -17,28 +18,40 @@ const HomeHeroSection = () => {
   return (
     <Box
       sx={{
-        pt: { xs: 9, md: 12 },
-        pb: { xs: 7, md: 8 },
+        pt: { xs: 10, md: 12 },
+        pb: { xs: 5, md: 8 },
         backgroundColor: Colors.WHITE,
         position: "relative",
       }}
     >
-      <Container maxWidth={false} sx={{ maxWidth: CONSTANTS.MAX_WIDTH }}>
+      <Container
+        maxWidth={false}
+        sx={{
+          maxWidth: CONSTANTS.MAX_WIDTH,
+          px: { xs: 2, sm: 3, md: 4 },
+        }}
+      >
+        {/* HERO SECTION */}
         <Stack
           direction={{ xs: "column", md: "row" }}
           spacing={{ xs: 4, md: 6 }}
           alignItems="flex-start"
         >
-          {/* Left Content */}
-          <Box sx={{ flex: 1, pt: 4 }}>
+          {/* LEFT CONTENT */}
+          <Box sx={{ flex: 1, pt: { xs: 1, md: 4 }, width: "100%" }}>
             <Box sx={{ mb: 2 }}>
-              <SparkleLabel 
-                text={hero.sparkle} 
-                fontSize={18} 
-                sparklePosition="right" 
+              <SparkleLabel
+                text={hero.sparkle}
+                fontSize={18}
+                sparklePosition="right"
                 customIcon={
                   <Box sx={{ width: 18, height: 18, position: "relative" }}>
-                    <Image src={ASSETS.IMAGES.ICON_RED_STAR} alt="red star" fill style={{ objectFit: "contain" }} />
+                    <Image
+                      src={ASSETS.IMAGES.ICON_RED_STAR}
+                      alt="red star"
+                      fill
+                      style={{ objectFit: "contain" }}
+                    />
                   </Box>
                 }
               />
@@ -48,7 +61,7 @@ const HomeHeroSection = () => {
               sx={{
                 fontFamily: poppins.style.fontFamily,
                 fontWeight: 700,
-                fontSize: "20px",
+                fontSize: { xs: "16px", md: "20px" },
                 color: Colors.BLACK,
                 mb: 1,
               }}
@@ -61,11 +74,11 @@ const HomeHeroSection = () => {
                 sx={{
                   fontFamily: poppins.style.fontFamily,
                   fontWeight: 600,
-                  fontSize: { xs: "32px", md: "45px" },
+                  fontSize: { xs: "28px", sm: "36px", md: "45px" },
                   backgroundColor: Colors.BLACK,
                   color: Colors.WHITE,
                   display: "inline-block",
-                  px: 3,
+                  px: { xs: 2, md: 3 },
                   py: 1,
                   borderRadius: "15px 50px 50px 0",
                   lineHeight: 1.1,
@@ -80,11 +93,11 @@ const HomeHeroSection = () => {
                 sx={{
                   fontFamily: poppins.style.fontFamily,
                   fontWeight: 600,
-                  fontSize: { xs: "32px", md: "45px" },
+                  fontSize: { xs: "28px", sm: "36px", md: "45px" },
                   backgroundColor: Colors.BLACK,
                   color: Colors.WHITE,
                   display: "inline-block",
-                  px: 3,
+                  px: { xs: 2, md: 3 },
                   py: 1,
                   borderRadius: "0 50px 50px 15px",
                   lineHeight: 1.1,
@@ -94,24 +107,24 @@ const HomeHeroSection = () => {
               </Typography>
             </Box>
 
-            <Typography
+            {/* <Typography
               sx={{
                 fontFamily: ibmPlexSans.style.fontFamily,
                 fontWeight: 600,
-                fontSize: "28px",
+                fontSize: { xs: "22px", md: "28px" },
                 color: Colors.BLACK,
                 mb: 2,
-                lineHeight: 1,
+                lineHeight: { xs: 1.3, md: 1 },
               }}
             >
               {hero.subtitle}
-            </Typography>
+            </Typography> */}
 
             <Typography
               variant="body1"
               sx={{
                 fontFamily: ibmPlexSans.style.fontFamily,
-                fontSize: "20px",
+                fontSize: { xs: "16px", md: "20px" },
                 color: Colors.TEXT_MUTED,
                 maxWidth: "600px",
                 lineHeight: 1.6,
@@ -121,36 +134,33 @@ const HomeHeroSection = () => {
               {hero.description}
             </Typography>
 
-            <Stack direction="column" spacing={5} alignItems="flex-start">
-              {/* Submit Button Row */}
-              <Button
-                component={Link}
-                href={hero.cta1Href}
-                variant="contained"
-                endIcon={<ArrowUpRight size={18} />}
-                sx={{
-                  height: 48,
-                  borderRadius: "50px",
-                  px: 4,
-                  backgroundColor: Colors.SECONDARY,
-                  color: Colors.WHITE,
-                  fontFamily: poppins.style.fontFamily,
-                  fontWeight: 600,
-                  fontSize: "18px",
-                  textTransform: "none",
+            <Button
+              component={Link}
+              href={hero.cta1Href}
+              variant="contained"
+              endIcon={<ArrowUpRight size={18} />}
+              sx={{
+                height: 48,
+                borderRadius: "50px",
+                px: { xs: 3, md: 4 },
+                backgroundColor: Colors.SECONDARY,
+                color: Colors.WHITE,
+                fontFamily: poppins.style.fontFamily,
+                fontWeight: 600,
+                fontSize: { xs: "16px", md: "18px" },
+                textTransform: "none",
+                boxShadow: "none",
+                "&:hover": {
+                  backgroundColor: "#c61530",
                   boxShadow: "none",
-                  "&:hover": {
-                    backgroundColor: "#c61530",
-                    boxShadow: "none"
-                  },
-                }}
-              >
-                {hero.cta1Text}
-              </Button>
-            </Stack>
+                },
+              }}
+            >
+              {hero.cta1Text}
+            </Button>
           </Box>
 
-          {/* Right Image */}
+          {/* RIGHT IMAGE */}
           <Box
             sx={{
               flex: 1.2,
@@ -159,7 +169,7 @@ const HomeHeroSection = () => {
               borderRadius: "24px",
               overflow: "hidden",
               boxShadow: "0 20px 60px rgba(0,0,0,0.1)",
-              height: { xs: "300px", md: "460px" },
+              height: { xs: "260px", sm: "340px", md: "460px" },
               maxWidth: "840px",
             }}
           >
@@ -171,26 +181,23 @@ const HomeHeroSection = () => {
               priority
             />
 
-            {/* Play Button Overlay (Watch) */}
+            {/* PLAY BUTTON */}
             <Box
               sx={{
                 position: "absolute",
                 top: "50%",
-                left: "40%",
+                left: { xs: "50%", md: "40%" },
                 transform: "translate(-50%, -50%)",
                 display: "flex",
                 alignItems: "center",
-                gap: 2,
+                gap: { xs: 1, md: 2 },
                 cursor: "pointer",
-                padding: "8px 16px",
+                padding: { xs: "8px 12px", md: "8px 16px" },
                 borderRadius: "50px",
-                "&:hover": {
-                  "& .play-icon": { scale: "1.1" }
-                }
+                zIndex: 3,
               }}
             >
               <Box
-                className="play-icon"
                 sx={{
                   width: 44,
                   height: 44,
@@ -200,8 +207,8 @@ const HomeHeroSection = () => {
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
-                  transition: "all 0.3s ease",
-                  backdropFilter: "blur(4px)"
+                  backdropFilter: "blur(4px)",
+                  flexShrink: 0,
                 }}
               >
                 <Box
@@ -211,11 +218,12 @@ const HomeHeroSection = () => {
                     borderTop: "8px solid transparent",
                     borderBottom: "8px solid transparent",
                     borderLeft: `12px solid ${Colors.WHITE}`,
-                    ml: "3px"
+                    ml: "3px",
                   }}
                 />
               </Box>
-              <Box>
+
+              <Box sx={{ display: { xs: "none", sm: "block" } }}>
                 <Typography
                   sx={{
                     fontFamily: ibmPlexSans.style.fontFamily,
@@ -227,6 +235,7 @@ const HomeHeroSection = () => {
                 >
                   {hero.watchLabel}
                 </Typography>
+
                 <Typography
                   sx={{
                     fontFamily: ibmPlexSans.style.fontFamily,
@@ -240,18 +249,16 @@ const HomeHeroSection = () => {
               </Box>
             </Box>
 
-            {/* Bottom Label Overlay */}
+            {/* IMAGE LABEL */}
             <Box
               sx={{
                 position: "absolute",
                 bottom: 0,
                 left: 0,
                 backgroundColor: Colors.WHITE,
-                p: "14px 28px",
+                p: { xs: "10px 16px", md: "14px 28px" },
                 borderBottom: `4px solid ${Colors.SECONDARY}`,
-                display: "inline-block",
-                width: "75% ",
-                margin: "0",
+                width: { xs: "90%", md: "75%" },
                 borderRadius: "4px",
               }}
             >
@@ -259,7 +266,7 @@ const HomeHeroSection = () => {
                 sx={{
                   fontFamily: ibmPlexSans.style.fontFamily,
                   fontWeight: 700,
-                  fontSize: "14px",
+                  fontSize: { xs: "12px", md: "14px" },
                   color: Colors.BLACK,
                 }}
               >
@@ -269,13 +276,39 @@ const HomeHeroSection = () => {
           </Box>
         </Stack>
 
-        {/* About Button + Description Row - Moved below for better width */}
+        {/* ABOUT SECTION */}
         <Stack
           direction={{ xs: "column", lg: "row" }}
-          spacing={21} 
-          alignItems={{ xs: "flex-start", lg: "center" }}
-          sx={{ mt: 12 }}
+          spacing={{ xs: 2, lg: 8 }}
+          alignItems={{ xs: "stretch", lg: "center" }}
+          justifyContent="space-between"
+          sx={{
+            mt: { xs: 3, md: 12 },
+            width: "100%",
+          }}
         >
+          {/* DESCRIPTION */}
+          <Typography
+            sx={{
+              fontFamily: ibmPlexSans.style.fontFamily,
+              fontSize: { xs: "16px", md: "20px" },
+              color: Colors.BLACK,
+              lineHeight: 1.6,
+              textAlign: { xs: "left", lg: "justify" },
+              maxWidth: { lg: "950px" },
+              order: { xs: 1, lg: 2 },
+              flex: 1,
+              "& span": {
+                color: Colors.SECONDARY,
+                fontWeight: 700,
+              },
+            }}
+          >
+            <span>Top Young Innovators</span>{" "}
+            {hero.description2.replace("Top Young Innovators ", "")}
+          </Typography>
+
+          {/* ABOUT BUTTON */}
           <Button
             component={Link}
             href={hero.cta2Href}
@@ -284,42 +317,46 @@ const HomeHeroSection = () => {
             sx={{
               height: 48,
               borderRadius: "50px",
-              px: 4,
+              px: { xs: 3, md: 4 },
               border: `1px solid ${Colors.SECONDARY}`,
               color: Colors.SECONDARY,
               fontFamily: poppins.style.fontFamily,
               fontWeight: 600,
-              fontSize: "18px",
+              fontSize: { xs: "16px", md: "18px" },
               textTransform: "none",
               backgroundColor: "transparent",
-              minWidth: "110px",
+
+            width: {
+  xs: "100%",
+  sm: "fit-content",
+},
+
+alignSelf: {
+  xs: "stretch",
+  sm: "flex-start",
+},
+
+              order: { xs: 2, lg: 1 },
+
+              mt: {
+                xs: 4,
+                md: 0,
+              },
+
               "&:hover": {
                 backgroundColor: "rgba(227, 24, 55, 0.05)",
-                borderColor: Colors.SECONDARY
+                borderColor: Colors.SECONDARY,
               },
             }}
           >
             {hero.cta2Text}
           </Button>
-
-          <Typography
-            sx={{
-              fontFamily: ibmPlexSans.style.fontFamily,
-              fontSize: "20px",
-              color: Colors.BLACK,
-              lineHeight: 1.6,
-              maxWidth: "1000px",
-              textAlign: "justify",
-              "& span": { color: Colors.SECONDARY, fontWeight: 700 }
-            }}
-          >
-            <span>Top Young Innovators</span> {hero.description2.replace("Top Young Innovators ", "")}
-          </Typography>
         </Stack>
 
+        {/* BOTTOM LINE */}
         <Box
           sx={{
-            mt: 8,
+            mt: { xs: 5, md: 8 },
             width: "100%",
             height: "1.5px",
             backgroundColor: "rgba(0, 0, 0, 0.1)",

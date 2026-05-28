@@ -1,75 +1,106 @@
 "use client";
+
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { Box, Container, Stack, Typography, Button, Grid } from "@mui/material";
+import { Box, Container, Typography, Button, Grid } from "@mui/material";
 import { ArrowUpRight } from "lucide-react";
+
 import { Colors, CONSTANTS } from "@/utils/enum";
 import { poppins, ibmPlexSans } from "@/utils/fonts";
 import { WEBSITE_DATA } from "@/utils/website";
-import { ASSETS } from "@/utils/assets";
 import SparkleLabel from "@/components/widgets/common/SparkleLabel";
+
 const { cta } = WEBSITE_DATA.challenge;
+
 const ChallengeCtaSection = () => {
   return (
-    <Box 
-      sx={{ 
-        py: { xs: 8, md: 0 }, 
+    <Box
+      sx={{
+        py: { xs: 0, md: 0 },
         background: "linear-gradient(90deg, #D0DDF7 0%, #FFFFFF 100%)",
         position: "relative",
-        overflow: "visible",
-        height: { md: 430 },
+        overflow: { xs: "hidden", md: "visible" },
+        height: { xs: "auto", md: 430 },
         display: "flex",
-        alignItems: "center"
+        alignItems: "center",
       }}
     >
-      <Container maxWidth={false} sx={{ maxWidth: CONSTANTS.MAX_WIDTH }}>
-        <Grid container spacing={{ xs: 6, md: 8 }} alignItems="center">
-          {/* Left Side - New Step Image (Aligned flush) */}
-          <Grid size={{ xs: 12, md: 6 }} sx={{ position: "relative", alignSelf: "stretch", zIndex: 2 }}>
+      <Container
+        maxWidth={false}
+        sx={{
+          maxWidth: CONSTANTS.MAX_WIDTH,
+          px: { xs: 2, sm: 3, md: 4 },
+        }}
+      >
+        <Grid
+          container
+          spacing={{ xs: 4, md: 8 }}
+          alignItems="center"
+        >
+          <Grid
+            size={{ xs: 12, md: 6 }}
+            sx={{
+              position: "relative",
+              alignSelf: "stretch",
+              zIndex: 2,
+              order: { xs: 2, md: 1 },
+            }}
+          >
             <Box
               sx={{
                 position: "relative",
                 width: "100%",
-                height: 430,
+                height: { xs: 200, sm: 380, md: 430 },
                 display: "flex",
                 alignItems: "flex-end",
                 backgroundColor: "transparent",
               }}
             >
-              <Image 
-                src={cta.image} 
-                alt="Join the challenge" 
-                fill 
-                style={{ 
-                  objectFit: "contain", 
-                  objectPosition: "bottom left",
-                }} 
+              <Image
+                src={cta.image}
+                alt="Join the challenge"
+                fill
+                style={{
+                  objectFit: "contain",
+                  objectPosition: "bottom center",
+                }}
               />
             </Box>
           </Grid>
 
-          {/* Right Side - Content */}
-          <Grid size={{ xs: 12, md: 6 }}>
-            <Box sx={{ py: { xs: 4, md: 0 } }}>
-              <Box sx={{ mb: 2 }}>
-                <SparkleLabel 
-                  text={cta.sparkle} 
-                  sparklePosition="both" 
-                  type="diamond" 
+          <Grid size={{ xs: 12, md: 6 }} sx={{ order: { xs: 1, md: 2 } }}>
+            <Box
+              sx={{
+                py: { xs: 2, md: 0 },
+                textAlign: { xs: "center", md: "left" },
+              }}
+            >
+              <Box
+                sx={{
+                  mb: 2,
+                  display: "flex",
+                  justifyContent: { xs: "center", md: "flex-start" },
+                }}
+              >
+                <SparkleLabel
+                  text={cta.sparkle}
+                  sparklePosition="both"
+                  type="diamond"
                   fontSize="18px"
                 />
               </Box>
-              
+
               <Typography
                 sx={{
                   fontFamily: poppins.style.fontFamily,
                   fontWeight: 500,
-                  fontSize: { xs: "32px", md: "45px" },
+                  fontSize: { xs: "30px", sm: "36px", md: "45px" },
                   color: Colors.BLACK,
-                  lineHeight: 1.15,
+                  lineHeight: { xs: 1.25, md: 1.15 },
                   mb: 2,
-                  maxWidth: 700
+                  maxWidth: 700,
+                  mx: { xs: "auto", md: 0 },
                 }}
               >
                 {cta.title}
@@ -79,11 +110,12 @@ const ChallengeCtaSection = () => {
                 sx={{
                   fontFamily: ibmPlexSans.style.fontFamily,
                   fontWeight: 400,
-                  fontSize: { xs: "18px", md: "20px" },
+                  fontSize: { xs: "16px", md: "20px" },
                   color: Colors.TEXT_MUTED,
                   lineHeight: 1.6,
-                  mb: 5,
-                  maxWidth: 600
+                  mb: { xs: 4, md: 5 },
+                  maxWidth: 600,
+                  mx: { xs: "auto", md: 0 },
                 }}
               >
                 {cta.description}
@@ -95,17 +127,18 @@ const ChallengeCtaSection = () => {
                 variant="contained"
                 endIcon={<ArrowUpRight size={22} />}
                 sx={{
-                  height: 56,
-                  px: 6,
+                  height: { xs: 50, md: 56 },
+                  px: { xs: 3, md: 6 },
+                  width: { xs: "100%", sm: "auto" },
                   borderRadius: "50px",
                   backgroundColor: Colors.SECONDARY,
                   color: Colors.WHITE,
                   fontFamily: poppins.style.fontFamily,
                   fontWeight: 600,
-                  fontSize: "18px",
+                  fontSize: { xs: "16px", md: "18px" },
                   textTransform: "none",
                   boxShadow: "0px 10px 30px rgba(227, 24, 55, 0.2)",
-                  "&:hover": { 
+                  "&:hover": {
                     backgroundColor: "#c61530",
                     boxShadow: "0px 15px 40px rgba(227, 24, 55, 0.3)",
                   },
@@ -120,4 +153,5 @@ const ChallengeCtaSection = () => {
     </Box>
   );
 };
+
 export default ChallengeCtaSection;

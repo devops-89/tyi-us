@@ -1,7 +1,14 @@
 "use client";
 
 import React, { useState } from "react";
-import { Box, Container, Stack, Typography, IconButton, Collapse, Grid } from "@mui/material";
+import {
+  Box,
+  Container,
+  Stack,
+  Typography,
+  Collapse,
+  Grid,
+} from "@mui/material";
 import { Minus, Plus } from "lucide-react";
 
 import { Colors, CONSTANTS } from "@/utils/enum";
@@ -16,32 +23,64 @@ const ChallengeFaqSection = () => {
   const [openIndex, setOpenIndex] = useState<number>(0);
 
   return (
-    <Box sx={{ py: { xs: 8, md: 12 }, backgroundColor: Colors.WHITE }}>
-      <Container maxWidth={false} sx={{ maxWidth: CONSTANTS.MAX_WIDTH }}>
-        <Grid container spacing={{ xs: 6, md: 10 }} alignItems="flex-start">
-          {/* Left Column - Header Info */}
+    <Box
+      sx={{
+        py: { xs: 6, md: 12 },
+        backgroundColor: Colors.WHITE,
+      }}
+    >
+      <Container
+        maxWidth={false}
+        sx={{
+          maxWidth: CONSTANTS.MAX_WIDTH,
+          px: { xs: 2, sm: 3, md: 4 },
+        }}
+      >
+        <Grid
+          container
+          spacing={{ xs: 5, md: 10 }}
+          alignItems="flex-start"
+        >
+          {/* Left Column */}
           <Grid size={{ xs: 12, md: 5 }}>
-            <Box sx={{ position: "sticky", top: 100 }}>
-              <Box sx={{ mb: 2 }}>
-                <SparkleLabel 
-                  text={faq.sparkle} 
-                  sparklePosition="both" 
-                  type="flower" 
+            <Box
+              sx={{
+                position: { xs: "relative", md: "sticky" },
+                top: { md: 100 },
+                textAlign: { xs: "center", md: "left" },
+              }}
+            >
+              <Box
+                sx={{
+                  mb: 2,
+                  display: "flex",
+                  justifyContent: {
+                    xs: "center",
+                    md: "flex-start",
+                  },
+                }}
+              >
+                <SparkleLabel
+                  text={faq.sparkle}
+                  sparklePosition="both"
+                  type="flower"
                   fontSize="18px"
                 />
               </Box>
+
               <Typography
                 sx={{
                   fontFamily: poppins.style.fontFamily,
                   fontWeight: 500,
-                  fontSize: { xs: "32px", md: "45px" },
+                  fontSize: { xs: "30px", sm: "36px", md: "45px" },
                   color: Colors.BLACK,
-                  lineHeight: 1.2,
+                  lineHeight: { xs: 1.25, md: 1.2 },
                   mb: 2,
                 }}
               >
                 {faq.title}
               </Typography>
+
               <Typography
                 sx={{
                   fontFamily: ibmPlexSans.style.fontFamily,
@@ -49,6 +88,8 @@ const ChallengeFaqSection = () => {
                   fontWeight: 400,
                   color: Colors.TEXT_MUTED,
                   lineHeight: 1.6,
+                  maxWidth: { xs: "100%", md: 520 },
+                  mx: { xs: "auto", md: 0 },
                 }}
               >
                 {faq.description}
@@ -56,72 +97,115 @@ const ChallengeFaqSection = () => {
             </Box>
           </Grid>
 
-          {/* Right Column - Accordions */}
+          {/* Right Column */}
           <Grid size={{ xs: 12, md: 7 }}>
-            <Stack spacing={0} sx={{ mt: { md: -1.5 } }}>
+            <Stack spacing={0} sx={{ mt: { xs: 0, md: -1.5 } }}>
               {faqItems.items.map((item, idx) => {
                 const isOpen = openIndex === idx;
+
                 return (
-                  <Box 
-                    key={idx} 
-                    sx={{ 
+                  <Box
+                    key={idx}
+                    sx={{
                       borderBottom: "1px solid #E0E0E0",
-                      "&::first-of-type": {
-                        // Optional: top border for the first item
-                      }
                     }}
                   >
-                    <Stack 
-                      direction="row" 
-                      alignItems="center" 
-                      justifyContent="space-between" 
-                      onClick={() => setOpenIndex(isOpen ? -1 : idx)}
-                      sx={{ 
-                        py: { xs: 3, md: 3.5 }, 
+                    <Stack
+                      direction="row"
+                      alignItems="center"
+                      justifyContent="space-between"
+                      onClick={() =>
+                        setOpenIndex(isOpen ? -1 : idx)
+                      }
+                      sx={{
+                        py: { xs: 2.5, md: 3.5 },
                         cursor: "pointer",
-                        "&:hover": { 
+                        gap: 2,
+                        "&:hover": {
                           color: Colors.SECONDARY,
-                          "& .faq-icon": { color: Colors.SECONDARY }
+                          "& .faq-icon": {
+                            color: Colors.SECONDARY,
+                          },
                         },
-                        transition: "all 0.2s ease-in-out"
+                        transition: "all 0.2s ease-in-out",
                       }}
                     >
                       <Typography
                         sx={{
                           fontFamily: poppins.style.fontFamily,
                           fontWeight: 500,
-                          fontSize: { xs: "18px", md: "22px" },
+                          fontSize: {
+                            xs: "17px",
+                            sm: "18px",
+                            md: "22px",
+                          },
                           color: Colors.BLACK,
+                          lineHeight: { xs: 1.5, md: 1.4 },
+                          flex: 1,
                         }}
                       >
                         {idx + 1}. {item.question}
                       </Typography>
-                      <Box 
+
+                      <Box
                         className="faq-icon"
-                        sx={{ 
+                        sx={{
                           color: Colors.BLACK,
-                          ml: 2,
-                          transition: "color 0.2s"
+                          flexShrink: 0,
+                          display: "flex",
+                          alignItems: "center",
+                          justifyContent: "center",
+                          transition: "color 0.2s",
                         }}
                       >
-                        {isOpen ? <Minus size={22} strokeWidth={2.5} /> : <Plus size={22} strokeWidth={2.5} />}
+                        {isOpen ? (
+                          <Minus
+                            size={20}
+                            strokeWidth={2.5}
+                          />
+                        ) : (
+                          <Plus
+                            size={20}
+                            strokeWidth={2.5}
+                          />
+                        )}
                       </Box>
                     </Stack>
 
-                    <Collapse in={isOpen} timeout="auto" unmountOnExit>
+                    <Collapse
+                      in={isOpen}
+                      timeout="auto"
+                      unmountOnExit
+                    >
                       <Typography
                         sx={{
-                          pb: 3,
-                          fontFamily: ibmPlexSans.style.fontFamily,
+                          pb: { xs: 2.5, md: 3 },
+                          pr: { xs: 1, md: 0 },
+                          fontFamily:
+                            ibmPlexSans.style.fontFamily,
                           fontWeight: 400,
-                          fontSize: "20px",
+                          fontSize: {
+                            xs: "15px",
+                            sm: "16px",
+                            md: "20px",
+                          },
                           color: Colors.TEXT_MUTED,
-                          lineHeight: 1.6,
-                          maxWidth: "95%",
-                          marginLeft: { xs: "24px", md: "28px" } // Indent answer from number
+                          lineHeight: {
+                            xs: 1.7,
+                            md: 1.6,
+                          },
+                          maxWidth: {
+                            xs: "100%",
+                            md: "95%",
+                          },
+                          marginLeft: {
+                            xs: "18px",
+                            md: "28px",
+                          },
                         }}
                       >
-                        {item.answer || "Information coming soon."}
+                        {item.answer ||
+                          "Information coming soon."}
                       </Typography>
                     </Collapse>
                   </Box>
@@ -136,4 +220,3 @@ const ChallengeFaqSection = () => {
 };
 
 export default ChallengeFaqSection;
-
