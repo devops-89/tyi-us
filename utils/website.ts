@@ -2,6 +2,15 @@ import React from "react";
 import { IWebsiteData } from "./types";
 import { ASSETS } from "./assets";
 import { Colors } from "./enum";
+import {
+  Medal,
+  GraduationCap,
+  Rocket,
+  
+  Lock,
+  Target,
+} from "lucide-react";
+import {Users,Lightbulb,HelpCircle,MessageSquare,FileText,Puzzle,ClipboardList,Microscope,} from "lucide-react";
 import { Crown, DollarSign, Trophy, Award, Facebook, Instagram, Linkedin, Twitter, Youtube, Mail, Phone, MapPin } from "lucide-react";
 
 export const WEBSITE_DATA: IWebsiteData = {
@@ -499,4 +508,218 @@ To help participants bring their ideas to life, we’ve partnered with one of th
       termsOfUse: "Terms of Use",
     },
   },
+
+innovation:{
+innovationCampData: {
+  sparkle: "Sponsored By DiscoverSTEM Foundation",
+  headline: "Free\nInnovation Camp",
+  description:
+    "Enrollment For The FREE Innovation Camp 2025 Is Closed. Stay Tuned For Updates On The Innovation Camp 2026.",
+  buttonText: "See Event Recap",
+
+  sliderImages: [
+    ASSETS.IMAGES.HERO1,
+    ASSETS.IMAGES.HERO2,
+    ASSETS.IMAGES.HERO3,
+    ASSETS.IMAGES.HERO4,
+    
+  ],
+
+  paragraph1:
+    `Innovation Is Not An Easy Task. We Understand That As A Young Student, You Might Need Some Support To Come Up With An Idea Or Already Have An Idea That Needs Refinement Before Submitting It To The Competition. One Of The Objectives Of This Competition Is To Foster A Culture Of Innovation, Creativity And Problem-Solving Among Young Kids. We Have Partnered With DiscoverSTEM, A US National Award Winning Organization To Conduct An Innovation Camp For The Participants Of "America's Top Young Innovators"`,
+
+  paragraph2:
+    "This Guided Innovation Camp Is Designed To Equip Students With The Mindset And Skills Needed To Innovate. Through Interactive Session Led By Experts From DiscoverSTEM Will Learn How To Identify The Real-World Problem, Analyze These Problems Using Structured Thinking Patterns, Learn Idea Generation And Brainstorming Techniques, Perform Root-Cause Analysis And Gap Analysis To Be Able To Innovate A Novel And Patentable Solution. Whether A Student Is Starting Fresh Or Looking To Strengthen An Existing Idea, The Camp Provides A Clear, Supportive Path To Turn Creative Thinking Into Competition-Ready Innovation.",
+
+  note:
+    "This Innovation Camp Will Be Offered Online. If You Live In The Dallas Fort Worth (DFW) Area, You Can Attend The Innovation Camp In Person, Subject To Seat Availability.",
+},
+
+InnovationInfoCard:[
+  {
+    label: "FEE",
+    title: "FREE",
+    description:
+      "Innovation Camp is FREE to join, and is sponsored by DiscoverSTEM Foundation.",
+  },
+  {
+    label: "TIME COMMITMENT",
+    title: "1 Hour / day",
+    description:
+      "• 5 days (Monday – Friday)\n• Total camp duration = 10 hours\n• Online mode\n• In-person (if you live in DFW)",
+  },
+  {
+    label: "ELIGIBILITY",
+    title: "10–22 years",
+    description:
+      "Kids between 10–22 years of age are accepted",
+  },
+  {
+    label: "ENROLLMENT DEADLINE",
+    title: "Sep 30, 2026",
+    description:
+      "Enrollment for the FREE Innovation Camp 2025 is closed. Stay tuned for updates on the Innovation Camp 2026.",
+  },
+],
+
+ModuleItem:[
+  {
+    title: "Introduction & Team Building",
+    desc: "Build collaborative foundations and learn to work effectively in innovation teams.",
+    level: "BEGINNER",
+    duration: "2 weeks",
+    Icon: Users,
+  },
+  {
+    title: "Introduction to Innovation",
+    desc: "Discover the principles, mindset, and processes that drive innovative thinking.",
+    level: "BEGINNER",
+    duration: "3 weeks",
+    Icon: Lightbulb,
+  },
+  {
+    title: "How to Think Like an Innovator",
+    desc: "Master asking the right questions and finding meaningful answers.",
+    level: "INTERMEDIATE",
+    duration: "4 weeks",
+    Icon: HelpCircle,
+  },
+  {
+    title: "Brainstorming & Persuasion",
+    desc: "Generate breakthrough ideas and communicate them with clarity and confidence.",
+    level: "INTERMEDIATE",
+    duration: "3 weeks",
+    Icon: MessageSquare,
+  },
+  {
+    title: "Introduction to Patents",
+    desc: "Learn how to protect intellectual property and navigate the patent landscape.",
+    level: "INTERMEDIATE",
+    duration: "2 weeks",
+    Icon: FileText,
+  },
+  {
+    title: "Research & Problem Dividing",
+    desc: "Break down complex problems into manageable components for effective research.",
+    level: "ADVANCED",
+    duration: "4 weeks",
+    Icon: Puzzle,
+  },
+  {
+    title: "Establishing Research Statements",
+    desc: "Craft precise problem statements that drive focused, impactful research.",
+    level: "ADVANCED",
+    duration: "3 weeks",
+    Icon: ClipboardList,
+  },
+  {
+    title: "The Logic of Scientific Discovery",
+    desc: "Apply scientific reasoning to validate hypotheses and uncover new insights.",
+    level: "ADVANCED",
+    duration: "5 weeks",
+    Icon: Microscope,
+  },
+],
+
+LearningOutcomesData :{
+  sparkle: "Develop Skills",
+
+  title: "Learning Outcomes",
+
+  description:
+    "You Will Develop Skills Like Critical Thinking, Logical Analysis, Reasoning, Different Types Of Brainstorming, Experiment Designing To Test A Hypothesis, And Writing A Problem Statement For Research. You Will Also Learn To Analyze Problems, Generate Ideas, And Evaluate Ideas To Find The Best One.",
+},
+
+},
+
+patent:{
+
+PatentIdea:{
+
+  sparkle: "Get A United States Patents",
+
+  title: "Turn Your Idea Into A US\nPatent",
+
+  subtitle:
+    "We Start With Your Passion. We End With A Patent.",
+
+  image: ASSETS.IMAGES.HERO1,
+
+  paragraph1Prefix: "Has It Ever Happened To You",
+
+  paragraph1:
+    "– You Had A Powerful Idea, Something Truly Game-Changing, And Months Later, You Find Someone Else Built It, Launched It, And Is Making Money From It.",
+
+  paragraph2:
+    "You’re Not Alone. Everyone Has A Great Idea At Some Point In Life, But Most Don’t Know How To Proceed With It, What To Do Next To Protect It. We Help Turn Your Rough Concepts Into Patentable Inventions. Our Team Of Innovation Mentors, Technology Experts And Elite U.S. Patent Attorneys Guides You From Idea To Protection, So Your Creativity Gets The Credit And Potential It Deserves.",
+
+  footerText:
+    "Don’t Let Your Idea Slip Away. Protect It. Patent It. Profit From It.",
+
+},
+
+PatentMatterCard:[
+  {
+    title: "Elite Global Recognition",
+    desc: "Only 0.2% people in the world hold a patent. Earning one sets you apart and places you among a global elite of real-world innovators.",
+    Icon: Medal,
+  },
+  {
+    title: "Impactful College Applications",
+    desc: "A patent is a testimony of your creativity and problem solving skills. It is a powerful extracurricular to add to your profile.",
+    Icon: GraduationCap,
+  },
+  {
+    title: "Turn Ideas into Businesses",
+    desc: "Your idea could be the next big startup. With a patent, you can build your own product, partner with companies, or attract investors.",
+    Icon: Rocket,
+  },
+  {
+    title: "Earn While You Learn",
+    desc: "Patents can generate passive income by licensing your invention to companies. Yes, even while you’re still in school.",
+    Icon: DollarSign,
+  },
+  {
+    title: "Protect What You Create",
+    desc: "Without a patent, anyone can copy your idea. With one, your invention is legally protected and truly yours.",
+    Icon: Lock,
+  },
+  {
+    title: "Gain Recognition & Make an Impact",
+    desc: "Young inventors with patents get featured in media, win awards, and become role models for innovation and creativity.",
+    Icon: Target,
+  },
+],
+
+BigData:{
+  sparkle: "Which One Are You",
+
+  title: "Who Is This For",
+
+  description: "Anyone With A Spark Of Curiosity Or A Big Idea",
+
+  items: [
+    {
+      title1: "STUDENTS WITH",
+      title2: "IDEAS",
+    },
+    {
+      title1: "PARENTS GUIDING",
+      title2: "YOUNG INNOVATORS",
+    },
+    {
+      title1: "HOBBYISTS AND",
+      title2: "TINKERERS",
+    },
+  ],
+},
+
+
+}
+
+
+
 };
+
+
+

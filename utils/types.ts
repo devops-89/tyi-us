@@ -306,4 +306,79 @@ export interface IWebsiteData {
       items: { id: number | string; title: string; description: string; icon: string }[];
     };
   };
+
+  innovation: {
+  innovationCampData: {
+    sparkle: string;
+    headline: string;
+    description: string;
+    buttonText: string;
+
+    sliderImages: string[];
+
+    paragraph1: string;
+    paragraph2: string;
+
+    note: string;
+  };
+
+  InnovationInfoCard: {
+  label: string;
+  title: string;
+  description: string;
+}[];
+
+ModuleItem :{
+  title: string;
+  desc: string;
+  level: string;
+  duration: string;
+  Icon: any;
+}[];
+
+LearningOutcomesData: {
+  sparkle: string;
+  title: string;
+  description: string;
+},
+
 }
+patent:{
+
+PatentIdea:{
+  sparkle: string;
+  title: string;
+  subtitle: string;
+  image: any;
+
+  paragraph1Prefix: string;
+  paragraph1: string;
+
+  paragraph2: string;
+
+  footerText: string;
+ 
+},
+
+PatentMatterCard: {
+  title: string;
+  desc: string;
+  Icon: any;
+}[];
+
+BigData: {
+  sparkle: string;
+  title: string;
+  description: string;
+
+  items: {
+    title1: string;
+    title2: string;
+  }[];
+},
+
+
+}
+
+}
+
