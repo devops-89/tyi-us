@@ -15,7 +15,7 @@ const { rules: rulesData } = WEBSITE_DATA.challenge;
 
 const RulesSection = () => {
   return (
-    <Box sx={{ py: { xs: 6, md: 12 }, backgroundColor: Colors.WHITE }}>
+    <Box sx={{ py: { xs: 4, md: 12 }, backgroundColor: Colors.WHITE }}>
       <Container
         maxWidth={false}
         sx={{
@@ -44,7 +44,7 @@ const RulesSection = () => {
               sx={{
                 fontFamily: poppins.style.fontFamily,
                 fontWeight: 500,
-                fontSize: { xs: "30px", sm: "36px", md: "45px" },
+                fontSize: { xs: "24px", sm: "30px", md: "45px" },
                 color: Colors.BLACK,
                 lineHeight: { xs: 1.2, md: 1.1 },
                 mb: 1.5,

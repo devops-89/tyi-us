@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import {
   Box,
@@ -12,45 +12,27 @@ import {
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 import { COLORS, CONSTANTS } from "@/utils/enum";
-import { poppins, ibmPlexSans } from "@/utils/fonts";
+import { poppins } from "@/utils/fonts";
 import SparkleLabel from "@/components/widgets/common/SparkleLabel";
-import { ASSETS } from "@/utils/assets";
+import { WEBSITE_DATA } from "@/utils/website";
 
-const successStories = [
-  {
-    image: ASSETS.IMAGES.HERO2,
-    title: "Madhalasa Iyer: From Teen Researcher to Global Problem Solver",
-    description:
-      "From winning global writing awards to publishing scientific research, Madhalasa Iyer is proof that compassion and curiosity can fuel real-world impact",
-    points: [
-      "TEDx and EarthX Speaker",
-      "Accepted to Princeton University (Ivy League)",
-      "Author of Award-Winning Children's Book Motley",
-      "2 US Patents Granted",
-    ],
-  },
-  {
-    image: ASSETS.IMAGES.HERO3,
-    title: "Madhalasa Iyer: From Teen Researcher to Global Problem Solver",
-    description:
-      "From winning global writing awards to publishing scientific research, Madhalasa Iyer is proof that compassion and curiosity can fuel real-world impact",
-    points: [
-      "TEDx and EarthX Speaker",
-      "Accepted to Princeton University (Ivy League)",
-      "Author of Award-Winning Children's Book Motley",
-      "2 US Patents Granted",
-    ],
-  },
-];
+const CARD_GAP = 20;
 
 const SuccessStoriesSection = () => {
+  const successStoriesData = WEBSITE_DATA.patent.SuccessStoriesData;
+  const stories = successStoriesData.stories;
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  const handlePrev = () => {
+    setActiveIndex((prev) => (prev === 0 ? stories.length - 1 : prev - 1));
+  };
+
+  const handleNext = () => {
+    setActiveIndex((prev) => (prev === stories.length - 1 ? 0 : prev + 1));
+  };
+
   return (
-    <Box
-      sx={{
-        backgroundColor: COLORS.WHITE,
-        py: { xs: 6, md: 10 },
-      }}
-    >
+    <Box sx={{ backgroundColor: COLORS.WHITE, py: { xs: 4, md: 10 } }}>
       <Container
         maxWidth={false}
         sx={{
@@ -59,170 +41,235 @@ const SuccessStoriesSection = () => {
         }}
       >
         <Stack
-          direction="row"
+          direction={{ xs: "column", md: "row" }}
           justifyContent="space-between"
-          alignItems="center"
-          sx={{ mb: { xs: 4, md: 6 } }}
+          alignItems={{ xs: "center", md: "center" }}
+          spacing={3}
+          sx={{
+            mb: { xs: 4, md: 6 },
+            textAlign: { xs: "center", md: "left" },
+          }}
         >
           <Box>
-            <SparkleLabel
-              text="Real Stories"
-              fontSize={14}
-              sparklePosition="both"
-              color={COLORS.PRIMARY}
-            />
+            <Box
+              sx={{
+                display: "flex",
+                justifyContent: { xs: "center", md: "flex-start" },
+                mb: 2,
+              }}
+            >
+              <SparkleLabel
+                text={successStoriesData.sparkle}
+                fontSize={18}
+                sparkleSize={35}
+                type="blue-star"
+                sparklePosition="both"
+                color={COLORS.PRIMARY}
+              />
+            </Box>
 
             <Typography
               sx={{
-                mt: 1,
-                fontFamily: poppins.style.fontFamily,
-                fontWeight: 500,
-                fontSize: { xs: "30px", md: "48px" },
+                fontFamily: "PolySans Trial, sans-serif",
+                fontWeight: 400,
+              fontSize: { xs: "24px", sm: "30px", md: "45px" },
+                lineHeight: { xs: "38px", sm: "42px", md: "48px" },
+                letterSpacing: "-0.01em",
+                textTransform: "capitalize",
                 color: COLORS.BLACK,
-                lineHeight: 1.2,
               }}
             >
-              Success Stories
+              {successStoriesData.title}
             </Typography>
           </Box>
 
           <Stack
             direction="row"
-            spacing={1}
+            spacing={1.5}
             sx={{
-              display: { xs: "none", lg: "flex" },
+              display: { xs: "none", md: "flex" },
             }}
           >
             <IconButton
+              onClick={handlePrev}
               sx={{
-                width: 40,
-                height: 40,
+                width: 48,
+                height: 48,
                 border: "1px solid #E5E5E5",
+                backgroundColor: COLORS.WHITE,
+                "&:hover": { backgroundColor: "#F6F6F6" },
               }}
             >
-              <ChevronLeft size={18} />
+              <ChevronLeft size={20} />
             </IconButton>
 
             <IconButton
+              onClick={handleNext}
               sx={{
-                width: 40,
-                height: 40,
+                width: 48,
+                height: 48,
                 border: "1px solid #E5E5E5",
+                backgroundColor: COLORS.WHITE,
+                "&:hover": { backgroundColor: "#F6F6F6" },
               }}
             >
-              <ChevronRight size={18} />
+              <ChevronRight size={20} />
             </IconButton>
           </Stack>
         </Stack>
 
         <Box
           sx={{
-            display: "grid",
-            gridTemplateColumns: "1fr",
-            gap: { xs: 2, md: 3 },
-
-            "@media (min-width:768px)": {
-              gridTemplateColumns: "repeat(2, 1fr)",
-            },
-
-            "@media (min-width:1200px)": {
-              gridTemplateColumns: "repeat(4, 1fr)",
-            },
+            width: "100%",
+            overflow: "hidden",
+            position: "relative",
           }}
         >
-          {successStories.map((story, index) => (
-            <Box
-              key={index}
-              sx={{
-                width: "100%",
-                backgroundColor: "#F6F6F6",
-                borderRadius: "14px",
-                overflow: "hidden",
-              }}
-            >
+          <Box
+            sx={{
+              display: "flex",
+              gap: `${CARD_GAP}px`,
+              transition: "transform 0.45s ease",
+              transform: {
+                xs: `translateX(calc(-${activeIndex} * (100% + ${CARD_GAP}px)))`,
+                md: `translateX(calc(-${activeIndex} * ((100% - ${CARD_GAP}px) / 2 + ${CARD_GAP}px)))`,
+              },
+            }}
+          >
+            {stories.map((story, index) => (
               <Box
+                key={index}
                 sx={{
-                  position: "relative",
-                  width: "100%",
-                  height: {
-                    xs: 220,
-                    sm: 260,
-                    md: 280,
+                  width: {
+                    xs: "100%",
+                    md: `calc((100% - ${CARD_GAP}px) / 2)`,
                   },
+                  minWidth: {
+                    xs: "100%",
+                    md: `calc((100% - ${CARD_GAP}px) / 2)`,
+                  },
+                  minHeight: { xs: "auto", md: 543 },
+                  backgroundColor: COLORS.WHITE,
+                  borderRadius: "16px",
+                  overflow: "hidden",
+                  border: "0.8px solid #0000001A",
+                  boxShadow:
+                    "0px 1px 2px -1px #0000001A, 0px 1px 3px 0px #0000001A",
+                  display: "flex",
+                  flexDirection: "column",
                 }}
               >
-                <Image
-                  src={story.image}
-                  alt={story.title}
-                  fill
-                  style={{
-                    objectFit: "cover",
-                  }}
-                />
-              </Box>
-
-              <Box
-                sx={{
-                  p: {
-                    xs: 2.5,
-                    md: 3,
-                  },
-                }}
-              >
-                <Typography
+                <Box
                   sx={{
-                    fontFamily: poppins.style.fontFamily,
-                    fontWeight: 700,
-                    fontSize: {
-                      xs: "18px",
-                      md: "20px",
-                    },
-                    color: COLORS.BLACK,
-                    lineHeight: 1.35,
-                    mb: 1,
+                    position: "relative",
+                    width: "100%",
+                    height: { xs: 240, sm: 300, md: 315 },
+                    overflow: "hidden",
                   }}
                 >
-                  {story.title}
-                </Typography>
+                  <Image
+                    src={story.image}
+                    alt={story.title}
+                    fill
+                    style={{ objectFit: "cover" }}
+                  />
 
-                <Typography
+                  <IconButton
+                    onClick={handlePrev}
+                    sx={{
+                      display: { xs: "flex", md: "none" },
+                      position: "absolute",
+                      left: 12,
+                      top: "50%",
+                      transform: "translateY(-50%)",
+                      zIndex: 2,
+                      width: 40,
+                      height: 40,
+                      backgroundColor: COLORS.WHITE,
+                      border: "1px solid #E5E5E5",
+                      "&:hover": { backgroundColor: "#F6F6F6" },
+                    }}
+                  >
+                    <ChevronLeft size={20} />
+                  </IconButton>
+
+                  <IconButton
+                    onClick={handleNext}
+                    sx={{
+                      display: { xs: "flex", md: "none" },
+                      position: "absolute",
+                      right: 12,
+                      top: "50%",
+                      transform: "translateY(-50%)",
+                      zIndex: 2,
+                      width: 40,
+                      height: 40,
+                      backgroundColor: COLORS.WHITE,
+                      border: "1px solid #E5E5E5",
+                      "&:hover": { backgroundColor: "#F6F6F6" },
+                    }}
+                  >
+                    <ChevronRight size={20} />
+                  </IconButton>
+                </Box>
+
+                <Box
                   sx={{
-                    fontFamily: ibmPlexSans.style.fontFamily,
-                    fontSize: {
-                      xs: "14px",
-                      md: "15px",
-                    },
-                    color: COLORS.TEXT_MUTED,
-                    lineHeight: 1.7,
-                    mb: 3,
+                    p: { xs: 2.5, md: 3 },
+                    flex: 1,
                   }}
                 >
-                  {story.description}
-                </Typography>
+                  <Typography
+                    sx={{
+                      fontFamily: poppins.style.fontFamily,
+                      fontWeight: 600,
+                      fontSize: "20px",
+                      lineHeight: "23.4px",
+                      letterSpacing: "-0.45px",
+                      color: COLORS.BLACK,
+                      mb: 2,
+                    }}
+                  >
+                    {story.title}
+                  </Typography>
 
-                <Box component="ul" sx={{ pl: 2.5, m: 0 }}>
-                  {story.points.map((point, idx) => (
-                    <Typography
-                      key={idx}
-                      component="li"
-                      sx={{
-                        fontFamily: ibmPlexSans.style.fontFamily,
-                        fontSize: {
-                          xs: "14px",
-                          md: "15px",
-                        },
-                        fontWeight: 600,
-                        color: "#555",
-                        lineHeight: 1.8,
-                      }}
-                    >
-                      {point}
-                    </Typography>
-                  ))}
+                  <Typography
+                    sx={{
+                      fontFamily: poppins.style.fontFamily,
+                      fontWeight: 400,
+                      fontSize: "16px",
+                      lineHeight: "22.75px",
+                      letterSpacing: "0px",
+                      color: "#5C5C5C",
+                      mb: 2,
+                    }}
+                  >
+                    {story.description}
+                  </Typography>
+
+                  <Box component="ul" sx={{ pl: 2.5, m: 0 }}>
+                    {story.points.map((point, idx) => (
+                      <Typography
+                        key={idx}
+                        component="li"
+                        sx={{
+                          fontFamily: poppins.style.fontFamily,
+                          fontWeight: 600,
+                          fontSize: "16px",
+                          lineHeight: "22.75px",
+                          letterSpacing: "0px",
+                          color: "#5C5C5C",
+                          mb: 0.5,
+                        }}
+                      >
+                        {point}
+                      </Typography>
+                    ))}
+                  </Box>
                 </Box>
               </Box>
-            </Box>
-          ))}
+            ))}
+          </Box>
         </Box>
       </Container>
     </Box>

@@ -11,7 +11,7 @@ import SparkleLabel from "@/components/widgets/common/SparkleLabel";
 
 const ScaleSection = () => {
   return (
-    <Box sx={{ py: { xs: 6, sm: 8, md: 12 }, backgroundColor: COLORS.WHITE }}>
+    <Box sx={{ py: { xs: 4, sm: 8, md: 12 }, backgroundColor: COLORS.WHITE }}>
       <Container
         maxWidth={false}
         sx={{

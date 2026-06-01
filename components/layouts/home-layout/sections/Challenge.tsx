@@ -12,8 +12,8 @@ const ChallengeSection = () => {
   return (
     <Box
       sx={{
-        pt: { xs: 6, md: 10 },
-        pb: { xs: 6, md: 10 },
+        pt: { xs: 4, md: 10 },
+        pb: { xs: 4, md: 10 },
         backgroundColor: COLORS.WHITE,
       }}
     >

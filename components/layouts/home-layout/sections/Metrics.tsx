@@ -8,7 +8,7 @@ import { METRICS_DATA } from "@/public/data/insights";
 
 const MetricsSection = () => {
   return (
-    <Box sx={{ py: 8, backgroundColor: COLORS.WHITE }}>
+    <Box sx={{  py: { xs: 4, md: 8 }, backgroundColor: COLORS.WHITE }}>
       <Container maxWidth={false} sx={{ maxWidth: CONSTANTS.MAX_WIDTH }}>
         <Grid container spacing={4}>
           {METRICS_DATA.map((metric, index) => (

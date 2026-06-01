@@ -16,7 +16,7 @@ const AboutPartnerSection = () => {
     <Box
       sx={{
         backgroundColor: Colors.WHITE,
-        py: { xs: 6, md: 12 },
+        py: { xs: 4, md: 12 },
       }}
     >
       <Container

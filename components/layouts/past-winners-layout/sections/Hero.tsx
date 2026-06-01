@@ -16,8 +16,8 @@ const PastWinnersHeroSection = () => {
   return (
     <Box
       sx={{
-        pt: { xs: 8, md: 10 },
-        pb: { xs: 8, md: 10 },
+        pt: { xs: 4,sm:6, md: 10 },
+        pb: { xs: 4,sm:6, md: 10 },
         backgroundColor: Colors.WHITE,
         position: "relative",
       }}
@@ -38,7 +38,7 @@ const PastWinnersHeroSection = () => {
               sx={{
                 fontFamily: poppins.style.fontFamily,
                 fontWeight: 700,
-                fontSize: { xs: "32px", md: "48px" },
+                fontSize: { xs: "28px", md: "48px" },
                 color: Colors.BLACK,
                 lineHeight: 1.1,
                 mb: 3,
@@ -171,7 +171,7 @@ const PastWinnersHeroSection = () => {
         </Stack>
 
         <Box
-          sx={{ mt: 10, width: "100%", height: "1px", backgroundColor: Colors.DIVIDER }}
+          sx={{ mt: {sx:4, sm:6, md:10}, width: "100%", height: "1px", backgroundColor: Colors.DIVIDER }}
         />
       </Container>
     </Box>

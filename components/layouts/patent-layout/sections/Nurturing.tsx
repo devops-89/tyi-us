@@ -1,19 +1,30 @@
 "use client";
 
-import React from "react";
-import { Box, Container, Typography } from "@mui/material";
+import React, { useState } from "react";
+import {
+  Box,
+  Container,
+  Typography,
+  Dialog,
+  IconButton,
+} from "@mui/material";
+import CloseIcon from "@mui/icons-material/Close";
 import { Play } from "lucide-react";
 
 import { COLORS, CONSTANTS } from "@/utils/enum";
-import { poppins, ibmPlexSans } from "@/utils/fonts";
+import { poppins } from "@/utils/fonts";
 import SparkleLabel from "@/components/widgets/common/SparkleLabel";
+import { WEBSITE_DATA } from "@/utils/website";
 
 const NurturingYoungInventorsSection = () => {
+  const [openVideo, setOpenVideo] = useState(false);
+  const data = WEBSITE_DATA.patent.Nurturing;
+
   return (
     <Box
       sx={{
         backgroundColor: COLORS.WHITE,
-        py: { xs: 6, md: 8 },
+        py: { xs: 4, md: 10 },
       }}
     >
       <Container
@@ -23,108 +34,206 @@ const NurturingYoungInventorsSection = () => {
           px: { xs: 2, sm: 3, md: 4 },
         }}
       >
-        <Box sx={{ mb: 1.5 }}>
-          <SparkleLabel
-            text="Nurturing"
-            fontSize={14}
-            sparklePosition="both"
-            color={COLORS.PRIMARY}
-          />
-        </Box>
-
-        <Typography
-          sx={{
-            fontFamily: poppins.style.fontFamily,
-            fontWeight: 500,
-            fontSize: { xs: "26px", md: "32px" },
-            color: COLORS.BLACK,
-            lineHeight: 1.2,
-            mb: { xs: 3, md: 4 },
-          }}
-        >
-          Nurturing Young Inventors
-        </Typography>
-
-        <Box
-          component="ul"
-          sx={{
-            pl: { xs: 2.5, md: 3 },
-            mb: { xs: 4, md: 6 },
-            maxWidth: 980,
-          }}
-        >
-          {[
-            <>
-              The <b>Only Organization</b> In The World That Nurtures Young
-              Minds To Convert Vague Ideas Into Patentable Inventions
-            </>,
-            <>
-              <b>330+</b> Students With Successful Patent Granted In 5 Years.
-            </>,
-            <>
-              Nurturing <b>1 Inventor Every 6 Days!</b>
-            </>,
-            <>
-              Team Of Elite <b>Innovation Mentors</b>, Technology Experts And
-              US Patent Attorneys
-            </>,
-            <>
-              Trusted By Parents, Recognized By The Media And Awarded By The{" "}
-              <b>US Government</b>
-            </>,
-            <>
-              Partnership With <b>DiscoverSTEM</b> – Leading Innovation,
-              Research & Entrepreneurship Organization
-            </>,
-          ].map((item, index) => (
-            <Typography
-              key={index}
-              component="li"
-              sx={{
-                fontFamily: ibmPlexSans.style.fontFamily,
-                fontSize: { xs: "14px", md: "16px" },
-                color: COLORS.TEXT_MUTED,
-                lineHeight: 1.7,
-                mb: 0.4,
-                "& b": {
-                  color: COLORS.BLACK,
-                  fontWeight: 700,
-                },
-              }}
-            >
-              {item}
-            </Typography>
-          ))}
-        </Box>
-
         <Box
           sx={{
             width: "100%",
-            maxWidth: 1050,
-            height: { xs: 240, sm: 360, md: 560 },
-            backgroundColor: COLORS.BLACK,
-            borderRadius: { xs: "16px", md: "20px" },
+            maxWidth: 1160,
             mx: "auto",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
           }}
         >
           <Box
             sx={{
-              width: { xs: 52, md: 62 },
-              height: { xs: 36, md: 44 },
-              borderRadius: "10px",
-              backgroundColor: "#FF0000",
+              textAlign: {
+                xs: "center",
+                sm: "center",
+                md: "center",
+                lg: "left",
+              },
+            }}
+          >
+            <Box
+              sx={{
+                mb: 2,
+                display: "flex",
+                justifyContent: {
+                  xs: "center",
+                  sm: "center",
+                  md: "flex-start",
+                  lg: "flex-start",
+                },
+              }}
+            >
+              <SparkleLabel
+                text={data.sparkle}
+                fontSize={18}
+                sparkleSize={35}
+               type="blue-star"
+                sparklePosition="both"
+                color={COLORS.PRIMARY}
+              />
+            </Box>
+
+            <Typography
+              sx={{
+                fontFamily: "PolySans Trial, sans-serif",
+                fontWeight: 400,
+             fontSize: { xs: "24px", sm: "30px", md: "45px" },
+                lineHeight: {
+                  xs: "38px",
+                  sm: "42px",
+                  md: "48px",
+                },
+                letterSpacing: "-0.01em",
+                textTransform: "capitalize",
+                color: COLORS.BLACK,
+                mb: { xs: 3, md: 4 },
+                textAlign: {
+                  xs: "center",
+                  sm: "center",
+                  md: "left",
+                  lg: "left",
+                },
+              }}
+            >
+              {data.title}
+            </Typography>
+          </Box>
+
+          <Box
+            component="ul"
+            sx={{
+              pl: { xs: 2.5, md: 3 },
+              mb: { xs: 5, md: 7 },
+              maxWidth: 1160,
+            }}
+          >
+            {data.items.map((item, index) => (
+              <Typography
+                key={index}
+                component="li"
+                sx={{
+                  fontFamily: poppins.style.fontFamily,
+                  fontWeight: 400,
+                  fontSize: { xs: "16px", sm: "18px", md: "20px" },
+                  lineHeight: { xs: "28px", sm: "32px", md: "35px" },
+                  letterSpacing: "-0.02em",
+                  textTransform: "capitalize",
+                  color: COLORS.TEXT_MUTED,
+                  mb: 0.6,
+                }}
+              >
+                {item.prefix}
+
+                <Box
+                  component="span"
+                  sx={{
+                    fontFamily: poppins.style.fontFamily,
+                    fontWeight: 600,
+                    fontSize: { xs: "16px", sm: "18px", md: "20px" },
+                    lineHeight: { xs: "28px", sm: "32px", md: "35px" },
+                    letterSpacing: "-0.02em",
+                    textTransform: "capitalize",
+                    color: COLORS.BLACK,
+                  }}
+                >
+                  {item.highlight}
+                </Box>
+
+                {item.suffix}
+              </Typography>
+            ))}
+          </Box>
+
+          <Box
+            onClick={() => setOpenVideo(true)}
+            sx={{
+              width: "100%",
+              maxWidth: 1160,
+              height: { xs: 230, sm: 420, md: 560, lg: 658 },
+              backgroundColor: COLORS.BLACK,
+              borderRadius: "29px",
+              mx: "auto",
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
-              color: COLORS.WHITE,
+              cursor: "pointer",
+              overflow: "hidden",
             }}
           >
-            <Play size={24} fill="white" />
+            <Box
+              sx={{
+                width: { xs: 52, md: 62 },
+                height: { xs: 36, md: 44 },
+                borderRadius: "10px",
+                backgroundColor: COLORS.SECONDARY,
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                color: COLORS.WHITE,
+              }}
+            >
+              <Play size={24} fill="white" />
+            </Box>
           </Box>
         </Box>
+
+        <Dialog
+          open={openVideo}
+          onClose={() => setOpenVideo(false)}
+          maxWidth="lg"
+          fullWidth
+          PaperProps={{
+            sx: {
+              backgroundColor: COLORS.BLACK,
+              borderRadius: "14px",
+              overflow: "hidden",
+            },
+          }}
+        >
+          <Box sx={{ position: "relative" }}>
+            <IconButton
+              onClick={() => setOpenVideo(false)}
+              sx={{
+                position: "absolute",
+                top: 8,
+                right: 8,
+                zIndex: 2,
+                backgroundColor: COLORS.WHITE,
+                color: COLORS.BLACK,
+                "&:hover": {
+                  backgroundColor: COLORS.WHITE,
+                },
+              }}
+            >
+              <CloseIcon />
+            </IconButton>
+
+            <Box
+              sx={{
+                position: "relative",
+                width: "100%",
+                paddingTop: "56.25%",
+              }}
+            >
+              {openVideo && (
+                <iframe
+                  src={data.videoUrl}
+                  title="Nurturing Young Inventors Video"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  style={{
+                    position: "absolute",
+                    top: 0,
+                    left: 0,
+                    width: "100%",
+                    height: "100%",
+                    border: 0,
+                  }}
+                />
+              )}
+            </Box>
+          </Box>
+        </Dialog>
       </Container>
     </Box>
   );

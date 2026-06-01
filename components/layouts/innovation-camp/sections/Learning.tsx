@@ -4,7 +4,7 @@ import React from "react";
 import { Box, Container, Typography } from "@mui/material";
 
 import { COLORS, CONSTANTS } from "@/utils/enum";
-import { poppins, ibmPlexSans } from "@/utils/fonts";
+import { poppins } from "@/utils/fonts";
 import SparkleLabel from "@/components/widgets/common/SparkleLabel";
 import { WEBSITE_DATA } from "@/utils/website";
 
@@ -16,7 +16,7 @@ const LearningOutcomesSection = () => {
     <Box
       sx={{
         backgroundColor: COLORS.WHITE,
-        py: { xs: 6, md: 10 },
+        py: { xs: 4, md: 10 },
       }}
     >
       <Container
@@ -41,8 +41,10 @@ const LearningOutcomesSection = () => {
           >
             <SparkleLabel
               text={learningOutcomes.sparkle}
-              fontSize={18}
+              fontSize= "18px"
+               type="blue-star"
               sparklePosition="both"
+              sparkleSize={35}
               color={COLORS.PRIMARY}
             />
           </Box>
@@ -50,11 +52,20 @@ const LearningOutcomesSection = () => {
           <Typography
             sx={{
               fontFamily: poppins.style.fontFamily,
-              fontWeight: 500,
-              fontSize: { xs: "30px", md: "48px" },
+              fontWeight: 400,
+           fontSize: { xs: "24px", sm: "30px", md: "45px" },
+              lineHeight: {
+                xs: "38px",
+                sm: "46px",
+                md: "54px",
+                lg: "62px",
+              },
+              letterSpacing: "-0.03em",
+              textAlign: "center",
               color: COLORS.BLACK,
-              lineHeight: 1.2,
-              mb: { xs: 3, md: 4 },
+              mb: { xs: 2.5, md: 4 },
+              maxWidth: "1000px",
+              mx: "auto",
             }}
           >
             {learningOutcomes.title}
@@ -62,14 +73,26 @@ const LearningOutcomesSection = () => {
 
           <Typography
             sx={{
-              fontFamily: ibmPlexSans.style.fontFamily,
+              fontFamily: poppins.style.fontFamily,
               fontWeight: 400,
-              fontSize: { xs: "16px", md: "18px" },
-              color: COLORS.TEXT_MUTED,
-              lineHeight: { xs: 1.8, md: 1.9 },
-              maxWidth: CONSTANTS.MAX_WIDTH,
-              mx: "auto",
+              fontSize: {
+                xs: "16px",
+                sm: "18px",
+                md: "20px",
+                lg: "22px",
+              },
+              lineHeight: {
+                xs: "28px",
+                sm: "30px",
+                md: "32px",
+                lg: "35px",
+              },
+              letterSpacing: "-0.02em",
               textAlign: "center",
+              textTransform: "capitalize",
+              color: COLORS.TEXT_MUTED,
+              maxWidth: "1100px",
+              mx: "auto",
             }}
           >
             {learningOutcomes.description}

@@ -95,7 +95,7 @@ const ChallengeCtaSection = () => {
                 sx={{
                   fontFamily: poppins.style.fontFamily,
                   fontWeight: 500,
-                  fontSize: { xs: "30px", sm: "36px", md: "45px" },
+                 fontSize: { xs: "24px", sm: "30px", md: "45px" },
                   color: Colors.BLACK,
                   lineHeight: { xs: 1.25, md: 1.15 },
                   mb: 2,

@@ -63,9 +63,9 @@ const FaqSection = () => {
               sx={{
                 fontFamily: poppins.style.fontFamily,
                 fontWeight: 400,
-                fontSize: { xs: 30, sm: 36, md: 45 },
+                fontSize: { xs: 30, sm: 36, md: 40 , lg:45},
                 color: Colors.BLACK,
-                lineHeight: { xs: "42px", sm: "50px", md: "66px" },
+                lineHeight: { xs: "42px", sm: "50px", md: "55px", lg:"66px" },
                 mb: 1.5,
               }}
             >
@@ -134,13 +134,13 @@ const FaqSection = () => {
                     >
                       <Typography
                         sx={{
-                          fontFamily: poppins.style.fontFamily,
-                          fontWeight: 400,
-                          fontSize: { xs: 18, sm: 22, md: 28 },
-                          color: Colors.BLACK,
-                          lineHeight: { xs: "28px", md: "84px" },
-                          flex: 1,
-                        }}
+                                                 fontFamily: poppins.style.fontFamily,
+                                                 fontWeight: 400,
+                                                 fontSize: { xs: 18, sm: 22, md: 20, lg: 28 },
+                                                 color: Colors.BLACK,
+                                                 lineHeight: { xs: "28px", md: "40px", lg: "84px" },
+                                                 flex: 1,
+                                               }}
                       >
                         {question}
                       </Typography>

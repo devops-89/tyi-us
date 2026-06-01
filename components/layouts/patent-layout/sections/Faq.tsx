@@ -1,55 +1,40 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useMemo, useState } from "react";
 import {
   Box,
   Container,
+  Stack,
   Typography,
+  IconButton,
+  Collapse,
   Button,
-  Accordion,
-  AccordionSummary,
-  AccordionDetails,
 } from "@mui/material";
-import AddIcon from "@mui/icons-material/Add";
-import RemoveIcon from "@mui/icons-material/Remove";
-import NorthEastIcon from "@mui/icons-material/NorthEast";
-
-import { COLORS, CONSTANTS } from "@/utils/enum";
+import { Minus, Plus, ArrowUpRight } from "lucide-react";
+import { Colors, CONSTANTS } from "@/utils/enum";
 import { poppins, ibmPlexSans } from "@/utils/fonts";
+import { WEBSITE_DATA } from "@/utils/website";
+import SparkleLabel from "@/components/widgets/common/SparkleLabel";
 
-const faqData = [
-  {
-    question: "What is Top Young Innovators?",
-    answer:
-      "Top Young Innovators is a global platform that encourages students to develop innovative solutions to real-world problems through STEM, creativity, and critical thinking challenges.",
-  },
-  {
-    question: "How do I submit my idea or project?",
-    answer:
-      "You can submit your idea or project through the official registration or submission form provided on the website.",
-  },
-  {
-    question: "What types of projects are accepted?",
-    answer:
-      "Projects related to innovation, STEM, problem-solving, creativity, technology, sustainability, and real-world impact are accepted.",
-  },
-  {
-    question: "Is there any registration fee?",
-    answer:
-      "Please check the registration details on the website for the latest fee information.",
-  },
-  {
-    question: "What benefits do participants get?",
-    answer:
-      "Participants get exposure, learning opportunities, expert guidance, and a chance to showcase their innovative ideas.",
-  },
-];
+const faqs = WEBSITE_DATA.patent.PatentFaq;
 
 const FaqSection = () => {
-  const [expanded, setExpanded] = useState<number>(0);
+  const [openIndex, setOpenIndex] = useState<number>(0);
+
+  const rows = useMemo(
+    () => faqs.items.map((f, idx) => ({ ...f, idx })),
+    []
+  );
 
   return (
-    <Box sx={{ backgroundColor: COLORS.WHITE, py: { xs: 7, md: 12 } }}>
+    <Box
+      sx={{
+        py: { xs: 6, md: 10 },
+        backgroundColor: Colors.WHITE,
+        position: "relative",
+        overflow: "hidden",
+      }}
+    >
       <Container
         maxWidth={false}
         sx={{
@@ -57,147 +42,157 @@ const FaqSection = () => {
           px: { xs: 2, sm: 3, md: 4 },
         }}
       >
-        <Box
-          sx={{
-            display: "grid",
-            gridTemplateColumns: { xs: "1fr", md: "35% 65%" },
-            gap: { xs: 5, md: 8 },
-            alignItems: "flex-start",
-          }}
+        <Stack
+          direction={{ xs: "column", md: "row" }}
+          spacing={{ xs: 5, md: 10 }}
+          alignItems="flex-start"
         >
-          <Box>
-            <Typography
-              sx={{
-                fontFamily: poppins.style.fontFamily,
-                fontSize: "13px",
-                fontWeight: 600,
-                color: COLORS.PRIMARY,
-                mb: 1.5,
-              }}
-            >
-              ✽ FAQs ✽
-            </Typography>
+          {/* Left Content */}
+          <Box
+            sx={{
+              flex: 1,
+              width: "100%",
+              maxWidth: { xs: "100%", md: 560 },
+            }}
+          >
+            <Box sx={{ mb: 1.5 }}>
+              <SparkleLabel text={faqs.sparkle}  fontSize={18} />
+            </Box>
 
             <Typography
               sx={{
                 fontFamily: poppins.style.fontFamily,
-                fontSize: { xs: "30px", md: "38px" },
-                fontWeight: 500,
-                color: COLORS.BLACK,
-                lineHeight: 1.25,
-                mb: 2.5,
-                maxWidth: 360,
+                fontWeight: 400,
+                fontSize: { xs: "24px", sm: "30px", md: "35px" , lg: "45px" },
+                color: Colors.BLACK,
+                lineHeight: { xs: "42px", sm: "50px", md: "50px" , lg: "66px"},
+                mb: 1.5,
               }}
             >
-              Frequently Asked Questions
+              {faqs.title}
             </Typography>
 
             <Typography
               sx={{
                 fontFamily: ibmPlexSans.style.fontFamily,
-                fontSize: { xs: "14px", md: "16px" },
-                color: COLORS.TEXT_MUTED,
-                lineHeight: 1.8,
-                maxWidth: 380,
-                mb: 5,
+                fontWeight: 400,
+                fontSize: { xs: 16, md: 20 },
+                color: Colors.TEXT_MUTED,
+                lineHeight: { xs: "28px", md: "38px" },
+                mb: 3,
               }}
             >
-              We know hiring can feel overwhelming, so we’ve gathered the top
-              questions in one place to make your experience smooth and
-              stress-free.
+              {faqs.description}
             </Typography>
 
             <Button
               variant="outlined"
-              endIcon={<NorthEastIcon sx={{ fontSize: 16 }} />}
+              endIcon={<ArrowUpRight size={18} />}
               sx={{
                 borderRadius: "50px",
-                px: 3,
-                py: 1.2,
-                borderColor: COLORS.SECONDARY,
-                color: COLORS.SECONDARY,
-                fontFamily: poppins.style.fontFamily,
-                fontSize: "14px",
-                fontWeight: 500,
+                px: { xs: 2.5, md: 3 },
+                py: 1,
+                borderColor: Colors.SECONDARY,
+                color: Colors.SECONDARY,
+                backgroundColor: "rgba(227, 24, 55, 0.08)",
                 textTransform: "none",
+                fontFamily: ibmPlexSans.style.fontFamily,
+                fontWeight: 400,
+                fontSize: { xs: "15px", md: "18px" },
+                width: { xs: "100%", sm: "fit-content" },
                 "&:hover": {
-                  borderColor: COLORS.PRIMARY,
-                  backgroundColor: "transparent",
-                  color: COLORS.PRIMARY,
+                  backgroundColor: "rgba(227, 24, 55, 0.12)",
+                  borderColor: Colors.SECONDARY,
                 },
               }}
             >
-              More FAQs
+              {faqs.buttonText}
             </Button>
           </Box>
 
-          <Box>
-            {faqData.map((item, index) => {
-              const isOpen = expanded === index;
+          {/* FAQ Right Section */}
+          <Box sx={{ flex: 1.3, width: "100%" }}>
+            <Stack spacing={2}>
+              {rows.map(({ question, answer, idx }) => {
+                const open = openIndex === idx;
 
-              return (
-                <Accordion
-                  key={index}
-                  expanded={isOpen}
-                  onChange={() => setExpanded(isOpen ? -1 : index)}
-                  disableGutters
-                  elevation={0}
-                  sx={{
-                    backgroundColor: "transparent",
-                    borderBottom: "1px solid #9E9E9E",
-                    "&::before": {
-                      display: "none",
-                    },
-                  }}
-                >
-                  <AccordionSummary
-                    expandIcon={
-                      isOpen ? (
-                        <RemoveIcon sx={{ color: COLORS.BLACK }} />
-                      ) : (
-                        <AddIcon sx={{ color: COLORS.BLACK }} />
-                      )
-                    }
+                return (
+                  <Box
+                    key={question}
                     sx={{
-                      px: 0,
-                      py: 1.4,
-                      minHeight: "auto",
-                      "& .MuiAccordionSummary-content": {
-                        my: 0,
-                      },
+                      borderBottom: `1px solid ${Colors.BLACK}`,
                     }}
                   >
-                    <Typography
+                    <Stack
+                      direction="row"
+                      alignItems="center"
+                      justifyContent="space-between"
                       sx={{
-                        fontFamily: poppins.style.fontFamily,
-                        fontSize: { xs: "15px", md: "18px" },
-                        fontWeight: 500,
-                        color: COLORS.BLACK,
-                        lineHeight: 1.4,
+                        py: { xs: 2, md: 1.5 },
+                        gap: 2,
                       }}
                     >
-                      {index + 1}. {item.question}
-                    </Typography>
-                  </AccordionSummary>
+                      <Typography
+                        sx={{
+                          fontFamily: poppins.style.fontFamily,
+                          fontWeight: 400,
+                          fontSize: { xs: 18, sm: 22, md: 22, lg: 28 },
+                          color: Colors.BLACK,
+                          lineHeight: { xs: "28px", md: "50px", lg: "84px" },
+                          flex: 1,
+                        }}
+                      >
+                        {question}
+                      </Typography>
 
-                  <AccordionDetails sx={{ px: 0, pt: 0, pb: 2 }}>
-                    <Typography
-                      sx={{
-                        fontFamily: ibmPlexSans.style.fontFamily,
-                        fontSize: { xs: "14px", md: "16px" },
-                        color: COLORS.TEXT_MUTED,
-                        lineHeight: 1.8,
-                        maxWidth: 700,
-                      }}
+                      <IconButton
+                        onClick={() =>
+                          setOpenIndex(open ? -1 : idx)
+                        }
+                        sx={{
+                          width: { xs: 36, md: 44 },
+                          height: { xs: 36, md: 44 },
+                          borderRadius: "999px",
+                          color: Colors.BLACK,
+                          flexShrink: 0,
+                        }}
+                      >
+                        {open ? (
+                          <Minus size={22} />
+                        ) : (
+                          <Plus size={22} />
+                        )}
+                      </IconButton>
+                    </Stack>
+
+                    <Collapse
+                      in={open}
+                      timeout="auto"
+                      unmountOnExit
                     >
-                      {item.answer}
-                    </Typography>
-                  </AccordionDetails>
-                </Accordion>
-              );
-            })}
+                      {answer && (
+                        <Typography
+                          sx={{
+                            pb: 2,
+                            pr: { xs: 1, md: 4 },
+                            fontFamily:
+                              ibmPlexSans.style.fontFamily,
+                            fontWeight: 400,
+                            fontSize: { xs: 16, md: 20 },
+                            color: Colors.TEXT_MUTED,
+                            lineHeight: { xs: "28px", md: "38px" },
+                          }}
+                        >
+                          {answer}
+                        </Typography>
+                      )}
+                    </Collapse>
+                  </Box>
+                );
+              })}
+            </Stack>
           </Box>
-        </Box>
+        </Stack>
       </Container>
     </Box>
   );

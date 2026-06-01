@@ -136,7 +136,7 @@ const WhyParticipateSection = () => {
             sparklePosition="both"
             type="diamond"
             color={Colors.PRIMARY}
-            fontSize={18}
+           fontSize={{ xs: "12px", sm: "18px" }}
           />
         </Stack>
 
@@ -146,7 +146,7 @@ const WhyParticipateSection = () => {
               sx={{
                 fontFamily: poppins.style.fontFamily,
                 fontWeight: 400,
-                fontSize: { xs: "26px", sm: "28px", md: "28px" },
+                fontSize: { xs: "20px", sm: "24px", md: "28px" },
                 color: Colors.BLACK,
                 lineHeight: { xs: 1.25, md: 1.3 },
                 textAlign: { xs: "center", md: "left" },

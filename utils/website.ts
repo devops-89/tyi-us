@@ -643,7 +643,7 @@ PatentIdea:{
   subtitle:
     "We Start With Your Passion. We End With A Patent.",
 
-  image: ASSETS.IMAGES.HERO1,
+  image: ASSETS.IMAGES.PATENT_PREVIEW,
 
   paragraph1Prefix: "Has It Ever Happened To You",
 
@@ -662,32 +662,32 @@ PatentMatterCard:[
   {
     title: "Elite Global Recognition",
     desc: "Only 0.2% people in the world hold a patent. Earning one sets you apart and places you among a global elite of real-world innovators.",
-    Icon: Medal,
+    Icon: ASSETS.IMAGES.PATENT_TROPHY,
   },
   {
     title: "Impactful College Applications",
     desc: "A patent is a testimony of your creativity and problem solving skills. It is a powerful extracurricular to add to your profile.",
-    Icon: GraduationCap,
+    Icon: ASSETS.IMAGES.PATENT_EDUCATION,
   },
   {
     title: "Turn Ideas into Businesses",
     desc: "Your idea could be the next big startup. With a patent, you can build your own product, partner with companies, or attract investors.",
-    Icon: Rocket,
+    Icon: ASSETS.IMAGES.PATENT_ROCKET,
   },
   {
     title: "Earn While You Learn",
     desc: "Patents can generate passive income by licensing your invention to companies. Yes, even while you’re still in school.",
-    Icon: DollarSign,
+    Icon: ASSETS.IMAGES.PATENT_MONEY,
   },
   {
     title: "Protect What You Create",
     desc: "Without a patent, anyone can copy your idea. With one, your invention is legally protected and truly yours.",
-    Icon: Lock,
+    Icon: ASSETS.IMAGES.PATENT_LOCK,
   },
   {
     title: "Gain Recognition & Make an Impact",
     desc: "Young inventors with patents get featured in media, win awards, and become role models for innovation and creativity.",
-    Icon: Target,
+    Icon: ASSETS.IMAGES.PATENT_GLOBAL,
   },
 ],
 
@@ -710,6 +710,207 @@ BigData:{
     {
       title1: "HOBBYISTS AND",
       title2: "TINKERERS",
+    },
+  ],
+},
+
+CaseStudiesData: {
+  sparkle: "Read In Details",
+
+  title: "Case Studies",
+
+  items: [
+    {
+      title: "Relay-based system to launch a projectile",
+      award:
+        "Winner - 1st Prize, NASA Ames Space Settlement Challenge — 2018",
+      image: ASSETS.IMAGES.PATENT_THERMAL,
+      awardImage: ASSETS.IMAGES.PATENT_AWARD,
+      patentLink: "#",
+      certificateLink: "#",
+    },
+    {
+      title: "Relay-based system to launch a projectile",
+      award:
+        "Winner - 1st Prize, NASA Ames Space Settlement Challenge — 2018",
+      image: ASSETS.IMAGES.PATENT_THERMAL,
+      awardImage: ASSETS.IMAGES.PATENT_AWARD,
+      patentLink: "#",
+      certificateLink: "#",
+    },
+    {
+      title: "Relay-based system to launch a projectile",
+      award:
+        "Winner - 1st Prize, NASA Ames Space Settlement Challenge — 2018",
+      image: ASSETS.IMAGES.PATENT_THERMAL,
+      awardImage: ASSETS.IMAGES.PATENT_AWARD,
+      patentLink: "#",
+      certificateLink: "#",
+    },
+    {
+      title: "Relay-based system to launch a projectile",
+      award:
+        "Winner - 1st Prize, NASA Ames Space Settlement Challenge — 2018",
+      image: ASSETS.IMAGES.PATENT_THERMAL,
+      awardImage: ASSETS.IMAGES.PATENT_AWARD,
+      patentLink: "#",
+      certificateLink: "#",
+    },
+  ],
+},
+PatentFaq: {
+  sparkle: "FAQs",
+
+  title: "Frequently Asked Questions",
+
+  description:
+    "We know hiring can feel overwhelming, so we’ve gathered the top questions in one place to make your experience smooth and stress-free.",
+
+  buttonText: "More FAQs",
+
+  items: [
+    {
+      question: "What is Top Young Innovators?",
+      answer:
+        "Top Young Innovators is a global platform that encourages students to develop innovative solutions to real-world problems through STEM, creativity, and critical thinking challenges.",
+    },
+    {
+      question: "How do I submit my idea or project?",
+      answer:
+        "You can submit your idea or project through the official registration or submission form provided on the website.",
+    },
+    {
+      question: "What types of projects are accepted?",
+      answer:
+        "Projects related to innovation, STEM, problem-solving, creativity, technology, sustainability, and real-world impact are accepted.",
+    },
+    {
+      question: "Is there any registration fee?",
+      answer:
+        "Please check the registration details on the website for the latest fee information.",
+    },
+    {
+      question: "What benefits do participants get?",
+      answer:
+        "Participants get exposure, learning opportunities, expert guidance, and a chance to showcase their innovative ideas.",
+    },
+  ],
+},
+
+Nurturing:  {
+  sparkle: "Nurturing",
+
+  title: "Nurturing Young Inventors",
+
+  videoUrl: "https://www.youtube.com/watch?v=YOUR_VIDEO_ID",
+
+  items: [
+    {
+      prefix: "The ",
+      highlight: "Only Organization",
+      suffix:
+        " In The World That Nurtures Young Minds To Convert Vague Ideas Into Patentable Inventions",
+    },
+    {
+      highlight: "330+",
+      suffix: " Students With Successful Patent Granted In 5 Years.",
+    },
+    {
+      prefix: "Nurturing ",
+      highlight: "1 Inventor Every 6 Days!",
+    },
+    {
+      prefix: "Team Of Elite ",
+      highlight: "Innovation Mentors",
+      suffix: ", Technology Experts And US Patent Attorneys",
+    },
+    {
+      prefix:
+        "Trusted By Parents, Recognized By The Media And Awarded By The ",
+      highlight: "US Government",
+    },
+    {
+      prefix: "Partnership With ",
+      highlight: "DiscoverSTEM",
+      suffix:
+        " – Leading Innovation, Research & Entrepreneurship Organization",
+    },
+  ],
+},
+
+PatentServiceData:{
+  sparkle: "Helping You Get Patent",
+
+  title: "Our End-To-End Patent Service",
+
+  steps: [
+    {
+      number: "1",
+      title: "Discovery & NDA",
+      desc: "We begin with your area of interest or idea. A Non-Disclosure Agreement (NDA) is signed to protect your intellectual property right from the start.",
+    },
+    {
+      number: "2",
+      title: "Idea Evaluation & Patentability Assessment",
+      desc: "Our IP experts and US patent attorneys evaluate the idea for:",
+      points: ["Novelty", "Non-obviousness", "Utility"],
+      bottomText: "We also conduct prior art search.",
+    },
+    {
+      number: "3",
+      title: "Idea Development & Innovation Coaching",
+      desc: "Work 1-on-1 with:",
+      points: [
+        "Technology & Innovation Experts",
+        "US-based IP Team",
+        "DiscoverSTEM Mentors",
+      ],
+      bottomText:
+        "We shape, refine, and strengthen your idea for the highest patent success probability.",
+    },
+    {
+      number: "4",
+      title: "Patent Drafting & Innovation",
+      desc: "We begin with your area of interest or idea. A Non-Disclosure Agreement (NDA) is signed to protect your intellectual property right from the start.",
+    },
+  ],
+},
+
+SuccessStoriesData:{
+  sparkle: "Real Stories",
+
+  title: "Success Stories",
+
+  stories: [
+    {
+      image: ASSETS.IMAGES.PATENT_SUCCESS,
+      title:
+        "Madhalasa Iyer: From Teen Researcher to Global Problem Solver",
+
+      description:
+        "From winning global writing awards to publishing scientific research, Madhalasa Iyer is proof that compassion and curiosity can fuel real-world impact",
+
+      points: [
+        "TEDx and EarthX Speaker",
+        "Accepted to Princeton University (Ivy League)",
+        "Author of Award-Winning Children's Book Motley",
+        "2 US Patents Granted",
+      ],
+    },
+    {
+      image: ASSETS.IMAGES.PATENT_SUCCESS,
+      title:
+        "Madhalasa Iyer: From Teen Researcher to Global Problem Solver",
+
+      description:
+        "From winning global writing awards to publishing scientific research, Madhalasa Iyer is proof that compassion and curiosity can fuel real-world impact",
+
+      points: [
+        "TEDx and EarthX Speaker",
+        "Accepted to Princeton University (Ivy League)",
+        "Author of Award-Winning Children's Book Motley",
+        "2 US Patents Granted",
+      ],
     },
   ],
 },

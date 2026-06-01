@@ -14,7 +14,7 @@ import {
 import CloseIcon from "@mui/icons-material/Close";
 
 import { COLORS, CONSTANTS } from "@/utils/enum";
-import { poppins, ibmPlexSans } from "@/utils/fonts";
+import { poppins } from "@/utils/fonts";
 import SparkleLabel from "@/components/widgets/common/SparkleLabel";
 import { ASSETS } from "@/utils/assets";
 
@@ -44,15 +44,15 @@ const PatentPreviewSection = () => {
       sx={{
         position: "relative",
         width: "100%",
-        maxWidth: { xs: 340, sm: 520, md: 680 },
-        height: { xs: 260, sm: 420, md: 520 },
+        maxWidth: { xs: 340, sm: 600, md: 830 },
+        height: { xs: 260, sm: 470, md: 654 },
         mx: "auto",
-        borderRadius: "8px",
+        borderRadius: "10px",
         overflow: "hidden",
       }}
     >
       <Image
-        src={ASSETS.IMAGES.HERO3}
+        src={ASSETS.IMAGES.PATENT_PREVIEW}
         alt="Patent Certificate Preview"
         fill
         style={{ objectFit: "contain" }}
@@ -62,8 +62,8 @@ const PatentPreviewSection = () => {
         <Typography
           sx={{
             position: "absolute",
-            top: { xs: "54%", sm: "55%" },
-            left: "50%",
+            top: { xs: "50%", sm: "50%" },
+            left: "61%",
             transform: "translateX(-50%)",
             fontFamily: poppins.style.fontFamily,
             fontSize: { xs: "12px", sm: "18px", md: "22px" },
@@ -82,10 +82,10 @@ const PatentPreviewSection = () => {
         <Typography
           sx={{
             position: "absolute",
-            top: { xs: "63%", sm: "64%" },
-            left: "50%",
+            top: { xs: "58%", sm: "62%" },
+             left: "61%",
             transform: "translateX(-50%)",
-            fontFamily: ibmPlexSans.style.fontFamily,
+            fontFamily: poppins.style.fontFamily,
             fontSize: { xs: "10px", sm: "15px", md: "18px" },
             fontWeight: 500,
             color: COLORS.BLACK,
@@ -109,10 +109,19 @@ const PatentPreviewSection = () => {
           px: { xs: 2, sm: 3, md: 4 },
         }}
       >
-        <Box sx={{ mb: 2 }}>
+        <Box
+          sx={{
+            width: "100%",
+            maxWidth: 1160,
+            mx: "auto",
+            mb: 2,
+          }}
+        >
           <SparkleLabel
             text="Own Your Patent"
-            fontSize={14}
+            fontSize={18}
+            sparkleSize={35}
+            type="blue-star"
             sparklePosition="both"
             color={COLORS.PRIMARY}
           />
@@ -120,11 +129,15 @@ const PatentPreviewSection = () => {
 
         <Typography
           sx={{
-            fontFamily: poppins.style.fontFamily,
-            fontWeight: 500,
-            fontSize: { xs: "26px", md: "40px" },
+            fontFamily: "PolySans Trial, sans-serif",
+            fontWeight: 400,
+            fontSize: { xs: "24px", sm: "30px", md: "45px" },
+            lineHeight: { xs: "38px", sm: "42px", md: "48px" },
+            letterSpacing: "-0.01em",
+            textTransform: "capitalize",
             color: COLORS.BLACK,
-            lineHeight: 1.25,
+            maxWidth: 1160,
+            mx: "auto",
             mb: 2,
           }}
         >
@@ -133,10 +146,15 @@ const PatentPreviewSection = () => {
 
         <Typography
           sx={{
-            fontFamily: ibmPlexSans.style.fontFamily,
-            fontSize: { xs: "16px", md: "22px" },
+            fontFamily: poppins.style.fontFamily,
+            fontWeight: 400,
+            fontSize: { xs: "16px", sm: "18px", md: "22px" },
+            lineHeight: { xs: "28px", sm: "32px", md: "40px" },
+            letterSpacing: "-0.02em",
+            textTransform: "capitalize",
             color: COLORS.TEXT_MUTED,
-            lineHeight: 1.7,
+            maxWidth: 1160,
+            mx: "auto",
             mb: 4,
           }}
         >
@@ -146,20 +164,24 @@ const PatentPreviewSection = () => {
 
         <Box
           sx={{
-            display: "flex",
-            flexDirection: { xs: "column", lg: "row" },
-            alignItems: "center",
-            gap: { xs: 2, lg: 2 },
             width: "100%",
+            maxWidth: 1160,
+            mx: "auto",
+            display: "flex",
+            flexDirection: { xs: "column", sm: "row" },
+            alignItems: { xs: "stretch", sm: "center" },
+            justifyContent: "space-between",
+            gap: { xs: 2, sm: 1.5, md: 2 },
             mb: { xs: 4, md: 5 },
           }}
         >
           <Box
             sx={{
-              width: { xs: "100%", lg: "60%" },
+              width: { xs: "100%", sm: "58%", md: "65%" },
               display: "flex",
               flexDirection: { xs: "column", sm: "row" },
-              gap: 2,
+              gap: { xs: 2, sm: 1.5, md: 2 },
+              minWidth: 0,
             }}
           >
             <TextField
@@ -170,14 +192,27 @@ const PatentPreviewSection = () => {
               fullWidth
               sx={{
                 flex: 1,
+                minWidth: 0,
+                maxWidth: "100%",
                 "& .MuiOutlinedInput-root": {
-                  borderRadius: "6px",
-                  backgroundColor: "#FDECEF",
-                  height: 40,
+                  borderRadius: "10px",
+                  backgroundColor: COLORS.SUBMIT_ACCENT_BG,
+                  height: 50,
+                  "& fieldset": {
+                    border: "0.8px solid #00000080",
+                  },
+                  "&:hover fieldset": {
+                    border: "0.8px solid #00000080",
+                  },
+                  "&.Mui-focused fieldset": {
+                    border: `0.8px solid ${COLORS.PRIMARY}`,
+                  },
                 },
                 "& input": {
-                  fontFamily: ibmPlexSans.style.fontFamily,
+                  fontFamily: poppins.style.fontFamily,
                   fontSize: "14px",
+                  height: "50px",
+                  boxSizing: "border-box",
                 },
               }}
             />
@@ -190,14 +225,27 @@ const PatentPreviewSection = () => {
               fullWidth
               sx={{
                 flex: 1,
+                minWidth: 0,
+                maxWidth: "100%",
                 "& .MuiOutlinedInput-root": {
-                  borderRadius: "6px",
-                  backgroundColor: "#FDECEF",
-                  height: 40,
+                  borderRadius: "10px",
+                  backgroundColor: COLORS.SUBMIT_ACCENT_BG,
+                  height: 50,
+                  "& fieldset": {
+                    border: "0.8px solid #00000080",
+                  },
+                  "&:hover fieldset": {
+                    border: "0.8px solid #00000080",
+                  },
+                  "&.Mui-focused fieldset": {
+                    border: `0.8px solid ${COLORS.PRIMARY}`,
+                  },
                 },
                 "& input": {
-                  fontFamily: ibmPlexSans.style.fontFamily,
+                  fontFamily: poppins.style.fontFamily,
                   fontSize: "14px",
+                  height: "50px",
+                  boxSizing: "border-box",
                 },
               }}
             />
@@ -205,23 +253,28 @@ const PatentPreviewSection = () => {
 
           <Box
             sx={{
-              width: { xs: "100%", lg: "40%" },
+              width: { xs: "100%", sm: "42%", md: "35%" },
               display: "flex",
               flexDirection: { xs: "column", sm: "row" },
-              justifyContent: { xs: "stretch", lg: "flex-end" },
-              gap: 2,
+              justifyContent: { xs: "stretch", sm: "flex-end" },
+              alignItems: "center",
+              gap: { xs: "10px", sm: "6px", md: "10px" },
+              minWidth: 0,
             }}
           >
             <Button
               variant="contained"
               onClick={handleGenerate}
               sx={{
-                minWidth: { xs: "100%", sm: 120 },
-                height: 40,
-                borderRadius: "50px",
+                width: { xs: "100%", sm: 86, md: 113 },
+                minWidth: { xs: "100%", sm: 86, md: 113 },
+                height: 41,
+                borderRadius: "32px",
+                p: { xs: "10px", sm: "8px", md: "10px" },
                 backgroundColor: COLORS.SECONDARY,
+                color: COLORS.WHITE,
                 fontFamily: poppins.style.fontFamily,
-                fontSize: "13px",
+                fontSize: { xs: "13px", sm: "11px", md: "13px" },
                 fontWeight: 600,
                 textTransform: "none",
                 boxShadow: "none",
@@ -238,18 +291,20 @@ const PatentPreviewSection = () => {
               variant="contained"
               onClick={() => setOpenPreview(true)}
               sx={{
-                minWidth: { xs: "100%", sm: 120 },
-                height: 40,
-                borderRadius: "50px",
-                backgroundColor: "#FDECEF",
+                width: { xs: "100%", sm: 86, md: 113 },
+                minWidth: { xs: "100%", sm: 86, md: 113 },
+                height: 41,
+                borderRadius: "32px",
+                p: { xs: "10px", sm: "8px", md: "10px" },
+                backgroundColor: COLORS.SUBMIT_ACCENT_BG,
                 color: COLORS.BLACK,
                 fontFamily: poppins.style.fontFamily,
-                fontSize: "13px",
+                fontSize: { xs: "13px", sm: "11px", md: "13px" },
                 fontWeight: 500,
                 textTransform: "none",
                 boxShadow: "none",
                 "&:hover": {
-                  backgroundColor: "#F8D2DA",
+                  backgroundColor: COLORS.SOCIAL_ICON_SOFT,
                   boxShadow: "none",
                 },
               }}
@@ -261,18 +316,20 @@ const PatentPreviewSection = () => {
               variant="contained"
               onClick={handleReset}
               sx={{
-                minWidth: { xs: "100%", sm: 120 },
-                height: 40,
-                borderRadius: "50px",
-                backgroundColor: "#FDECEF",
+                width: { xs: "100%", sm: 86, md: 113 },
+                minWidth: { xs: "100%", sm: 86, md: 113 },
+                height: 41,
+                borderRadius: "32px",
+                p: { xs: "10px", sm: "8px", md: "10px" },
+                backgroundColor: COLORS.SUBMIT_ACCENT_BG,
                 color: COLORS.BLACK,
                 fontFamily: poppins.style.fontFamily,
-                fontSize: "13px",
+                fontSize: { xs: "13px", sm: "11px", md: "13px" },
                 fontWeight: 500,
                 textTransform: "none",
                 boxShadow: "none",
                 "&:hover": {
-                  backgroundColor: "#F8D2DA",
+                  backgroundColor: COLORS.SOCIAL_ICON_SOFT,
                   boxShadow: "none",
                 },
               }}
@@ -305,9 +362,9 @@ const PatentPreviewSection = () => {
                 right: { xs: 0, sm: 4 },
                 top: { xs: 0, sm: 4 },
                 zIndex: 2,
-                backgroundColor: "#FDECEF",
+                backgroundColor: COLORS.SUBMIT_ACCENT_BG,
                 "&:hover": {
-                  backgroundColor: "#F8D2DA",
+                  backgroundColor: COLORS.SOCIAL_ICON_SOFT,
                 },
               }}
             >

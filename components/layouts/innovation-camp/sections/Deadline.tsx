@@ -4,7 +4,7 @@ import React from "react";
 import { Box, Container, Grid, Typography } from "@mui/material";
 
 import { COLORS, CONSTANTS } from "@/utils/enum";
-import { poppins, ibmPlexSans } from "@/utils/fonts";
+import { poppins } from "@/utils/fonts";
 import { WEBSITE_DATA } from "@/utils/website";
 
 const InnovationCampInfoCards = () => {
@@ -14,7 +14,7 @@ const InnovationCampInfoCards = () => {
     <Box
       sx={{
         backgroundColor: "#FDE8EC",
-        py: { xs: 6, md: 8 },
+        py: { xs: 4, md: 8 },
       }}
     >
       <Container
@@ -24,28 +24,44 @@ const InnovationCampInfoCards = () => {
           px: { xs: 2, sm: 3, md: 4 },
         }}
       >
-        <Grid container spacing={{ xs: 3, md: 4 }} justifyContent="center">
+        <Grid
+          container
+          spacing={{ xs: 2.5, md: 3 }}
+          justifyContent="center"
+        >
           {infoCards.map((card) => (
-            <Grid key={card.title} size={{ xs: 12, sm: 6, md: 3 }}>
+            <Grid
+              key={card.title}
+              size={{ xs: 12, sm: 6, md: 3 }}
+              sx={{
+                display: "flex",
+                justifyContent: "center",
+              }}
+            >
               <Box
                 sx={{
-                  height: "100%",
-                  minHeight: { xs: 170, md: 180 },
+                  width: "100%",
+                  maxWidth: 290,
+                  minHeight: { xs: 190, md: 203 },
                   backgroundColor: COLORS.WHITE,
-                  borderRadius: "14px",
-                  p: { xs: 3, md: 3 },
-                  boxShadow: "0 4px 12px rgba(0,0,0,0.12)",
+                  borderRadius: "16px",
+                  border: "0.8px solid rgba(0,0,0,0.08)",
+                  p: "24px",
+                  display: "flex",
+                  flexDirection: "column",
+                  boxSizing: "border-box",
                 }}
               >
                 <Typography
                   sx={{
                     fontFamily: poppins.style.fontFamily,
-                    fontWeight: 600,
-                    fontSize: "11px",
-                    color: COLORS.PRIMARY,
-                    letterSpacing: "0.8px",
+                    fontWeight: 500,
+                    fontSize: "14px",
+                    lineHeight: "16px",
+                    letterSpacing: "0.6px",
                     textTransform: "uppercase",
-                    mb: 0.5,
+                    color: COLORS.PRIMARY,
+                    mb: 1.5,
                   }}
                 >
                   {card.label}
@@ -54,10 +70,17 @@ const InnovationCampInfoCards = () => {
                 <Typography
                   sx={{
                     fontFamily: poppins.style.fontFamily,
-                    fontWeight: 700,
-                    fontSize: { xs: "22px", md: "24px" },
+                    fontWeight: 600,
+                    fontSize: {
+                      xs: "22px",
+                      md: "24px",
+                    },
+                    lineHeight: {
+                      xs: "24px",
+                      md: "26.4px",
+                    },
+                    letterSpacing: "-0.6px",
                     color: COLORS.SECONDARY,
-                    lineHeight: 1.2,
                     mb: 2,
                   }}
                 >
@@ -66,10 +89,12 @@ const InnovationCampInfoCards = () => {
 
                 <Typography
                   sx={{
-                    fontFamily: ibmPlexSans.style.fontFamily,
-                    fontSize: { xs: "14px", md: "15px" },
-                    color: COLORS.TEXT_MUTED,
-                    lineHeight: 1.6,
+                    fontFamily: poppins.style.fontFamily,
+                    fontWeight: 400,
+                    fontSize: "14px",
+                    lineHeight: "22.75px",
+                    letterSpacing: "0px",
+                    color: "#5C5C5C",
                     whiteSpace: "pre-line",
                   }}
                 >

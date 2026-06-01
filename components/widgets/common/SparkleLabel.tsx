@@ -12,55 +12,101 @@ interface SparkleLabelProps {
   sparkleColor?: string;
   sparklePosition?: "left" | "right" | "both";
   sparkleSize?: number | string;
-  fontSize?: string | number;
+  fontSize?: any;
   type?: "diamond" | "flower" | "red-star" | "blue-star";
   customIcon?: React.ReactNode;
 }
 
-const SparkleLabel: React.FC<SparkleLabelProps> = ({ 
-  text, 
+const SparkleLabel: React.FC<SparkleLabelProps> = ({
+  text,
   color: propColor,
   sparklePosition: propSparklePosition,
   sparkleSize = 14,
   fontSize = "14px",
   type = "flower",
-  customIcon
+  customIcon,
 }) => {
   const isObject = typeof text !== "string";
   const displayText = isObject ? text.text : text;
-  const color = propColor || (isObject && text.color ? text.color : Colors.PRIMARY);
-  const sparklePosition = propSparklePosition || (isObject && text.sparklePosition ? text.sparklePosition : "both");
-  const iconSrc = 
-    type === "flower" ? ASSETS.IMAGES.ICON_FLOWER :
-    type === "red-star" ? ASSETS.IMAGES.ICON_RED_STAR :
-    type === "blue-star" ? ASSETS.IMAGES.ICON_BLUESTAR :
-    ASSETS.IMAGES.ICON_BLUESTAR;
+
+  const color =
+    propColor || (isObject && text.color ? text.color : Colors.PRIMARY);
+
+  const sparklePosition =
+    propSparklePosition ||
+    (isObject && text.sparklePosition ? text.sparklePosition : "both");
+
+  const iconSrc =
+    type === "flower"
+      ? ASSETS.IMAGES.ICON_FLOWER
+      : type === "red-star"
+      ? ASSETS.IMAGES.ICON_RED_STAR
+      : type === "blue-star"
+      ? ASSETS.IMAGES.ICON_BLUESTAR
+      : ASSETS.IMAGES.ICON_BLUESTAR;
+
+  const iconSize =
+    typeof sparkleSize === "number"
+      ? sparkleSize
+      : parseInt(sparkleSize as string) || 14;
 
   const renderIcon = () => {
     if (customIcon) return customIcon;
-    const size = typeof sparkleSize === "number" ? sparkleSize : parseInt(sparkleSize as string) || 14;
+
     return (
-      <Box sx={{ width: size, height: size, position: "relative" }}>
+      <Box
+        sx={{
+          width: iconSize,
+          height: iconSize,
+          minWidth: iconSize,
+          position: "relative",
+          flexShrink: 0,
+          lineHeight: 0,
+        }}
+      >
         <Image src={iconSrc} alt="*" fill style={{ objectFit: "contain" }} />
       </Box>
     );
   };
 
   return (
-    <Stack direction="row" alignItems="center" spacing={1.5}>
-      {(sparklePosition === "left" || sparklePosition === "both") && renderIcon()}
+    <Stack
+      direction="row"
+      alignItems="center"
+      justifyContent="center"
+      sx={{
+        display: "inline-flex",
+        width: "fit-content",
+        maxWidth: "100%",
+        gap: {
+          xs: "6px",
+          sm: "8px",
+          md: "10px",
+        },
+        flexWrap: "nowrap",
+        whiteSpace: "nowrap",
+      }}
+    >
+      {(sparklePosition === "left" || sparklePosition === "both") &&
+        renderIcon()}
+
       <Typography
+        component="span"
         sx={{
           fontFamily: ibmPlexSans.style.fontFamily,
-          fontWeight: 600, 
-          fontSize: fontSize,
-          color: color,
-          letterSpacing: "0.5px"
+          fontWeight: 600,
+          fontSize,
+          color,
+          letterSpacing: "0.5px",
+          lineHeight: 1,
+          whiteSpace: "nowrap",
         }}
       >
         {displayText}
       </Typography>
-      {(sparklePosition === "right" || sparklePosition === "both") && renderIcon()}
+
+      {(sparklePosition === "right" || sparklePosition === "both") &&
+        renderIcon()}
     </Stack>
   );
 };

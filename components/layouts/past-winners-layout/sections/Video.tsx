@@ -12,7 +12,7 @@ import { WEBSITE_DATA } from "@/utils/website";
 const PastWinnersVideoSection = () => {
   const { video } = WEBSITE_DATA.pastWinners;
   return (
-    <Box sx={{ py: { xs: 8, md: 10 }, backgroundColor: Colors.WHITE }}>
+    <Box sx={{ py: { xs: 4, md: 10 }, backgroundColor: Colors.WHITE }}>
       <Container maxWidth={false} sx={{ maxWidth: CONSTANTS.MAX_WIDTH }}>
         <Typography
           sx={{

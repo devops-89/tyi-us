@@ -49,5 +49,15 @@ export const ASSETS = {
     ABOUT_GROUP_LAPTOP: "/images/about/group-laptop.png",
     ABOUT_GLOBAL_UAE: "/images/about/global-uae.png",
     ABOUT_GLOBAL_USA: "/images/about/global-usa.png",
+    PATENT_GLOBAL: "/images/patent/global.png",
+PATENT_EDUCATION: "/images/patent/education.png",
+PATENT_ROCKET: "/images/patent/growth.png",
+PATENT_MONEY: "/images/patent/money.png",
+PATENT_LOCK: "/images/patent/protection.png",
+PATENT_TROPHY: "/images/patent/recognition.png",
+PATENT_PREVIEW: "/images/patent/patent-preview.png",
+PATENT_THERMAL:"/images/patent/thermal.png",
+PATENT_AWARD:"/images/patent/award.png",
+PATENT_SUCCESS:"/images/patent/success.png",
   }
 };

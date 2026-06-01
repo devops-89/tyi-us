@@ -5,7 +5,7 @@ import Image from "next/image";
 import { Box, Container, Stack, Typography } from "@mui/material";
 
 import { COLORS, CONSTANTS } from "@/utils/enum";
-import { poppins, ibmPlexSans } from "@/utils/fonts";
+import { poppins } from "@/utils/fonts";
 import SparkleLabel from "@/components/widgets/common/SparkleLabel";
 import { WEBSITE_DATA } from "@/utils/website";
 
@@ -16,7 +16,7 @@ const PatentSection = () => {
     <Box
       sx={{
         backgroundColor: COLORS.WHITE,
-        py: { xs: 6, sm: 8, md: 10 },
+        py: { xs: 4, sm: 8, md: 10 },
       }}
     >
       <Container
@@ -29,7 +29,7 @@ const PatentSection = () => {
         <Stack
           direction={{ xs: "column", md: "row" }}
           spacing={{ xs: 5, sm: 6, md: 8 }}
-           alignItems={{ xs: "center", md: "flex-start" }}
+          alignItems={{ xs: "center", md: "flex-start" }}
           justifyContent="space-between"
         >
           <Box
@@ -47,7 +47,9 @@ const PatentSection = () => {
             >
               <SparkleLabel
                 text={patentData.sparkle}
-                fontSize={14}
+                fontSize={15}
+                sparkleSize={35}
+               type="blue-star"
                 sparklePosition="both"
                 color={COLORS.PRIMARY}
               />
@@ -55,11 +57,18 @@ const PatentSection = () => {
 
             <Typography
               sx={{
-                fontFamily: poppins.style.fontFamily,
-                fontWeight: 500,
-                fontSize: { xs: "28px", sm: "32px", md: "36px" },
+                fontFamily: "PolySans Trial, sans-serif",
+                fontWeight: 400,
+               fontSize: { xs: "24px", sm: "30px", md: "45px" },
+                lineHeight: {
+                  xs: "36px",
+                  sm: "40px",
+                  md: "44px",
+                  lg: "48px",
+                },
+                letterSpacing: "-0.01em",
+                textTransform: "capitalize",
                 color: COLORS.BLACK,
-                lineHeight: { xs: 1.25, md: 1.2 },
                 mb: 2,
                 whiteSpace: "pre-line",
               }}
@@ -69,11 +78,24 @@ const PatentSection = () => {
 
             <Typography
               sx={{
-                fontFamily: ibmPlexSans.style.fontFamily,
-                fontSize: { xs: "16px", md: "18px" },
+                fontFamily: poppins.style.fontFamily,
+                fontWeight: 400,
+                fontSize: {
+                  xs: "16px",
+                  sm: "18px",
+                  md: "20px",
+                  lg: "22px",
+                },
+                lineHeight: {
+                  xs: "28px",
+                  sm: "30px",
+                  md: "32px",
+                  lg: "35px",
+                },
+                letterSpacing: "-0.02em",
+                textTransform: "capitalize",
                 color: COLORS.TEXT_MUTED,
-                lineHeight: 1.6,
-                maxWidth: { xs: "100%", md: 420 },
+                maxWidth: { xs: "100%", md: 520 },
                 mx: { xs: "auto", md: 0 },
               }}
             >
@@ -88,7 +110,7 @@ const PatentSection = () => {
               mx: { xs: "auto", md: 0 },
               position: "relative",
               height: { xs: 230, sm: 320, md: 380 },
-              borderRadius: "12px",
+              borderRadius: "16px",
               overflow: "hidden",
             }}
           >
@@ -104,21 +126,39 @@ const PatentSection = () => {
         <Box
           sx={{
             mt: { xs: 6, md: 10 },
-           
             mx: "auto",
           }}
         >
           <Typography
             sx={{
-              fontFamily: ibmPlexSans.style.fontFamily,
-              fontSize: { xs: "16px", md: "18px" },
+              fontFamily: poppins.style.fontFamily,
+              fontWeight: 400,
+              fontSize: {
+                xs: "16px",
+                sm: "18px",
+                md: "20px",
+                lg: "22px",
+              },
               color: COLORS.TEXT_MUTED,
-              lineHeight: { xs: 1.75, md: 1.8 },
+              lineHeight: {
+                xs: "28px",
+                sm: "30px",
+                md: "32px",
+                lg: "35px",
+              },
+              letterSpacing: "-0.02em",
+              textTransform: "capitalize",
               mb: 4,
-              textAlign: { xs: "left", md: "left" },
+              textAlign: "left",
             }}
           >
-            <Box component="span" sx={{ fontWeight: 700, color: COLORS.BLACK }}>
+            <Box
+              component="span"
+              sx={{
+                fontWeight: 700,
+                color: COLORS.BLACK,
+              }}
+            >
               {patentData.paragraph1Prefix}
             </Box>{" "}
             {patentData.paragraph1}
@@ -126,12 +166,25 @@ const PatentSection = () => {
 
           <Typography
             sx={{
-              fontFamily: ibmPlexSans.style.fontFamily,
-              fontSize: { xs: "16px", md: "18px" },
+              fontFamily: poppins.style.fontFamily,
+              fontWeight: 400,
+              fontSize: {
+                xs: "16px",
+                sm: "18px",
+                md: "20px",
+                lg: "22px",
+              },
               color: COLORS.TEXT_MUTED,
-              lineHeight: { xs: 1.75, md: 1.8 },
+              lineHeight: {
+                xs: "28px",
+                sm: "30px",
+                md: "32px",
+                lg: "35px",
+              },
+              letterSpacing: "-0.02em",
+              textTransform: "capitalize",
               mb: 4,
-              textAlign: { xs: "left", md: "left" },
+              textAlign: "left",
             }}
           >
             {patentData.paragraph2}
@@ -140,8 +193,12 @@ const PatentSection = () => {
           <Typography
             sx={{
               fontFamily: poppins.style.fontFamily,
-              fontWeight: 700,
-              fontSize: { xs: "15px", sm: "16px", md: "18px" },
+              fontWeight: 600,
+              fontSize: {
+                xs: "15px",
+                sm: "16px",
+                md: "24px",
+              },
               color: COLORS.SECONDARY,
               textAlign: "center",
               mt: { xs: 4, md: 5 },

@@ -47,7 +47,7 @@ const ContactSection = () => {
     <Box
       sx={{
         backgroundColor: Colors.WHITE,
-        pt: { xs: 6, md: 12 },
+        pt: { xs: 4, md: 12 },
         pb: { xs: 6, md: 12 },
       }}
     >

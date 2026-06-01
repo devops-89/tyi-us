@@ -1,24 +1,19 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 import { Box, Container, Grid, Stack, Typography } from "@mui/material";
 
 import { COLORS, CONSTANTS } from "@/utils/enum";
-import { poppins, ibmPlexSans } from "@/utils/fonts";
+import { poppins } from "@/utils/fonts";
 import SparkleLabel from "@/components/widgets/common/SparkleLabel";
 import { WEBSITE_DATA } from "@/utils/website";
 
 const WhyPatentMatterSection = () => {
-  const patentMatterCards =
-    WEBSITE_DATA.patent.PatentMatterCard;
+  const patentMatterCards = WEBSITE_DATA.patent.PatentMatterCard;
 
   return (
-    <Box
-      sx={{
-        backgroundColor: COLORS.WHITE,
-        py: { xs: 6, md: 9 },
-      }}
-    >
+    <Box sx={{ backgroundColor: COLORS.WHITE, py: { xs: 6, md: 9 } }}>
       <Container
         maxWidth={false}
         sx={{
@@ -26,90 +21,129 @@ const WhyPatentMatterSection = () => {
           px: { xs: 2, sm: 3, md: 4 },
         }}
       >
-        <Box sx={{ mb: { xs: 4, md: 5 } }}>
-          <SparkleLabel
-            text="Patents Helps"
-            fontSize={14}
-            sparklePosition="both"
-            color={COLORS.PRIMARY}
-          />
-
-          <Typography
+        <Box sx={{ width: "100%", maxWidth: 1162, mx: "auto" }}>
+          <Box
             sx={{
-              fontFamily: poppins.style.fontFamily,
-              fontWeight: 500,
-              fontSize: { xs: "28px", md: "32px" },
-              color: COLORS.BLACK,
-              lineHeight: 1.2,
-              mt: 1,
+              mb: { xs: 4, md: 5 },
+              textAlign: { xs: "center", md: "center", lg: "left" },
             }}
           >
-            Why Patent Matter
-          </Typography>
-        </Box>
+            <Box
+              sx={{
+                display: "flex",
+                justifyContent: {
+                  xs: "center",
+                  md: "center",
+                  lg: "flex-start",
+                },
+                mb: 1.5,
+              }}
+            >
+              <SparkleLabel
+                text="Patents Helps"
+                fontSize={18}
+                sparkleSize={35}
+                type="blue-star"
+                sparklePosition="both"
+                color={COLORS.PRIMARY}
+              />
+            </Box>
 
-        <Grid container spacing={{ xs: 2, md: 2 }}>
-          {patentMatterCards.map((item) => (
-            <Grid key={item.title} size={{ xs: 12, md: 6 }}>
-              <Stack
-                direction="row"
-                spacing={2}
-                alignItems="flex-start"
-                sx={{
-                  height: "100%",
-                  backgroundColor: "#FDECEF",
-                  border: "1px solid #F8D2DA",
-                  borderRadius: "10px",
-                  px: { xs: 2, md: 2.5 },
-                  py: { xs: 2, md: 2.2 },
-                }}
-              >
-                <Box
+            <Typography
+              sx={{
+                fontFamily: "PolySans Trial, sans-serif",
+                fontWeight: 400,
+                fontSize: { xs: "24px", sm: "30px", md: "45px" },
+                lineHeight: {
+                  xs: "32px",
+                  sm: "34px",
+                  md: "35px",
+                  lg: "36.8px",
+                },
+                letterSpacing: "-0.8px",
+                color: COLORS.BLACK,
+              }}
+            >
+              Why Patent Matter
+            </Typography>
+          </Box>
+
+          <Grid
+            container
+            columnSpacing={{ xs: 0, md: "12px", lg: "8px" }}
+            rowSpacing={{ xs: 2.5, md: "20px" }}
+          >
+            {patentMatterCards.map((item) => (
+              <Grid key={item.title} size={{ xs: 12, md: 6 }}>
+                <Stack
+                  direction="row"
+                  alignItems="flex-start"
                   sx={{
-                    width: 34,
-                    height: 34,
-                    borderRadius: "50%",
-                    backgroundColor: "#F8C9D2",
-                    color: COLORS.SECONDARY,
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    flexShrink: 0,
-                    mt: 0.4,
+                    width: "100%",
+                    maxWidth: { xs: "100%", md: "100%", lg: 577 },
+                    minHeight: 149.109,
+                    backgroundColor: "#FCE8EB80",
+                    border: "0.8px solid #0000001A",
+                    borderRadius: "16px",
+                    px: { xs: 2, md: 2.5 },
+                    py: "18px",
+                    gap: "20px",
+                    boxSizing: "border-box",
                   }}
                 >
-                  <item.Icon size={17} strokeWidth={2.2} />
-                </Box>
-
-                <Box>
-                  <Typography
+                  <Box
                     sx={{
-                      fontFamily: poppins.style.fontFamily,
-                      fontWeight: 700,
-                      fontSize: { xs: "16px", md: "18px" },
-                      color: COLORS.SECONDARY,
-                      lineHeight: 1.25,
-                      mb: 0.5,
+                      width: 40,
+                      height: 40,
+                      borderRadius: "50%",
+                      backgroundColor: "#F6B7C1",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      flexShrink: 0,
+                      overflow: "hidden",
                     }}
                   >
-                    {item.title}
-                  </Typography>
+                    <Image
+                      src={item.Icon}
+                      alt={item.title}
+                      width={16}
+                      height={26}
+                      style={{ objectFit: "contain" }}
+                    />
+                  </Box>
 
-                  <Typography
-                    sx={{
-                      fontFamily: ibmPlexSans.style.fontFamily,
-                      fontSize: { xs: "16px", md: "18px" },
-                      color: COLORS.TEXT_MUTED,
-                      lineHeight: 1.5,
-                    }}
-                  >
-                    {item.desc}
-                  </Typography>
-                </Box>
-              </Stack>
-            </Grid>
-          ))}
-        </Grid>
+                  <Box>
+                    <Typography
+                      sx={{
+                        fontFamily: poppins.style.fontFamily,
+                        fontWeight: 600,
+                        fontSize: "20px",
+                        lineHeight: "26px",
+                        color: "#E31837",
+                        mb: 0.75,
+                      }}
+                    >
+                      {item.title}
+                    </Typography>
+
+                    <Typography
+                      sx={{
+                        fontFamily: poppins.style.fontFamily,
+                        fontWeight: 400,
+                        fontSize: "16px",
+                        lineHeight: "26px",
+                        color: "#5C5C5C",
+                      }}
+                    >
+                      {item.desc}
+                    </Typography>
+                  </Box>
+                </Stack>
+              </Grid>
+            ))}
+          </Grid>
+        </Box>
       </Container>
     </Box>
   );

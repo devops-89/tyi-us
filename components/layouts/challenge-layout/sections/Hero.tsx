@@ -18,8 +18,8 @@ const ChallengeHeroSection = () => {
     <Box
       sx={{
         backgroundColor: Colors.WHITE,
-        pt: { xs: 8, md: 4 },
-        pb: { xs: 6, md: 10 },
+        pt: { xs: 4, md: 4 },
+        pb: { xs: 4, md: 10 },
       }}
     >
       <Container
@@ -38,7 +38,7 @@ const ChallengeHeroSection = () => {
             sx={{
               fontFamily: poppins.style.fontFamily,
               fontWeight: 500,
-              fontSize: { xs: "30px", sm: "36px", md: "45px" },
+              fontSize: { xs: "24px", sm: "30px", md: "45px" },
               color: "#0A0A0A",
               textAlign: "center",
               letterSpacing: "-0.2px",

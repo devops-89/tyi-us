@@ -13,8 +13,8 @@ const JoinCTA = () => {
   return (
     <Box
       sx={{
-        pt: { xs: 8, md: 18 },
-        pb: { xs: 7, md: 10 },
+        pt: { xs: 4, md: 18 },
+        pb: { xs: 4, md: 10 },
         backgroundColor: COLORS.WHITE,
         position: "relative",
         overflow: "hidden",

@@ -377,6 +377,75 @@ BigData: {
   }[];
 },
 
+CaseStudiesData: {
+  sparkle: string;
+  title: string;
+
+  items: {
+    title: string;
+    award: string;
+    image: string;
+    awardImage: string;
+    patentLink: string;
+    certificateLink: string;
+  }[];
+},
+
+PatentFaq:{
+  sparkle: string;
+  title: string;
+  description: string;
+  buttonText: string;
+
+  items: {
+    question: string;
+    answer: string;
+  }[];
+},
+
+Nurturing: {
+  sparkle: string;
+  title: string;
+  videoUrl?: string;
+
+  items: {
+    prefix?: string;
+    highlight: string;
+    suffix?: string;
+  }[];
+},
+
+PatentServiceData :{
+  sparkle: string;
+  title: string;
+
+  steps: {
+    number: string;
+    title: string;
+    desc?: string;
+    points?: string[];
+    bottomText?: string;
+  }[];
+},
+
+SuccessStoriesData: {
+  sparkle: string;
+  title: string;
+
+  stories: {
+    image: any;
+    title: string;
+    description: string;
+    points: string[];
+  }[];
+},
+
+
+
+
+
+
+
 
 }
 

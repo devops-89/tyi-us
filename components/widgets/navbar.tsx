@@ -9,22 +9,38 @@ import {
   Button,
   Drawer,
   IconButton,
+  Menu as MuiMenu,
+  MenuItem,
+  Collapse,
 } from "@mui/material";
 import Link from "next/link";
 import Image from "next/image";
 import { COLORS, CONSTANTS } from "@/utils/enum";
 import { NAV_ITEMS } from "@/public/data/navigation";
 import { ibmPlexSans } from "@/utils/fonts";
-import {
-  ArrowUpRight,
-  Plus,
-  Menu,
-  X,
-} from "lucide-react";
+import { ArrowUpRight, ChevronDown, Menu, X } from "lucide-react";
 import { ASSETS } from "@/utils/assets";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
+  const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
+  const [desktopDropdownItems, setDesktopDropdownItems] = useState<any[]>([]);
+  const [mobileOpenDropdown, setMobileOpenDropdown] = useState<string | null>(
+    null
+  );
+
+  const handleDesktopDropdownOpen = (
+    event: React.MouseEvent<HTMLElement>,
+    items: any[] = []
+  ) => {
+    setAnchorEl(event.currentTarget);
+    setDesktopDropdownItems(items);
+  };
+
+  const handleDesktopDropdownClose = () => {
+    setAnchorEl(null);
+    setDesktopDropdownItems([]);
+  };
 
   return (
     <>
@@ -44,12 +60,7 @@ const Navbar = () => {
         }}
       >
         <Container maxWidth={false} sx={{ maxWidth: CONSTANTS.MAX_WIDTH }}>
-          <Stack
-            direction="row"
-            justifyContent="space-between"
-            alignItems="center"
-          >
-            {/* Logo */}
+          <Stack direction="row" justifyContent="space-between" alignItems="center">
             <Link href="/" style={{ textDecoration: "none" }}>
               <Box
                 sx={{
@@ -68,57 +79,105 @@ const Navbar = () => {
               </Box>
             </Link>
 
-            {/* Desktop Menu */}
             <Stack
               direction="row"
               spacing={4}
               alignItems="center"
-              sx={{ display: { xs: "none", md: "flex" } }}
+              sx={{ display: { xs: "none", lg: "flex" } }}
             >
-              {NAV_ITEMS.map((item) => (
-                <Stack
-                  key={item.label}
-                  direction="row"
-                  alignItems="center"
-                  spacing={0.5}
-                  component={Link}
-                  href={item.href}
-                  sx={{
-                    textDecoration: "none",
-                    color: COLORS.BLACK,
-                    "&:hover": { color: COLORS.SECONDARY },
-                    transition: "color 0.2s ease",
-                  }}
-                >
-                  <Typography
+              {NAV_ITEMS.map((item) =>
+                item.hasDropdown && item.dropdownItems ? (
+                  <Stack
+                    key={item.label}
+                    direction="row"
+                    alignItems="center"
+                    spacing={0.5}
+                    onClick={(event) =>
+                      handleDesktopDropdownOpen(event, item.dropdownItems)
+                    }
                     sx={{
-                      fontFamily: ibmPlexSans.style.fontFamily,
-                      fontWeight: 500,
-                      fontSize: "14px",
+                      cursor: "pointer",
+                      color: COLORS.BLACK,
+                      "&:hover": { color: COLORS.SECONDARY },
+                      transition: "color 0.2s ease",
                     }}
                   >
-                    {item.label}
-                  </Typography>
-
-                  {item.hasDropdown && (
-                    <Plus
-                      size={16}
-                      strokeWidth={2.5}
-                      style={{
-                        color: COLORS.BLACK,
-                        opacity: 0.7,
+                    <Typography
+                      sx={{
+                        fontFamily: ibmPlexSans.style.fontFamily,
+                        fontWeight: 500,
+                        fontSize: "14px",
                       }}
-                    />
-                  )}
-                </Stack>
-              ))}
+                    >
+                      {item.label}
+                    </Typography>
+
+                    <ChevronDown size={16} strokeWidth={2.5} />
+                  </Stack>
+                ) : (
+                  <Stack
+                    key={item.label}
+                    direction="row"
+                    alignItems="center"
+                    spacing={0.5}
+                    component={Link}
+                    href={item.href}
+                    sx={{
+                      textDecoration: "none",
+                      color: COLORS.BLACK,
+                      "&:hover": { color: COLORS.SECONDARY },
+                      transition: "color 0.2s ease",
+                    }}
+                  >
+                    <Typography
+                      sx={{
+                        fontFamily: ibmPlexSans.style.fontFamily,
+                        fontWeight: 500,
+                        fontSize: "14px",
+                      }}
+                    >
+                      {item.label}
+                    </Typography>
+                  </Stack>
+                )
+              )}
             </Stack>
 
-            {/* Desktop Button */}
+            <MuiMenu
+              anchorEl={anchorEl}
+              open={Boolean(anchorEl)}
+              onClose={handleDesktopDropdownClose}
+              PaperProps={{
+                sx: {
+                  mt: 1.5,
+                  borderRadius: "12px",
+                  boxShadow: "0 10px 30px rgba(0,0,0,0.12)",
+                  minWidth: 220,
+                },
+              }}
+            >
+              {desktopDropdownItems.map((dropdownItem) => (
+                <MenuItem
+                  key={dropdownItem.href}
+                  component={Link}
+                  href={dropdownItem.href}
+                  onClick={handleDesktopDropdownClose}
+                  sx={{
+                    fontFamily: ibmPlexSans.style.fontFamily,
+                    fontWeight: 500,
+                    fontSize: "14px",
+                    py: 1.2,
+                  }}
+                >
+                  {dropdownItem.label}
+                </MenuItem>
+              ))}
+            </MuiMenu>
+
             <Box
               sx={{
                 width: "180px",
-                display: { xs: "none", md: "flex" },
+                display: { xs: "none", lg: "flex" },
                 justifyContent: "flex-end",
               }}
             >
@@ -138,10 +197,7 @@ const Navbar = () => {
                       mr: 1,
                     }}
                   >
-                    <ArrowUpRight
-                      size={20}
-                      color={COLORS.SECONDARY}
-                    />
+                    <ArrowUpRight size={20} color={COLORS.SECONDARY} />
                   </Box>
                 }
                 sx={{
@@ -157,21 +213,17 @@ const Navbar = () => {
                   boxShadow: "none",
                   "&:hover": {
                     backgroundColor: COLORS.PRIMARY,
-                    boxShadow:
-                      "0 8px 20px rgba(227, 24, 55, 0.2)",
+                    boxShadow: "0 8px 20px rgba(227, 24, 55, 0.2)",
                   },
                 }}
               >
-                Let's Connect
+                Let&apos;s Connect
               </Button>
             </Box>
 
-            {/* Mobile Menu Icon */}
             <IconButton
               onClick={() => setOpen(true)}
-              sx={{
-                display: { xs: "flex", md: "none" },
-              }}
+              sx={{ display: { xs: "flex", lg: "none" } }}
             >
               <Menu size={28} />
             </IconButton>
@@ -179,65 +231,109 @@ const Navbar = () => {
         </Container>
       </Box>
 
-      {/* Mobile Drawer */}
-      <Drawer
-        anchor="right"
-        open={open}
-        onClose={() => setOpen(false)}
-      >
-        <Box
-          sx={{
-            width: 280,
-            height: "100%",
-            p: 3,
-          }}
-        >
-          {/* Close Icon */}
-          <Box
-            sx={{
-              display: "flex",
-              justifyContent: "flex-end",
-              mb: 4,
-            }}
-          >
+      <Drawer anchor="right" open={open} onClose={() => setOpen(false)}>
+        <Box sx={{ width: 280, height: "100%", p: 3 }}>
+          <Box sx={{ display: "flex", justifyContent: "flex-end", mb: 4 }}>
             <IconButton onClick={() => setOpen(false)}>
               <X size={28} />
             </IconButton>
           </Box>
 
-          {/* Mobile Menu Items */}
-          <Stack spacing={3}>
-            {NAV_ITEMS.map((item) => (
-              <Stack
-                key={item.label}
-                direction="row"
-                alignItems="center"
-                spacing={1}
-                component={Link}
-                href={item.href}
-                onClick={() => setOpen(false)}
-                sx={{
-                  textDecoration: "none",
-                  color: COLORS.BLACK,
-                }}
-              >
-                <Typography
+          <Stack spacing={2.5}>
+            {NAV_ITEMS.map((item) => {
+              const hasDropdown = item.hasDropdown && item.dropdownItems;
+
+              if (hasDropdown) {
+                const isOpen = mobileOpenDropdown === item.label;
+
+                return (
+                  <Box key={item.label}>
+                    <Stack
+                      direction="row"
+                      alignItems="center"
+                      justifyContent="space-between"
+                      onClick={() =>
+                        setMobileOpenDropdown(isOpen ? null : item.label)
+                      }
+                      sx={{
+                        cursor: "pointer",
+                        color: COLORS.BLACK,
+                      }}
+                    >
+                      <Typography
+                        sx={{
+                          fontFamily: ibmPlexSans.style.fontFamily,
+                          fontWeight: 500,
+                          fontSize: "18px",
+                        }}
+                      >
+                        {item.label}
+                      </Typography>
+
+                      <ChevronDown
+                        size={18}
+                        style={{
+                          transform: isOpen ? "rotate(180deg)" : "rotate(0deg)",
+                          transition: "transform 0.2s ease",
+                        }}
+                      />
+                    </Stack>
+
+                    <Collapse in={isOpen} timeout="auto" unmountOnExit>
+                      <Stack spacing={1.5} sx={{ pl: 2, pt: 2 }}>
+                        {item.dropdownItems?.map((dropdownItem) => (
+                          <Typography
+                            key={dropdownItem.href}
+                            component={Link}
+                            href={dropdownItem.href}
+                            onClick={() => setOpen(false)}
+                            sx={{
+                              fontFamily: ibmPlexSans.style.fontFamily,
+                              fontWeight: 500,
+                              fontSize: "15px",
+                              textDecoration: "none",
+                              color: COLORS.TEXT_MUTED,
+                              "&:hover": {
+                                color: COLORS.SECONDARY,
+                              },
+                            }}
+                          >
+                            {dropdownItem.label}
+                          </Typography>
+                        ))}
+                      </Stack>
+                    </Collapse>
+                  </Box>
+                );
+              }
+
+              return (
+                <Stack
+                  key={item.label}
+                  direction="row"
+                  alignItems="center"
+                  spacing={1}
+                  component={Link}
+                  href={item.href}
+                  onClick={() => setOpen(false)}
                   sx={{
-                    fontFamily: ibmPlexSans.style.fontFamily,
-                    fontWeight: 500,
-                    fontSize: "18px",
+                    textDecoration: "none",
+                    color: COLORS.BLACK,
                   }}
                 >
-                  {item.label}
-                </Typography>
+                  <Typography
+                    sx={{
+                      fontFamily: ibmPlexSans.style.fontFamily,
+                      fontWeight: 500,
+                      fontSize: "18px",
+                    }}
+                  >
+                    {item.label}
+                  </Typography>
+                </Stack>
+              );
+            })}
 
-                {item.hasDropdown && (
-                  <Plus size={16} />
-                )}
-              </Stack>
-            ))}
-
-            {/* Mobile Button */}
             <Button
               variant="contained"
               endIcon={<ArrowUpRight size={18} />}
@@ -249,9 +345,12 @@ const Navbar = () => {
                 fontFamily: ibmPlexSans.style.fontFamily,
                 fontWeight: 600,
                 fontSize: "14px",
+                "&:hover": {
+                  backgroundColor: COLORS.PRIMARY,
+                },
               }}
             >
-              Let's Connect
+              Let&apos;s Connect
             </Button>
           </Stack>
         </Box>

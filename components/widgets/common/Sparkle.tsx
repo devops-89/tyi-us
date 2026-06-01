@@ -10,22 +10,25 @@ interface SparkleProps {
   sx?: any;
 }
 
-const Sparkle: React.FC<SparkleProps> = ({ 
-  color = Colors.SECONDARY, 
+const Sparkle: React.FC<SparkleProps> = ({
+  color = Colors.SECONDARY,
   size = "20px",
-  sx = {}
+  sx = {},
 }) => {
   return (
-    <Box 
-      component="span" 
-      sx={{ 
-        color, 
+    <Box
+      component="span"
+      sx={{
+        color,
         width: size,
         height: size,
+        minWidth: size,
         display: "inline-flex",
         alignItems: "center",
         justifyContent: "center",
-        ...sx 
+        flexShrink: 0,
+        lineHeight: 0,
+        ...sx,
       }}
     >
       <svg
@@ -35,7 +38,6 @@ const Sparkle: React.FC<SparkleProps> = ({
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
-        {/* Sleek 4-pointed star with concave curves */}
         <path
           d="M12 2C12 8.5 15.5 12 22 12C15.5 12 12 15.5 12 22C12 15.5 8.5 12 2 12C8.5 12 12 8.5 12 2Z"
           stroke="currentColor"

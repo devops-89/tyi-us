@@ -4,7 +4,7 @@ import React from "react";
 import { Box, Container, Grid, Typography, Stack } from "@mui/material";
 
 import { COLORS, CONSTANTS } from "@/utils/enum";
-import { poppins, ibmPlexSans } from "@/utils/fonts";
+import { poppins } from "@/utils/fonts";
 import SparkleLabel from "@/components/widgets/common/SparkleLabel";
 import { WEBSITE_DATA } from "@/utils/website";
 
@@ -12,12 +12,7 @@ const ModulesCoveredSection = () => {
   const modulesData = WEBSITE_DATA.innovation.ModuleItem;
 
   return (
-    <Box
-      sx={{
-        backgroundColor: COLORS.WHITE,
-        py: { xs: 6, md: 10 },
-      }}
-    >
+    <Box sx={{ backgroundColor: COLORS.WHITE, py: { xs: 4, md: 10 } }}>
       <Container
         maxWidth={false}
         sx={{
@@ -29,9 +24,11 @@ const ModulesCoveredSection = () => {
           <Box sx={{ display: "flex", justifyContent: "center", mb: 2 }}>
             <SparkleLabel
               text="8 Module Covered"
-              fontSize={18}
-              sparklePosition="both"
-              color={COLORS.PRIMARY}
+               fontSize= "18px"
+                              type="blue-star"
+                             sparklePosition="both"
+                             sparkleSize={35}
+                             color={COLORS.PRIMARY}
             />
           </Box>
 
@@ -39,7 +36,7 @@ const ModulesCoveredSection = () => {
             sx={{
               fontFamily: poppins.style.fontFamily,
               fontWeight: 500,
-              fontSize: { xs: "28px", sm: "34px", md: "40px" },
+              fontSize: { xs: "24px", sm: "30px", md: "45px" },
               color: COLORS.BLACK,
               lineHeight: 1.2,
             }}
@@ -48,30 +45,34 @@ const ModulesCoveredSection = () => {
           </Typography>
         </Box>
 
-        <Grid container spacing={{ xs: 3, md: 4 }}>
+        <Grid container spacing={{ xs: 3, md: 3, lg: 4 }}>
           {modulesData.map((item) => (
-            <Grid key={item.title} size={{ xs: 12, sm: 6, md: 3 }}>
+            <Grid key={item.title} size={{ xs: 12, sm: 6, md: 4, lg: 3 }}>
               <Box
                 sx={{
-                  height: "100%",
-                  minHeight: { xs: 260, md: 305 },
-                  backgroundColor: "#F4F5F7",
-                  borderRadius: "14px",
-                  p: { xs: 3, md: 3.2 },
+                  width: "100%",
+                  maxWidth: { lg: 271 },
+                  height: { xs: "auto", lg: 318 },
+                  minHeight: { xs: 280, lg: 318 },
+                  backgroundColor: "#F3F4F6",
+                  borderRadius: "16px",
+                  p: "28px",
                   display: "flex",
                   flexDirection: "column",
+                  gap: "20px",
+                  mx: "auto",
                 }}
               >
                 <Stack
                   direction="row"
                   justifyContent="space-between"
                   alignItems="flex-start"
-                  sx={{ mb: 4 }}
+                  sx={{ gap: 1.5 }}
                 >
                   <Box
                     sx={{
-                      width: 54,
-                      height: 54,
+                      width: 56,
+                      height: 56,
                       borderRadius: "14px",
                       backgroundColor: COLORS.SECONDARY,
                       display: "flex",
@@ -81,7 +82,7 @@ const ModulesCoveredSection = () => {
                       flexShrink: 0,
                     }}
                   >
-                    <item.Icon size={26} strokeWidth={2.2} />
+                    <item.Icon size={28} strokeWidth={2.2} />
                   </Box>
 
                   <Box
@@ -90,15 +91,19 @@ const ModulesCoveredSection = () => {
                       borderRadius: "999px",
                       px: 1.5,
                       py: 0.5,
+                      flexShrink: 0,
                     }}
                   >
                     <Typography
                       sx={{
-                        fontFamily: ibmPlexSans.style.fontFamily,
-                        fontSize: "11px",
-                        fontWeight: 600,
-                        color: COLORS.PRIMARY,
-                        letterSpacing: "0.5px",
+                        fontFamily: poppins.style.fontFamily,
+                        fontWeight: 400,
+                        fontSize: "12px",
+                        lineHeight: "18px",
+                        letterSpacing: "0.48px",
+                        color: "#37569E",
+                        textTransform: "uppercase",
+                        whiteSpace: "nowrap",
                       }}
                     >
                       {item.level}
@@ -109,11 +114,11 @@ const ModulesCoveredSection = () => {
                 <Typography
                   sx={{
                     fontFamily: poppins.style.fontFamily,
-                    fontWeight: 700,
-                    fontSize: { xs: "18px", md: "18px" },
+                    fontWeight: 600,
+                    fontSize: "18px",
+                    lineHeight: "25.2px",
+                    letterSpacing: "-0.18px",
                     color: COLORS.BLACK,
-                    lineHeight: 1.3,
-                    mb: 1.5,
                   }}
                 >
                   {item.title}
@@ -121,11 +126,12 @@ const ModulesCoveredSection = () => {
 
                 <Typography
                   sx={{
-                    fontFamily: ibmPlexSans.style.fontFamily,
-                    fontSize: "15px",
+                    fontFamily: poppins.style.fontFamily,
+                    fontWeight: 400,
+                    fontSize: "14px",
+                    lineHeight: "22.4px",
+                    letterSpacing: "0px",
                     color: COLORS.TEXT_MUTED,
-                    lineHeight: 1.55,
-                    mb: 3,
                   }}
                 >
                   {item.desc}
@@ -133,8 +139,11 @@ const ModulesCoveredSection = () => {
 
                 <Typography
                   sx={{
-                    fontFamily: ibmPlexSans.style.fontFamily,
+                    fontFamily: poppins.style.fontFamily,
+                    fontWeight: 400,
                     fontSize: "13px",
+                    lineHeight: "19.5px",
+                    letterSpacing: "0px",
                     color: COLORS.TEXT_MUTED,
                     mt: "auto",
                   }}

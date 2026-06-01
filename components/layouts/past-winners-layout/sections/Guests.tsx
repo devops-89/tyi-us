@@ -12,7 +12,7 @@ import { WEBSITE_DATA } from "@/utils/website";
 const PastWinnersGuestsSection = () => {
   const { guests } = WEBSITE_DATA.pastWinners;
   return (
-    <Box sx={{ py: { xs: 10, md: 12 }, backgroundColor: Colors.WHITE }}>
+    <Box sx={{ py: { xs: 4, md: 12 }, backgroundColor: Colors.WHITE }}>
       <Container maxWidth={false} sx={{ maxWidth: CONSTANTS.MAX_WIDTH }}>
         <Stack spacing={2} alignItems="center" sx={{ mb: 6 }}>
           <Typography sx={{ fontFamily: poppins.style.fontFamily, fontWeight: 700, fontSize: { xs: 28, md: 32 }, color: Colors.BLACK }}>

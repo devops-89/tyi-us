@@ -37,7 +37,7 @@ const ParticipationJourneySection = () => {
   return (
     <Box
       sx={{
-        py: { xs: 6, md: 10 },
+        py: { xs: 4, md: 10 },
         backgroundColor: Colors.WHITE,
         position: "relative",
         overflow: "hidden",

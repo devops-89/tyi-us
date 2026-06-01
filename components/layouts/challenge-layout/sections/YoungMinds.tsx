@@ -13,7 +13,7 @@ const YoungMindsSection = () => {
   return (
     <Box
       sx={{
-        py: { xs: 6, md: 12 },
+        py: { xs: 4, md: 12 },
         backgroundColor: Colors.WHITE,
         position: "relative",
         overflow: "hidden",
@@ -36,7 +36,7 @@ const YoungMindsSection = () => {
           >
             <SparkleLabel
               text={youngMinds.sparkle}
-              fontSize="18px"
+              fontSize={{ xs: "14px", sm: "18px" }}
               sparklePosition="both"
             />
           </Box>
@@ -45,7 +45,7 @@ const YoungMindsSection = () => {
             sx={{
               fontFamily: poppins.style.fontFamily,
               fontWeight: 500,
-              fontSize: { xs: "30px", sm: "36px", md: "45px" },
+              fontSize: { xs: "22px", sm: "28px", md: "45px" },
               color: Colors.BLACK,
               lineHeight: { xs: 1.25, md: 1.2 },
               mb: 1,
