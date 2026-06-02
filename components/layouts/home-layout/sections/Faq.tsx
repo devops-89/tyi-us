@@ -29,7 +29,7 @@ const FaqSection = () => {
   return (
     <Box
       sx={{
-        py: { xs: 6, md: 10 },
+        py: {  md: 10 },
         backgroundColor: Colors.WHITE,
         position: "relative",
         overflow: "hidden",

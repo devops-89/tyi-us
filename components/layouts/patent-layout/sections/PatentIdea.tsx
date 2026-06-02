@@ -118,7 +118,7 @@ const PatentSection = () => {
               src={patentData.image}
               alt="US Patent Certificate"
               fill
-              style={{ objectFit: "cover" }}
+              style={{ objectFit: "contain" }}
             />
           </Box>
         </Stack>

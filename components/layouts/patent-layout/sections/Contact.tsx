@@ -3,6 +3,7 @@ import { Box, Container, Typography, Button } from "@mui/material";
 
 import { COLORS, CONSTANTS } from "@/utils/enum";
 import { poppins } from "@/utils/fonts";
+import Link from "next/link";
 
 const ProtectIdeaSection = () => {
   return (
@@ -133,33 +134,35 @@ const ProtectIdeaSection = () => {
               </Box>
 
               <Button
-                variant="contained"
-                sx={{
-                  width: 151,
-                  height: 47,
-                  borderRadius: "25px",
-                  px: "25px",
-                  py: "10px",
-                  gap: "12px",
-                  backgroundColor: COLORS.SECONDARY,
-                  color: COLORS.WHITE,
-                  fontFamily: poppins.style.fontFamily,
-                  fontWeight: 400,
-                  fontSize: "16px",
-                  lineHeight: "100%",
-                  letterSpacing: "-0.02em",
-                  textTransform: "none",
-                  boxShadow: "none",
-                  ml: { xs: 0, md: "auto" },
-                  mr: { xs: 0, md: "70px" },
-                  "&:hover": {
-                    backgroundColor: COLORS.PRIMARY,
-                    boxShadow: "none",
-                  },
-                }}
-              >
-                Contact Us
-              </Button>
+  component={Link}
+  href="/contact"
+  variant="contained"
+  sx={{
+    width: 151,
+    height: 47,
+    borderRadius: "25px",
+    px: "25px",
+    py: "10px",
+    gap: "12px",
+    backgroundColor: COLORS.SECONDARY,
+    color: COLORS.WHITE,
+    fontFamily: poppins.style.fontFamily,
+    fontWeight: 400,
+    fontSize: "16px",
+    lineHeight: "100%",
+    letterSpacing: "-0.02em",
+    textTransform: "none",
+    boxShadow: "none",
+    ml: { xs: 0, md: "auto" },
+    mr: { xs: 0, md: "70px" },
+    "&:hover": {
+      backgroundColor: COLORS.PRIMARY,
+      boxShadow: "none",
+    },
+  }}
+>
+  Contact Us
+</Button>
             </Box>
           </Box>
         </Box>

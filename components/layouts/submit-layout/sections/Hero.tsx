@@ -15,8 +15,8 @@ const SubmitHeroSection = () => {
     <Box
       sx={{
         backgroundColor: COLORS.WHITE,
-        pt: { xs: 8, md: 12 },
-        pb: { xs: 6, md: 12 },
+        pt: { xs: 4, md: 12 },
+        pb: { xs: 4, md: 12 },
       }}
     >
       <Container

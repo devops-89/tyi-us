@@ -72,7 +72,7 @@ const SuccessStoriesSection = () => {
               sx={{
                 fontFamily: "PolySans Trial, sans-serif",
                 fontWeight: 400,
-              fontSize: { xs: "24px", sm: "30px", md: "45px" },
+                fontSize: { xs: "24px", sm: "30px", md: "45px" },
                 lineHeight: { xs: "38px", sm: "42px", md: "48px" },
                 letterSpacing: "-0.01em",
                 textTransform: "capitalize",
@@ -132,7 +132,7 @@ const SuccessStoriesSection = () => {
               transition: "transform 0.45s ease",
               transform: {
                 xs: `translateX(calc(-${activeIndex} * (100% + ${CARD_GAP}px)))`,
-                md: `translateX(calc(-${activeIndex} * ((100% - ${CARD_GAP}px) / 2 + ${CARD_GAP}px)))`,
+                md: `translateX(calc(-${activeIndex} * (50% + ${CARD_GAP / 2}px)))`,
               },
             }}
           >
@@ -142,11 +142,11 @@ const SuccessStoriesSection = () => {
                 sx={{
                   width: {
                     xs: "100%",
-                    md: `calc((100% - ${CARD_GAP}px) / 2)`,
+                    md: `calc(50% - ${CARD_GAP / 2}px)`,
                   },
                   minWidth: {
                     xs: "100%",
-                    md: `calc((100% - ${CARD_GAP}px) / 2)`,
+                    md: `calc(50% - ${CARD_GAP / 2}px)`,
                   },
                   minHeight: { xs: "auto", md: 543 },
                   backgroundColor: COLORS.WHITE,

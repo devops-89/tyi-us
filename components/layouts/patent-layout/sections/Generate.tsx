@@ -45,24 +45,28 @@ const PatentPreviewSection = () => {
         position: "relative",
         width: "100%",
         maxWidth: { xs: 340, sm: 600, md: 830 },
-        height: { xs: 260, sm: 470, md: 654 },
         mx: "auto",
         borderRadius: "10px",
-        overflow: "hidden",
+        overflow: "visible",
       }}
     >
       <Image
         src={ASSETS.IMAGES.PATENT_PREVIEW}
         alt="Patent Certificate Preview"
-        fill
-        style={{ objectFit: "contain" }}
+        width={830}
+        height={654}
+        style={{
+          width: "100%",
+          height: "auto",
+          display: "block",
+        }}
       />
 
       {generatedName && (
         <Typography
           sx={{
             position: "absolute",
-            top: { xs: "50%", sm: "50%" },
+            top: { xs: "47%", sm: "50%" },
             left: "61%",
             transform: "translateX(-50%)",
             fontFamily: poppins.style.fontFamily,
@@ -82,8 +86,8 @@ const PatentPreviewSection = () => {
         <Typography
           sx={{
             position: "absolute",
-            top: { xs: "58%", sm: "62%" },
-             left: "61%",
+            top: { xs: "60%", sm: "62%" },
+            left: "61%",
             transform: "translateX(-50%)",
             fontFamily: poppins.style.fontFamily,
             fontSize: { xs: "10px", sm: "15px", md: "18px" },
@@ -131,7 +135,7 @@ const PatentPreviewSection = () => {
           sx={{
             fontFamily: "PolySans Trial, sans-serif",
             fontWeight: 400,
-            fontSize: { xs: "24px", sm: "30px", md: "45px" },
+            fontSize: { xs: "24px", sm: "30px", md: "40px" },
             lineHeight: { xs: "38px", sm: "42px", md: "48px" },
             letterSpacing: "-0.01em",
             textTransform: "capitalize",
@@ -177,7 +181,7 @@ const PatentPreviewSection = () => {
         >
           <Box
             sx={{
-              width: { xs: "100%", sm: "58%", md: "65%" },
+              width: { xs: "100%", sm: "58%", md: "62%" },
               display: "flex",
               flexDirection: { xs: "column", sm: "row" },
               gap: { xs: 2, sm: 1.5, md: 2 },
@@ -260,6 +264,7 @@ const PatentPreviewSection = () => {
               alignItems: "center",
               gap: { xs: "10px", sm: "6px", md: "10px" },
               minWidth: 0,
+              ml: { md: 2 },
             }}
           >
             <Button

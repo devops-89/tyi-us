@@ -52,11 +52,11 @@ const HowToParticipateSection = () => {
               sx={{
                 fontFamily: poppins.style.fontFamily,
                 fontWeight: 600,
-                fontSize: { xs: "30px", sm: "36px", md: "45px" },
+                fontSize: { xs: "30px", sm: "36px", md: "40px", lg: "45px" },
                 color: Colors.BLACK,
-                lineHeight: { xs: 1.25, md: 1.2 },
+                lineHeight: { xs: 1.25, md: 1, lg: 1.2 },
                 mb: 2,
-                textAlign: { xs: "center", md: "left" },
+                textAlign: { xs: "center", md: "center", lg: "left"},
               }}
             >
               {howToParticipate.header}
