@@ -10,6 +10,6 @@ export const metadata = {
 };
 
 export default function PatentPage() {
-  return <GetPatent/>;
+  return <GetPatent/>
 }
 

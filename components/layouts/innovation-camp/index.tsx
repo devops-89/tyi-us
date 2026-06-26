@@ -10,14 +10,15 @@ import LearningOutcomesSection from "./sections/Learning";
 import InnovationCampInfoCards from "./sections/Deadline";
 import ParticipationJourneySection from "../home-layout/sections/ParticipationJourney";
 import PartnersSection from "../home-layout/sections/Partners";
-import FreeInnovationSection from "./sections/FreeInnovation";
+import InnovationCampSection from "./sections/Freeinnovation";
+
 
 
 
 const InnovationCamp = () => {
   return (
     <Box>
-     <FreeInnovationSection/>
+     <InnovationCampSection/>
      <ModulesCoveredSection/>
      <LearningOutcomesSection/>
      <InnovationCampInfoCards/>
