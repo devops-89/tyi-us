@@ -145,7 +145,7 @@ const PatentPreviewSection = () => {
             mb: 2,
           }}
         >
-          Ever Wondered What It Feels Like To See Your Own US Patent?
+          Ever wondered what it feels like to have your own US patent?
         </Typography>
 
         <Typography
@@ -162,8 +162,7 @@ const PatentPreviewSection = () => {
             mb: 4,
           }}
         >
-          Now You Can! Enter Your Details To Generate A Personalized Sample U.S.
-          Patent Certificate, A Glimpse Into Your Future As An Innovator.
+         Try now! Enter your details to generate a personalized sample U.S. Patent Certificate and a glimpse into your future as an innovator.
         </Typography>
 
         <Box

@@ -289,24 +289,23 @@ const HomeHeroSection = () => {
         >
           {/* DESCRIPTION */}
           <Typography
-            sx={{
-              fontFamily: ibmPlexSans.style.fontFamily,
-              fontSize: { xs: "16px", md: "20px" },
-              color: Colors.BLACK,
-              lineHeight: 1.6,
-              textAlign: { xs: "left", lg: "justify" },
-              maxWidth: { lg: "950px" },
-              order: { xs: 1, lg: 2 },
-              flex: 1,
-              "& span": {
-                color: Colors.SECONDARY,
-                fontWeight: 700,
-              },
-            }}
-          >
-            <span>Top Young Innovators</span>{" "}
-            {hero.description2.replace("Top Young Innovators ", "")}
-          </Typography>
+  dangerouslySetInnerHTML={{ __html: hero.description2 }}
+  sx={{
+    fontFamily: ibmPlexSans.style.fontFamily,
+    fontSize: { xs: "16px", md: "20px" },
+    color: Colors.BLACK,
+    lineHeight: 1.6,
+    textAlign: { xs: "left", lg: "justify" },
+    maxWidth: { lg: "950px" },
+    order: { xs: 1, lg: 2 },
+    flex: 1,
+    whiteSpace: "pre-line", // Preserves double newlines (\n\n) as paragraph spacing
+    "& span": {
+      color: Colors.SECONDARY,
+      fontWeight: 700,
+    },
+  }}
+/>
 
           {/* ABOUT BUTTON */}
           <Button

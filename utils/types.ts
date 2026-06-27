@@ -139,6 +139,13 @@ export interface IWebsiteData {
       image1: any;
       image2: any;
     };
+     cultureOfInnovation: {
+    sparkle: string;
+    title: string;
+    leadDesc: string;
+    bodyDesc: string;
+    highlightDesc: string;
+  };
     competitions: {
       sparkle: string;
       title: string;
@@ -402,6 +409,7 @@ PatentFaq:{
     answer: string;
   }[];
 },
+
 
 Nurturing: {
   sparkle: string;

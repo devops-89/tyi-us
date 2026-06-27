@@ -24,11 +24,11 @@ const ModulesCoveredSection = () => {
           <Box sx={{ display: "flex", justifyContent: "center", mb: 2 }}>
             <SparkleLabel
               text="8 Module Covered"
-               fontSize= "18px"
-                              type="blue-star"
-                             sparklePosition="both"
-                             sparkleSize={35}
-                             color={COLORS.PRIMARY}
+              fontSize="18px"
+              type="blue-star"
+              sparklePosition="both"
+              sparkleSize={35}
+              color={COLORS.PRIMARY}
             />
           </Box>
 
@@ -41,7 +41,7 @@ const ModulesCoveredSection = () => {
               lineHeight: 1.2,
             }}
           >
-            Modules Covered in “Free Innovation Camp”
+            Modules Covered in TYI&apos;s Innovation Camp
           </Typography>
         </Box>
 
@@ -52,7 +52,7 @@ const ModulesCoveredSection = () => {
                 sx={{
                   width: "100%",
                   maxWidth: { lg: 271 },
-                  height: { xs: "auto", lg: 318 },
+                  height: "100%",
                   minHeight: { xs: 280, lg: 318 },
                   backgroundColor: "#F3F4F6",
                   borderRadius: "16px",
@@ -119,6 +119,7 @@ const ModulesCoveredSection = () => {
                     lineHeight: "25.2px",
                     letterSpacing: "-0.18px",
                     color: COLORS.BLACK,
+                    minHeight: { xs: "auto", sm: "75.6px" }, // Reserves space for up to 3 lines of title text
                   }}
                 >
                   {item.title}

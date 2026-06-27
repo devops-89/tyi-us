@@ -42,7 +42,7 @@ const ChallengeSection = () => {
                   lineHeight: { xs: 1.25, md: 1.1 },
                 }}
               >
-                The Ultimate Innovation Challenge for Young Creators
+                The Ultimate Innovation Challenge for Young Minds!
               </Typography>
 
               <Typography
@@ -56,9 +56,7 @@ const ChallengeSection = () => {
                   textAlign: { xs: "left", md: "justify" },
                 }}
               >
-                Top Young Innovators brings an exciting innovation competition
-                "America's Top Young Innovator" to hunt the most innovative and
-                creative young minds.
+                Top Young Innovators, a globally recognized innovation challenge for young minds, is now in India. We are here to inspire, nurture, and discover the country's next generation of innovators and problem-solvers. 
               </Typography>
 
               <AppButton
@@ -68,7 +66,7 @@ const ChallengeSection = () => {
                   fontSize: { xs: "16px", md: "18px" },
                 }}
               >
-                Explore the Competition
+               Know More About the Competition
               </AppButton>
             </Box>
 
@@ -114,7 +112,7 @@ const ChallengeSection = () => {
                   lineHeight: { xs: 1.25, md: 1.25 },
                 }}
               >
-                Got a Big Idea? Show It to the World!
+                Got an Idea That Can Change the World?
               </Typography>
 
               <Typography
@@ -128,10 +126,7 @@ const ChallengeSection = () => {
                   textAlign: { xs: "left", md: "justify" },
                 }}
               >
-                If you are aged between 10 to 22 years and have an idea that
-                you think has the power to change the world, participate in
-                “America’s Top Young Innovator”, win the title, and get global
-                recognition.
+                If you are aged between 10 to 22 years and have an idea that can make a difference or simply the curiosity to solve real-world problems, India’s Top Young Innovators gives you the opportunity to learn, innovate, showcase your creativity, win the title and get global recognition.
               </Typography>
             </Box>
 

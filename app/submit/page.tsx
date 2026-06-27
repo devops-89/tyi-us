@@ -7,6 +7,6 @@ export const metadata = {
 };
 
 export default function SubmitPage() {
-  return <SubmitLayout />;
+  return <SubmitLayout />
 }
 

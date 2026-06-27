@@ -7,6 +7,6 @@ export const metadata = {
 };
 
 export default function PastWinnersPage() {
-  return <PastWinnersLayout />;
+  return <PastWinnersLayout />
 }
 

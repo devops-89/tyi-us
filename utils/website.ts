@@ -22,12 +22,14 @@ export const WEBSITE_DATA: IWebsiteData = {
         color: "#37569E",
         sparkleColor: Colors.SECONDARY,
       },
-      secondaryTitle: "America's",
+      secondaryTitle: " India's",
       tertiaryTitle: "Top Young",
       title: "Innovators",
       subtitle: "— Grand Finale",
-      description: "We celebrate the young minds who dare to dream big and make a difference. Join us as young geniuses on America’s Top Young Innovators present their bold ideas to the world and receive prestigious awards and patent certificates.",
-      description2: "Top Young Innovators is a global platform dedicated to discovering and nurturing the most creative, inventive, and forward-thinking young minds from around the world. Our mission is to cultivate a generation of children who think differently who question, create, and solve the most pressing real-world problems.",
+      description: "We celebrate the young minds who dare to dream big and make a difference. Join us as the next generation of Indian innovators learn, create, and present their bold ideas to the world and receive prestigious awards and patent certificates. ",
+      description2: `<span>Top Young Innovators</span> is a global platform dedicated to discovering and nurturing the most creative, inventive, and forward-thinking young minds, and we are now in India.
+We believe innovation is not a talent; it is a skill that can be learned and developed. Our mission is to cultivate a generation of young minds who think differently, question boldly, and develop the confidence to solve real-world challenges.
+Through <span>innovation learning</span>, mentorship, and competition, we are building a culture of creativity, problem-solving, and innovation among India's youth.`,
       cta1Text: "Submit Your Entry",
       cta1Href: "/submit",
       cta2Text: "About",
@@ -39,18 +41,18 @@ export const WEBSITE_DATA: IWebsiteData = {
     },
     participation: {
       sparkle: "Participation Journey",
-      title: "A Simple 6-Step Path to the Grand Finale",
+      title: "Your Roadmap to Becoming India’s Top Young Innovators ",
       description: "From your very first step to standing on the grand finale stage, Top Young Innovators journey helps you build confidence, gain mentorship, and experience how global competitions work.",
       steps: [
         {
           stepLabel: "Step - 01",
           title: "Registration",
-          description: 'You can register in the "America’s Top Young Innovators" as an individual or as a team. Click here to know more about the registration process.',
+          description: 'You can register in the "India’s Top Young Innovators" as an individual or as a team. Click here to know more about the registration process.',
         },
         {
           stepLabel: "Step - 02",
-          title: "Attend FREE Innovation Camp (Optional)",
-          description: "Develop a new innovation idea with expert mentorship or build your existing idea further with step-by-step guidance. Request to Register for our optional 15 hours FREE Innovation Camp sponsored by our partner DiscoverSTEM Foundation. Learn More about the Innovation Camp.",
+          title: "Attend Our Innovation Camp ",
+          description: "Develop a new innovation idea with expert mentorship or build your existing idea further with step-by-step guidance. Request to Register for our optional 15-hour Innovation Camp sponsored by our partner DiscoverSTEM Foundation. Learn More about the Innovation Camp.",
         },
         {
           stepLabel: "Step - 03",
@@ -65,12 +67,12 @@ export const WEBSITE_DATA: IWebsiteData = {
         {
           stepLabel: "Step - 05",
           title: "Results Announcement",
-          description: "The results of the competition will be announced at the Grand Finale of America's Top Young Innovators.",
+          description: "The results of the competition will be announced at the Grand Finale of India's Top Young Innovators.",
         },
         {
           stepLabel: "Step - 06",
           title: "Win Prestigious Awards",
-          description: `The winner will receive the title of "America's Top Young Innovator" along with awards in other categories, giving them the opportunity to shine on the global stage. `,
+          description: `The winner will receive the title of "India's Top Young Innovator" along with awards in other categories, giving them the opportunity to shine on the global stage.`,
         },
         
       ],
@@ -78,9 +80,9 @@ export const WEBSITE_DATA: IWebsiteData = {
   },
   submit: {
     hero: {
-      title: "Join the FREE\nInnovation Camp",
-      description: `A free learning experience where young minds develop new ideas or build on existing ones with our expert, step-by-step guidance.
-                    Request to register for our optional FREE Innovation Camp.`,
+      title: "Join Our\nInnovation Camp",
+      description: `A learning experience where young minds develop new ideas or build on existing ones with our expert, step-by-step guidance. 
+                    Register now for our optional Innovation Camp.`,
       cta1Text: "Register Now",
       cta1Href: "https://topyounginnovators.org/innovation-camp/",
       cta2Text: "Learn More",
@@ -122,7 +124,7 @@ export const WEBSITE_DATA: IWebsiteData = {
   about: {
     hero: {
       sparkle: "About Us",
-      title: "Who We Are",
+      title: "Top Young Innovators - Who We Are",
       description: `Top Young Innovators is a global platform dedicated to discovering and nurturing the most creative, inventive, and forward-thinking young minds from around the world. Our mission is to cultivate a generation of children who think differently - who question, create, and solve the most pressing real-world problems.
 
 Through this competition, we provide a powerful launchpad and a supportive innovation ecosystem that empowers young inventors to transform bold ideas into practical and viable solutions for today’s most urgent challenges.
@@ -147,9 +149,16 @@ To help participants bring their ideas to life, we’ve partnered with one of th
         },
       ],
     },
+    cultureOfInnovation: {
+    sparkle: "Our Mission",
+    title: "Building a Culture of <span>Innovation</span> in India",
+    leadDesc: "At <span>Top Young Innovators India</span>, our mission extends beyond organizing a competition. We are committed to building a culture of innovation, creativity, and problem-solving among young minds across the country.",
+    bodyDesc: "We believe that innovation is a skill that can be learned. While many students are curious and creative, they often lack access to the right guidance, resources, and frameworks needed to transform ideas into meaningful solutions. Through learning opportunities, mentorship, and innovation-focused programs, we aim to help students develop the confidence and skills to become innovators.",
+    highlightDesc: "<strong>Top Young Innovators India</strong> is an initiative of <strong>IAIRE</strong>, an ecosystem dedicated to nurturing the next generation of innovators through education, training, resources, and real-world application. Together, we are creating pathways that empower young minds to learn, innovate, and make a meaningful impact on the world around them.",
+  },
     partner: {
       sparkle: "Innovation Partner",
-      titlePre: "About Our Innovation Partner – ",
+      titlePre: "Meet Our Innovation Partner  – ",
       titleAccent: "DiscoverSTEM",
       description: "Empowering young innovators worldwide with expert guidance and real-world innovation training.",
       images: [
@@ -163,11 +172,11 @@ To help participants bring their ideas to life, we’ve partnered with one of th
           desc: "DiscoverSTEM, based in Texas, USA, is an educational initiative that helps young minds turn ideas into innovations through expert guidance and mentorship.",
         },
         {
-          title: "Proven Track Record",
+          title: "Proven Track Record ",
           desc: "DiscoverSTEM has an outstanding track record of guiding over 700 children aged 5 to 18 in identifying global problems and developing patentable solutions. In just the last five years alone, more than 330 students have been granted patents in the United States and other countries.",
         },
         {
-          title: "Nationally Recognized for Excellence in Education  ",
+          title: "Nationally Recognized for Excellence in Education   ",
           desc: "Recognized by the Texas State Capitol in March 2025 through House Resolution #403, honoring DiscoverSTEM’s role in shaping the next generation of innovators, researchers, and entrepreneurs.",
         },
         {
@@ -177,6 +186,7 @@ To help participants bring their ideas to life, we’ve partnered with one of th
       ],
     },
   },
+  
   challenge: {
     hero: {
       sparkle: {
@@ -184,8 +194,8 @@ To help participants bring their ideas to life, we’ve partnered with one of th
         sparklePosition: "right" as const,
         color: Colors.PRIMARY,
       },
-      title: "The Global Search for the Brightest Young\nInnovators Begins Are You the One?",
-      description: "Step into a world where creativity meets real-world impact. Present your groundbreaking idea, compete \n with brilliant young minds, and become the next global changemaker.",
+     title: "The Hunt for India's Brightest Young\n Innovators Starts Now! Are You the One?",
+      description: "Step into a world where creativity meets real-world impact. Present your groundbreaking idea, compete with brilliant young minds, and become the next global changemaker.",
       primaryCta: "Join the Challenge",
       secondaryCta: "Explore Past Winners",
       images: [
@@ -201,7 +211,7 @@ To help participants bring their ideas to life, we’ve partnered with one of th
       description: "Please review these rules carefully to ensure your entry is valid and accepted.",
       rules: [
         "Participants aged 10–22 years from across the world can participate.",
-        "Entry is FREE for all",
+        "Entry is FREE for all.",
         "Participants must submit an original innovation idea.",
         "We strongly recommend you file a provisional or non-provisional patent application before submitting your entry to protect your innovations. If you need support in filing a patent application, please contact us.",
         "The competition reserves the right to approve or disapprove any participating entries.",
@@ -218,8 +228,8 @@ To help participants bring their ideas to life, we’ve partnered with one of th
       items: [
         { 
           index: "01", 
-          labelTop: "Win The Prestigious Title of", 
-          labelMain: "AMERICA'S TOP YOUNG INNOVATOR", 
+          labelTop: "Win The Prestigious Title of ", 
+          labelMain: "INDIA'S TOP YOUNG INNOVATORS", 
           Icon: ASSETS.IMAGES.ICON_CROWN 
         },
         { 
@@ -247,26 +257,27 @@ To help participants bring their ideas to life, we’ve partnered with one of th
     youngMinds: {
       sparkle: "Young Minds Can Solve Big Challenges",
       title: "Young Minds Can Solve the World's Biggest Problems",
-      description: "And Top Young Innovators gives them the global platform to showcase their innovations.",
+      description: "And Top Young Innovators gives them the opportunity to learn innovation, develop creative solutions, and provides a global platform to showcase their creativity and problem-solving skills through impactful innovations.",
       images: [
         ASSETS.IMAGES.CHALLENGE_CTA,
         ASSETS.IMAGES.CHALLENGE_HERO_MID_BOTTOM,
       ],
       paragraphs: [
-        "America's Top Young Innovators is a global hunt to find the best and brightest young minds. In this competition, children from across the world present their unique ideas and innovations to solve the most pressing real-world challenges.",
-        "At Top Young Innovators, we understand that not every young innovator begins with a big idea. What matters is curiosity, creativity, and the right mentorship. To support every child’s journey, participants have access to attend an optional 14-hour FREE Innovation Camp, sponsored by our partner, the DiscoverSTEM Foundation. Through expert mentoring, students explore problems worth solving and shape their ideas into impactful innovations, whether starting fresh or building on something they’ve already imagined.",
-        "The finalists of America's Top Young Innovators earn global recognition, media exposure, and the opportunity to present their innovations to highly acclaimed thought leaders and industry experts.",
+        "India's Top Young Innovators is a search to find the best and brightest young minds. In this competition, children from the country present their unique ideas and innovations to solve the most pressing real-world challenges.",
+        "At Top Young Innovators, we understand that not every young innovator begins with a big idea. What matters is curiosity, creativity, and the right mentorship. We believe innovation is not an inborn talent but a skill that can be learned, practiced, and developed over time.",
+        "To support every child’s journey, participants have access to attend an optional 14-hour Innovation Camp, sponsored by our partner, the DiscoverSTEM Foundation. Through expert mentoring, students explore problems worth solving and shape their ideas into impactful innovations, whether starting fresh or building on something they’ve already imagined.",
+        "The finalists of India's Top Young Innovators earn global recognition, media exposure, and the opportunity to present their innovations to highly acclaimed thought leaders and industry experts.",
       ],
     },
     scoreBreakdown: {
       sparkle: "Judging Criteria",
-      title: "Innovation Score Breakdown",
-      description: "Judges will rate the submitted ideas out of 100 marks based on the following criteria.",
+      title: "Top Young Innovators - Score Breakdown",
+      description: "Judges will rate the submitted ideas out of 100 marks based on the following criteria:",
       items: [
         {
           number: "01",
           title: "Unique Idea",
-          subtitle: "Ingenuity & Innovation Thinking",
+          subtitle: "Ingenuity & Innovative Thinking",
           marks: "50 marks",
           image: ASSETS.IMAGES.CHALLENGE_SCORE_1,
           topOffset: 60,
@@ -274,14 +285,14 @@ To help participants bring their ideas to life, we’ve partnered with one of th
         {
           number: "02",
           title: "Scientific & Technical Knowledge",
-          subtitle: "Behind Idea",
+          subtitle: "Behind the Idea",
           marks: "30 marks",
           image: ASSETS.IMAGES.CHALLENGE_SCORE_2,
           topOffset: 180,
         },
         {
           number: "03",
-          title: "Quality of Entry & Video Presentation",
+          title: "Quality of Entry & Video Presentation ",
           marks: "20 marks",
           image: ASSETS.IMAGES.CHALLENGE_SCORE_3,
           topOffset: 300,
@@ -290,7 +301,7 @@ To help participants bring their ideas to life, we’ve partnered with one of th
     },
     cta: {
       sparkle: "Step into the future",
-      title: "Your Path to America's Top Young Innovator ",
+      title: "Your Path to India's Top Young Innovator",
       description: "Transform your ideas into real-world solutions and gain national recognition.",
       buttonText: "Participate Now",
       image: ASSETS.IMAGES.STEP_INTO_FUTURE,
@@ -304,17 +315,18 @@ To help participants bring their ideas to life, we’ve partnered with one of th
   contact: {
     sparkle: "Get In Touch",
     title: "Contact Us",
-    description: "If you have any questions about the competition, innovation camp, or obtaining a US patent, please fill out the form below with your details and inquiry.\n\nOur team will get back to you as soon as possible.",
+    description: "If you have any questions about Top Young Innovators India, IAIRE learning resources, or obtaining a US patent, please fill out the form below with your details and inquiry.\n\nOur team will get back to you as soon as possible.",
     subjects: [
       { id: "general-1", label: "General Inquiry" },
       { id: "general-2", label: "General Inquiry" },
       { id: "general-3", label: "General Inquiry" },
     ],
     infoSnippets: [
+      "I want to learn innovation through IAIRE resources and programs.",
       "I want to convert my idea into a US patent.",
-      "I want to register for the FREE Innovation Camp to prepare for the America's Top Young Innovators Challenge.",
+       "I have a question about participating in Top Young Innovators India.",
     ],
-     newUpdate:"Enrollment for the FREE Innovation Camp 2025 is now closed. Stay tuned for 2026 registration updates.",
+     newUpdate:"Stay tuned for 2026 registration updates.",
     form: {
       firstName: "First Name",
       lastName: "Last Name",
@@ -324,6 +336,7 @@ To help participants bring their ideas to life, we’ve partnered with one of th
       message: "Message",
       submitBtn: "Submit",
     },
+    
   },
   pastWinners: {
     hero: {
@@ -512,9 +525,9 @@ To help participants bring their ideas to life, we’ve partnered with one of th
 innovation:{
 innovationCampData: {
   sparkle: "Sponsored By DiscoverSTEM Foundation",
-  headline: "Free\nInnovation Camp",
+  headline: "Innovation Camp",
   description:
-    "Enrollment For The FREE Innovation Camp 2025 Is Closed. Stay Tuned For Updates On The Innovation Camp 2026.",
+    "Enrollment For The Innovation Camp 2025 Is Closed. Stay Tuned For Updates On The Innovation Camp 2026.",
   buttonText: "See Event Recap",
 
   sliderImages: [
@@ -526,13 +539,13 @@ innovationCampData: {
   ],
 
   paragraph1:
-    `Innovation Is Not An Easy Task. We Understand That As A Young Student, You Might Need Some Support To Come Up With An Idea Or Already Have An Idea That Needs Refinement Before Submitting It To The Competition. One Of The Objectives Of This Competition Is To Foster A Culture Of Innovation, Creativity And Problem-Solving Among Young Kids. We Have Partnered With DiscoverSTEM, A US National Award Winning Organization To Conduct An Innovation Camp For The Participants Of "America's Top Young Innovators"`,
+    `Innovation is a skill that can be learned. Whether you're developing a new idea from scratch or refining an existing one, the right guidance, frameworks, and mentorship can help turn curiosity into meaningful innovation. `,
 
   paragraph2:
-    "This Guided Innovation Camp Is Designed To Equip Students With The Mindset And Skills Needed To Innovate. Through Interactive Session Led By Experts From DiscoverSTEM Will Learn How To Identify The Real-World Problem, Analyze These Problems Using Structured Thinking Patterns, Learn Idea Generation And Brainstorming Techniques, Perform Root-Cause Analysis And Gap Analysis To Be Able To Innovate A Novel And Patentable Solution. Whether A Student Is Starting Fresh Or Looking To Strengthen An Existing Idea, The Camp Provides A Clear, Supportive Path To Turn Creative Thinking Into Competition-Ready Innovation.",
+    "One of our core objectives at Top Young Innovators is to foster a culture of innovation, creativity, and problem-solving among young minds by helping students learn how innovators think, create, and solve real-world challenges.  To support this, we have partnered with DiscoverSTEM, a US National Award-winning organization, to conduct an Innovation Camp exclusively for participants of India's Top Young Innovators. ",
 
   note:
-    "This Innovation Camp Will Be Offered Online. If You Live In The Dallas Fort Worth (DFW) Area, You Can Attend The Innovation Camp In Person, Subject To Seat Availability.",
+    "This guided Innovation Camp is designed to equip students with the mindset and skills needed to innovate. Through interactive sessions led by experts from DiscoverSTEM, students will learn how to identify real-world problems, analyze them using Structured Thinking Patterns, generate and brainstorm ideas, perform root-cause and gap analysis, and develop novel, patentable solutions. Whether a student is starting fresh or refining an existing idea, the camp provides a clear, supportive path to turn creative thinking into competition-ready innovation.",
 },
 
 InnovationInfoCard:[
@@ -543,19 +556,19 @@ InnovationInfoCard:[
       "Innovation Camp is FREE to join, and is sponsored by DiscoverSTEM Foundation.",
   },
   {
-    label: "TIME COMMITMENT",
-    title: "1 Hour / day",
+    label: "Time Commitment ",
+    title: "1 hour / day ",
     description:
-      "• 5 days (Monday – Friday)\n• Total camp duration = 10 hours\n• Online mode\n• In-person (if you live in DFW)",
+      "• 5 days a week (Monday – Friday)\n• Total camp duration = 10 hours in total.\n• Online Mode\n• In-person (if you live in DFW)",
   },
   {
-    label: "ELIGIBILITY",
+    label: "Eligibility",
     title: "10–22 years",
     description:
-      "Kids between 10–22 years of age are accepted",
+      "Kids between 10-22 years of age are accepted",
   },
   {
-    label: "ENROLLMENT DEADLINE",
+    label: "Enrollment Deadline",
     title: "Sep 30, 2026",
     description:
       "Enrollment for the FREE Innovation Camp 2025 is closed. Stay tuned for updates on the Innovation Camp 2026.",
@@ -578,8 +591,8 @@ ModuleItem:[
     Icon: Lightbulb,
   },
   {
-    title: "How to Think Like an Innovator",
-    desc: "Master asking the right questions and finding meaningful answers.",
+    title: "How to think like an Innovator?",
+    desc: "Asking the right questions and finding the right solutions",
     level: "INTERMEDIATE",
     duration: "4 weeks",
     Icon: HelpCircle,
@@ -592,21 +605,21 @@ ModuleItem:[
     Icon: MessageSquare,
   },
   {
-    title: "Introduction to Patents",
+    title: "Identifying Innovation Opportunities to solve real-world problems",
     desc: "Learn how to protect intellectual property and navigate the patent landscape.",
     level: "INTERMEDIATE",
     duration: "2 weeks",
     Icon: FileText,
   },
   {
-    title: "Research & Problem Dividing",
+    title: "Research Techniques/ Dividing a complex problem",
     desc: "Break down complex problems into manageable components for effective research.",
     level: "ADVANCED",
     duration: "4 weeks",
     Icon: Puzzle,
   },
   {
-    title: "Establishing Research Statements",
+    title: "Establishing 'Research Problem statements'",
     desc: "Craft precise problem statements that drive focused, impactful research.",
     level: "ADVANCED",
     duration: "3 weeks",
@@ -622,12 +635,12 @@ ModuleItem:[
 ],
 
 LearningOutcomesData :{
-  sparkle: "Develop Skills",
+  sparkle: "What to Expect from Our Innovation Camp",
 
   title: "Learning Outcomes",
 
   description:
-    "You Will Develop Skills Like Critical Thinking, Logical Analysis, Reasoning, Different Types Of Brainstorming, Experiment Designing To Test A Hypothesis, And Writing A Problem Statement For Research. You Will Also Learn To Analyze Problems, Generate Ideas, And Evaluate Ideas To Find The Best One.",
+    "You will develop critical thinking, logical analysis, reasoning, brainstorming techniques, experiment design, hypothesis testing, and problem statement writing. You will also learn to analyze problems, generate ideas, and evaluate them to find the best solution.",
 },
 
 },
@@ -645,33 +658,33 @@ PatentIdea:{
 
   image: ASSETS.IMAGES.PATENT_PREVIEW,
 
-  paragraph1Prefix: "Has It Ever Happened To You",
+  paragraph1Prefix: "Has it ever happened to you?",
 
   paragraph1:
-    "– You Had A Powerful Idea, Something Truly Game-Changing, And Months Later, You Find Someone Else Built It, Launched It, And Is Making Money From It.",
+    "– You had a powerful idea, something truly game-changing, and months later, you find someone else has built it, launched it, and is making money from it.",
 
   paragraph2:
-    "You’re Not Alone. Everyone Has A Great Idea At Some Point In Life, But Most Don’t Know How To Proceed With It, What To Do Next To Protect It. We Help Turn Your Rough Concepts Into Patentable Inventions. Our Team Of Innovation Mentors, Technology Experts And Elite U.S. Patent Attorneys Guides You From Idea To Protection, So Your Creativity Gets The Credit And Potential It Deserves.",
+    "You're not alone. Everyone has a great idea at some point in life, but most don't know how to proceed with it or what to do next to protect it. We help turn your rough concepts into patentable inventions. Our team of innovation mentors, technology experts, and elite U.S. patent attorneys guides you from idea to protection, so your creativity gets the credit and recognition it deserves.",
 
   footerText:
-    "Don’t Let Your Idea Slip Away. Protect It. Patent It. Profit From It.",
+    "Don't let your idea slip away. Protect it. Patent it. Profit from it.",
 
 },
 
 PatentMatterCard:[
   {
     title: "Elite Global Recognition",
-    desc: "Only 0.2% people in the world hold a patent. Earning one sets you apart and places you among a global elite of real-world innovators.",
+    desc: "Only 0.2% of people in the world hold a patent. Earning one sets you apart and places you among a global elite of real-world innovators.",
     Icon: ASSETS.IMAGES.PATENT_TROPHY,
   },
   {
     title: "Impactful College Applications",
-    desc: "A patent is a testimony of your creativity and problem solving skills. It is a powerful extracurricular to add to your profile.",
+    desc: "A patent is a testimony to your creativity and problem-solving skills. It’s a powerful extracurricular addition to your profile.",
     Icon: ASSETS.IMAGES.PATENT_EDUCATION,
   },
   {
-    title: "Turn Ideas into Businesses",
-    desc: "Your idea could be the next big startup. With a patent, you can build your own product, partner with companies, or attract investors.",
+    title: "Turn Your Ideas into Businesses",
+    desc: "Your idea could become the next big startup. With a patent, you can build your own product, collaborate with companies, or attract investors.",
     Icon: ASSETS.IMAGES.PATENT_ROCKET,
   },
   {
@@ -685,8 +698,8 @@ PatentMatterCard:[
     Icon: ASSETS.IMAGES.PATENT_LOCK,
   },
   {
-    title: "Gain Recognition & Make an Impact",
-    desc: "Young inventors with patents get featured in media, win awards, and become role models for innovation and creativity.",
+    title: "Gain Recognition and Make an Impact",
+    desc: "Young inventors with patents get featured in the media, win awards, and become role models for innovation and creativity.",
     Icon: ASSETS.IMAGES.PATENT_GLOBAL,
   },
 ],
@@ -696,7 +709,7 @@ BigData:{
 
   title: "Who Is This For",
 
-  description: "Anyone With A Spark Of Curiosity Or A Big Idea",
+  description: "Anyone with a spark of curiosity or a big idea",
 
   items: [
     {
@@ -809,31 +822,31 @@ Nurturing:  {
       prefix: "The ",
       highlight: "Only Organization",
       suffix:
-        " In The World That Nurtures Young Minds To Convert Vague Ideas Into Patentable Inventions",
+        " In the world that nurtures young minds to convert vague ideas into patentable inventions.",
     },
     {
       highlight: "330+",
-      suffix: " Students With Successful Patent Granted In 5 Years.",
+      suffix: " students with successful patents granted in 5 years.",
     },
     {
       prefix: "Nurturing ",
-      highlight: "1 Inventor Every 6 Days!",
+      highlight: "1 inventor every 6 days!",
     },
     {
       prefix: "Team Of Elite ",
       highlight: "Innovation Mentors",
-      suffix: ", Technology Experts And US Patent Attorneys",
+      suffix: ", technology experts, and U.S. patent attorneys.",
     },
     {
       prefix:
-        "Trusted By Parents, Recognized By The Media And Awarded By The ",
+        "Trusted by parents, recognized by the media, and awarded by the ",
       highlight: "US Government",
     },
     {
       prefix: "Partnership With ",
       highlight: "DiscoverSTEM",
       suffix:
-        " – Leading Innovation, Research & Entrepreneurship Organization",
+        " –  a leading innovation, research, and entrepreneurship organization.",
     },
   ],
 },
@@ -847,14 +860,14 @@ PatentServiceData:{
     {
       number: "1",
       title: "Discovery & NDA",
-      desc: "We begin with your area of interest or idea. A Non-Disclosure Agreement (NDA) is signed to protect your intellectual property right from the start.",
+      desc: "We begin with your area of interest or idea. A Non-Disclosure Agreement (NDA) is signed to protect your intellectual property rights from the start.",
     },
     {
       number: "2",
       title: "Idea Evaluation & Patentability Assessment",
       desc: "Our IP experts and US patent attorneys evaluate the idea for:",
       points: ["Novelty", "Non-obviousness", "Utility"],
-      bottomText: "We also conduct prior art search.",
+      bottomText: "We also conduct a prior art search.",
     },
     {
       number: "3",

@@ -7,6 +7,6 @@ export const metadata = {
 };
 
 export default function ChallengePage() {
-  return <ChallengeLayout />;
+  return <ChallengeLayout />
 }
 

@@ -11,24 +11,24 @@ import { ASSETS } from "@/utils/assets";
 const featuresLeft = [
   {
     title: "Innovation Camp Learning",
-    desc: " Attend the FREE Innovation Camp to learn the process of developing ideas and solutions.",
+    desc: " Attend the Innovation Camp to learn the process of developing ideas and solutions.",
     icon: "/images/icons/ai-innovation.png",
   },
   {
     title: "Solve Real-World Problems",
-    desc: " Identify a real-world problem and come up with an innovative solution.",
+    desc: "  Identify a real-world problem and come up with an innovative solution.",
     icon: "/images/icons/fluent_search-info-24-filled.png",
   },
   {
-    title: "Earn a Prestigious Title",
-    desc: ' Win the prestigious title of "America\'s Top Young Innovator".',
+    title: "Win the Title of India’s Top Young Innovator",
+    desc: ' Win the prestigious title of "India\'s Top Young Innovator."',
     icon: "/images/icons/marketeq_reward.png",
   },
 ];
 
 const featuresRight = [
   {
-    title: "Showcase to the World",
+    title: "Put Your Innovation on the World Stage",
     desc: "Present your innovation to the world and attract potential investors.",
     icon: "/images/icons/hugeicons_save-money-dollar.png",
   },
@@ -39,7 +39,7 @@ const featuresRight = [
   },
   {
     title: "Gain Global Recognition",
-    desc: "Receive recognition on a global platform for your innovative work.",
+    desc: " Receive recognition on a global platform for your innovative work",
     icon: "/images/icons/marketeq_reward.png",
   },
 ];
@@ -152,7 +152,7 @@ const WhyParticipateSection = () => {
                 textAlign: { xs: "center", md: "left" },
               }}
             >
-              What Makes This Challenge <br /> Worth It?
+             Why Participate in India’s <br /> Top Young Innovators? 
             </Typography>
           </Grid>
 
@@ -168,8 +168,7 @@ const WhyParticipateSection = () => {
                 mb: 1.5,
               }}
             >
-              Gain exposure, mentorship, and the chance to become a globally
-              celebrated young innovator.
+              Gain exposure, mentorship, and the chance to become a globally celebrated young innovator.
             </Typography>
           </Grid>
         </Grid>

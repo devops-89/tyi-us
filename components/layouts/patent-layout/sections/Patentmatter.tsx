@@ -64,7 +64,7 @@ const WhyPatentMatterSection = () => {
                 color: COLORS.BLACK,
               }}
             >
-              Why Patent Matter
+              Your Ideas Deserve Protection. Here’s Why Patents Matter
             </Typography>
           </Box>
 

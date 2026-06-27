@@ -64,7 +64,7 @@ const ScaleSection = () => {
                   textAlign: { xs: "center", sm: "left" },
                 }}
               >
-                Are You Ready to Be the World&apos;s Next
+               Got What It Takes to Be the Next
                 <br />
                 <Box
                   component="span"
@@ -93,10 +93,9 @@ const ScaleSection = () => {
                   textAlign: { xs: "center", sm: "left" },
                 }}
               >
-                Unlock your creativity and join the world&apos;s most exciting
-                STEM challenge for students. Explore your passion for science,
-                build groundbreaking ideas, and gain recognition for your
-                innovation.
+                Unlock your creativity and join the world&apos;s  most exciting challenge for students. Explore your passion for science, build groundbreaking ideas, and gain recognition for your innovation.
+
+               
               </Typography>
 
               <Stack
