@@ -47,7 +47,7 @@ const ChallengeFaqSection = () => {
               sx={{
                 position: { xs: "relative", md: "sticky" },
                 top: { md: 100 },
-                textAlign: { xs: "center", md: "left" },
+                textAlign: { xs: "left" , md: "left" },
               }}
             >
               <Box
@@ -55,7 +55,7 @@ const ChallengeFaqSection = () => {
                   mb: 2,
                   display: "flex",
                   justifyContent: {
-                    xs: "center",
+                    xs: "flex-start",
                     md: "flex-start",
                   },
                 }}

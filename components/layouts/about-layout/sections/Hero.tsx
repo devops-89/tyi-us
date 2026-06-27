@@ -16,7 +16,7 @@ const AboutHeroSection = () => {
     <Box
       sx={{
         backgroundColor: Colors.WHITE,
-        pt: { xs: 4, md: 12 },
+        pt: { xs: 1, md: 12 },
         pb: { xs: 4, md: 10 },
       }}
     >

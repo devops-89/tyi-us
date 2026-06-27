@@ -16,7 +16,7 @@ const PatentSection = () => {
     <Box
       sx={{
         backgroundColor: COLORS.WHITE,
-        py: { xs: 4, sm: 8, md: 10 },
+        py: { xs: 1, sm: 8, md: 10 },
       }}
     >
       <Container

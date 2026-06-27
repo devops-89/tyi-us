@@ -47,7 +47,7 @@ const Navbar = () => {
       <Box
         component="nav"
         sx={{
-          height: CONSTANTS.NAV_HEIGHT,
+          height: { xs: "60px", lg: CONSTANTS.NAV_HEIGHT },
           width: "100%",
           position: "fixed",
           top: 0,
@@ -66,7 +66,7 @@ const Navbar = () => {
                 sx={{
                   display: "flex",
                   alignItems: "center",
-                  width: "180px",
+                  width: { xs: "100px", lg: "180px" },
                 }}
               >
                 <Image
@@ -74,7 +74,7 @@ const Navbar = () => {
                   alt="Logo"
                   width={120}
                   height={46}
-                  style={{ objectFit: "contain" }}
+                  style={{ objectFit: "contain", width: "100%", height: "auto" }}
                 />
               </Box>
             </Link>

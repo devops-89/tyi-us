@@ -62,6 +62,7 @@ const WhyPatentMatterSection = () => {
                 },
                 letterSpacing: "-0.8px",
                 color: COLORS.BLACK,
+                mb:{ xs: "20px", sm: "30px", md: 13 },
               }}
             >
               Your Ideas Deserve Protection. Here’s Why Patents Matter
