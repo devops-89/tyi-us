@@ -130,14 +130,21 @@ const WhyParticipateSection = () => {
           px: { xs: 2, sm: 3, md: 4 },
         }}
       >
-        <Stack spacing={2} sx={{ mb: { xs: 3, md: 2 } }}>
-          <SparkleLabel
-            text="Why Participate in the Challenge?"
-            sparklePosition="both"
-            type="diamond"
-            color={Colors.PRIMARY}
-           fontSize={{ xs: "12px", sm: "18px" }}
-          />
+        <Stack
+          spacing={2}
+          alignItems={{ xs: "center", md: "flex-start" }}
+          sx={{ mb: { xs: 3, md: 2 } }}
+        >
+          <Box sx={{ maxWidth: { xs: "270px", sm: "100%" } }}>
+            <SparkleLabel
+              text="Why Participate in the Challenge?"
+              sparklePosition="both"
+              type="diamond"
+              sparkleSize={24}
+              color={Colors.PRIMARY}
+              fontSize={{ xs: "18px", sm: "18px" }}
+            />
+          </Box>
         </Stack>
 
         <Grid container spacing={{ xs: 3, md: 10 }} alignItems="flex-start">
@@ -152,7 +159,7 @@ const WhyParticipateSection = () => {
                 textAlign: { xs: "center", md: "left" },
               }}
             >
-             Why Participate in India’s <br /> Top Young Innovators? 
+              Why Participate in India’s <br /> Top Young Innovators?
             </Typography>
           </Grid>
 

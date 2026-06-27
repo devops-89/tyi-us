@@ -16,7 +16,7 @@ const PatentSection = () => {
     <Box
       sx={{
         backgroundColor: COLORS.WHITE,
-        py: { xs: 1, sm: 8, md: 10 },
+        py: { xs: 1, sm: 4, md: 10 },
       }}
     >
       <Container
@@ -45,21 +45,28 @@ const PatentSection = () => {
                 justifyContent: { xs: "center", md: "flex-start" },
               }}
             >
-              <SparkleLabel
-                text={patentData.sparkle}
-                fontSize={15}
-                sparkleSize={35}
-               type="blue-star"
-                sparklePosition="both"
-                color={COLORS.PRIMARY}
-              />
+              <Box
+                sx={{
+                  maxWidth: { xs: "340px", sm: "100%" },
+                  textAlign: { xs: "center", md: "left" },
+                }}
+              >
+                <SparkleLabel
+                  text={patentData.sparkle}
+                  fontSize={{ xs: "14px", md: 16 }}
+                  sparkleSize={35}
+                  type="blue-star"
+                  sparklePosition="both"
+                  color={COLORS.PRIMARY}
+                />
+              </Box>
             </Box>
 
             <Typography
               sx={{
                 fontFamily: "PolySans Trial, sans-serif",
                 fontWeight: 400,
-               fontSize: { xs: "24px", sm: "30px", md: "45px" },
+                fontSize: { xs: "24px", sm: "30px", md: "45px" },
                 lineHeight: {
                   xs: "36px",
                   sm: "40px",

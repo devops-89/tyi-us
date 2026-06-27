@@ -41,8 +41,8 @@ const LearningOutcomesSection = () => {
           >
             <SparkleLabel
               text={learningOutcomes.sparkle}
-              fontSize= "18px"
-               type="blue-star"
+              fontSize="18px"
+              type="blue-star"
               sparklePosition="both"
               sparkleSize={35}
               color={COLORS.PRIMARY}
@@ -53,7 +53,7 @@ const LearningOutcomesSection = () => {
             sx={{
               fontFamily: poppins.style.fontFamily,
               fontWeight: 400,
-           fontSize: { xs: "24px", sm: "30px", md: "45px" },
+              fontSize: { xs: "24px", sm: "30px", md: "45px" },
               lineHeight: {
                 xs: "38px",
                 sm: "46px",

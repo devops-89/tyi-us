@@ -2,7 +2,7 @@ import React from "react";
 import AboutLayout from "@/components/layouts/about-layout";
 
 export const metadata = {
-  title: "About Us | America's Top Young Innovators",
+  title: "About Us | India's Top Young Innovators",
   description: "Learn about Top Young Innovators and our innovation partner DiscoverSTEM.",
 };
 

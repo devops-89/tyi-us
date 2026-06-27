@@ -47,39 +47,40 @@ const InnovationCampSection = () => {
               alignItems: "flex-start",
             }}
           >
-          <Box
-  sx={{
-    display: "flex",
-    justifyContent: { xs: "center", sm: "flex-start" },
-    width: "100%",
-    mb: 3,
-  }}
->
-  <Box
-    sx={{
-      maxWidth: { xs: "220px", sm: "100%" },
-      textAlign: { xs: "center", md: "left" },
-    }}
-  >
-    <SparkleLabel
-      text={innovationCampData.sparkle}
-      type="blue-star"
-      fontSize={{ xs: "12px", sm: "18px" }}
-      sparkleSize={24}
-    />
-  </Box>
-</Box>
+            <Box
+              sx={{
+                display: "flex",
+                justifyContent: { xs: "center", sm: "flex-start" },
+                width: "100%",
+                mb: 3,
+              }}
+            >
+              <Box
+                sx={{
+                  maxWidth: { xs: "340px", sm: "100%" },
+                  textAlign: { xs: "center", md: "left" },
+                }}
+              >
+                <SparkleLabel
+                  text={innovationCampData.sparkle}
+                   fontSize={{ xs: "16px", md: "18px" }}
+                  type="blue-star"
+                  sparklePosition="both"
+                  sparkleSize={35}
+                  color={COLORS.PRIMARY}
+                />
+              </Box>
+            </Box>
 
             <Typography
               sx={{
                 fontFamily: poppins.style.fontFamily,
                 fontWeight: 400,
-               fontSize: { xs: "24px", sm: "30px", md: "45px" },
+                fontSize: { xs: "24px", sm: "30px", md: "45px" },
                 lineHeight: { xs: "38px", sm: "42px", md: "48px" },
                 letterSpacing: "-0.01em",
                 textTransform: "capitalize",
                 color: COLORS.BLACK,
-                
                 mb: 2,
                 whiteSpace: "pre-line",
               }}

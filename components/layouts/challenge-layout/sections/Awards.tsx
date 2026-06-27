@@ -47,10 +47,11 @@ const AwardsSection = () => {
                 sx={{
                   fontFamily: poppins.style.fontFamily,
                   fontWeight: 500,
-                  fontSize: { xs: 15, md: 16 },
+                  fontSize: { xs: 16, md: 16 },
                   color: Colors.PRIMARY,
                   textTransform: "capitalize",
                   textAlign: "center",
+                  
                 }}
               >
                 {awards.sparkle}

@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import Image from "next/image";
 import { Stack, Typography, Box } from "@mui/material";
@@ -84,7 +86,7 @@ const SparkleLabel: React.FC<SparkleLabelProps> = ({
           md: "10px",
         },
         flexWrap: "nowrap",
-        whiteSpace: "nowrap",
+        whiteSpace: { xs: "normal", sm: "nowrap" },
       }}
     >
       {(sparklePosition === "left" || sparklePosition === "both") &&
@@ -98,8 +100,9 @@ const SparkleLabel: React.FC<SparkleLabelProps> = ({
           fontSize,
           color,
           letterSpacing: "0.5px",
-          lineHeight: 1,
-          whiteSpace: "nowrap",
+          lineHeight: { xs: 1.3, sm: 1 },
+          whiteSpace: { xs: "pre-line", sm: "nowrap" },
+          textAlign: "center",
         }}
       >
         {displayText}

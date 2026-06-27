@@ -2,7 +2,7 @@ import React from "react";
 import ServicesLayout from "@/components/layouts/services-layout";
 
 export const metadata = {
-  title: "Services | America's Top Young Innovators",
+  title: "Services | India's Top Young Innovators",
   description: "Explore our innovation services and programs.",
 };
 
