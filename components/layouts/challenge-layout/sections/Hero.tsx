@@ -18,7 +18,7 @@ const ChallengeHeroSection = () => {
     <Box
       sx={{
         backgroundColor: Colors.WHITE,
-        pt: { xs: 4, md: 4 },
+        pt: { xs: 0, md: 4 },
         pb: { xs: 4, md: 10 },
       }}
     >

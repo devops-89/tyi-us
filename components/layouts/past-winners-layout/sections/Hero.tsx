@@ -16,7 +16,7 @@ const PastWinnersHeroSection = () => {
   return (
     <Box
       sx={{
-        pt: { xs: 4,sm:6, md: 10 },
+        pt: { xs: 0, sm: 3, md: 10 },
         pb: { xs: 4,sm:6, md: 10 },
         backgroundColor: Colors.WHITE,
         position: "relative",
@@ -29,7 +29,7 @@ const PastWinnersHeroSection = () => {
           alignItems="flex-start"
         >
           {/* Left Content */}
-          <Box sx={{ flex: 1, pt: 4 }}>
+          <Box sx={{ flex: 1, pt: 1 }}>
             <Box sx={{ mb: 2 }}>
               <SparkleLabel text={hero.sparkle} />
             </Box>

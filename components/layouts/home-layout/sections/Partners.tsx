@@ -13,7 +13,7 @@ const PartnersSection = () => {
   return (
     <Box
       sx={{
-        py: { xs: 4, md: 25 },
+        py: { xs: 8, md: 25 },
         backgroundColor: COLORS.WHITE,
         position: "relative",
         overflow: "hidden",

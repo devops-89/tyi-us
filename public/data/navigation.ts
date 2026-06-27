@@ -6,10 +6,7 @@ export interface INavItem extends ILink {
 }
 
 export const NAV_ITEMS: INavItem[] = [
-{
-    label: "Home",
-    href: "/",
-  },
+
 
   {
     label: "The Challenge",

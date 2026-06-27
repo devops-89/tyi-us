@@ -18,7 +18,7 @@ const HomeHeroSection = () => {
   return (
     <Box
       sx={{
-        pt: { xs: 4, md: 12 },
+        pt: { xs: 0, md: 12 },
         pb: { xs: 3, md: 8 },
         backgroundColor: Colors.WHITE,
         position: "relative",

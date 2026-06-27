@@ -25,7 +25,7 @@ const InnovationCampSection = () => {
   }, [innovationCampData.sliderImages.length]);
 
   return (
-    <Box sx={{ backgroundColor: COLORS.WHITE, py: { xs: 4, md: 8 } }}>
+    <Box sx={{ backgroundColor: COLORS.WHITE, py: { xs: 1, md: 8 } }}>
       <Container
         maxWidth={false}
         sx={{
