@@ -81,15 +81,15 @@ const ChallengeHeroSection = () => {
               variant="contained"
               endIcon={<ArrowUpRight size={18} />}
               sx={{
-                height: 48,
+                height: { xs: 40, md: 48 }, // Responsive height
                 borderRadius: "50px",
-                px: { xs: 3, md: 4 },
-                width: { xs: "100%", sm: "auto" },
+                px: { xs: 2.5, md: 4 }, // Responsive padding
+                width: { xs: "220px", sm: "auto" }, // Same width on mobile to fit the longer button
                 backgroundColor: Colors.SECONDARY,
                 color: Colors.WHITE,
                 fontFamily: poppins.style.fontFamily,
                 fontWeight: 600,
-                fontSize: { xs: "16px", md: "18px" },
+                fontSize: { xs: "14px", md: "18px" }, // Responsive font-size
                 textTransform: "none",
                 boxShadow: "none",
                 "&:hover": {
@@ -107,15 +107,15 @@ const ChallengeHeroSection = () => {
               variant="outlined"
               endIcon={<ArrowUpRight size={18} />}
               sx={{
-                height: 48,
+                height: { xs: 40, md: 48 }, // Responsive height
                 borderRadius: "50px",
-                px: { xs: 3, md: 4 },
-                width: { xs: "100%", sm: "auto" },
+                px: { xs: 2.5, md: 4 }, // Responsive padding
+                width: { xs: "220px", sm: "auto" }, // Same width on mobile to fit the longer button
                 border: `1px solid ${Colors.SECONDARY}`,
                 color: Colors.SECONDARY,
                 fontFamily: poppins.style.fontFamily,
                 fontWeight: 600,
-                fontSize: { xs: "16px", md: "18px" },
+                fontSize: { xs: "14px", md: "18px" }, // Responsive font-size
                 textTransform: "none",
                 backgroundColor: "transparent",
                 "&:hover": {

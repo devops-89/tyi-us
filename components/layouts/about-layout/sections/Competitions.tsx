@@ -66,10 +66,14 @@ const AboutCompetitionsSection = () => {
               {competitions.description}
             </Typography>
 
+            {/* Parent Wrapper: Centered < 768px, Left-aligned >= 768px */}
             <Box
               sx={{
                 display: "flex",
-                justifyContent: { xs: "center", md: "flex-start" },
+                justifyContent: "center",
+                "@media (min-width: 768px)": {
+                  justifyContent: "flex-start",
+                }
               }}
             >
               <Button
@@ -77,16 +81,24 @@ const AboutCompetitionsSection = () => {
                 endIcon={<ArrowUpRight size={18} />}
                 sx={{
                   borderRadius: "50px",
-                  px: { xs: 3, md: 3 },
-                  py: 1.6,
-                  width: { xs: "100%", sm: "auto" },
+                  px: { xs: 2.5, md: 3 },
                   borderColor: Colors.SECONDARY,
                   color: Colors.SECONDARY,
                   backgroundColor: "rgba(214,14,52,0.08)",
                   textTransform: "none",
                   fontFamily: poppins.style.fontFamily,
                   fontWeight: 600,
-                  fontSize: { xs: 15, md: 16 },
+                  
+                  // Responsive Sizing overrides
+                  width: "fit-content",
+                  height: 40,
+                  fontSize: "14px",
+                  "@media (min-width: 768px)": {
+                    width: "auto",
+                    height: 48,
+                    fontSize: "16px",
+                  },
+
                   "&:hover": {
                     borderColor: Colors.SECONDARY,
                     backgroundColor: "rgba(214,14,52,0.12)",

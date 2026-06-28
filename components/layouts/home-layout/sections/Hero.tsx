@@ -140,16 +140,27 @@ const HomeHeroSection = () => {
               variant="contained"
               endIcon={<ArrowUpRight size={18} />}
               sx={{
-                height: 48,
+                height: { xs: 40, md: 48 },
                 borderRadius: "50px",
-                px: { xs: 3, md: 4 },
+                px: { xs: 2.5, md: 4 },
                 backgroundColor: Colors.SECONDARY,
                 color: Colors.WHITE,
                 fontFamily: poppins.style.fontFamily,
                 fontWeight: 600,
-                fontSize: { xs: "16px", md: "18px" },
+                fontSize: { xs: "14px", md: "18px" },
                 textTransform: "none",
                 boxShadow: "none",
+                
+                // Centering & Width
+                display: "flex",
+                mx: "auto",
+                width: "fit-content",
+                "@media (min-width: 768px)": {
+                  display: "inline-flex",
+                  mx: 0,
+                  width: "auto",
+                },
+
                 "&:hover": {
                   backgroundColor: "#c61530",
                   boxShadow: "none",
@@ -163,7 +174,7 @@ const HomeHeroSection = () => {
           {/* RIGHT IMAGE */}
           <Box
             sx={{
-              flex: 1.2,
+              flex: { xs: "none", md: 1.2 },
               position: "relative",
               width: "100%",
               borderRadius: "24px",
@@ -315,26 +326,23 @@ const HomeHeroSection = () => {
             variant="outlined"
             endIcon={<ArrowUpRight size={18} />}
             sx={{
-              height: 48,
+              height: { xs: 40, md: 48 },
               borderRadius: "50px",
-              px: { xs: 3, md: 4 },
+              px: { xs: 2.5, md: 4 },
               border: `1px solid ${Colors.SECONDARY}`,
               color: Colors.SECONDARY,
               fontFamily: poppins.style.fontFamily,
               fontWeight: 600,
-              fontSize: { xs: "16px", md: "18px" },
+              fontSize: { xs: "14px", md: "18px" },
               textTransform: "none",
               backgroundColor: "transparent",
 
-            width: {
-  xs: "100%",
-  sm: "fit-content",
-},
-
-alignSelf: {
-  xs: "stretch",
-  sm: "flex-start",
-},
+              // Centering & Width
+              width: "fit-content",
+              alignSelf: "center",
+              "@media (min-width: 768px)": {
+                alignSelf: "flex-start",
+              },
 
               order: { xs: 2, lg: 1 },
 

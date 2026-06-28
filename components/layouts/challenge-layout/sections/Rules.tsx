@@ -44,7 +44,7 @@ const RulesSection = () => {
               sx={{
                 fontFamily: poppins.style.fontFamily,
                 fontWeight: 500,
-                fontSize: { xs: "24px", sm: "30px", md: "45px" },
+                fontSize: { xs: "24px", sm: "30px", md: "38px", lg: "45px" }, // Decreased on 1024px (md)
                 color: Colors.BLACK,
                 lineHeight: { xs: 1.2, md: 1.1 },
                 mb: 1.5,
@@ -56,7 +56,7 @@ const RulesSection = () => {
             <Typography
               sx={{
                 fontFamily: ibmPlexSans.style.fontFamily,
-                fontSize: { xs: "16px", md: "20px" },
+                fontSize: { xs: "16px", md: "17px", lg: "20px" }, // Decreased on 1024px (md)
                 color: Colors.TEXT_MUTED,
                 lineHeight: 1.6,
                 maxWidth: 800,
@@ -67,14 +67,14 @@ const RulesSection = () => {
             </Typography>
           </Box>
 
-          <Grid container spacing={{ xs: 6, md: 10 }} alignItems="flex-start">
+          <Grid container spacing={{ xs: 6, md: 8, lg: 10 }} alignItems="flex-start">
             <Grid size={{ xs: 12, md: 6 }}>
               <Box sx={{ position: "relative", pb: { xs: 6, md: 0 } }}>
                 <Box
                   sx={{
                     position: "relative",
                     width: "100%",
-                    height: { xs: 320, sm: 420, md: 575 },
+                    height: { xs: 320, sm: 420, md: 600, lg: 575 }, // Increased main image height on 1024px (md)
                     borderRadius: { xs: "22px", md: "30px" },
                     overflow: "hidden",
                     boxShadow: "0px 10px 30px rgba(0,0,0,0.05)",
@@ -91,8 +91,8 @@ const RulesSection = () => {
                 <Box
                   sx={{
                     position: "absolute",
-                    bottom: { xs: 0, md: -80 },
-                    right: { xs: 16, md: -50 },
+                    bottom: { xs: 0, md: -60, lg: -80 }, // Adjusted offset on 1024px (md) to prevent screen cutoff
+                    right: { xs: 16, md: -30, lg: -50 }, // Adjusted offset on 1024px (md) to prevent screen cutoff
                     width: { xs: 150, sm: 180, md: 220 },
                     height: { xs: 150, sm: 190, md: 240 },
                     borderRadius: { xs: "22px", md: "30px" },
@@ -131,7 +131,7 @@ const RulesSection = () => {
             </Grid>
 
             <Grid size={{ xs: 12, md: 6 }}>
-              <Stack spacing={{ xs: 3, md: 4 }} sx={{ pt: { xs: 0, md: 2 } }}>
+              <Stack spacing={{ xs: 3, md: 3, lg: 4 }} sx={{ pt: { xs: 0, md: 2 } }}> {/* Adjusted spacing on md */}
                 {rulesData.rules.map((ruleText: string, idx: number) => {
                   const parts = ruleText.split("contact us");
 
@@ -175,7 +175,7 @@ const RulesSection = () => {
                       <Typography
                         sx={{
                           fontFamily: ibmPlexSans.style.fontFamily,
-                          fontSize: { xs: "16px", md: "20px" },
+                          fontSize: { xs: "16px", md: "17px", lg: "20px" }, // Decreased on 1024px (md)
                           color: "#333333",
                           lineHeight: { xs: 1.65, md: 1.6 },
                           textAlign: { xs: "left", md: "justify" },
@@ -209,16 +209,16 @@ const RulesSection = () => {
                     component={Link}
                     href="#"
                     variant="contained"
-                    endIcon={<ArrowUpRight size={22} />}
+                    endIcon={<ArrowUpRight size={18} />}
                     sx={{
-                      height: { xs: 50, md: 56 },
-                      px: { xs: 3, md: 5 },
-                      width: { xs: "100%", sm: "auto" },
+                      height: { xs: 40, md: 48, lg: 56 }, // Decreased height on 1024px (md) to 48px
+                      px: { xs: 2.5, md: 4, lg: 5 }, // Decreased padding on 1024px (md) to 4
+                      width: { xs: "fit-content", sm: "auto" },
                       borderRadius: "50px",
                       backgroundColor: Colors.SECONDARY,
                       fontFamily: ibmPlexSans.style.fontFamily,
                       fontWeight: 600,
-                      fontSize: { xs: 16, md: 18 },
+                      fontSize: { xs: 14, md: 16, lg: 18 }, // Decreased size on 1024px (md) to 16px
                       textTransform: "none",
                       boxShadow: "0 4px 14px rgba(227, 24, 55, 0.3)",
                       "&:hover": {

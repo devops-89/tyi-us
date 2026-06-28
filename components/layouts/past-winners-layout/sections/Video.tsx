@@ -56,6 +56,7 @@ const PastWinnersVideoSection = () => {
           <Image src={video.image} alt="Event recap video" fill style={{ objectFit: "cover" }} />
           <Box sx={{ position: "absolute", inset: 0, backgroundColor: "rgba(0,0,0,0.3)" }} />
 
+          {/* Centered Play Button Overlay */}
           <Box
             sx={{
               position: "absolute",
@@ -63,29 +64,48 @@ const PastWinnersVideoSection = () => {
               top: "50%",
               transform: "translate(-50%, -50%)",
               display: "flex",
+              flexDirection: { xs: "column", sm: "row" }, // Stacks vertically on mobile to prevent overflow
               alignItems: "center",
-              gap: 2,
+              justifyContent: "center",
+              gap: { xs: 1.5, sm: 2 },
               color: Colors.WHITE,
+              textAlign: { xs: "center", sm: "left" },
+              width: "90%", // Prevents side edge clipping on extra small screens
+              maxWidth: "400px",
             }}
           >
             <Box
               sx={{
-                width: 60,
-                height: 60,
-                borderRadius: "30px",
+                width: { xs: 48, sm: 60 }, // Scaled down on mobile
+                height: { xs: 48, sm: 60 }, // Scaled down on mobile
+                borderRadius: "50%",
                 border: "2px solid #fff",
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
+                flexShrink: 0,
               }}
             >
               <Play size={18} />
             </Box>
             <Box>
-              <Typography sx={{ fontFamily: poppins.style.fontFamily, fontWeight: 700, fontSize: 14, lineHeight: "24px" }}>
+              <Typography 
+                sx={{ 
+                  fontFamily: poppins.style.fontFamily, 
+                  fontWeight: 700, 
+                  fontSize: { xs: 12, sm: 14 }, // Responsive text
+                  lineHeight: { xs: "18px", sm: "24px" } 
+                }}
+              >
                 {video.watchLabel}
               </Typography>
-              <Typography sx={{ fontFamily: poppins.style.fontFamily, fontSize: 14, lineHeight: "24px" }}>
+              <Typography 
+                sx={{ 
+                  fontFamily: poppins.style.fontFamily, 
+                  fontSize: { xs: 11, sm: 14 }, // Responsive text
+                  lineHeight: { xs: "16px", sm: "24px" } 
+                }}
+              >
                 {video.watchDesc}
               </Typography>
             </Box>
@@ -97,4 +117,3 @@ const PastWinnersVideoSection = () => {
 };
 
 export default PastWinnersVideoSection;
-

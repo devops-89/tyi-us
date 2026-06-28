@@ -26,17 +26,37 @@ const PastWinnersGuestsSection = () => {
         <Grid container spacing={6} justifyContent="center">
           {guests.items.map((g) => (
             <Grid key={g.name} size={{ xs: 12, md: 4 }}>
-              <Stack spacing={2} alignItems="flex-start">
+              {/* Responsive alignment: center on mobile, left-aligned on desktop */}
+              <Stack spacing={2} alignItems={{ xs: "center", md: "flex-start" }}>
                 <Box sx={{ position: "relative", width: "100%", height: 387, borderRadius: "18px", overflow: "hidden" }}>
                   <Image src={g.image} alt={g.name} fill style={{ objectFit: "cover" }} />
                 </Box>
-                <Typography sx={{ fontFamily: poppins.style.fontFamily, fontWeight: 700, fontSize: 22, color: Colors.BLACK }}>
+                <Typography 
+                  sx={{ 
+                    fontFamily: poppins.style.fontFamily, 
+                    fontWeight: 700, 
+                    fontSize: 22, 
+                    color: Colors.BLACK,
+                    textAlign: { xs: "center", md: "left" } // Centered on mobile only
+                  }}
+                >
                   {g.name}
                 </Typography>
-                <Typography sx={{ fontFamily: ibmPlexSans.style.fontFamily, fontSize: 16, color: Colors.TEXT_MUTED }}>
+                <Typography 
+                  sx={{ 
+                    fontFamily: ibmPlexSans.style.fontFamily, 
+                    fontSize: 16, 
+                    color: Colors.TEXT_MUTED,
+                    textAlign: { xs: "center", md: "left" } // Centered on mobile only
+                  }}
+                >
                   {g.title}
                 </Typography>
-                <Stack direction="row" spacing={1}>
+                <Stack 
+                  direction="row" 
+                  spacing={1} 
+                  justifyContent={{ xs: "center", md: "flex-start" }} // Centered on mobile only
+                >
                   <IconButton size="small" sx={{ border: `1px solid ${Colors.BORDER}` }}>
                     <Linkedin size={18} />
                   </IconButton>
@@ -57,4 +77,3 @@ const PastWinnersGuestsSection = () => {
 };
 
 export default PastWinnersGuestsSection;
-

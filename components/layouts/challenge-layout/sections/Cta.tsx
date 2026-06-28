@@ -95,7 +95,7 @@ const ChallengeCtaSection = () => {
                 sx={{
                   fontFamily: poppins.style.fontFamily,
                   fontWeight: 500,
-                 fontSize: { xs: "24px", sm: "30px", md: "45px" },
+                  fontSize: { xs: "24px", sm: "30px", md: "45px" },
                   color: Colors.BLACK,
                   lineHeight: { xs: 1.25, md: 1.15 },
                   mb: 2,
@@ -125,17 +125,17 @@ const ChallengeCtaSection = () => {
                 component={Link}
                 href="https://topyounginnovators.org/submit-your-entry/"
                 variant="contained"
-                endIcon={<ArrowUpRight size={22} />}
+                endIcon={<ArrowUpRight size={18} />} // Resized icon to match mobile scale
                 sx={{
-                  height: { xs: 50, md: 56 },
-                  px: { xs: 3, md: 6 },
-                  width: { xs: "100%", sm: "auto" },
+                  height: { xs: 40, md: 56 }, // Decreased height on mobile
+                  px: { xs: 2.5, md: 6 }, // Decreased padding on mobile
+                  width: { xs: "fit-content", sm: "auto" }, // Decreased width on mobile
                   borderRadius: "50px",
                   backgroundColor: Colors.SECONDARY,
                   color: Colors.WHITE,
                   fontFamily: poppins.style.fontFamily,
                   fontWeight: 600,
-                  fontSize: { xs: "16px", md: "18px" },
+                  fontSize: { xs: "14px", md: "18px" }, // Decreased font-size on mobile
                   textTransform: "none",
                   boxShadow: "0px 10px 30px rgba(227, 24, 55, 0.2)",
                   "&:hover": {

@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import Image from "next/image";
 import { Box, Container, Grid, Typography, Stack } from "@mui/material";
@@ -34,11 +36,18 @@ const YoungMindsSection = () => {
               justifyContent: { xs: "center", md: "flex-start" },
             }}
           >
-            <SparkleLabel
-              text={youngMinds.sparkle}
-              fontSize={{ xs: "14px", sm: "18px" }}
-              sparklePosition="both"
-            />
+            <Box
+              sx={{
+                maxWidth: { xs: "340px", sm: "100%" },
+                textAlign: { xs: "center", md: "left" },
+              }}
+            >
+              <SparkleLabel
+                text={youngMinds.sparkle}
+                fontSize= "18px"
+                sparklePosition="both"
+              />
+            </Box>
           </Box>
 
           <Typography

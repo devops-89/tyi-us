@@ -11,7 +11,7 @@ import SparkleLabel from "@/components/widgets/common/SparkleLabel";
 
 const ScaleSection = () => {
   return (
-    <Box sx={{ py: { xs: 4, sm: 8, md: 12 }, backgroundColor: COLORS.WHITE }}>
+    <Box sx={{ py: { xs: 4, sm: 6, md: 12 }, backgroundColor: COLORS.WHITE }}>
       <Container
         maxWidth={false}
         sx={{
@@ -29,14 +29,22 @@ const ScaleSection = () => {
           />
         </Box>
 
-        <Grid container spacing={{ xs: 5, sm: 4, md: 8 }} alignItems="center">
-          <Grid size={{ xs: 12, sm: 5 }}>
+        {/* Stretches columns to equal heights on tablet/desktop */}
+        <Grid 
+          container 
+          spacing={{ xs: 5, sm: 3, md: 5, lg: 8 }} // 5 spacing on 1024px (md), 8 on 1440px (lg)
+          alignItems={{ xs: "center", sm: "stretch" }}
+        >
+          {/* Left Grid: Lightbulb Graphic (stretches to 100% height of content) */}
+          <Grid size={{ xs: 12, sm: 4, md: 5 }}>
             <Box
               sx={{
                 position: "relative",
-                height: { xs: "260px", sm: "380px", md: "520px" },
+                height: { xs: "260px", sm: "100%" }, // Stretches to match the right content height
                 width: "100%",
                 mx: "auto",
+                borderRadius: "20px",
+                overflow: "hidden",
               }}
             >
               <Image
@@ -44,20 +52,21 @@ const ScaleSection = () => {
                 alt="Big Genius Lightbulb"
                 fill
                 style={{
-                  objectFit: "contain",
+                  objectFit: "cover", // Covers the card area, keeping the cap/bulb centered
                   objectPosition: "center",
                 }}
               />
             </Box>
           </Grid>
 
-          <Grid size={{ xs: 12, sm: 7 }}>
-            <Box sx={{ pl: { xs: 0, sm: 2, md: 10 } }}>
+          {/* Right Grid: Text Content */}
+          <Grid size={{ xs: 12, sm: 8, md: 7 }}>
+            <Box sx={{ pl: { xs: 0, sm: 2, md: 5, lg: 10 } }}> {/* 5 padding on 1024px (md), 10 on 1440px (lg) */}
               <Typography
                 sx={{
                   fontFamily: poppins.style.fontFamily,
                   fontWeight: 600,
-                  fontSize: { xs: "30px", sm: "34px", md: "45px" },
+                  fontSize: { xs: "24px", sm: "28px", md: "36px", lg: "45px" }, // Decreased on 1024px (md)
                   color: COLORS.BLACK,
                   lineHeight: { xs: 1.25, md: 1.2 },
                   mb: 2,
@@ -84,7 +93,7 @@ const ScaleSection = () => {
               <Typography
                 sx={{
                   fontFamily: poppins.style.fontFamily,
-                  fontSize: { xs: "16px", sm: "17px", md: "20px" },
+                  fontSize: { xs: "16px", sm: "15px", md: "17px", lg: "20px" }, // Decreased on 1024px (md)
                   fontWeight: 400,
                   color: COLORS.TEXT_MUTED,
                   mb: 3,
@@ -103,19 +112,20 @@ const ScaleSection = () => {
                 direction={{ xs: "column", sm: "row" }}
                 spacing={2}
                 sx={{
-                  mb: { xs: 4, md: 3 },
+                  mb: { xs: 4, sm: 3, md: 3 },
                   alignItems: "center",
                   justifyContent: { xs: "center", sm: "flex-start" },
+                  flexWrap: "wrap",
                 }}
               >
                 <AppButton
                   pill
                   sx={{
                     backgroundColor: COLORS.SECONDARY,
-                    fontSize: { xs: "16px", sm: "15px", md: "18px" },
-                    py: { xs: 1.4, md: 1.8 },
-                    px: { xs: 3, sm: 2.2, md: 4 },
-                    width: { xs: "100%", sm: "auto" },
+                    fontSize: { xs: "13px", sm: "14px", md: "16px", lg: "18px" }, // Decreased on 1024px (md)
+                    py: { xs: 1, sm: 1.2, md: 1.5, lg: 1.8 }, // Decreased padding on 1024px (md)
+                    px: { xs: 2.5, sm: 2.5, md: 3.5, lg: 4 }, // Decreased padding on 1024px (md)
+                    width: { xs: "200px", sm: "auto" },
                     whiteSpace: "nowrap",
                     "&:hover": { backgroundColor: COLORS.PRIMARY },
                   }}
@@ -129,10 +139,10 @@ const ScaleSection = () => {
                     backgroundColor: "rgba(227, 24, 55, 0.08)",
                     color: COLORS.SECONDARY,
                     border: `1px solid ${COLORS.SECONDARY}`,
-                    fontSize: { xs: "16px", sm: "15px", md: "18px" },
-                    py: { xs: 1.4, md: 1.8 },
-                    px: { xs: 3, sm: 2.2, md: 4 },
-                    width: { xs: "100%", sm: "auto" },
+                    fontSize: { xs: "13px", sm: "14px", md: "16px", lg: "18px" }, // Decreased on 1024px (md)
+                    py: { xs: 1, sm: 1.2, md: 1.5, lg: 1.8 }, // Decreased padding on 1024px (md)
+                    px: { xs: 2.5, sm: 2.5, md: 3.5, lg: 4 }, // Decreased padding on 1024px (md)
+                    width: { xs: "200px", sm: "auto" },
                     whiteSpace: "nowrap",
                     "&:hover": {
                       backgroundColor: "rgba(227, 24, 55, 0.15)",
@@ -145,7 +155,7 @@ const ScaleSection = () => {
 
               <Stack
                 direction={{ xs: "column", sm: "row" }}
-                spacing={{ xs: 3, sm: 3, md: 6 }}
+                spacing={{ xs: 3, sm: 4, md: 4, lg: 6 }} // Decreased spacing on 1024px (md)
                 alignItems={{ xs: "center", sm: "flex-start" }}
               >
                 {[
@@ -160,7 +170,7 @@ const ScaleSection = () => {
                     <Typography
                       sx={{
                         fontFamily: poppins.style.fontFamily,
-                        fontSize: { xs: "30px", sm: "32px", md: "42px" },
+                        fontSize: { xs: "30px", sm: "32px", md: "36px", lg: "42px" }, // Decreased on 1024px (md)
                         fontWeight: 700,
                         color: COLORS.BLACK,
                         lineHeight: 1.1,
@@ -172,8 +182,9 @@ const ScaleSection = () => {
                     <Typography
                       sx={{
                         fontFamily: ibmPlexSans.style.fontFamily,
-                        fontSize: { xs: "15px", sm: "15px", md: "18px" },
+                        fontSize: { xs: "15px", sm: "15px", md: "16px", lg: "18px" }, // Decreased on 1024px (md)
                         color: COLORS.TEXT_MUTED,
+                        mt: { xs: 0.5, sm: 1 },
                       }}
                     >
                       {item.label}

@@ -65,7 +65,16 @@ const ChallengeSection = () => {
                 pill
                 sx={{
                   mb: { xs: 4, md: 8 },
-                  fontSize: { xs: "16px", md: "18px" },
+                  fontSize: { xs: "14px", md: "18px" },
+                  padding: { xs: "8px 20px", md: "12px 32px" },
+                  
+                  // Centering for screens < 768px
+                  display: "flex",
+                  mx: "auto",
+                  "@media (min-width: 768px)": {
+                    display: "inline-flex",
+                    mx: 0,
+                  },
                 }}
               >
                 Explore the Competition
