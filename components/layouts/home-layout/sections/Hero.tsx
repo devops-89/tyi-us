@@ -74,7 +74,7 @@ const HomeHeroSection = () => {
                 sx={{
                   fontFamily: poppins.style.fontFamily,
                   fontWeight: 600,
-                  fontSize: { xs: "28px", sm: "36px", md: "45px" },
+                  fontSize: { xs: "28px", sm: "36px", md: "36px", lg: "45px" }, // Compacted on 1024px (md)
                   backgroundColor: Colors.BLACK,
                   color: Colors.WHITE,
                   display: "inline-block",
@@ -93,7 +93,7 @@ const HomeHeroSection = () => {
                 sx={{
                   fontFamily: poppins.style.fontFamily,
                   fontWeight: 600,
-                  fontSize: { xs: "28px", sm: "36px", md: "45px" },
+                  fontSize: { xs: "28px", sm: "36px", md: "36px", lg: "45px" }, // Compacted on 1024px (md)
                   backgroundColor: Colors.BLACK,
                   color: Colors.WHITE,
                   display: "inline-block",
@@ -107,28 +107,16 @@ const HomeHeroSection = () => {
               </Typography>
             </Box>
 
-            {/* <Typography
-              sx={{
-                fontFamily: ibmPlexSans.style.fontFamily,
-                fontWeight: 600,
-                fontSize: { xs: "22px", md: "28px" },
-                color: Colors.BLACK,
-                mb: 2,
-                lineHeight: { xs: 1.3, md: 1 },
-              }}
-            >
-              {hero.subtitle}
-            </Typography> */}
-
             <Typography
               variant="body1"
               sx={{
                 fontFamily: ibmPlexSans.style.fontFamily,
-                fontSize: { xs: "16px", md: "20px" },
+                fontSize: { xs: "16px", md: "18px", lg: "20px" }, // Compacted on 1024px (md)
                 color: Colors.TEXT_MUTED,
                 maxWidth: "600px",
                 lineHeight: 1.6,
                 mb: 4,
+                textAlign: "left",
               }}
             >
               {hero.description}
@@ -142,14 +130,17 @@ const HomeHeroSection = () => {
               sx={{
                 height: 48,
                 borderRadius: "50px",
-                px: { xs: 3, md: 4 },
+                px: { xs: 3, md: 3, lg: 4 }, // Compacted padding on 1024px (md)
                 backgroundColor: Colors.SECONDARY,
                 color: Colors.WHITE,
                 fontFamily: poppins.style.fontFamily,
                 fontWeight: 600,
-                fontSize: { xs: "16px", md: "18px" },
+                fontSize: { xs: "16px", md: "16px", lg: "18px" }, // Compacted font size on 1024px (md)
                 textTransform: "none",
                 boxShadow: "none",
+                display: { xs: "flex", sm: "inline-flex" }, // Centered on mobile, inline-flex on sm+
+                mx: { xs: "auto", sm: 0 }, // Centered on mobile, left-aligned on sm+
+                width: { xs: "230px", sm: "fit-content" }, // Symmetrical sizing on mobile
                 "&:hover": {
                   backgroundColor: "#c61530",
                   boxShadow: "none",
@@ -160,16 +151,16 @@ const HomeHeroSection = () => {
             </Button>
           </Box>
 
-          {/* RIGHT IMAGE */}
+          {/* RIGHT IMAGE / VIDEO COLUMN */}
           <Box
             sx={{
-              flex: 1.2,
+              flex: { xs: "none", md: 1.2 },
               position: "relative",
               width: "100%",
               borderRadius: "24px",
               overflow: "hidden",
               boxShadow: "0 20px 60px rgba(0,0,0,0.1)",
-              height: { xs: "260px", sm: "340px", md: "460px" },
+              height: { xs: "260px", sm: "340px", md: "380px", lg: "460px" }, // Compacted height on 1024px (md)
               maxWidth: "840px",
             }}
           >
@@ -289,23 +280,23 @@ const HomeHeroSection = () => {
         >
           {/* DESCRIPTION */}
           <Typography
-  dangerouslySetInnerHTML={{ __html: hero.description2 }}
-  sx={{
-    fontFamily: ibmPlexSans.style.fontFamily,
-    fontSize: { xs: "16px", md: "20px" },
-    color: Colors.BLACK,
-    lineHeight: 1.6,
-    textAlign: { xs: "left", lg: "justify" },
-    maxWidth: { lg: "950px" },
-    order: { xs: 1, lg: 2 },
-    flex: 1,
-    whiteSpace: "pre-line", // Preserves double newlines (\n\n) as paragraph spacing
-    "& span": {
-      color: Colors.SECONDARY,
-      fontWeight: 700,
-    },
-  }}
-/>
+            dangerouslySetInnerHTML={{ __html: hero.description2 }}
+            sx={{
+              fontFamily: ibmPlexSans.style.fontFamily,
+              fontSize: { xs: "16px", md: "20px" },
+              color: Colors.BLACK,
+              lineHeight: 1.6,
+              textAlign: { xs: "left", lg: "justify" },
+              maxWidth: { lg: "950px" },
+              order: { xs: 1, lg: 2 },
+              flex: 1,
+              whiteSpace: "pre-line",
+              "& span": {
+                color: Colors.SECONDARY,
+                fontWeight: 700,
+              },
+            }}
+          />
 
           {/* ABOUT BUTTON */}
           <Button
@@ -316,32 +307,29 @@ const HomeHeroSection = () => {
             sx={{
               height: 48,
               borderRadius: "50px",
-              px: { xs: 3, md: 4 },
+              px: { xs: 3, md: 3, lg: 4 }, // Compacted padding on 1024px (md)
               border: `1px solid ${Colors.SECONDARY}`,
               color: Colors.SECONDARY,
               fontFamily: poppins.style.fontFamily,
               fontWeight: 600,
-              fontSize: { xs: "16px", md: "18px" },
+              fontSize: { xs: "16px", md: "16px", lg: "18px" }, // Compacted font size on 1024px (md)
               textTransform: "none",
               backgroundColor: "transparent",
-
-            width: {
-  xs: "100%",
-  sm: "fit-content",
-},
-
-alignSelf: {
-  xs: "stretch",
-  sm: "flex-start",
-},
-
+              width: {
+                xs: "230px", // Identical to Button 1
+                sm: "fit-content",
+              },
+              display: { xs: "flex", sm: "inline-flex" }, // Centered on mobile, inline-flex on sm+
+              mx: { xs: "auto", sm: 0 }, // Centered on mobile, left-aligned on sm+
+              alignSelf: {
+                xs: "center", // Centered on mobile, flex-start on sm+
+                sm: "flex-start",
+              },
               order: { xs: 2, lg: 1 },
-
               mt: {
                 xs: 4,
                 md: 0,
               },
-
               "&:hover": {
                 backgroundColor: "rgba(227, 24, 55, 0.05)",
                 borderColor: Colors.SECONDARY,

@@ -2,6 +2,8 @@
 
 import React from "react";
 import { Box, Container, Stack, Typography } from "@mui/material";
+import { ArrowUpRight } from "lucide-react";
+
 import { COLORS, CONSTANTS } from "@/utils/enum";
 import { poppins, ibmPlexSans } from "@/utils/fonts";
 import AppButton from "@/components/widgets/Button";
@@ -13,11 +15,12 @@ const JoinCTA = () => {
   return (
     <Box
       sx={{
-        pt: { xs: 8, sm: 10, md: 18 },
+        pt: { xs: 0, sm: 2, md: 4, lg: 18 },
         pb: { xs: 2, md: 10 },
         backgroundColor: COLORS.WHITE,
         position: "relative",
-        overflow: "hidden",
+        zIndex: 10,
+        overflow: "visible",
       }}
     >
       <Box
@@ -53,11 +56,10 @@ const JoinCTA = () => {
           spacing={{ xs: 2, sm: 14, md: 10 }}
           alignItems="center"
         >
-          {/* Image Section */}
           <Box
             sx={{
               flex: 1,
-             order: { xs: 1, md: 1 },
+              order: { xs: 1, md: 1 },
               position: "relative",
               width: "100%",
               display: "flex",
@@ -69,8 +71,8 @@ const JoinCTA = () => {
                 position: "relative",
                 width: {
                   xs: "72vw",
-                  sm: "410px",
-                  md: "430px",
+                  sm: "336px",
+                  md: "336px",
                   lg: "518px",
                 },
                 maxWidth: "518px",
@@ -90,6 +92,8 @@ const JoinCTA = () => {
                   src={ASSETS.IMAGES.IMAGE_WHAT_WAITING}
                   alt="Students collaborating on innovation"
                   fill
+                  priority
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   style={{
                     objectFit: "cover",
                     objectPosition: "center",
@@ -97,42 +101,59 @@ const JoinCTA = () => {
                 />
               </Box>
 
-              {/* Top Right Circle */}
               <Box
                 sx={{
                   position: "absolute",
                   width: {
-                    xs: "34%",
-                    sm: "40%",
-                    md: "42%",
-                    lg: "46%",
+                    xs: "100px",
+                    sm: "180px",
+                    md: "150px",
+                    lg: "277px",
                   },
-                  aspectRatio: "1 / 1",
+                  height: {
+                    xs: "100px",
+                    sm: "180px",
+                    md: "150px",
+                    lg: "277px",
+                  },
                   top: {
-                    xs: "-15%",
-                    sm: "-16%",
-                    md: "-18%",
-                    lg: "-20%",
+                    xs: "-48px",
+                    sm: "-100px",
+                    md: "-74px",
+                    lg: "-154px",
                   },
                   right: {
-                    xs: "-10%",
-                    sm: "-12%",
-                    md: "-12%",
-                    lg: "-15%",
+                    xs: "-28px",
+                    sm: "-72px",
+                    md: "-46px",
+                    lg: "-111px",
                   },
                   borderRadius: "50%",
                   border: "0.5px solid #101010",
-                  backgroundColor: "transparent",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
+                  backgroundColor: COLORS.WHITE,
                   zIndex: 3,
                 }}
               >
                 <Box
                   sx={{
-                    width: "65%",
-                    aspectRatio: "1 / 1",
+                    position: "absolute",
+                    top: 0,
+                    left: 0,
+                    right: 0,
+                    bottom: 0,
+                    margin: "auto",
+                    width: {
+                      xs: "78%",
+                      sm: "117px",
+                      md: "98px",
+                      lg: "180px",
+                    },
+                    height: {
+                      xs: "78%",
+                      sm: "117px",
+                      md: "98px",
+                      lg: "180px",
+                    },
                     backgroundColor: "#FFEDF1",
                     borderRadius: "50%",
                     display: "flex",
@@ -146,8 +167,18 @@ const JoinCTA = () => {
                   <Box
                     sx={{
                       position: "relative",
-                      width: { xs: 13, sm: 18, md: 22, lg: 26 },
-                      height: { xs: 13, sm: 18, md: 22, lg: 26 },
+                      width: {
+                        xs: 18,
+                        sm: 28,
+                        md: 20,
+                        lg: 43.76,
+                      },
+                      height: {
+                        xs: 18,
+                        sm: 28,
+                        md: 20,
+                        lg: 43.76,
+                      },
                       mb: { xs: 0.3, md: 1 },
                     }}
                   >
@@ -163,10 +194,10 @@ const JoinCTA = () => {
                     sx={{
                       fontFamily: ibmPlexSans.style.fontFamily,
                       fontSize: {
-                        xs: "4.5px",
-                        sm: "6px",
-                        md: "7px",
-                        lg: "8px",
+                        xs: "7.5px",
+                        sm: "6.5px",
+                        md: "6.5px",
+                        lg: "10px",
                       },
                       fontWeight: 500,
                       color: COLORS.SECONDARY,
@@ -180,10 +211,10 @@ const JoinCTA = () => {
                     sx={{
                       fontFamily: ibmPlexSans.style.fontFamily,
                       fontSize: {
-                        xs: "5.5px",
-                        sm: "7px",
+                        xs: "9px",
+                        sm: "9px",
                         md: "9px",
-                        lg: "10px",
+                        lg: "14px",
                       },
                       fontWeight: 700,
                       color: COLORS.SECONDARY,
@@ -198,50 +229,45 @@ const JoinCTA = () => {
                 </Box>
               </Box>
 
-              {/* Smaller Bottom Left Badge */}
               <Box
                 sx={{
                   position: "absolute",
-                 width: {
-  xs: "32%",
-  sm: "34%",
-  md: "28%",
-  lg: "30%",
-  xl: "32%",
-},
-
-maxWidth: {
-  md: "150px",
-  lg: "170px",
-},
-                 
-                  aspectRatio: "364 / 267",
+                  width: {
+                    xs: "32%",
+                    sm: "140px",
+                    md: "150px",
+                    lg: "264px",
+                  },
+                  height: {
+                    xs: "40px",
+                    sm: "90px",
+                    md: "90px",
+                    lg: "140px",
+                  },
                   left: {
-  xs: "-8%",
-  sm: "-10%",
-  md: "-8%",
-  lg: "-10%",
-},
-
-bottom: {
-  xs: "-4%",
-  sm: "-3%",
-  md: "3%",
-  lg: "4%",
-},
+                    xs: "-40px",
+                    sm: "-70px",
+                    md: "-70px",
+                    lg: "-130px",
+                  },
+                  bottom: {
+                    xs: "15px",
+                    sm: "30px",
+                    md: "30px",
+                    lg: "45px",
+                  },
                   backgroundColor: COLORS.WHITE,
                   borderRadius: "200px",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  boxShadow: "0 8px 24px rgba(0,0,0,0.12)",
+                  boxShadow: "0px 30px 80px rgba(47, 65, 88, 0.2)",
                   zIndex: 3,
+                  display: "grid",
+                  placeItems: "center",
                 }}
               >
                 <Box
                   sx={{
                     width: "80%",
-height: "72%",
+                    height: "72%",
                     borderRadius: "200px",
                     display: "flex",
                     flexDirection: "column",
@@ -254,8 +280,18 @@ height: "72%",
                   <Box
                     sx={{
                       position: "relative",
-                     width: { xs: 10, sm: 12, md: 14, lg: 16 },
-height: { xs: 10, sm: 12, md: 14, lg: 16 },
+                      width: {
+                        xs: 10,
+                        sm: 48,
+                        md: 36,
+                        lg: 74.58,
+                      },
+                      height: {
+                        xs: 10,
+                        sm: 48,
+                        md: 36,
+                        lg: 74.58,
+                      },
                       mb: { xs: 0.15, md: 0.3 },
                     }}
                   >
@@ -271,11 +307,11 @@ height: { xs: 10, sm: 12, md: 14, lg: 16 },
                     sx={{
                       fontFamily: ibmPlexSans.style.fontFamily,
                       fontSize: {
-  xs: "4px",
-  sm: "5px",
-  md: "7px",
-  lg: "8px",
-},
+                        xs: "4px",
+                        sm: "9px",
+                        md: "8px",
+                        lg: "14px",
+                      },
                       fontWeight: 600,
                       color: COLORS.SECONDARY,
                       lineHeight: 1.15,
@@ -288,11 +324,11 @@ height: { xs: 10, sm: 12, md: 14, lg: 16 },
                     sx={{
                       fontFamily: ibmPlexSans.style.fontFamily,
                       fontSize: {
-  xs: "3.5px",
-  sm: "4.5px",
-  md: "6px",
-  lg: "7px",
-},
+                        xs: "3.5px",
+                        sm: "6.5px",
+                        md: "6px",
+                        lg: "10px",
+                      },
                       fontWeight: 500,
                       color: COLORS.SECONDARY,
                       lineHeight: 1.2,
@@ -306,7 +342,6 @@ height: { xs: 10, sm: 12, md: 14, lg: 16 },
             </Box>
           </Box>
 
-          {/* Text Section */}
           <Box
             sx={{
               flex: 1,
@@ -315,10 +350,9 @@ height: { xs: 10, sm: 12, md: 14, lg: 16 },
               width: "100%",
               textAlign: { xs: "center", md: "left" },
               mb: { xs: 8, sm: 6, md: 0 },
-              
             }}
           >
-            <Box sx={{ mb: 2 ,mt:4 }}>
+            <Box sx={{ mb: 2, mt: 4 }}>
               <SparkleLabel
                 text="Join Us"
                 sparklePosition="both"
@@ -353,8 +387,7 @@ height: { xs: 10, sm: 12, md: 14, lg: 16 },
                 mx: { xs: "auto", md: 0 },
               }}
             >
-              Use your creativity to tackle major world issues and share your
-              idea on an international platform.
+              Solve the World’s Biggest Problems & showcase Your Idea Globally
             </Typography>
 
             <AppButton
@@ -371,7 +404,7 @@ height: { xs: 10, sm: 12, md: 14, lg: 16 },
                 gap: 1,
                 mb: { xs: 6, sm: 4, md: 0 },
                 "&:hover": {
-                  backgroundColor: COLORS.PRIMARY,
+                  backgroundColor: COLORS.SECONDARY,
                   boxShadow: "0 8px 24px rgba(214,14,52,0.25)",
                 },
               }}

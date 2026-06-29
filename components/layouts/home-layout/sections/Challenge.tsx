@@ -63,7 +63,10 @@ const ChallengeSection = () => {
                 pill
                 sx={{
                   mb: { xs: 4, md: 8 },
-                  fontSize: { xs: "12px", md: "18px" },
+                  fontSize: { xs: "12px", md: "14px", lg: "18px" },
+                  display: { xs: "flex", md: "inline-flex" },
+                  mx: { xs: "auto", md: "0px" },
+                  width: "fit-content",
                 }}
               >
                Know More About the Competition

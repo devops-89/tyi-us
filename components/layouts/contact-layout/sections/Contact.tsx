@@ -275,16 +275,29 @@ const ContactSection = () => {
                     variant="contained"
                     endIcon={<ArrowUpRight size={18} />}
                     sx={{
-                      height: { xs: 52, md: 60 },
-                      width: { xs: "100%", sm: "auto" },
                       borderRadius: "50px",
                       backgroundColor: Colors.SECONDARY,
                       fontFamily: poppins.style.fontFamily,
                       fontWeight: 600,
-                      fontSize: { xs: 15, md: 16 },
-                      px: { xs: 3, md: 4 },
                       textTransform: "none",
                       "&:hover": { backgroundColor: Colors.PRIMARY },
+
+                      // Responsive Sizing (Unchanged above 768px)
+                      width: "fit-content",
+                      height: 40,
+                      fontSize: "14px",
+                      px: 2.5,
+                      "@media (min-width: 768px)": {
+                        width: "auto",
+                        height: 52,
+                        fontSize: "15px",
+                        px: 3,
+                      },
+                      "@media (min-width: 900px)": { // md breakpoint
+                        height: 60,
+                        fontSize: "16px",
+                        px: 4,
+                      }
                     }}
                   >
                     {contact.form.submitBtn}

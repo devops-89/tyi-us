@@ -13,7 +13,7 @@ interface IAppButtonProps extends ButtonProps {
 
 const StyledButton = styled(MuiButton, {
   shouldForwardProp: (prop) => prop !== "pill",
-})<IAppButtonProps>(({ variant, pill }) => ({
+})<IAppButtonProps>(({ theme, variant, pill }) => ({
   borderRadius: pill ? "100px" : "8px",
   padding: pill ? "12px 32px" : "10px 24px",
   fontSize: "0.95rem",
@@ -21,6 +21,12 @@ const StyledButton = styled(MuiButton, {
   textTransform: "none",
   fontFamily: ibmPlexSans.style.fontFamily,
   transition: "all 0.3s cubic-bezier(0.4, 0, 0.2, 1)",
+
+  // Default responsive scaling for all AppButtons
+  [theme.breakpoints.down("md")]: {
+    padding: pill ? "8px 20px" : "6px 16px",
+    fontSize: "0.85rem",
+  },
 
   ...(variant === "contained" && {
     backgroundColor: COLORS.SECONDARY,

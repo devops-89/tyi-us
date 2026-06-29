@@ -56,7 +56,10 @@ const HowToParticipateSection = () => {
                 color: Colors.BLACK,
                 lineHeight: { xs: 1.25, md: 1, lg: 1.2 },
                 mb: 2,
-                textAlign: { xs: "center", md: "center", lg: "left"},
+                textAlign: "center", // Center text on screens < 768px
+                "@media (min-width: 768px)": {
+                  textAlign: "left", // Left-align text on screens >= 768px
+                }
               }}
             >
               {howToParticipate.header}
@@ -73,7 +76,10 @@ const HowToParticipateSection = () => {
                 mb: 3,
                 maxWidth: 600,
                 mx: { xs: "auto", md: 0 },
-                textAlign: { xs: "center", md: "left" },
+                textAlign: "center", // Center text on screens < 768px
+                "@media (min-width: 768px)": {
+                  textAlign: "left", // Left-align text on screens >= 768px
+                }
               }}
             >
               {howToParticipate.description}
@@ -87,10 +93,13 @@ const HowToParticipateSection = () => {
                 color: Colors.BLACK,
                 display: "flex",
                 alignItems: "center",
-                justifyContent: { xs: "center", md: "flex-start" },
+                justifyContent: "center", // Center on screens < 768px
                 gap: 1,
                 cursor: "pointer",
                 "&:hover": { color: Colors.PRIMARY },
+                "@media (min-width: 768px)": {
+                  justifyContent: "flex-start", // Left-align on screens >= 768px
+                }
               }}
             >
               Get Started <span style={{ fontSize: "20px" }}>→</span>
@@ -105,16 +114,35 @@ const HowToParticipateSection = () => {
                 sx={{
                   height: "100%",
                   "& a, & button": {
-                    width: { xs: "100%", sm: "auto" },
-                    maxWidth: { xs: "100%", sm: "none" },
-                    whiteSpace: { xs: "normal", sm: "nowrap" },
+                    width: "fit-content",
+                    maxWidth: "100%",
+                    whiteSpace: "normal",
                     textAlign: "center",
+                    display: "flex",
+                    mx: "auto", // Center button on screens < 768px
+                    "@media (min-width: 768px)": {
+                      width: "auto",
+                      maxWidth: "none",
+                      whiteSpace: "nowrap",
+                      mx: 0, // Left-align on screens >= 768px
+                    }
                   },
                   "& .MuiButton-root": {
-                    width: { xs: "100%", sm: "auto" },
-                    minHeight: { xs: 48, md: 48 },
-                    px: { xs: 2, md: 3 },
-                    fontSize: { xs: "15px", md: "16px" },
+                    width: "fit-content",
+                    height: "36px !important", // Forced height on mobile
+                    minHeight: "36px !important", // Forced minimum height on mobile
+                    px: "18px !important", // Forced padding on mobile
+                    fontSize: "13px !important", // Forced font-size on mobile
+                    display: "flex",
+                    mx: "auto", // Center button on screens < 768px
+                    "@media (min-width: 768px)": {
+                      width: "auto",
+                      height: "48px !important", // Desktop height
+                      minHeight: "48px !important",
+                      px: "24px !important",
+                      fontSize: "16px !important",
+                      mx: 0, // Left-align on screens >= 768px
+                    }
                   },
                 }}
               >
@@ -124,7 +152,7 @@ const HowToParticipateSection = () => {
                   description={s.desc}
                   ctaText={s.cta}
                   ctaHref={s.href}
-                  ctaWidth={{ xs: "100%", sm: s.width || "100%" }}
+                  ctaWidth={{ xs: "fit-content", md: s.width || "100%" }}
                 />
               </Box>
             </Grid>

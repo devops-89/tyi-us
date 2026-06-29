@@ -135,14 +135,14 @@ const WhyParticipateSection = () => {
           alignItems={{ xs: "center", md: "flex-start" }}
           sx={{ mb: { xs: 3, md: 2 } }}
         >
-          <Box sx={{ maxWidth: { xs: "270px", sm: "100%" } }}>
+          <Box sx={{ maxWidth: { xs: "290px", sm: "100%" } }}>
             <SparkleLabel
               text="Why Participate in the Challenge?"
               sparklePosition="both"
               type="diamond"
-              sparkleSize={24}
               color={Colors.PRIMARY}
-              fontSize={{ xs: "18px", sm: "18px" }}
+              fontSize= "18px" 
+              sparkleSize={24} 
             />
           </Box>
         </Stack>

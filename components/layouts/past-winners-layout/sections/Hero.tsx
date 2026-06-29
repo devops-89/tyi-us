@@ -16,8 +16,8 @@ const PastWinnersHeroSection = () => {
   return (
     <Box
       sx={{
-        pt: { xs: 0,sm:6, md: 10 },
-        pb: { xs: 4,sm:6, md: 10 },
+        pt: { xs: 0, sm: 3, md: 10 },
+        pb: { xs: 4, sm: 6, md: 10 },
         backgroundColor: Colors.WHITE,
         position: "relative",
       }}
@@ -29,7 +29,7 @@ const PastWinnersHeroSection = () => {
           alignItems="flex-start"
         >
           {/* Left Content */}
-          <Box sx={{ flex: 1, pt: 1 }}>
+          <Box sx={{ flex: 1, pt: 1, width: "100%" }}>
             <Box sx={{ mb: 2 }}>
               <SparkleLabel text={hero.sparkle} />
             </Box>
@@ -38,7 +38,7 @@ const PastWinnersHeroSection = () => {
               sx={{
                 fontFamily: poppins.style.fontFamily,
                 fontWeight: 700,
-                fontSize: { xs: "28px", md: "48px" },
+                fontSize: { xs: "26px", sm: "32px", md: "38px", lg: "48px" }, // Decreased on 1024px (md), original on 1440px (lg)
                 color: Colors.BLACK,
                 lineHeight: 1.1,
                 mb: 3,
@@ -51,7 +51,7 @@ const PastWinnersHeroSection = () => {
               sx={{
                 fontFamily: ibmPlexSans.style.fontFamily,
                 fontWeight: 600,
-                fontSize: "18px",
+                fontSize: { xs: "15px", sm: "16px", md: "16px", lg: "18px" }, // Responsive font-size
                 color: Colors.BLACK,
                 mb: 4,
               }}
@@ -67,9 +67,10 @@ const PastWinnersHeroSection = () => {
                 variant="outlined"
                 endIcon={<ArrowUpRight size={18} />}
                 sx={{
-                  height: 48,
+                  height: { xs: 40, md: 48 }, // Responsive height
                   borderRadius: "50px",
-                  px: 3,
+                  px: { xs: 2.5, md: 3 }, // Decreased horizontal padding on mobile to save space
+                  width: { xs: "230px", sm: "auto" }, // Increased width to 230px on mobile to fit the text in 1 line
                   borderColor: "rgba(227, 24, 55, 0.2)",
                   backgroundColor: "rgba(227, 24, 55, 0.05)",
                   color: Colors.SECONDARY,
@@ -77,6 +78,9 @@ const PastWinnersHeroSection = () => {
                   fontWeight: 600,
                   fontSize: "14px",
                   textTransform: "none",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
                   "&:hover": { 
                     borderColor: Colors.SECONDARY, 
                     backgroundColor: "rgba(227, 24, 55, 0.1)" 
@@ -92,9 +96,10 @@ const PastWinnersHeroSection = () => {
                 href="/moments"
                 startIcon={<Box sx={{ width: 10, height: 10, borderRadius: "50%", backgroundColor: Colors.SECONDARY, mr: 0.5 }} />}
                 sx={{
-                  height: 48,
+                  height: { xs: 40, md: 48 }, // Responsive height
                   borderRadius: "50px",
-                  px: 3,
+                  px: { xs: 2.5, md: 3 }, // Decreased horizontal padding on mobile to save space
+                  width: { xs: "230px", sm: "auto" }, // Increased width to 230px on mobile to fit the text in 1 line
                   border: `1px solid ${Colors.BORDER}`,
                   color: Colors.BLACK,
                   fontFamily: poppins.style.fontFamily,
@@ -102,6 +107,9 @@ const PastWinnersHeroSection = () => {
                   fontSize: "14px",
                   textTransform: "none",
                   backgroundColor: Colors.WHITE,
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
                   "&:hover": { 
                     backgroundColor: Colors.GRAY_LIGHT,
                     borderColor: Colors.BLACK 
@@ -116,13 +124,13 @@ const PastWinnersHeroSection = () => {
           {/* Right Image */}
           <Box
             sx={{
-              flex: 1.2,
+              flex: { xs: "none", md: 1.2 }, // Prevents height collapse on mobile
               position: "relative",
               width: "100%",
               borderRadius: "24px",
               overflow: "hidden",
               boxShadow: "0 20px 60px rgba(0,0,0,0.1)",
-              height: { xs: "300px", md: "520px" },
+              height: { xs: "280px", sm: "360px", md: "520px" }, // Responsive heights
             }}
           >
             <Image
@@ -137,16 +145,16 @@ const PastWinnersHeroSection = () => {
             <Box
               sx={{
                 position: "absolute",
-                top: 20,
-                right: 20,
+                top: { xs: 12, md: 20 },
+                right: { xs: 12, md: 20 },
                 backgroundColor: "rgba(255, 255, 255, 0.9)",
-                p: "10px 20px",
+                p: { xs: "6px 12px", md: "10px 20px" }, // Responsive padding
                 borderRadius: "10px",
                 backdropFilter: "blur(4px)",
                 border: `1px solid ${Colors.BORDER}`,
               }}
             >
-              <Typography sx={{ fontFamily: ibmPlexSans.style.fontFamily, fontWeight: 700, fontSize: "12px", color: Colors.BLACK }}>
+              <Typography sx={{ fontFamily: ibmPlexSans.style.fontFamily, fontWeight: 700, fontSize: { xs: "10px", md: "12px" }, color: Colors.BLACK }}>
                 {hero.overlayText1}
               </Typography>
             </Box>
@@ -154,16 +162,16 @@ const PastWinnersHeroSection = () => {
             <Box
               sx={{
                 position: "absolute",
-                bottom: 20,
-                left: 20,
+                bottom: { xs: 12, md: 20 },
+                left: { xs: 12, md: 20 },
                 backgroundColor: "rgba(255, 255, 255, 0.9)",
-                p: "10px 20px",
+                p: { xs: "6px 12px", md: "10px 20px" }, // Responsive padding
                 borderRadius: "10px",
                 backdropFilter: "blur(4px)",
                 border: `1px solid ${Colors.BORDER}`,
               }}
             >
-              <Typography sx={{ fontFamily: ibmPlexSans.style.fontFamily, fontWeight: 700, fontSize: "12px", color: Colors.BLACK }}>
+              <Typography sx={{ fontFamily: ibmPlexSans.style.fontFamily, fontWeight: 700, fontSize: { xs: "10px", md: "12px" }, color: Colors.BLACK }}>
                 {hero.overlayText2}
               </Typography>
             </Box>
@@ -171,7 +179,7 @@ const PastWinnersHeroSection = () => {
         </Stack>
 
         <Box
-          sx={{ mt: {sx:4, sm:6, md:10}, width: "100%", height: "1px", backgroundColor: Colors.DIVIDER }}
+          sx={{ mt: { xs: 4, sm: 6, md: 10 }, width: "100%", height: "1px", backgroundColor: Colors.DIVIDER }}
         />
       </Container>
     </Box>
@@ -179,4 +187,3 @@ const PastWinnersHeroSection = () => {
 };
 
 export default PastWinnersHeroSection;
-

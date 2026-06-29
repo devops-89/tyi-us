@@ -14,8 +14,8 @@ interface CtaButtonProps {
   href: string;
   variant?: "contained" | "outlined";
   width?: string | number | object;
-  height?: number;
-  fontSize?: string | number;
+  height?: string | number | object; // Changed from number to support responsive objects
+  fontSize?: string | number | object; // Changed to support responsive objects
   showIcon?: boolean;
   sx?: object;
 }
@@ -25,8 +25,8 @@ export const CtaButton: React.FC<CtaButtonProps> = ({
   href,
   variant = "contained",
   width = "auto",
-  height = 60,
-  fontSize = 18,
+  height = { xs: 40, md: 60 }, // Responsive height default
+  fontSize = { xs: 14, md: 18 }, // Responsive font-size default
   showIcon = true,
   sx = {},
 }) => {
@@ -40,7 +40,7 @@ export const CtaButton: React.FC<CtaButtonProps> = ({
       rel="noopener noreferrer"
       sx={{
         height: height,
-        px: 5,
+        px: { xs: 2.5, md: 5 }, // Responsive horizontal padding
         width: width,
         borderRadius: "50px",
         backgroundColor: variant === "contained" ? COLORS.SUBMIT_ACCENT : COLORS.SUBMIT_ACCENT_BG,
@@ -51,6 +51,10 @@ export const CtaButton: React.FC<CtaButtonProps> = ({
         fontSize: fontSize,
         textTransform: "none",
         boxShadow: variant === "contained" ? "0px 10px 30px rgba(220, 29, 64, 0.15)" : "none",
+        "& .MuiButton-endIcon svg": { // Overrides the SVG icon size responsively
+          width: { xs: 18, md: 22 },
+          height: { xs: 18, md: 22 }
+        },
         "&:hover": { 
           backgroundColor: variant === "contained" ? COLORS.PRIMARY : "#f9dfe6",
           borderColor: variant === "outlined" ? COLORS.SUBMIT_ACCENT : "transparent",

@@ -1,3 +1,5 @@
+
+
 "use client";
 
 import React from "react";
@@ -44,9 +46,8 @@ const YoungMindsSection = () => {
             >
               <SparkleLabel
                 text={youngMinds.sparkle}
-                fontSize= "18px"
+                fontSize={{ xs: "14px", sm: "18px" }}
                 sparklePosition="both"
-                sparkleSize={15}
               />
             </Box>
           </Box>
@@ -62,7 +63,7 @@ const YoungMindsSection = () => {
               textAlign: { xs: "center", md: "left" },
             }}
           >
-            Young Minds Can Solve the World&apos;s
+             Young Minds Can Solve the World&apos;s
             <Box component="br" sx={{ display: { xs: "none", md: "block" } }} />
             {" "}Biggest Problems{" "}
             <Box

@@ -63,7 +63,7 @@ const PastWinnersInnovationSection = () => {
             sx={{
               fontFamily: poppins.style.fontFamily,
               fontWeight: 700,
-              fontSize: { xs: 30, md: 40 },
+              fontSize: { xs: 30, md: 34, lg: 40 }, // Decreased on 1024px (md), original on 1440px (lg)
               color: Colors.BLACK,
               lineHeight: 1.1,
               mb: 1,
@@ -78,9 +78,9 @@ const PastWinnersInnovationSection = () => {
           <Typography
             sx={{
               fontFamily: ibmPlexSans.style.fontFamily,
-              fontSize: { xs: 16, md: 18 },
+              fontSize: { xs: 16, md: 16, lg: 18 }, // Decreased on 1024px (md), original on 1440px (lg)
               color: Colors.TEXT_MUTED,
-              mb: 6,
+              mb: { xs: 3, md: 6 },
             }}
           >
             {innovation.description}
@@ -90,9 +90,9 @@ const PastWinnersInnovationSection = () => {
             <Grid
               key={idx}
               container
-              spacing={6}
+              spacing={{ xs: 3, md: 6 }}
               alignItems="center"
-              sx={{ mt: idx === 0 ? 0 : 2 }}
+              sx={{ mt: idx === 0 ? 0 : { xs: 4, md: 2 } }}
             >
               <Grid
                 size={{ xs: 12, md: idx === 0 ? 5 : 7 }}
@@ -101,7 +101,7 @@ const PastWinnersInnovationSection = () => {
                 <Box
                   sx={{
                     position: "relative",
-                    height: 403,
+                    height: { xs: 220, sm: 320, md: 403 },
                     width: "100%",
                     borderRadius: "32px",
                     overflow: "hidden",
@@ -125,7 +125,7 @@ const PastWinnersInnovationSection = () => {
                   sx={{
                     fontFamily: poppins.style.fontFamily,
                     fontWeight: 600,
-                    fontSize: 22,
+                    fontSize: { xs: 18, md: 19, lg: 22 }, // Decreased on 1024px (md), original on 1440px (lg)
                     color: Colors.BLACK,
                     mb: 2,
                   }}
@@ -137,9 +137,9 @@ const PastWinnersInnovationSection = () => {
                   <Typography
                     sx={{
                       fontFamily: ibmPlexSans.style.fontFamily,
-                      fontSize: 18,
+                      fontSize: { xs: 15, md: 16, lg: 18 }, // Decreased on 1024px (md), original on 1440px (lg)
                       color: Colors.TEXT_MUTED,
-                      textAlign: "justify",
+                      textAlign: { xs: "left", md: "justify" },
                     }}
                   >
                     {card.desc1}
@@ -148,9 +148,9 @@ const PastWinnersInnovationSection = () => {
                   <Typography
                     sx={{
                       fontFamily: ibmPlexSans.style.fontFamily,
-                      fontSize: 18,
+                      fontSize: { xs: 15, md: 16, lg: 18 }, // Decreased on 1024px (md), original on 1440px (lg)
                       color: Colors.TEXT_MUTED,
-                      textAlign: "justify",
+                      textAlign: { xs: "left", md: "justify" },
                     }}
                   >
                     {card.desc2}
@@ -165,7 +165,7 @@ const PastWinnersInnovationSection = () => {
             justifyContent="center"
             alignItems="center"
             spacing={{ xs: 4, md: 12 }}
-            sx={{ mt: 16 }}
+            sx={{ mt: { xs: 6, md: 16 } }}
           >
             {innovation.stats.map((m) => (
               <Stack key={m.label} spacing={1} alignItems="center">
@@ -173,7 +173,7 @@ const PastWinnersInnovationSection = () => {
                   sx={{
                     fontFamily: poppins.style.fontFamily,
                     fontWeight: 700,
-                    fontSize: { xs: 36, md: 44 },
+                    fontSize: { xs: 36, md: 38, lg: 44 }, // Decreased on 1024px (md), original on 1440px (lg)
                     color: Colors.BLACK,
                   }}
                 >
@@ -184,7 +184,7 @@ const PastWinnersInnovationSection = () => {
                   sx={{
                     fontFamily: ibmPlexSans.style.fontFamily,
                     fontWeight: 600,
-                    fontSize: { xs: 16, md: 18 },
+                    fontSize: { xs: 16, md: 16, lg: 18 }, // Decreased on 1024px (md), original on 1440px (lg)
                     color: Colors.TEXT_MUTED,
                     textAlign: "center",
                   }}

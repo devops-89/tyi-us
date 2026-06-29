@@ -21,14 +21,19 @@ const CARD_GAP = 20;
 const SuccessStoriesSection = () => {
   const successStoriesData = WEBSITE_DATA.patent.SuccessStoriesData;
   const stories = successStoriesData.stories;
+  
   const [activeIndex, setActiveIndex] = useState(0);
 
+  // The scroll limit is identical for all screen sizes (0 to stories.length - 1)
+  const maxIndex = stories.length - 1;
+
+  // Infinite wrapping navigation logic (identical on mobile & desktop)
   const handlePrev = () => {
-    setActiveIndex((prev) => (prev === 0 ? stories.length - 1 : prev - 1));
+    setActiveIndex((prev) => (prev === 0 ? maxIndex : prev - 1));
   };
 
   const handleNext = () => {
-    setActiveIndex((prev) => (prev === stories.length - 1 ? 0 : prev + 1));
+    setActiveIndex((prev) => (prev === maxIndex ? 0 : prev + 1));
   };
 
   return (
@@ -40,80 +45,88 @@ const SuccessStoriesSection = () => {
           px: { xs: 2, sm: 3, md: 4 },
         }}
       >
-        <Stack
-          direction={{ xs: "column", md: "row" }}
-          justifyContent="space-between"
-          alignItems={{ xs: "center", md: "center" }}
-          spacing={3}
+        {/* Row 1: Sparkle Label */}
+        <Box
           sx={{
-            mb: { xs: 4, md: 6 },
-            textAlign: { xs: "center", md: "left" },
+            display: "flex",
+            justifyContent: "flex-start",
+            mb: 2,
           }}
         >
-          <Box>
-            <Box
-              sx={{
-                display: "flex",
-                justifyContent: { xs: "center", md: "flex-start" },
-                mb: 2,
-              }}
-            >
-              <SparkleLabel
-                text={successStoriesData.sparkle}
-                fontSize={18}
-                sparkleSize={35}
-                type="blue-star"
-                sparklePosition="both"
-                color={COLORS.PRIMARY}
-              />
-            </Box>
+          <SparkleLabel
+            text={successStoriesData.sparkle}
+            fontSize={18}
+            sparkleSize={35}
+            type="blue-star"
+            sparklePosition="both"
+            color={COLORS.PRIMARY}
+          />
+        </Box>
 
-            <Typography
-              sx={{
-                fontFamily: "PolySans Trial, sans-serif",
-                fontWeight: 400,
-                fontSize: { xs: "24px", sm: "30px", md: "45px" },
-                lineHeight: { xs: "38px", sm: "42px", md: "48px" },
-                letterSpacing: "-0.01em",
-                textTransform: "capitalize",
-                color: COLORS.BLACK,
-              }}
-            >
-              {successStoriesData.title}
-            </Typography>
-          </Box>
+        {/* Row 2: Title & Navigation Arrows */}
+        <Stack
+          direction="row"
+          justifyContent="space-between"
+          alignItems="center"
+          spacing={2}
+          sx={{
+            mb: { xs: 4, md: 6 },
+          }}
+        >
+          <Typography
+            sx={{
+              fontFamily: "PolySans Trial, sans-serif",
+              fontWeight: 400,
+              fontSize: { xs: "20px", sm: "30px", md: "45px" },
+              lineHeight: { xs: "28px", sm: "42px", md: "48px" },
+              letterSpacing: "-0.01em",
+              textTransform: "capitalize",
+              color: COLORS.BLACK,
+            }}
+          >
+            {successStoriesData.title}
+          </Typography>
 
           <Stack
             direction="row"
-            spacing={1.5}
+            spacing={1}
             sx={{
-              display: { xs: "none", md: "flex" },
+              display: "flex",
+              flexShrink: 0,
             }}
           >
             <IconButton
               onClick={handlePrev}
               sx={{
-                width: 48,
-                height: 48,
+                width: { xs: 32, md: 48 },
+                height: { xs: 32, md: 48 },
                 border: "1px solid #E5E5E5",
                 backgroundColor: COLORS.WHITE,
                 "&:hover": { backgroundColor: "#F6F6F6" },
+                "& svg": {
+                  width: { xs: 16, md: 20 },
+                  height: { xs: 16, md: 20 },
+                }
               }}
             >
-              <ChevronLeft size={20} />
+              <ChevronLeft />
             </IconButton>
 
             <IconButton
               onClick={handleNext}
               sx={{
-                width: 48,
-                height: 48,
+                width: { xs: 32, md: 48 },
+                height: { xs: 32, md: 48 },
                 border: "1px solid #E5E5E5",
                 backgroundColor: COLORS.WHITE,
                 "&:hover": { backgroundColor: "#F6F6F6" },
+                "& svg": {
+                  width: { xs: 16, md: 20 },
+                  height: { xs: 16, md: 20 },
+                }
               }}
             >
-              <ChevronRight size={20} />
+              <ChevronRight />
             </IconButton>
           </Stack>
         </Stack>
@@ -173,44 +186,6 @@ const SuccessStoriesSection = () => {
                     fill
                     style={{ objectFit: "cover" }}
                   />
-
-                  <IconButton
-                    onClick={handlePrev}
-                    sx={{
-                      display: { xs: "flex", md: "none" },
-                      position: "absolute",
-                      left: 12,
-                      top: "50%",
-                      transform: "translateY(-50%)",
-                      zIndex: 2,
-                      width: 40,
-                      height: 40,
-                      backgroundColor: COLORS.WHITE,
-                      border: "1px solid #E5E5E5",
-                      "&:hover": { backgroundColor: "#F6F6F6" },
-                    }}
-                  >
-                    <ChevronLeft size={20} />
-                  </IconButton>
-
-                  <IconButton
-                    onClick={handleNext}
-                    sx={{
-                      display: { xs: "flex", md: "none" },
-                      position: "absolute",
-                      right: 12,
-                      top: "50%",
-                      transform: "translateY(-50%)",
-                      zIndex: 2,
-                      width: 40,
-                      height: 40,
-                      backgroundColor: COLORS.WHITE,
-                      border: "1px solid #E5E5E5",
-                      "&:hover": { backgroundColor: "#F6F6F6" },
-                    }}
-                  >
-                    <ChevronRight size={20} />
-                  </IconButton>
                 </Box>
 
                 <Box
