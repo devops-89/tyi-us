@@ -117,6 +117,7 @@ const SubmitHeroSection = () => {
       </Container>
     </Box>
   );
+  // new things
 };
 
 export default SubmitHeroSection;
