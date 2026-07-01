@@ -10,7 +10,7 @@ import LearningOutcomesSection from "./sections/Learning";
 import InnovationCampInfoCards from "./sections/Deadline";
 
 import PartnersSection from "../home-layout/sections/Partners";
-import InnovationCampSection from "./sections/Freeinnovation";
+import InnovationCampSection from "./sections/freeinnovation";
 import SelectionFlowSection from "./sections/Selectionflow";
 
 
