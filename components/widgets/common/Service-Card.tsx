@@ -13,8 +13,8 @@ interface IServiceCardProps {
 }
 
 const ServiceCard: React.FC<IServiceCardProps> = ({ title, description, iconName }) => {
-  // @ts-ignore
-  const Icon = LucideIcons[iconName] || LucideIcons.HelpCircle;
+  
+  const Icon = (LucideIcons[iconName as keyof typeof LucideIcons] || LucideIcons.HelpCircle) as React.ElementType;
 
   return (
     <Paper

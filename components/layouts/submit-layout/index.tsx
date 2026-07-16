@@ -6,12 +6,13 @@ import { Box } from "@mui/material";
 import SubmitHeroSection from "./sections/Hero";
 import HowToParticipateSection from "./sections/HowToParticipate";
 import Footer from "@/components/widgets/Footer";
+import AnimationWrapper from "@/components/widgets/common/AnimationWrapper";
 
 const SubmitLayout = () => {
   return (
     <Box>
-      <SubmitHeroSection />
-      <HowToParticipateSection />
+      <AnimationWrapper><SubmitHeroSection /></AnimationWrapper>
+      <AnimationWrapper><HowToParticipateSection /></AnimationWrapper>
       <Footer />
     </Box>
   );

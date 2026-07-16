@@ -12,7 +12,7 @@ const ModulesCoveredSection = () => {
   const modulesData = WEBSITE_DATA.innovation.ModuleItem;
 
   return (
-    <Box sx={{ backgroundColor: COLORS.WHITE, py: { xs: 4, md: 10 } }}>
+    <Box sx={{py: { xs: 4, md: 6 }, backgroundColor: COLORS.WHITE}}>
       <Container
         maxWidth={false}
         sx={{

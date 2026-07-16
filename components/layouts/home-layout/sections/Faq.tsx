@@ -28,12 +28,9 @@ const FaqSection = () => {
 
   return (
     <Box
-      sx={{
-        py: { sx:2, md: 10 },
-        backgroundColor: Colors.WHITE,
+      sx={{py: { xs: 4, md: 4 }, backgroundColor: Colors.WHITE,
         position: "relative",
-        overflow: "hidden",
-      }}
+        overflow: "hidden"}}
     >
       <Container
         maxWidth={false}
@@ -47,7 +44,7 @@ const FaqSection = () => {
           spacing={{ xs: 5, md: 10 }}
           alignItems="flex-start"
         >
-          {/* Left Content */}
+          {}
           <Box
             sx={{
               flex: 1,
@@ -76,9 +73,9 @@ const FaqSection = () => {
               sx={{
                 fontFamily: ibmPlexSans.style.fontFamily,
                 fontWeight: 400,
-                fontSize: { xs: 16, md: 20 },
+                fontSize: { xs: 14, md: 16 },
                 color: Colors.TEXT_MUTED,
-                lineHeight: { xs: "28px", md: "38px" },
+                lineHeight: { xs: "24px", md: "25px" },
                 mb: 3,
               }}
             >
@@ -110,7 +107,7 @@ const FaqSection = () => {
             </Button>
           </Box>
 
-          {/* FAQ Right Section */}
+          {}
           <Box sx={{ flex: 1.3, width: "100%" }}>
             <Stack spacing={2}>
               {rows.map(({ question, answer, idx }) => {
@@ -134,13 +131,13 @@ const FaqSection = () => {
                     >
                       <Typography
                         sx={{
-                                                 fontFamily: poppins.style.fontFamily,
-                                                 fontWeight: 400,
-                                                 fontSize: { xs: 18, sm: 22, md: 20, lg: 28 },
-                                                 color: Colors.BLACK,
-                                                 lineHeight: { xs: "28px", md: "40px", lg: "84px" },
-                                                 flex: 1,
-                                               }}
+                          fontFamily: poppins.style.fontFamily,
+                          fontWeight: 400,
+                          fontSize: { xs: 14, sm: 22, md: 20, lg: 26 },
+                          color: Colors.BLACK,
+                          lineHeight: { xs: "24px", md: "35px", lg: "40px" },
+                          flex: 1,
+                        }}
                       >
                         {question}
                       </Typography>
@@ -153,8 +150,10 @@ const FaqSection = () => {
                           width: { xs: 36, md: 44 },
                           height: { xs: 36, md: 44 },
                           borderRadius: "999px",
-                          color: Colors.BLACK,
+                          
+                          color: open ? Colors.PRIMARY : Colors.SECONDARY,
                           flexShrink: 0,
+                          transition: "color 0.3s ease",
                         }}
                       >
                         {open ? (
@@ -178,9 +177,10 @@ const FaqSection = () => {
                             fontFamily:
                               ibmPlexSans.style.fontFamily,
                             fontWeight: 400,
-                            fontSize: { xs: 16, md: 20 },
+                            
+                            fontSize: { xs: 14, md: 16 },
                             color: Colors.TEXT_MUTED,
-                            lineHeight: { xs: "28px", md: "38px" },
+                            lineHeight: { xs: "24px", md: "28px" },
                           }}
                         >
                           {answer}

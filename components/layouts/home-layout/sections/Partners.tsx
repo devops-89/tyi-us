@@ -13,7 +13,7 @@ const PartnersSection = () => {
   return (
     <Box
       sx={{
-        py: { xs: 8, md: 25 },
+        py: { xs: 4, md: 20 },
         backgroundColor: COLORS.WHITE,
         position: "relative",
         overflow: "hidden",
@@ -23,7 +23,7 @@ const PartnersSection = () => {
         sx={{
           position: "absolute",
           left: 0,
-          top: 100,
+          top: 60,
           width: { xs: 100, md: 180 },
           height: { xs: 60, md: 120 },
           display: { xs: "none", md: "block" },
@@ -41,7 +41,7 @@ const PartnersSection = () => {
         sx={{
           position: "absolute",
           right: 0,
-          bottom: { xs: 10, md: 100 },
+          bottom: { xs: 10, md: 55 },
           width: { xs: 100, md: 180 },
           height: { xs: 60, md: 120 },
           display: { xs: "none", md: "block" },
@@ -110,7 +110,7 @@ const PartnersSection = () => {
                 sx={{
                   fontFamily: ibmPlexSans.style.fontFamily,
                   fontWeight: 400,
-                  fontSize: { xs: 16, sm: 18, md: 22 },
+                  fontSize: { xs: 14, md: 16 },
                   color: COLORS.TEXT_MUTED,
                   lineHeight: { xs: 1.6, md: 1.6 },
                 }}
@@ -120,11 +120,16 @@ const PartnersSection = () => {
             </Box>
 
             <Box
+              component="a"
+              href="https://discoverstem.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
               sx={{
                 position: "relative",
                 width: { xs: 240, sm: 280, md: 387 },
                 height: { xs: 60, sm: 70, md: 97 },
                 mx: { xs: "auto", md: 0 },
+                display: "block",
               }}
             >
               <Image

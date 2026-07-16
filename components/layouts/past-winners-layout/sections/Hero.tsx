@@ -28,7 +28,7 @@ const PastWinnersHeroSection = () => {
           spacing={4}
           alignItems="flex-start"
         >
-          {/* Left Content */}
+          {}
           <Box sx={{ flex: 1, pt: 1, width: "100%" }}>
             <Box sx={{ mb: 2 }}>
               <SparkleLabel text={hero.sparkle} />
@@ -38,7 +38,7 @@ const PastWinnersHeroSection = () => {
               sx={{
                 fontFamily: poppins.style.fontFamily,
                 fontWeight: 700,
-                fontSize: { xs: "26px", sm: "32px", md: "38px", lg: "48px" }, // Decreased on 1024px (md), original on 1440px (lg)
+                fontSize: { xs: "26px", sm: "32px", md: "38px", lg: "48px" }, 
                 color: Colors.BLACK,
                 lineHeight: 1.1,
                 mb: 3,
@@ -51,7 +51,8 @@ const PastWinnersHeroSection = () => {
               sx={{
                 fontFamily: ibmPlexSans.style.fontFamily,
                 fontWeight: 600,
-                fontSize: { xs: "15px", sm: "16px", md: "16px", lg: "18px" }, // Responsive font-size
+              fontSize: { xs: "14px", md: "16px" },
+                  lineHeight: { xs: 1.2, md: 1.4 },
                 color: Colors.BLACK,
                 mb: 4,
               }}
@@ -60,17 +61,17 @@ const PastWinnersHeroSection = () => {
             </Typography>
 
             <Stack direction="column" spacing={2} alignItems="flex-start">
-              {/* Recaps Button */}
+              {}
               <Button
                 component={Link}
                 href="/recap"
                 variant="outlined"
                 endIcon={<ArrowUpRight size={18} />}
                 sx={{
-                  height: { xs: 40, md: 48 }, // Responsive height
+                  height: { xs: 40, md: 48 }, 
                   borderRadius: "50px",
-                  px: { xs: 2.5, md: 3 }, // Decreased horizontal padding on mobile to save space
-                  width: { xs: "230px", sm: "auto" }, // Increased width to 230px on mobile to fit the text in 1 line
+                  px: { xs: 2.5, md: 3 }, 
+                  width: { xs: "230px", sm: "auto" }, 
                   borderColor: "rgba(227, 24, 55, 0.2)",
                   backgroundColor: "rgba(227, 24, 55, 0.05)",
                   color: Colors.SECONDARY,
@@ -90,16 +91,16 @@ const PastWinnersHeroSection = () => {
                 {hero.cta1Text}
               </Button>
 
-              {/* Moments Button */}
+              {}
               <Button
                 component={Link}
                 href="/moments"
                 startIcon={<Box sx={{ width: 10, height: 10, borderRadius: "50%", backgroundColor: Colors.SECONDARY, mr: 0.5 }} />}
                 sx={{
-                  height: { xs: 40, md: 48 }, // Responsive height
+                  height: { xs: 40, md: 48 }, 
                   borderRadius: "50px",
-                  px: { xs: 2.5, md: 3 }, // Decreased horizontal padding on mobile to save space
-                  width: { xs: "230px", sm: "auto" }, // Increased width to 230px on mobile to fit the text in 1 line
+                  px: { xs: 2.5, md: 3 }, 
+                  width: { xs: "230px", sm: "auto" }, 
                   border: `1px solid ${Colors.BORDER}`,
                   color: Colors.BLACK,
                   fontFamily: poppins.style.fontFamily,
@@ -121,16 +122,16 @@ const PastWinnersHeroSection = () => {
             </Stack>
           </Box>
 
-          {/* Right Image */}
+          {}
           <Box
             sx={{
-              flex: { xs: "none", md: 1.2 }, // Prevents height collapse on mobile
+              flex: { xs: "none", md: 1.2 }, 
               position: "relative",
               width: "100%",
               borderRadius: "24px",
               overflow: "hidden",
               boxShadow: "0 20px 60px rgba(0,0,0,0.1)",
-              height: { xs: "280px", sm: "360px", md: "520px" }, // Responsive heights
+              height: { xs: "280px", sm: "360px", md: "520px" }, 
             }}
           >
             <Image
@@ -141,14 +142,14 @@ const PastWinnersHeroSection = () => {
               priority
             />
 
-            {/* Overlays */}
+            {}
             <Box
               sx={{
                 position: "absolute",
                 top: { xs: 12, md: 20 },
                 right: { xs: 12, md: 20 },
                 backgroundColor: "rgba(255, 255, 255, 0.9)",
-                p: { xs: "6px 12px", md: "10px 20px" }, // Responsive padding
+                p: { xs: "6px 12px", md: "10px 20px" }, 
                 borderRadius: "10px",
                 backdropFilter: "blur(4px)",
                 border: `1px solid ${Colors.BORDER}`,
@@ -165,7 +166,7 @@ const PastWinnersHeroSection = () => {
                 bottom: { xs: 12, md: 20 },
                 left: { xs: 12, md: 20 },
                 backgroundColor: "rgba(255, 255, 255, 0.9)",
-                p: { xs: "6px 12px", md: "10px 20px" }, // Responsive padding
+                p: { xs: "6px 12px", md: "10px 20px" }, 
                 borderRadius: "10px",
                 backdropFilter: "blur(4px)",
                 border: `1px solid ${Colors.BORDER}`,

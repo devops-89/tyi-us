@@ -1,31 +1,46 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import {
   Box,
   Container,
   Typography,
-  Dialog,
-  IconButton,
 } from "@mui/material";
-import CloseIcon from "@mui/icons-material/Close";
-import { Play } from "lucide-react";
 
 import { COLORS, CONSTANTS } from "@/utils/enum";
 import { poppins } from "@/utils/fonts";
 import SparkleLabel from "@/components/widgets/common/SparkleLabel";
 import { WEBSITE_DATA } from "@/utils/website";
 
+
+
+const getEmbedUrl = (url?: string) => {
+  if (!url) return "";
+
+  let videoId = "";
+  if (url.includes("watch?v=")) {
+    videoId = url.split("watch?v=")[1].split("&")[0];
+  } else if (url.includes("youtu.be/")) {
+    videoId = url.split("youtu.be/")[1].split("?")[0];
+  } else if (url.includes("embed/")) {
+    return `${url}${url.includes("?") ? "&" : "?"}autoplay=1&mute=1`;
+  }
+
+  // If a standard YouTube ID was found, format it as an embed link with autoplay and mute
+  if (videoId) {
+    return `https://www.youtube.com/embed/${videoId}?autoplay=1&mute=1`;
+  }
+
+  // Fallback for non-YouTube videos (e.g. Vimeo, raw mp4)
+  return `${url}${url.includes("?") ? "&" : "?"}autoplay=1&mute=1`;
+};
+
 const NurturingYoungInventorsSection = () => {
-  const [openVideo, setOpenVideo] = useState(false);
   const data = WEBSITE_DATA.patent.Nurturing;
 
   return (
     <Box
-      sx={{
-        backgroundColor: COLORS.WHITE,
-        py: { xs: 4, md: 10 },
-      }}
+      sx={{py: { xs: 4, md: 6 }, backgroundColor: COLORS.WHITE}}
     >
       <Container
         maxWidth={false}
@@ -79,9 +94,9 @@ const NurturingYoungInventorsSection = () => {
                 fontWeight: 400,
              fontSize: { xs: "24px", sm: "30px", md: "45px" },
                 lineHeight: {
-                  xs: "38px",
-                  sm: "42px",
-                  md: "48px",
+                  xs: 1.25,
+                  sm: 1.4,
+                  md: 1.6,
                 },
                 letterSpacing: "-0.01em",
                 textTransform: "capitalize",
@@ -114,8 +129,8 @@ const NurturingYoungInventorsSection = () => {
                 sx={{
                   fontFamily: poppins.style.fontFamily,
                   fontWeight: 400,
-                  fontSize: { xs: "16px", sm: "18px", md: "20px" },
-                  lineHeight: { xs: "28px", sm: "32px", md: "35px" },
+                  fontSize: { xs: "14px", md: "16px" },
+                  lineHeight: { xs: 1.6, md: 1.4 },
                   letterSpacing: "-0.02em",
                   textTransform: "capitalize",
                   color: COLORS.TEXT_MUTED,
@@ -129,8 +144,8 @@ const NurturingYoungInventorsSection = () => {
                   sx={{
                     fontFamily: poppins.style.fontFamily,
                     fontWeight: 600,
-                    fontSize: { xs: "16px", sm: "18px", md: "20px" },
-                    lineHeight: { xs: "28px", sm: "32px", md: "35px" },
+                    fontSize: { xs: "14px", md: "16px" },
+                  lineHeight: { xs: 1.6, md: 1.4 },
                     letterSpacing: "-0.02em",
                     textTransform: "capitalize",
                     color: COLORS.BLACK,
@@ -144,96 +159,35 @@ const NurturingYoungInventorsSection = () => {
             ))}
           </Box>
 
+          {}
           <Box
-            onClick={() => setOpenVideo(true)}
             sx={{
+              position: "relative",
               width: "100%",
               maxWidth: 1160,
               height: { xs: 230, sm: 420, md: 560, lg: 658 },
               backgroundColor: COLORS.BLACK,
               borderRadius: "29px",
               mx: "auto",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              cursor: "pointer",
               overflow: "hidden",
             }}
           >
-            <Box
-              sx={{
-                width: { xs: 52, md: 62 },
-                height: { xs: 36, md: 44 },
-                borderRadius: "10px",
-                backgroundColor: COLORS.SECONDARY,
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                color: COLORS.WHITE,
+            <iframe
+              src={getEmbedUrl(data.videoUrl)}
+              title="Nurturing Young Inventors Video"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              style={{
+                position: "absolute",
+                top: 0,
+                left: 0,
+                width: "100%",
+                height: "100%",
+                border: 0,
               }}
-            >
-              <Play size={24} fill="white" />
-            </Box>
+            />
           </Box>
         </Box>
-
-        <Dialog
-          open={openVideo}
-          onClose={() => setOpenVideo(false)}
-          maxWidth="lg"
-          fullWidth
-          PaperProps={{
-            sx: {
-              backgroundColor: COLORS.BLACK,
-              borderRadius: "14px",
-              overflow: "hidden",
-            },
-          }}
-        >
-          <Box sx={{ position: "relative" }}>
-            <IconButton
-              onClick={() => setOpenVideo(false)}
-              sx={{
-                position: "absolute",
-                top: 8,
-                right: 8,
-                zIndex: 2,
-                backgroundColor: COLORS.WHITE,
-                color: COLORS.BLACK,
-                "&:hover": {
-                  backgroundColor: COLORS.WHITE,
-                },
-              }}
-            >
-              <CloseIcon />
-            </IconButton>
-
-            <Box
-              sx={{
-                position: "relative",
-                width: "100%",
-                paddingTop: "56.25%",
-              }}
-            >
-              {openVideo && (
-                <iframe
-                  src={data.videoUrl}
-                  title="Nurturing Young Inventors Video"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                  style={{
-                    position: "absolute",
-                    top: 0,
-                    left: 0,
-                    width: "100%",
-                    height: "100%",
-                    border: 0,
-                  }}
-                />
-              )}
-            </Box>
-          </Box>
-        </Dialog>
       </Container>
     </Box>
   );

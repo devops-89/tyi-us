@@ -13,11 +13,9 @@ const WhoIsThisForSection = () => {
 
   return (
     <Box
-      sx={{
-        backgroundColor: COLORS.SUBMIT_ACCENT_BG,
-        py: { xs: 4, sm: 8, md: 10 },
-        mt: { xs: 4, sm: 6, md: 12 },
-      }}
+      sx={{py: { xs: 4, md: 6 }, backgroundColor: COLORS.SUBMIT_ACCENT_BG,
+        
+        mt: { xs: 4, sm: 6, md: 12 }}}
     >
       <Container
         maxWidth={false}
@@ -73,16 +71,8 @@ const WhoIsThisForSection = () => {
             sx={{
               fontFamily: poppins.style.fontFamily,
               fontWeight: 400,
-              fontSize: {
-                xs: "16px",
-                sm: "18px",
-                md: "22px",
-              },
-              lineHeight: {
-                xs: "28px",
-                sm: "32px",
-                md: "36px",
-              },
+              fontSize: { xs: "14px", md: "16px" },
+                  lineHeight: { xs: 1.2, md: 1.4 },
               letterSpacing: "-0.02em",
               textAlign: "center",
               textTransform: "capitalize",
@@ -119,13 +109,13 @@ const WhoIsThisForSection = () => {
                   sx={{
                     fontFamily: poppins.style.fontFamily,
                     fontWeight: 600,
-                    fontSize: {
-                      xs: "18px",
-                      md: "20px",
+                     fontSize: {
+                      xs: "14px",
+                      md: "16px",
                     },
                     lineHeight: {
-                      xs: "30px",
-                      md: "36px",
+                      xs: 1.2,
+                      md: 1.4,
                     },
                     letterSpacing: "-0.02em",
                     textAlign: "center",
@@ -141,12 +131,12 @@ const WhoIsThisForSection = () => {
                     fontFamily: poppins.style.fontFamily,
                     fontWeight: 600,
                     fontSize: {
-                      xs: "18px",
-                      md: "20px",
+                      xs: "14px",
+                      md: "16px",
                     },
                     lineHeight: {
-                      xs: "30px",
-                      md: "36px",
+                      xs: 1.2,
+                      md: 1.4,
                     },
                     letterSpacing: "-0.02em",
                     textAlign: "center",

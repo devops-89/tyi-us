@@ -7,15 +7,12 @@ import { poppins, ibmPlexSans } from "@/utils/fonts";
 import AppButton from "@/components/widgets/Button";
 import Image from "next/image";
 import { ASSETS } from "@/utils/assets";
+import Link from "next/link";
 
 const ChallengeSection = () => {
   return (
     <Box
-      sx={{
-        pt: { xs: 4, md: 10 },
-        pb: { xs: 4, md: 10 },
-        backgroundColor: COLORS.WHITE,
-      }}
+      sx={{py: { xs: 4, md: 6 }, backgroundColor: COLORS.WHITE}}
     >
       <Container
         maxWidth={false}
@@ -25,7 +22,7 @@ const ChallengeSection = () => {
         }}
       >
         <Grid container spacing={{ xs: 5, md: 6 }} alignItems="stretch">
-          {/* Left Side Content */}
+          {}
           <Grid
             size={{ xs: 12, md: 6 }}
             sx={{ display: "flex", flexDirection: "column" }}
@@ -48,12 +45,12 @@ const ChallengeSection = () => {
               <Typography
                 sx={{
                   fontFamily: ibmPlexSans.style.fontFamily,
-                  fontSize: { xs: "16px", md: "20px" },
+                  fontSize: { xs: "14px", md: "16px" },
                   color: COLORS.TEXT_MUTED,
-                  lineHeight: { xs: 1.6, md: 1.8 },
+                  lineHeight: { xs: 1.2, md: 1.4 },
                   mb: { xs: 3, md: 4 },
                   maxWidth: "600px",
-                  textAlign: { xs: "left", md: "justify" },
+                  textAlign:  "justify" ,
                 }}
               >
                 Top Young Innovators brings an exciting innovation competition
@@ -61,24 +58,29 @@ const ChallengeSection = () => {
                 creative young minds.
               </Typography>
 
-              <AppButton
-                pill
-                sx={{
-                  mb: { xs: 4, md: 8 },
-                  fontSize: { xs: "14px", md: "18px" },
-                  padding: { xs: "8px 20px", md: "12px 32px" },
-                  
-                  // Centering for screens < 768px
-                  display: "flex",
-                  mx: "auto",
-                  "@media (min-width: 768px)": {
-                    display: "inline-flex",
-                    mx: 0,
-                  },
-                }}
-              >
-                Explore the Competition
-              </AppButton>
+
+
+
+  <AppButton
+               component={Link}
+  href="/challenge" 
+    pill
+    sx={{
+      mb: { xs: 4, md: 8 },
+      fontSize: { xs: "14px", md: "18px" },
+      padding: { xs: "8px 20px", md: "12px 32px" },
+      
+      display: "flex",
+      mx: "auto",
+      "@media (min-width: 768px)": {
+        display: "inline-flex",
+        mx: 0,
+      },
+    }}
+  >
+    Explore the Competition
+  </AppButton>
+
             </Box>
 
             <Box
@@ -100,7 +102,7 @@ const ChallengeSection = () => {
             </Box>
           </Grid>
 
-          {/* Right Side Content */}
+          {}
           <Grid
             size={{ xs: 12, md: 6 }}
             sx={{ display: "flex", flexDirection: "column" }}
@@ -129,12 +131,12 @@ const ChallengeSection = () => {
               <Typography
                 sx={{
                   fontFamily: ibmPlexSans.style.fontFamily,
-                  fontSize: { xs: "16px", md: "20px" },
+                  fontSize: { xs: "14px", md: "16px" },
                   color: COLORS.TEXT_MUTED,
-                  lineHeight: { xs: 1.6, md: 1.6 },
+                    lineHeight: { xs: 1.2, md: 1.4 },
                   mb: { xs: 3, md: 4 },
                   maxWidth: { xs: "100%", md: "520px" },
-                  textAlign: { xs: "left", md: "justify" },
+                   textAlign:  "justify" ,
                 }}
               >
                 If you are aged between 10 to 22 years and have an idea that

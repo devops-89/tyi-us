@@ -11,17 +11,18 @@ import ScoreBreakdownSection from "./sections/ScoreBreakdown";
 import ChallengeFaqSection from "./sections/Faq";
 import ChallengeCtaSection from "./sections/Cta";
 import Footer from "@/components/widgets/Footer";
+import AnimationWrapper from "@/components/widgets/common/AnimationWrapper";
 
 const ChallengeLayout = () => {
   return (
     <Box>
-      <ChallengeHeroSection />
-      <YoungMindsSection />
-      <AwardsSection />
-      <RulesSection />
-      <ScoreBreakdownSection />
-      <ChallengeFaqSection />
-      <ChallengeCtaSection />
+      <AnimationWrapper><ChallengeHeroSection /></AnimationWrapper>
+      <AnimationWrapper><YoungMindsSection /></AnimationWrapper>
+      <AnimationWrapper><AwardsSection /></AnimationWrapper>
+      <AnimationWrapper><RulesSection /></AnimationWrapper>
+      <AnimationWrapper><ScoreBreakdownSection /></AnimationWrapper>
+      <AnimationWrapper><ChallengeFaqSection /></AnimationWrapper>
+      <AnimationWrapper><ChallengeCtaSection /></AnimationWrapper>
       <Footer />
     </Box>
   );

@@ -15,7 +15,7 @@ import { Crown, DollarSign, Trophy, Award, Facebook, Instagram, Linkedin, Twitte
 
 export const WEBSITE_DATA: IWebsiteData = {
   home: {
-    hero: {
+       hero: {
       sparkle: {
         text: "Welcome to",
         sparklePosition: "right" as const,
@@ -34,7 +34,10 @@ export const WEBSITE_DATA: IWebsiteData = {
       cta2Href: "/about",
       watchLabel: "Watch",
       watchDescription: "That's how we make it work?",
-      image: ASSETS.IMAGES.HERO1,
+      
+    
+        video: "https://www.youtube.com/embed/jo5hgqxAaes?autoplay=1&mute=1&loop=1&playlist=jo5hgqxAaes&controls=1",
+      
       imageLabel: "America’s Top Young Innovators - Grand Finale 2024",
     },
     participation: {
@@ -376,7 +379,7 @@ To help participants bring their ideas to life, we’ve partnered with one of th
       sparkle: "Grand Finale",
       title: "America’s Top Young Innovator 2024 — Grand National Showcase",
       description: "Highlighting visionary youth innovations that are transforming the world with fresh, powerful ideas.",
-      image: ASSETS.IMAGES.PAST_WINNERS_VIDEO_BANNER,
+      image: "https://www.youtube.com/watch?v=ZN5YOD-jGss&t=3s",
       watchLabel: "Watch",
       watchDesc: "That's how we make it work?",
     },
@@ -802,7 +805,7 @@ Nurturing:  {
 
   title: "Nurturing Young Inventors",
 
-  videoUrl: "https://www.youtube.com/watch?v=YOUR_VIDEO_ID",
+  videoUrl: "https://www.youtube.com/watch?v=TVls4uiWbC4",
 
   items: [
     {

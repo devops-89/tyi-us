@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import {
   Box,
   Container,
@@ -14,6 +14,8 @@ import {
   FormControlLabel,
 } from "@mui/material";
 import { ArrowUpRight } from "lucide-react";
+import { useFormik } from "formik";
+import * as Yup from "yup";
 
 import { Colors, CONSTANTS } from "@/utils/enum";
 import { poppins, ibmPlexSans } from "@/utils/fonts";
@@ -28,28 +30,47 @@ const fieldSx = {
   "& .MuiInputBase-root:after": { borderBottomColor: Colors.BLACK },
   "& .MuiInputBase-input": {
     fontFamily: poppins.style.fontFamily,
-    fontSize: { xs: 16, md: 18 },
+    fontSize: { xs: 14, md: 16 },
     py: 1.5,
   },
   "& .MuiInputLabel-root": {
     fontFamily: poppins.style.fontFamily,
-    fontSize: { xs: 16, md: 18 },
+    fontSize: { xs: 14, md: 16 },
     color: "#8D8D8D",
   },
 };
 
 const { contact } = WEBSITE_DATA;
 
+const validationSchema = Yup.object({
+  inquiryType: Yup.string().required(),
+  firstName: Yup.string().required("First name is required"),
+  lastName: Yup.string().required("Last name is required"),
+  email: Yup.string().email("Enter a valid email").required("Email is required"),
+  phone: Yup.string().required("Phone number is required"),
+  message: Yup.string().required("Message is required"),
+});
+
 const ContactSection = () => {
-  const [subject, setSubject] = useState(contact.subjects[0].id);
+  const formik = useFormik({
+    initialValues: {
+      inquiryType: contact.infoSnippets[0], 
+      firstName: "",
+      lastName: "",
+      email: "",
+      phone: "",
+      message: "", 
+    },
+    validationSchema: validationSchema,
+    onSubmit: (values) => {
+      console.log("Form Submitted:", values);
+      // Add your submission logic here
+    },
+  });
 
   return (
     <Box
-      sx={{
-        backgroundColor: Colors.WHITE,
-        pt: { xs: 1, md: 12 },
-        pb: { xs: 6, md: 12 },
-      }}
+      sx={{py: { xs: 4, md: 6 }, backgroundColor: Colors.WHITE}}
     >
       <Container
         maxWidth={false}
@@ -102,60 +123,76 @@ const ContactSection = () => {
             <Typography
               sx={{
                 fontFamily: ibmPlexSans.style.fontFamily,
-                fontSize: { xs: 16, md: 18 },
+               fontSize: { xs: "14px", md: "16px" },
+                  lineHeight: { xs: 1.2, md: 1.4 },
                 color: Colors.TEXT_MUTED,
-                lineHeight: { xs: "28px", md: "35px" },
+               
                 mb: { xs: 3, md: 4 },
                 whiteSpace: "pre-line",
-                textAlign: { xs: "center", md: "left" },
+                textAlign: { xs: "justify", md: "left" },
               }}
             >
               {contact.description}
             </Typography>
 
-            <Stack spacing={{ xs: 2, md: 3 }} sx={{ mt: { xs: 3, md: 6 } }}>
+            {}
+            <RadioGroup
+              name="inquiryType"
+              value={formik.values.inquiryType}
+              onChange={formik.handleChange}
+              sx={{ 
+                mt: { xs: 3, md: 6 }, 
+                display: "flex", 
+                flexDirection: "column", 
+                gap: { xs: 2, md: 3 } 
+              }}
+            >
               {contact.infoSnippets.map((snippet, idx) => (
-                <Stack
+                <FormControlLabel
                   key={idx}
-                  direction="row"
-                  spacing={1.5}
-                  alignItems="flex-start"
-                >
-                  <Radio
-                    checked
-                    disabled
-                    sx={{
-                      p: 0.2,
-                      mt: 0.4,
-                      color: Colors.SECONDARY,
-                      "&.Mui-checked": { color: Colors.SECONDARY },
-                    }}
-                  />
-
-                  <Typography
-                    sx={{
-                      fontFamily: poppins.style.fontFamily,
-                      fontSize: { xs: 13, md: 14 },
-                      color: "#2F2F2F",
-                      letterSpacing: { xs: "0.4px", md: "1.08px" },
-                      lineHeight: {
-                        xs: "24px",
-                        md: idx === 0 ? "34px" : "28px",
-                      },
-                    }}
-                  >
-                    {snippet}
-                  </Typography>
-                </Stack>
+                  value={snippet}
+                  control={
+                    <Radio
+                      sx={{
+                        p: 0,
+                        mr: 1.5,
+                        alignSelf: "flex-start",
+                        mt: "4px", 
+                        color: Colors.SECONDARY,
+                        "&.Mui-checked": {
+                          color: Colors.SECONDARY,
+                        },
+                      }}
+                    />
+                  }
+                  label={
+                    <Typography
+                      sx={{
+                        fontFamily: poppins.style.fontFamily,
+                        fontSize: { xs: 13, md: 14 },
+                        color: "#2F2F2F",
+                        letterSpacing: { xs: "0.4px", md: "1.08px" },
+                        lineHeight: {
+                          xs: "24px",
+                          md: idx === 0 ? "34px" : "28px",
+                        },
+                      }}
+                    >
+                      {snippet}
+                    </Typography>
+                  }
+                  sx={{ m: 0, alignItems: "flex-start" }}
+                />
               ))}
-            </Stack>
+            </RadioGroup>
 
             <Typography
               sx={{
                 fontFamily: ibmPlexSans.style.fontFamily,
-                fontSize: { xs: 16, md: 18 },
+                fontSize: { xs: "14px", md: "16px" },
+                  lineHeight: { xs: 1.2, md: 1.4 },
                 color: Colors.TEXT_MUTED,
-                lineHeight: { xs: "28px", md: "35px" },
+            
                 mb: 4,
                 whiteSpace: "pre-line",
                 mt: { xs: 4, md: 6 },
@@ -167,13 +204,19 @@ const ContactSection = () => {
           </Grid>
 
           <Grid size={{ xs: 12, md: 7 }}>
-            <Box sx={{ p: { xs: 0, md: 2 } }}>
+            <Box component="form" onSubmit={formik.handleSubmit} sx={{ p: { xs: 0, md: 2 } }}>
               <Grid container spacing={{ xs: 3, md: 4 }}>
                 <Grid size={{ xs: 12, sm: 6 }}>
                   <TextField
                     fullWidth
                     variant="standard"
                     label={contact.form.firstName}
+                    name="firstName"
+                    value={formik.values.firstName}
+                    onChange={formik.handleChange}
+                    onBlur={formik.handleBlur}
+                    error={formik.touched.firstName && Boolean(formik.errors.firstName)}
+                    helperText={formik.touched.firstName && formik.errors.firstName}
                     sx={fieldSx}
                   />
                 </Grid>
@@ -183,7 +226,12 @@ const ContactSection = () => {
                     fullWidth
                     variant="standard"
                     label={contact.form.lastName}
-                    defaultValue="Doe"
+                    name="lastName"
+                    value={formik.values.lastName}
+                    onChange={formik.handleChange}
+                    onBlur={formik.handleBlur}
+                    error={formik.touched.lastName && Boolean(formik.errors.lastName)}
+                    helperText={formik.touched.lastName && formik.errors.lastName}
                     sx={fieldSx}
                   />
                 </Grid>
@@ -193,6 +241,12 @@ const ContactSection = () => {
                     fullWidth
                     variant="standard"
                     label={contact.form.email}
+                    name="email"
+                    value={formik.values.email}
+                    onChange={formik.handleChange}
+                    onBlur={formik.handleBlur}
+                    error={formik.touched.email && Boolean(formik.errors.email)}
+                    helperText={formik.touched.email && formik.errors.email}
                     sx={fieldSx}
                   />
                 </Grid>
@@ -202,62 +256,14 @@ const ContactSection = () => {
                     fullWidth
                     variant="standard"
                     label={contact.form.phone}
-                    defaultValue="+1 012 3456 789"
+                    name="phone"
+                    value={formik.values.phone}
+                    onChange={formik.handleChange}
+                    onBlur={formik.handleBlur}
+                    error={formik.touched.phone && Boolean(formik.errors.phone)}
+                    helperText={formik.touched.phone && formik.errors.phone}
                     sx={fieldSx}
                   />
-                </Grid>
-
-                <Grid size={{ xs: 12 }}>
-                  <Typography
-                    sx={{
-                      fontFamily: poppins.style.fontFamily,
-                      fontWeight: 700,
-                      fontSize: { xs: 18, md: 20 },
-                      color: Colors.BLACK,
-                      mb: 1.5,
-                    }}
-                  >
-                    {contact.form.subjectLabel}
-                  </Typography>
-
-                  <RadioGroup
-                    row
-                    value={subject}
-                    onChange={(e) => setSubject(e.target.value)}
-                    sx={{
-                      gap: { xs: 1, md: 4 },
-                      flexDirection: { xs: "column", sm: "row" },
-                      alignItems: { xs: "flex-start", sm: "center" },
-                    }}
-                  >
-                    {contact.subjects.map((s) => (
-                      <FormControlLabel
-                        key={s.id}
-                        value={s.id}
-                        control={
-                          <Radio
-                            sx={{
-                              color: "#D0D0D0",
-                              "&.Mui-checked": {
-                                color: Colors.SECONDARY,
-                              },
-                            }}
-                          />
-                        }
-                        label={
-                          <Typography
-                            sx={{
-                              fontFamily: poppins.style.fontFamily,
-                              fontSize: { xs: 15, md: 16 },
-                              color: Colors.BLACK,
-                            }}
-                          >
-                            {s.label}
-                          </Typography>
-                        }
-                      />
-                    ))}
-                  </RadioGroup>
                 </Grid>
 
                 <Grid size={{ xs: 12 }}>
@@ -265,13 +271,19 @@ const ContactSection = () => {
                     fullWidth
                     variant="standard"
                     label={contact.form.message}
-                    defaultValue="Write your message.."
+                    name="message"
+                    value={formik.values.message}
+                    onChange={formik.handleChange}
+                    onBlur={formik.handleBlur}
+                    error={formik.touched.message && Boolean(formik.errors.message)}
+                    helperText={formik.touched.message && formik.errors.message}
                     sx={fieldSx}
                   />
                 </Grid>
 
                 <Grid size={{ xs: 12 }}>
                   <Button
+                    type="submit"
                     variant="contained"
                     endIcon={<ArrowUpRight size={18} />}
                     sx={{
@@ -282,7 +294,7 @@ const ContactSection = () => {
                       textTransform: "none",
                       "&:hover": { backgroundColor: Colors.PRIMARY },
 
-                      // Responsive Sizing (Unchanged above 768px)
+                      
                       width: "fit-content",
                       height: 40,
                       fontSize: "14px",
@@ -293,7 +305,7 @@ const ContactSection = () => {
                         fontSize: "15px",
                         px: 3,
                       },
-                      "@media (min-width: 900px)": { // md breakpoint
+                      "@media (min-width: 900px)": { 
                         height: 60,
                         fontSize: "16px",
                         px: 4,

@@ -12,7 +12,7 @@ import { WEBSITE_DATA } from "@/utils/website";
 const PastWinnersGuestsSection = () => {
   const { guests } = WEBSITE_DATA.pastWinners;
   return (
-    <Box sx={{ py: { xs: 4, md: 12 }, backgroundColor: Colors.WHITE }}>
+    <Box sx={{py: { xs: 4, md: 6 }, backgroundColor: Colors.WHITE}}>
       <Container maxWidth={false} sx={{ maxWidth: CONSTANTS.MAX_WIDTH }}>
         <Stack spacing={2} alignItems="center" sx={{ mb: 6 }}>
           <Typography sx={{ fontFamily: poppins.style.fontFamily, fontWeight: 700, fontSize: { xs: 28, md: 32 }, color: Colors.BLACK }}>
@@ -26,7 +26,7 @@ const PastWinnersGuestsSection = () => {
         <Grid container spacing={6} justifyContent="center">
           {guests.items.map((g) => (
             <Grid key={g.name} size={{ xs: 12, md: 4 }}>
-              {/* Responsive alignment: center on mobile, left-aligned on desktop */}
+              {}
               <Stack spacing={2} alignItems={{ xs: "center", md: "flex-start" }}>
                 <Box sx={{ position: "relative", width: "100%", height: 387, borderRadius: "18px", overflow: "hidden" }}>
                   <Image src={g.image} alt={g.name} fill style={{ objectFit: "cover" }} />
@@ -37,7 +37,7 @@ const PastWinnersGuestsSection = () => {
                     fontWeight: 700, 
                     fontSize: 22, 
                     color: Colors.BLACK,
-                    textAlign: { xs: "center", md: "left" } // Centered on mobile only
+                    textAlign: { xs: "center", md: "left" } 
                   }}
                 >
                   {g.name}
@@ -47,7 +47,7 @@ const PastWinnersGuestsSection = () => {
                     fontFamily: ibmPlexSans.style.fontFamily, 
                     fontSize: 16, 
                     color: Colors.TEXT_MUTED,
-                    textAlign: { xs: "center", md: "left" } // Centered on mobile only
+                    textAlign: { xs: "center", md: "left" } 
                   }}
                 >
                   {g.title}
@@ -55,7 +55,7 @@ const PastWinnersGuestsSection = () => {
                 <Stack 
                   direction="row" 
                   spacing={1} 
-                  justifyContent={{ xs: "center", md: "flex-start" }} // Centered on mobile only
+                  justifyContent={{ xs: "center", md: "flex-start" }} 
                 >
                   <IconButton size="small" sx={{ border: `1px solid ${Colors.BORDER}` }}>
                     <Linkedin size={18} />

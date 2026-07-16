@@ -13,24 +13,21 @@ import CaseStudiesSection from "./sections/CaseStudy";
 import SuccessStoriesSection from "./sections/SuccessStory";
 import FaqSection from "./sections/Faq";
 import ProtectIdeaSection from "./sections/Contact";
-
-
-
+import AnimationWrapper from "@/components/widgets/common/AnimationWrapper";
 
 const GetPatent = () => {
   return (
     <Box>
-   
-     <PatentSection/>
-     <WhyPatentMatterSection/>
-     <WhoIsThisForSection/>
-     <PatentPreviewSection/>
-     <NurturingYoungInventorsSection/>
-     <PatentServiceSection/>
-     <CaseStudiesSection/>
-     <SuccessStoriesSection/>
-     <FaqSection/>
-     <ProtectIdeaSection/>
+      <AnimationWrapper><PatentSection/></AnimationWrapper>
+      <AnimationWrapper><WhyPatentMatterSection/></AnimationWrapper>
+      <AnimationWrapper><WhoIsThisForSection/></AnimationWrapper>
+      <AnimationWrapper><PatentPreviewSection/></AnimationWrapper>
+      <AnimationWrapper><NurturingYoungInventorsSection/></AnimationWrapper>
+      <AnimationWrapper><PatentServiceSection/></AnimationWrapper>
+      <AnimationWrapper><CaseStudiesSection/></AnimationWrapper>
+      <AnimationWrapper><SuccessStoriesSection/></AnimationWrapper>
+      <AnimationWrapper><FaqSection/></AnimationWrapper>
+      <AnimationWrapper><ProtectIdeaSection/></AnimationWrapper>
       <Footer />
     </Box>
   );

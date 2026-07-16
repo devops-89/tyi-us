@@ -39,12 +39,16 @@ const PatentPreviewSection = () => {
     setOpenPreview(false);
   };
 
-  const CertificateImage = () => (
+  // 👇 Added a "preview" prop to safely scale down the image and font sizes
+  const CertificateImage = ({ preview = false }: { preview?: boolean }) => (
     <Box
       sx={{
         position: "relative",
         width: "100%",
-        maxWidth: { xs: 340, sm: 600, md: 830 },
+        
+        maxWidth: preview 
+          ? { xs: 300, sm: 480, md: 580 } 
+          : { xs: 340, sm: 600, md: 830 },
         mx: "auto",
         borderRadius: "10px",
         overflow: "visible",
@@ -70,7 +74,10 @@ const PatentPreviewSection = () => {
             left: "61%",
             transform: "translateX(-50%)",
             fontFamily: poppins.style.fontFamily,
-            fontSize: { xs: "12px", sm: "18px", md: "22px" },
+            
+            fontSize: preview 
+              ? { xs: "10px", sm: "14px", md: "15px" }
+              : { xs: "12px", sm: "18px", md: "22px" },
             fontWeight: 600,
             color: COLORS.BLACK,
             textAlign: "center",
@@ -90,7 +97,10 @@ const PatentPreviewSection = () => {
             left: "61%",
             transform: "translateX(-50%)",
             fontFamily: poppins.style.fontFamily,
-            fontSize: { xs: "10px", sm: "15px", md: "18px" },
+            
+            fontSize: preview
+              ? { xs: "8px", sm: "11px", md: "13px" }
+              : { xs: "10px", sm: "15px", md: "18px" },
             fontWeight: 500,
             color: COLORS.BLACK,
             textAlign: "center",
@@ -105,7 +115,7 @@ const PatentPreviewSection = () => {
   );
 
   return (
-    <Box sx={{ backgroundColor: COLORS.WHITE, py: { xs: 6, md: 10 } }}>
+    <Box sx={{py: { xs: 4, md: 6 }, backgroundColor: COLORS.WHITE}}>
       <Container
         maxWidth={false}
         sx={{
@@ -136,7 +146,7 @@ const PatentPreviewSection = () => {
             fontFamily: "PolySans Trial, sans-serif",
             fontWeight: 400,
             fontSize: { xs: "24px", sm: "30px", md: "40px" },
-            lineHeight: { xs: "38px", sm: "42px", md: "48px" },
+            lineHeight: { xs: 1.2, sm: 1.4, md: 1.6 },
             letterSpacing: "-0.01em",
             textTransform: "capitalize",
             color: COLORS.BLACK,
@@ -152,11 +162,12 @@ const PatentPreviewSection = () => {
           sx={{
             fontFamily: poppins.style.fontFamily,
             fontWeight: 400,
-            fontSize: { xs: "16px", sm: "18px", md: "22px" },
-            lineHeight: { xs: "28px", sm: "32px", md: "40px" },
+            fontSize: { xs: "14px", md: "16px" },
+                  lineHeight: { xs: 1.2, md: 1.4 },
             letterSpacing: "-0.02em",
             textTransform: "capitalize",
             color: COLORS.TEXT_MUTED,
+            textAlign: {md:"left", xs:"justify"},
             maxWidth: 1160,
             mx: "auto",
             mb: 4,
@@ -346,6 +357,7 @@ const PatentPreviewSection = () => {
 
         <CertificateImage />
 
+        {}
         <Dialog
           open={openPreview}
           onClose={() => setOpenPreview(false)}
@@ -377,7 +389,7 @@ const PatentPreviewSection = () => {
             </IconButton>
 
             <Box sx={{ pt: { xs: 5, sm: 4 } }}>
-              <CertificateImage />
+              <CertificateImage preview={true} />
             </Box>
           </Box>
         </Dialog>

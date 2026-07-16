@@ -12,18 +12,19 @@ import PartnersSection from "./sections/Partners";
 import FaqSection from "./sections/Faq";
 
 import JoinCTA from "./sections/JoinCTA";
+import AnimationWrapper from "@/components/widgets/common/AnimationWrapper";
 
 const HomeLayout = () => {
   return (
     <Box>
-      <Hero />
-      <ChallengeSection />
-      <ScaleSection />
-      <ParticipationJourneySection />
-      <WhyParticipateSection />
-      <JoinCTA />
-      <FaqSection />
-      <PartnersSection />
+      <AnimationWrapper><Hero /></AnimationWrapper>
+      <AnimationWrapper><ChallengeSection /></AnimationWrapper>
+      <AnimationWrapper><ScaleSection /></AnimationWrapper>
+      <AnimationWrapper><ParticipationJourneySection /></AnimationWrapper>
+      <AnimationWrapper><WhyParticipateSection /></AnimationWrapper>
+      <AnimationWrapper><JoinCTA /></AnimationWrapper>
+      <AnimationWrapper><FaqSection /></AnimationWrapper>
+      <AnimationWrapper><PartnersSection /></AnimationWrapper>
       <Footer />
     </Box>
   );

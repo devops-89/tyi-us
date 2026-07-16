@@ -25,7 +25,7 @@ const InnovationCampSection = () => {
   }, [innovationCampData.sliderImages.length]);
 
   return (
-    <Box sx={{ backgroundColor: COLORS.WHITE, py: { xs: 1, md: 8 } }}>
+    <Box sx={{py: { xs: 4, md: 6 }, backgroundColor: COLORS.WHITE}}>
       <Container
         maxWidth={false}
         sx={{
@@ -77,7 +77,7 @@ const InnovationCampSection = () => {
                 fontFamily: poppins.style.fontFamily,
                 fontWeight: 400,
                 fontSize: { xs: "24px", sm: "30px", md: "45px" },
-                lineHeight: { xs: "38px", sm: "42px", md: "48px" },
+                lineHeight: { xs: "30px", sm: "35px", md: "48px" },
                 letterSpacing: "-0.01em",
                 textTransform: "capitalize",
                 color: COLORS.BLACK,
@@ -92,8 +92,8 @@ const InnovationCampSection = () => {
               sx={{
                 fontFamily: poppins.style.fontFamily,
                 fontWeight: 400,
-                fontSize: { xs: "16px", sm: "18px", md: "22px" },
-                lineHeight: { xs: "28px", sm: "32px", md: "35px" },
+                fontSize: { xs: "14px", md: "16px" },
+                  lineHeight: { xs: 1.2, md: 1.4 },
                 letterSpacing: "-0.02em",
                 textTransform: "capitalize",
                 color: COLORS.TEXT_MUTED,
@@ -118,7 +118,7 @@ const InnovationCampSection = () => {
                 boxShadow: "none",
                 px: { xs: 2.5, sm: 4 },
                 
-                // Centering and Sizing responsive styles (< 768px in center, >= 768px left-aligned)
+                
                 display: "flex",
                 mx: "auto",
                 width: "fit-content",
@@ -131,7 +131,7 @@ const InnovationCampSection = () => {
                   height: 54,
                   fontSize: "18px",
                 },
-                "@media (min-width: 900px)": { // md breakpoint
+                "@media (min-width: 900px)": { 
                   height: 60,
                   fontSize: "20px",
                 },
@@ -195,15 +195,15 @@ const InnovationCampSection = () => {
             mt: { xs: 6, md: 10 },
             maxWidth: CONSTANTS.MAX_WIDTH,
             mx: "auto",
-            textAlign: "center",
+            textAlign: {xs:"justify", md:"center"},
           }}
         >
           <Typography
             sx={{
               fontFamily: poppins.style.fontFamily,
               fontWeight: 400,
-              fontSize: { xs: "16px", sm: "18px", md: "22px" },
-              lineHeight: { xs: "28px", sm: "32px", md: "35px" },
+             fontSize: { xs: "14px", md: "16px" },
+                  lineHeight: { xs: 1.2, md: 1.4 },
               letterSpacing: "-0.02em",
               textTransform: "capitalize",
               color: COLORS.TEXT_MUTED,
@@ -217,8 +217,8 @@ const InnovationCampSection = () => {
             sx={{
               fontFamily: poppins.style.fontFamily,
               fontWeight: 400,
-              fontSize: { xs: "16px", sm: "18px", md: "22px" },
-              lineHeight: { xs: "28px", sm: "32px", md: "35px" },
+              fontSize: { xs: "14px", md: "16px" },
+                  lineHeight: { xs: 1.2, md: 1.4 },
               letterSpacing: "-0.02em",
               textTransform: "capitalize",
               color: COLORS.TEXT_MUTED,
@@ -232,8 +232,8 @@ const InnovationCampSection = () => {
             sx={{
               fontFamily: poppins.style.fontFamily,
               fontWeight: 400,
-              fontSize: { xs: "15px", sm: "17px", md: "22px" },
-              lineHeight: { xs: "26px", sm: "30px", md: "35px" },
+            fontSize: { xs: "14px", md: "16px" },
+                  lineHeight: { xs: 1.2, md: 1.4 },
               letterSpacing: "-0.02em",
               textTransform: "capitalize",
               color: COLORS.TEXT_MUTED,

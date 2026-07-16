@@ -14,10 +14,7 @@ const LearningOutcomesSection = () => {
 
   return (
     <Box
-      sx={{
-        backgroundColor: COLORS.WHITE,
-        py: { xs: 4, md: 10 },
-      }}
+      sx={{py: { xs: 4, md: 6 }, backgroundColor: COLORS.WHITE}}
     >
       <Container
         maxWidth={false}
@@ -55,9 +52,9 @@ const LearningOutcomesSection = () => {
               fontWeight: 400,
            fontSize: { xs: "24px", sm: "30px", md: "45px" },
               lineHeight: {
-                xs: "38px",
-                sm: "46px",
-                md: "54px",
+                xs: "30px",
+                sm: "35px",
+                md: "45px",
                 lg: "62px",
               },
               letterSpacing: "-0.03em",
@@ -75,20 +72,10 @@ const LearningOutcomesSection = () => {
             sx={{
               fontFamily: poppins.style.fontFamily,
               fontWeight: 400,
-              fontSize: {
-                xs: "16px",
-                sm: "18px",
-                md: "20px",
-                lg: "22px",
-              },
-              lineHeight: {
-                xs: "28px",
-                sm: "30px",
-                md: "32px",
-                lg: "35px",
-              },
+             fontSize: { xs: "14px", md: "16px" },
+                  lineHeight: { xs: 1.2, md: 1.4 },
               letterSpacing: "-0.02em",
-              textAlign: "center",
+              textAlign: {xs:"justify", md:"center"},
               textTransform: "capitalize",
               color: COLORS.TEXT_MUTED,
               maxWidth: "1100px",

@@ -27,6 +27,6 @@ export const COLORS = Colors;
 
 
 export const CONSTANTS = {
-  NAV_HEIGHT: 100,
+  NAV_HEIGHT: 80,
   MAX_WIDTH: 1322,
 };

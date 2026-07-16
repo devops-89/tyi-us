@@ -14,10 +14,7 @@ const { awards } = WEBSITE_DATA.challenge;
 const AwardsSection = () => {
   return (
     <Box
-      sx={{
-        py: { xs: 4, md: 12 },
-        backgroundColor: Colors.WHITE,
-      }}
+      sx={{py: { xs: 4, md: 6 }, backgroundColor: Colors.WHITE}}
     >
       <Container
         maxWidth={false}
@@ -84,11 +81,11 @@ const AwardsSection = () => {
           <Typography
             sx={{
               fontFamily: ibmPlexSans.style.fontFamily,
-              fontSize: { xs: "16px", md: "20px" },
+              fontSize: { xs: "14px", md: "16px" },
+                  lineHeight: { xs: 1.2, md: 1.4 },
               color: Colors.TEXT_MUTED,
               textAlign: "center",
-              lineHeight: 1.6,
-              mb: { xs: 5, md: 8 },
+             mb: { xs: 5, md: 8 },
               maxWidth: 800,
               mx: "auto",
             }}
@@ -96,37 +93,88 @@ const AwardsSection = () => {
             {awards.description}
           </Typography>
 
-          <Grid container spacing={{ xs: 5, sm: 4, md: 6 }} justifyContent="center">
+          <Grid container spacing={{ xs: 3, md: 4 }} justifyContent="center" alignItems="stretch">
             {awards.items.map(
               ({ index, labelTop, labelMain, labelBottom, Icon }, i) => (
                 <Grid key={i} size={{ xs: 12, sm: 6, md: 3 }}>
-                  <Stack
-                    spacing={{ xs: 1.5, md: 2 }}
-                    alignItems="center"
+                  <Box
                     sx={{
+                      backgroundColor: Colors.WHITE,
+                      border: "1px solid rgba(0, 0, 0, 0.08)",
+                      borderRadius: "24px",
+                      p: { xs: 3, md: 4 },
+                      display: "flex",
+                      flexDirection: "column",
+                      alignItems: "center",
                       textAlign: "center",
-                      maxWidth: { xs: 280, sm: "100%" },
-                      mx: "auto",
+                      transition: "all 0.4s cubic-bezier(0.4, 0, 0.2, 1)",
+                      height: "100%", 
+                      "&:hover": {
+                        transform: "translateY(-10px)",
+                        boxShadow: "0 20px 40px rgba(27, 62, 140, 0.08)",
+                        borderColor: "rgba(27, 62, 140, 0.2)",
+                        "& .icon-circle": {
+                          transform: "scale(1.1)",
+                          boxShadow: "0px 12px 30px rgba(27, 62, 140, 0.3)",
+                        },
+                        "& .icon-circle::after": {
+                          transform: "scale(1.15)",
+                          borderColor: "rgba(27, 62, 140, 0.3)",
+                        },
+                        "& .card-main-text": {
+                          color: "#1B3E8C",
+                        },
+                      },
                     }}
                   >
+                    {}
                     <Box
                       sx={{
-                        width: { xs: 112, md: 167 },
-                        height: { xs: 112, md: 167 },
+                        backgroundColor: "#F4F7FC",
+                        px: 2.5,
+                        py: 0.8,
+                        borderRadius: "20px",
+                        mb: 4,
+                      }}
+                    >
+                      <Typography
+                        sx={{
+                          fontFamily: poppins.style.fontFamily,
+                          fontWeight: 600,
+                          fontSize: "13px",
+                          color: "#1B3E8C",
+                          textTransform: "uppercase",
+                          letterSpacing: "0.5px",
+                        }}
+                      >
+                        {String(index).toUpperCase().includes("AWARD") 
+                          ? index 
+                          : `AWARD ${String(index).padStart(2, '0')}`}
+                      </Typography>
+                    </Box>
+
+                    {}
+                    <Box
+                      className="icon-circle"
+                      sx={{
+                        width: { xs: 80, md: 90 },
+                        height: { xs: 80, md: 90 },
                         borderRadius: "50%",
                         backgroundColor: "#1B3E8C",
                         display: "flex",
                         alignItems: "center",
                         justifyContent: "center",
                         position: "relative",
-                        boxShadow: "0px 8px 24px rgba(0, 0, 0, 0.12)",
-                        mb: { xs: 1, md: 2 },
+                        boxShadow: "0px 8px 24px rgba(27, 62, 140, 0.2)",
+                        mb: { xs: 4, md: 5 },
+                        transition: "all 0.4s cubic-bezier(0.4, 0, 0.2, 1)",
                         "&::after": {
                           content: '""',
                           position: "absolute",
-                          inset: -6,
+                          inset: -8,
                           borderRadius: "50%",
-                          border: "2px solid rgba(0, 0, 0, 0.05)",
+                          border: "1.5px solid rgba(27, 62, 140, 0.15)",
+                          transition: "all 0.4s cubic-bezier(0.4, 0, 0.2, 1)",
                         },
                       }}
                     >
@@ -147,32 +195,22 @@ const AwardsSection = () => {
                         </Box>
                       ) : (
                         <Icon
-                          size={52}
+                          size={40}
                           color={Colors.WHITE}
                           strokeWidth={1.5}
                         />
                       )}
                     </Box>
 
-                    <Typography
-                      sx={{
-                        fontFamily: poppins.style.fontFamily,
-                        fontWeight: 500,
-                        fontSize: { xs: 22, md: 28 },
-                        color: "#0A0A0A",
-                      }}
-                    >
-                      {index}
-                    </Typography>
-
-                    <Stack spacing={0.5} sx={{ px: { xs: 1, md: 2 } }}>
+                    {}
+                    <Stack spacing={0.8} sx={{ px: { xs: 0, md: 1 } }}>
                       {labelTop && (
                         <Typography
                           sx={{
                             fontFamily: ibmPlexSans.style.fontFamily,
-                            fontSize: { xs: 14, md: 16 },
+                            fontSize: { xs: 14, md: 15 },
                             color: Colors.TEXT_MUTED,
-                            lineHeight: 1.2,
+                            lineHeight: 1.3,
                           }}
                         >
                           {labelTop}
@@ -180,12 +218,15 @@ const AwardsSection = () => {
                       )}
 
                       <Typography
+                        className="card-main-text"
                         sx={{
                           fontFamily: poppins.style.fontFamily,
-                          fontWeight: 500,
+                          fontWeight: 700,
                           fontSize: { xs: 18, md: 20 },
                           color: "#0A0A0A",
                           lineHeight: 1.3,
+                          textTransform: "uppercase",
+                          transition: "color 0.4s ease",
                         }}
                       >
                         {labelMain}
@@ -195,16 +236,16 @@ const AwardsSection = () => {
                         <Typography
                           sx={{
                             fontFamily: ibmPlexSans.style.fontFamily,
-                            fontSize: { xs: 14, md: 16 },
+                            fontSize: { xs: 14, md: 15 },
                             color: Colors.TEXT_MUTED,
-                            lineHeight: 1.4,
+                            lineHeight: 1.5,
                           }}
                         >
                           {labelBottom}
                         </Typography>
                       )}
                     </Stack>
-                  </Stack>
+                  </Box>
                 </Grid>
               )
             )}

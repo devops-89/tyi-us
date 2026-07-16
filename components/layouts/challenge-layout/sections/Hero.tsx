@@ -55,12 +55,12 @@ const ChallengeHeroSection = () => {
             sx={{
               fontFamily: ibmPlexSans.style.fontFamily,
               fontWeight: 400,
-              fontSize: { xs: "16px", md: "20px" },
+           fontSize: { xs: "14px", md: "16px" },
               color: Colors.TEXT_MUTED,
               textAlign: "center",
               maxWidth: { xs: "100%", md: 1000 },
               mx: "auto",
-              lineHeight: { xs: 1.6, md: 1.6 },
+              lineHeight: { xs: 1.2, md: 1.4 },
               whiteSpace: "pre-line",
               mb: { xs: 4, md: 5 },
             }}
@@ -81,15 +81,15 @@ const ChallengeHeroSection = () => {
               variant="contained"
               endIcon={<ArrowUpRight size={18} />}
               sx={{
-                height: { xs: 40, md: 48 }, // Responsive height
+                height: { xs: 40, md: 48 }, 
                 borderRadius: "50px",
-                px: { xs: 2.5, md: 4 }, // Responsive padding
-                width: { xs: "220px", sm: "auto" }, // Same width on mobile to fit the longer button
+                px: { xs: 2.5, md: 4 }, 
+                width: { xs: "220px", sm: "auto" }, 
                 backgroundColor: Colors.SECONDARY,
                 color: Colors.WHITE,
                 fontFamily: poppins.style.fontFamily,
                 fontWeight: 600,
-                fontSize: { xs: "14px", md: "18px" }, // Responsive font-size
+                fontSize: { xs: "14px", md: "18px" }, 
                 textTransform: "none",
                 boxShadow: "none",
                 "&:hover": {
@@ -107,15 +107,15 @@ const ChallengeHeroSection = () => {
               variant="outlined"
               endIcon={<ArrowUpRight size={18} />}
               sx={{
-                height: { xs: 40, md: 48 }, // Responsive height
+                height: { xs: 40, md: 48 }, 
                 borderRadius: "50px",
-                px: { xs: 2.5, md: 4 }, // Responsive padding
-                width: { xs: "220px", sm: "auto" }, // Same width on mobile to fit the longer button
+                px: { xs: 2.5, md: 4 }, 
+                width: { xs: "220px", sm: "auto" }, 
                 border: `1px solid ${Colors.SECONDARY}`,
                 color: Colors.SECONDARY,
                 fontFamily: poppins.style.fontFamily,
                 fontWeight: 600,
-                fontSize: { xs: "14px", md: "18px" }, // Responsive font-size
+                fontSize: { xs: "14px", md: "18px" }, 
                 textTransform: "none",
                 backgroundColor: "transparent",
                 "&:hover": {

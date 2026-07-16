@@ -92,7 +92,8 @@ const FeatureItem = ({
       sx={{
         fontFamily: poppins.style.fontFamily,
         fontWeight: 400,
-        fontSize: { xs: "22px", sm: "24px", md: "28px" },
+        
+        fontSize: { xs: "22px", sm: "24px", md: "28px" }, 
         color: Colors.BLACK,
         mb: 1,
         lineHeight: { xs: 1.25, md: 1.3 },
@@ -104,7 +105,8 @@ const FeatureItem = ({
     <Typography
       sx={{
         fontFamily: ibmPlexSans.style.fontFamily,
-        fontSize: { xs: "16px", md: "20px" },
+        
+        fontSize: { xs: "14px", md: "16px" }, 
         color: Colors.TEXT_MUTED,
         lineHeight: { xs: 1.6, md: 1.5 },
       }}
@@ -117,11 +119,7 @@ const FeatureItem = ({
 const WhyParticipateSection = () => {
   return (
     <Box
-      sx={{
-        pt: { xs: 6, md: 10 },
-        pb: { xs: 8, md: 18 },
-        backgroundColor: Colors.WHITE,
-      }}
+      sx={{py: { xs: 4, md: 6 }, backgroundColor: Colors.WHITE}}
     >
       <Container
         maxWidth={false}
@@ -167,12 +165,12 @@ const WhyParticipateSection = () => {
             <Typography
               sx={{
                 fontFamily: ibmPlexSans.style.fontFamily,
-                fontSize: { xs: "16px", md: "20px" },
+                fontSize: { xs: "14px", md: "16px" },
                 fontWeight: 400,
                 color: Colors.TEXT_MUTED,
                 lineHeight: 1.6,
                 textAlign: { xs: "center", md: "right" },
-                mb: 1.5,
+                mb: 0.5,
               }}
             >
               Gain exposure, mentorship, and the chance to become a globally celebrated young innovator.
@@ -184,9 +182,9 @@ const WhyParticipateSection = () => {
           container
           spacing={{ xs: 4, md: 4 }}
           alignItems="stretch"
-          sx={{ mt: { xs: 5, md: 16 } }}
+          sx={{ mt: { xs: 5, md: 6 } }}
         >
-          {/* Left Features */}
+          {}
           <Grid size={{ xs: 12, md: 4 }} order={{ xs: 2, md: 1 }}>
             <Box
               sx={{
@@ -218,7 +216,7 @@ const WhyParticipateSection = () => {
             </Box>
           </Grid>
 
-          {/* Center Image */}
+          {}
           <Grid size={{ xs: 12, md: 4 }} order={{ xs: 1, md: 2 }}>
             <Box
               sx={{
@@ -240,7 +238,7 @@ const WhyParticipateSection = () => {
             </Box>
           </Grid>
 
-          {/* Right Features */}
+          {}
           <Grid size={{ xs: 12, md: 4 }} order={{ xs: 3, md: 3 }}>
             <Box
               sx={{

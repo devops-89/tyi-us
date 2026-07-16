@@ -24,10 +24,10 @@ const SuccessStoriesSection = () => {
   
   const [activeIndex, setActiveIndex] = useState(0);
 
-  // The scroll limit is identical for all screen sizes (0 to stories.length - 1)
+  
   const maxIndex = stories.length - 1;
 
-  // Infinite wrapping navigation logic (identical on mobile & desktop)
+  
   const handlePrev = () => {
     setActiveIndex((prev) => (prev === 0 ? maxIndex : prev - 1));
   };
@@ -37,7 +37,7 @@ const SuccessStoriesSection = () => {
   };
 
   return (
-    <Box sx={{ backgroundColor: COLORS.WHITE, py: { xs: 4, md: 10 } }}>
+    <Box sx={{py: { xs: 4, md: 6 }, backgroundColor: COLORS.WHITE}}>
       <Container
         maxWidth={false}
         sx={{
@@ -45,7 +45,7 @@ const SuccessStoriesSection = () => {
           px: { xs: 2, sm: 3, md: 4 },
         }}
       >
-        {/* Row 1: Sparkle Label */}
+        {}
         <Box
           sx={{
             display: "flex",
@@ -63,7 +63,7 @@ const SuccessStoriesSection = () => {
           />
         </Box>
 
-        {/* Row 2: Title & Navigation Arrows */}
+        {}
         <Stack
           direction="row"
           justifyContent="space-between"
@@ -198,8 +198,9 @@ const SuccessStoriesSection = () => {
                     sx={{
                       fontFamily: poppins.style.fontFamily,
                       fontWeight: 600,
-                      fontSize: "20px",
-                      lineHeight: "23.4px",
+                      fontSize: { xs: "16px", md: "20px" },
+                  lineHeight: { xs: 1.2, md: 1.4 },
+
                       letterSpacing: "-0.45px",
                       color: COLORS.BLACK,
                       mb: 2,
@@ -212,8 +213,9 @@ const SuccessStoriesSection = () => {
                     sx={{
                       fontFamily: poppins.style.fontFamily,
                       fontWeight: 400,
-                      fontSize: "16px",
-                      lineHeight: "22.75px",
+                      fontSize: { xs: "14px", md: "16px" },
+                  lineHeight: { xs: 1.2, md: 1.4 },
+
                       letterSpacing: "0px",
                       color: "#5C5C5C",
                       mb: 2,
@@ -230,8 +232,9 @@ const SuccessStoriesSection = () => {
                         sx={{
                           fontFamily: poppins.style.fontFamily,
                           fontWeight: 600,
-                          fontSize: "16px",
-                          lineHeight: "22.75px",
+                         fontSize: { xs: "14px", md: "16px" },
+                  lineHeight: { xs: 1.2, md: 1.4 },
+
                           letterSpacing: "0px",
                           color: "#5C5C5C",
                           mb: 0.5,

@@ -26,7 +26,7 @@ const Hero = () => {
           spacing={4}
           alignItems="flex-start"
         >
-          {/* Left Content */}
+          {}
           <Box sx={{ flex: 1, pt: 4 }}>
             <Box sx={{ mb: 2 }}>
               <SparkleLabel 
@@ -111,7 +111,7 @@ const Hero = () => {
             </Typography>
 
             <Stack direction="column" spacing={5} alignItems="flex-start">
-              {/* Submit Button Row */}
+              {}
               <Button
                 component={Link}
                 href={hero.cta1Href}
@@ -137,7 +137,7 @@ const Hero = () => {
                 {hero.cta1Text}
               </Button>
 
-              {/* About Button + Description Row */}
+              {}
               <Stack direction={{ xs: "column", lg: "row" }} spacing={3} alignItems="flex-start">
                 <Button
                   component={Link}
@@ -180,7 +180,7 @@ const Hero = () => {
             </Stack>
           </Box>
 
-          {/* Right Image */}
+          {}
           <Box
             sx={{
               flex: 1.2,
@@ -200,7 +200,7 @@ const Hero = () => {
               priority
             />
 
-            {/* Play Button Overlay (Watch) */}
+            {}
             <Box
               sx={{
                 position: "absolute",
@@ -269,7 +269,7 @@ const Hero = () => {
               </Box>
             </Box>
 
-            {/* Red Line Bottom Label */}
+            {}
             <Box
               sx={{
                 position: "absolute",

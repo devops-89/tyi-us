@@ -15,10 +15,7 @@ const { competitions } = WEBSITE_DATA.about;
 const AboutCompetitionsSection = () => {
   return (
     <Box
-      sx={{
-        backgroundColor: Colors.WHITE,
-        py: { xs: 4, md: 12 },
-      }}
+      sx={{py: { xs: 4, md: 6 }, backgroundColor: Colors.WHITE}}
     >
       <Container
         maxWidth={false}
@@ -46,7 +43,7 @@ const AboutCompetitionsSection = () => {
                 fontSize: { xs: 24, sm: 28, md: 32 },
                 color: Colors.BLACK,
                 mb: 2,
-                lineHeight: { xs: 1.3, md: 1.2 },
+                lineHeight: { xs: 1.2, md: 1.2 },
                 textAlign: { xs: "center", md: "left" },
               }}
             >
@@ -56,17 +53,18 @@ const AboutCompetitionsSection = () => {
             <Typography
               sx={{
                 fontFamily: ibmPlexSans.style.fontFamily,
-                fontSize: { xs: 16, md: 18 },
+               
                 color: Colors.TEXT_MUTED,
-                lineHeight: { xs: "28px", md: "32px" },
+                fontSize: { xs: "14px", md: "16px" },
+                  lineHeight: { xs: 1.2, md: 1.4 },
                 mb: { xs: 3, md: 4 },
-                textAlign: { xs: "center", md: "left" },
+                textAlign: { xs: "justify", md: "left" },
               }}
             >
               {competitions.description}
             </Typography>
 
-            {/* Parent Wrapper: Centered < 768px, Left-aligned >= 768px */}
+            {}
             <Box
               sx={{
                 display: "flex",
@@ -89,7 +87,7 @@ const AboutCompetitionsSection = () => {
                   fontFamily: poppins.style.fontFamily,
                   fontWeight: 600,
                   
-                  // Responsive Sizing overrides
+                  
                   width: "fit-content",
                   height: 40,
                   fontSize: "14px",
@@ -147,7 +145,7 @@ const AboutCompetitionsSection = () => {
                         right: { xs: 16, md: 20 },
                         fontFamily: poppins.style.fontFamily,
                         fontWeight: 600,
-                        fontSize: { xs: 15, md: 16 },
+                        fontSize: { xs: 14, md: 16 },
                         color: Colors.WHITE,
                         lineHeight: 1.4,
                       }}

@@ -34,7 +34,7 @@ const FlowerSparkle: React.FC<FlowerSparkleProps> = ({
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
-        {/* 8-pointed curved flower star */}
+        {}
         <path
           d="M12 2C12 8 13.5 10.5 16 13.5M12 2C12 8 10.5 10.5 8 13.5M12 22C12 16 13.5 13.5 16 10.5M12 22C12 16 10.5 13.5 8 10.5M2 12C8 12 10.5 13.5 13.5 16M2 12C8 12 10.5 10.5 13.5 8M22 12C16 12 13.5 13.5 10.5 16M22 12C16 12 13.5 10.5 10.5 8"
           stroke="currentColor"

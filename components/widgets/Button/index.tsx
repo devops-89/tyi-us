@@ -22,7 +22,7 @@ const StyledButton = styled(MuiButton, {
   fontFamily: ibmPlexSans.style.fontFamily,
   transition: "all 0.3s cubic-bezier(0.4, 0, 0.2, 1)",
 
-  // Default responsive scaling for all AppButtons
+  
   [theme.breakpoints.down("md")]: {
     padding: pill ? "8px 20px" : "6px 16px",
     fontSize: "0.85rem",

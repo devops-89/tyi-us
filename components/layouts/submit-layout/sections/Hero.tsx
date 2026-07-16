@@ -42,7 +42,7 @@ const SubmitHeroSection = () => {
               sx={{
                 fontFamily: poppins.style.fontFamily,
                 fontWeight: 500,
-                fontSize: { xs: "30px", sm: "36px", md: "45px" },
+                fontSize: { xs: "28px", sm: "32px", md: "45px" },
                 color: COLORS.BLACK,
                 lineHeight: { xs: 1.25, md: 1.15 },
                 letterSpacing: "-0.4px",
@@ -56,10 +56,11 @@ const SubmitHeroSection = () => {
             <Typography
               sx={{
                 fontFamily: ibmPlexSans.style.fontFamily,
-                fontSize: { xs: "16px", md: "20px" },
+               fontSize: { xs: "14px", md: "16px" },
+                  lineHeight: { xs: 1.2, md: 1.4 },
                 fontWeight: 400,
                 color: COLORS.TEXT_MUTED,
-                lineHeight: 1.6,
+                textAlign: { xs: "justify", md: "left" },
                 letterSpacing: "0.2px",
                 whiteSpace: "pre-line",
                 maxWidth: { xs: "100%", md: 554 },

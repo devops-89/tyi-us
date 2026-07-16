@@ -12,22 +12,18 @@ import InnovationCampInfoCards from "./sections/Deadline";
 import PartnersSection from "../home-layout/sections/Partners";
 import InnovationCampSection from "./sections/Freeinnovation";
 import SelectionFlowSection from "./sections/Selectionflow";
-
-
-
-
-
+import AnimationWrapper from "@/components/widgets/common/AnimationWrapper";
 
 const InnovationCamp = () => {
   return (
     <Box>
-     <InnovationCampSection/>
-     <ModulesCoveredSection/>
-     <LearningOutcomesSection/>
-     <InnovationCampInfoCards/>
-     <SelectionFlowSection/>
-     <PartnersSection/>
-    <Footer />
+      <AnimationWrapper><InnovationCampSection/></AnimationWrapper>
+      <AnimationWrapper><ModulesCoveredSection/></AnimationWrapper>
+      <AnimationWrapper><LearningOutcomesSection/></AnimationWrapper>
+      <AnimationWrapper><InnovationCampInfoCards/></AnimationWrapper>
+      <AnimationWrapper><SelectionFlowSection/></AnimationWrapper>
+      <AnimationWrapper><PartnersSection/></AnimationWrapper>
+      <Footer />
     </Box>
   );
 };

@@ -24,10 +24,7 @@ const ChallengeFaqSection = () => {
 
   return (
     <Box
-      sx={{
-        py: { xs: 6, md: 12 },
-        backgroundColor: Colors.WHITE,
-      }}
+      sx={{py: { xs: 4, md: 6 }, backgroundColor: Colors.WHITE}}
     >
       <Container
         maxWidth={false}
@@ -41,7 +38,7 @@ const ChallengeFaqSection = () => {
           spacing={{ xs: 5, md: 10 }}
           alignItems="flex-start"
         >
-          {/* Left Column */}
+          {}
           <Grid size={{ xs: 12, md: 5 }}>
             <Box
               sx={{
@@ -84,10 +81,10 @@ const ChallengeFaqSection = () => {
               <Typography
                 sx={{
                   fontFamily: ibmPlexSans.style.fontFamily,
-                  fontSize: { xs: "16px", md: "20px" },
+                  fontSize: { xs: "14px", md: "16px" },
+                  lineHeight: { xs: 1.2, md: 1.4 },
                   fontWeight: 400,
                   color: Colors.TEXT_MUTED,
-                  lineHeight: 1.6,
                   maxWidth: { xs: "100%", md: 520 },
                   mx: { xs: "auto", md: 0 },
                 }}
@@ -97,7 +94,7 @@ const ChallengeFaqSection = () => {
             </Box>
           </Grid>
 
-          {/* Right Column */}
+          {}
           <Grid size={{ xs: 12, md: 7 }}>
             <Stack spacing={0} sx={{ mt: { xs: 0, md: -1.5 } }}>
               {faqItems.items.map((item, idx) => {
@@ -150,7 +147,7 @@ const ChallengeFaqSection = () => {
                       <Box
                         className="faq-icon"
                         sx={{
-                          color: Colors.BLACK,
+                          color: isOpen ? Colors.PRIMARY : Colors.SECONDARY,
                           flexShrink: 0,
                           display: "flex",
                           alignItems: "center",
@@ -184,16 +181,10 @@ const ChallengeFaqSection = () => {
                           fontFamily:
                             ibmPlexSans.style.fontFamily,
                           fontWeight: 400,
-                          fontSize: {
-                            xs: "15px",
-                            sm: "16px",
-                            md: "20px",
-                          },
+                         fontSize: { xs: "14px", md: "16px" },
+                  lineHeight: { xs: 1.2, md: 1.4 },
                           color: Colors.TEXT_MUTED,
-                          lineHeight: {
-                            xs: 1.7,
-                            md: 1.6,
-                          },
+                         
                           maxWidth: {
                             xs: "100%",
                             md: "95%",

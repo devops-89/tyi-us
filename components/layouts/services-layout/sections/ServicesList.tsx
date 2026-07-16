@@ -7,7 +7,7 @@ import ServiceCard from "@/components/widgets/common/Service-Card";
 const ServicesList = () => {
   const { list } = WEBSITE_DATA.services;
   return (
-    <Box sx={{ py: { xs: 8, md: 12 }, backgroundColor: Colors.WHITE }}>
+    <Box sx={{py: { xs: 4, md: 6 }, backgroundColor: Colors.WHITE}}>
       <Container maxWidth={false} sx={{ maxWidth: CONSTANTS.MAX_WIDTH }}>
         <SectionTitle 
           title={list.title} 

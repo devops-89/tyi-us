@@ -13,11 +13,9 @@ const PatentServiceSection = () => {
 
   return (
     <Box
-      sx={{
-        backgroundColor: COLORS.WHITE,
-        py: { xs: 4, md: 9 },
-        overflow: "hidden",
-      }}
+      sx={{py: { xs: 4, md: 6 }, backgroundColor: COLORS.WHITE,
+        
+        overflow: "hidden"}}
     >
       <Container
         maxWidth={false}

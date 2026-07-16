@@ -10,17 +10,18 @@ import AppButton from "@/components/widgets/Button";
 import Image from "next/image";
 import { ASSETS } from "@/utils/assets";
 import SparkleLabel from "@/components/widgets/common/SparkleLabel";
+import Link from "next/link";
 
 const JoinCTA = () => {
   return (
     <Box
       sx={{
-        pt: { xs: 0, sm: 2, md: 4, lg: 18 }, // Decreased gap above the image on 1024px (md) from 10 to 4
+        pt: { xs: 0, sm: 2, md: 8, lg: 32 }, 
         pb: { xs: 2, md: 10 },
         backgroundColor: COLORS.WHITE,
         position: "relative",
-        zIndex: 10, // Lift section z-index to resolve clipping at the top
-        overflow: "visible", // Set to visible globally so the top right circle is never cut off on 768, 1024, or 1440
+        zIndex: 10, 
+        overflow: "visible", 
       }}
     >
       <Box
@@ -56,7 +57,7 @@ const JoinCTA = () => {
           spacing={{ xs: 2, sm: 14, md: 10 }}
           alignItems="center"
         >
-          {/* Image Section */}
+          {}
           <Box
             sx={{
               flex: 1,
@@ -71,13 +72,13 @@ const JoinCTA = () => {
               sx={{
                 position: "relative",
                 width: {
-                  xs: "72vw", // Unchanged on mobile
-                  sm: "336px", // Figma scaled 0.65x
-                  md: "336px", // Decreased on 1024px to fit
-                  lg: "518px", // Figma desktop width
+                  xs: "72vw", 
+                  sm: "336px", 
+                  md: "336px", 
+                  lg: "518px", 
                 },
                 maxWidth: "518px",
-                aspectRatio: "518 / 572", // Figma ratio
+                aspectRatio: "518 / 572", 
               }}
             >
               <Box
@@ -93,8 +94,8 @@ const JoinCTA = () => {
                   src={ASSETS.IMAGES.IMAGE_WHAT_WAITING}
                   alt="Students collaborating on innovation"
                   fill
-                  priority // Preloads image to prevent initial blur
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" // Requests high-resolution source
+                  priority 
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" 
                   style={{
                     objectFit: "cover",
                     objectPosition: "center",
@@ -102,41 +103,41 @@ const JoinCTA = () => {
                 />
               </Box>
 
-              {/* Top Right Circle Wrapper */}
+              {}
               <Box
                 sx={{
                   position: "absolute",
                   width: {
-                    xs: "100px", // Increased on mobile to fit text sizes safely
+                    xs: "100px", 
                     sm: "180px", 
-                    md: "150px", // Decreased on 1024px to prevent text overlap
+                    md: "150px", 
                     lg: "277px", 
                   },
                   height: {
-                    xs: "100px", // Increased on mobile to fit text sizes safely
+                    xs: "100px", 
                     sm: "180px", 
-                    md: "150px", // Decreased on 1024px to prevent text overlap
+                    md: "150px", 
                     lg: "277px", 
                   },
                   top: {
-                    xs: "-48px", // Symmetrical top offset on mobile (xs)
+                    xs: "-48px", 
                     sm: "-100px", 
-                    md: "-74px", // Adjusted on 1024px
+                    md: "-74px", 
                     lg: "-154px", 
                   },
                   right: {
-                    xs: "-28px", // Symmetrical right offset on mobile (xs)
+                    xs: "-28px", 
                     sm: "-72px", 
-                    md: "-46px", // Adjusted on 1024px
+                    md: "-46px", 
                     lg: "-111px", 
                   },
                   borderRadius: "50%",
                   border: "0.5px solid #101010",
-                  backgroundColor: COLORS.WHITE, // Solid white background
+                  backgroundColor: COLORS.WHITE, 
                   zIndex: 3,
                 }}
               >
-                {/* Inner Centered Pink Circle (Using absolute margin auto for perfect centering) */}
+                {}
                 <Box
                   sx={{
                     position: "absolute",
@@ -146,15 +147,15 @@ const JoinCTA = () => {
                     bottom: 0,
                     margin: "auto",
                     width: {
-                      xs: "78%", // Increased on mobile to give more spacing for text
+                      xs: "78%", 
                       sm: "117px", 
-                      md: "98px", // Decreased on 1024px
+                      md: "98px", 
                       lg: "180px", 
                     },
                     height: {
-                      xs: "78%", // Increased on mobile to give more spacing for text
+                      xs: "78%", 
                       sm: "117px",
-                      md: "98px", // Decreased on 1024px
+                      md: "98px", 
                       lg: "180px",
                     },
                     backgroundColor: "#FFEDF1",
@@ -171,15 +172,15 @@ const JoinCTA = () => {
                     sx={{
                       position: "relative",
                       width: { 
-                        xs: 18, // Increased on mobile
+                        xs: 18, 
                         sm: 28, 
-                        md: 20, // Decreased on 1024px
+                        md: 20, 
                         lg: 43.76 
                       },
                       height: { 
-                        xs: 18, // Increased on mobile
+                        xs: 18, 
                         sm: 28, 
-                        md: 20, // Decreased on 1024px
+                        md: 20, 
                         lg: 43.76 
                       },
                       mb: { xs: 0.3, md: 1 },
@@ -197,9 +198,9 @@ const JoinCTA = () => {
                     sx={{
                       fontFamily: ibmPlexSans.style.fontFamily,
                       fontSize: {
-                        xs: "7.5px", // Increased on mobile to prevent clipping from browser font clamping
+                        xs: "7.5px", 
                         sm: "6.5px", 
-                        md: "6.5px", // Decreased on 1024px
+                        md: "6.5px", 
                         lg: "10px", 
                       },
                       fontWeight: 500,
@@ -214,9 +215,9 @@ const JoinCTA = () => {
                     sx={{
                       fontFamily: ibmPlexSans.style.fontFamily,
                       fontSize: {
-                        xs: "9px", // Increased on mobile to prevent clipping from browser font clamping
+                        xs: "9px", 
                         sm: "9px", 
-                        md: "9px", // Decreased on 1024px
+                        md: "9px", 
                         lg: "14px", 
                       },
                       fontWeight: 700,
@@ -232,26 +233,26 @@ const JoinCTA = () => {
                 </Box>
               </Box>
 
-              {/* Smaller Bottom Left Badge Wrapper */}
+              {}
               <Box
                 sx={{
                   position: "absolute",
                   width: {
                     xs: "32%", 
                     sm: "140px", 
-                    md: "150px", // Decreased on 1024px
+                    md: "150px", 
                     lg: "264px", 
                   },
                   height: {
                     xs: "40px", 
                     sm: "90px", 
-                    md: "90px", // Decreased on 1024px
+                    md: "90px", 
                     lg: "140px", 
                   },
                   left: {
                     xs: "-40px", 
                     sm: "-70px", 
-                    md: "-70px", // Adjusted on 1024px
+                    md: "-70px", 
                     lg: "-130px", 
                   },
                   bottom: {
@@ -262,13 +263,13 @@ const JoinCTA = () => {
                   },
                   backgroundColor: COLORS.WHITE,
                   borderRadius: "200px",
-                  boxShadow: "0px 30px 80px rgba(47, 65, 88, 0.2)", // Figma Shadow
+                  boxShadow: "0px 30px 80px rgba(47, 65, 88, 0.2)", 
                   zIndex: 3,
                   display: "grid",
                   placeItems: "center",
                 }}
               >
-                {/* Inner Centered Capsule Content Wrapper */}
+                {}
                 <Box
                   sx={{
                     width: "80%",
@@ -288,13 +289,13 @@ const JoinCTA = () => {
                       width: { 
                         xs: 10, 
                         sm: 48, 
-                        md: 36, // Decreased on 1024px
+                        md: 36, 
                         lg: 74.58 
                       },
                       height: { 
                         xs: 10, 
                         sm: 48, 
-                        md: 36, // Decreased on 1024px
+                        md: 36, 
                         lg: 74.58 
                       },
                       mb: { xs: 0.15, md: 0.3 },
@@ -314,7 +315,7 @@ const JoinCTA = () => {
                       fontSize: {
                         xs: "4px", 
                         sm: "9px", 
-                        md: "8px", // Decreased on 1024px
+                        md: "8px", 
                         lg: "14px", 
                       },
                       fontWeight: 600,
@@ -331,7 +332,7 @@ const JoinCTA = () => {
                       fontSize: {
                         xs: "3.5px", 
                         sm: "6.5px", 
-                        md: "6px", // Decreased on 1024px
+                        md: "6px", 
                         lg: "10px", 
                       },
                       fontWeight: 500,
@@ -347,7 +348,7 @@ const JoinCTA = () => {
             </Box>
           </Box>
 
-          {/* Text Section */}
+          {}
           <Box
             sx={{
               flex: 1,
@@ -385,7 +386,7 @@ const JoinCTA = () => {
             <Typography
               sx={{
                 fontFamily: ibmPlexSans.style.fontFamily,
-                fontSize: { xs: "16px", md: "20px" },
+                fontSize: { xs: "14px", md: "16px" },
                 color: COLORS.TEXT_MUTED,
                 mb: { xs: 4.5, md: 3.5 },
                 maxWidth: { xs: "100%", md: "480px" },
@@ -398,7 +399,10 @@ const JoinCTA = () => {
 
             <AppButton
               pill
+                component={Link}
+  href="/submit" 
               sx={{
+
                 backgroundColor: COLORS.SECONDARY,
                 color: COLORS.WHITE,
                 px: { xs: 3, md: 4 },

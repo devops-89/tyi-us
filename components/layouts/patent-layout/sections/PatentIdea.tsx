@@ -14,10 +14,7 @@ const PatentSection = () => {
 
   return (
     <Box
-      sx={{
-        backgroundColor: COLORS.WHITE,
-        py: { xs: 1, sm: 4, md: 10 },
-      }}
+      sx={{py: { xs: 4, md: 6 }, backgroundColor: COLORS.WHITE}}
     >
       <Container
         maxWidth={false}
@@ -68,9 +65,9 @@ const PatentSection = () => {
                 fontWeight: 400,
                 fontSize: { xs: "24px", sm: "30px", md: "45px" },
                 lineHeight: {
-                  xs: "36px",
-                  sm: "40px",
-                  md: "44px",
+                  xs: "30px",
+                  sm: "35px",
+                  md: "40px",
                   lg: "48px",
                 },
                 letterSpacing: "-0.01em",
@@ -87,18 +84,8 @@ const PatentSection = () => {
               sx={{
                 fontFamily: poppins.style.fontFamily,
                 fontWeight: 400,
-                fontSize: {
-                  xs: "16px",
-                  sm: "18px",
-                  md: "20px",
-                  lg: "22px",
-                },
-                lineHeight: {
-                  xs: "28px",
-                  sm: "30px",
-                  md: "32px",
-                  lg: "35px",
-                },
+              fontSize: { xs: "14px", md: "16px" },
+                  lineHeight: { xs: 1.2, md: 1.4 },
                 letterSpacing: "-0.02em",
                 textTransform: "capitalize",
                 color: COLORS.TEXT_MUTED,
@@ -140,23 +127,14 @@ const PatentSection = () => {
             sx={{
               fontFamily: poppins.style.fontFamily,
               fontWeight: 400,
-              fontSize: {
-                xs: "16px",
-                sm: "18px",
-                md: "20px",
-                lg: "22px",
-              },
+              fontSize: { xs: "14px", md: "16px" },
+                  lineHeight: { xs: 1.2, md: 1.4 },
               color: COLORS.TEXT_MUTED,
-              lineHeight: {
-                xs: "28px",
-                sm: "30px",
-                md: "32px",
-                lg: "35px",
-              },
+             
               letterSpacing: "-0.02em",
               textTransform: "capitalize",
-              mb: 4,
-              textAlign: "left",
+              mb: 2,
+              textAlign: { xs: "justify", md: "left" },
             }}
           >
             <Box
@@ -175,23 +153,14 @@ const PatentSection = () => {
             sx={{
               fontFamily: poppins.style.fontFamily,
               fontWeight: 400,
-              fontSize: {
-                xs: "16px",
-                sm: "18px",
-                md: "20px",
-                lg: "22px",
-              },
+              fontSize: { xs: "14px", md: "16px" },
+                  lineHeight: { xs: 1.2, md: 1.4 },
               color: COLORS.TEXT_MUTED,
-              lineHeight: {
-                xs: "28px",
-                sm: "30px",
-                md: "32px",
-                lg: "35px",
-              },
+              
               letterSpacing: "-0.02em",
               textTransform: "capitalize",
               mb: 4,
-              textAlign: "left",
+             textAlign: { xs: "justify", md: "left" },
             }}
           >
             {patentData.paragraph2}
@@ -201,15 +170,12 @@ const PatentSection = () => {
             sx={{
               fontFamily: poppins.style.fontFamily,
               fontWeight: 600,
-              fontSize: {
-                xs: "15px",
-                sm: "16px",
-                md: "24px",
-              },
+              fontSize: { xs: "14px", md: "16px" },
+              lineHeight: { xs: 1.2, md: 1.4 },
               color: COLORS.SECONDARY,
               textAlign: "center",
               mt: { xs: 4, md: 5 },
-              lineHeight: 1.5,
+             
             }}
           >
             {patentData.footerText}

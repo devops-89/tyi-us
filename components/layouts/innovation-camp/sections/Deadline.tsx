@@ -12,10 +12,7 @@ const InnovationCampInfoCards = () => {
 
   return (
     <Box
-      sx={{
-        backgroundColor: "#FDE8EC",
-        py: { xs: 4, md: 8 },
-      }}
+      sx={{py: { xs: 4, md: 6 }, backgroundColor: "#FDE8EC"}}
     >
       <Container
         maxWidth={false}
@@ -92,7 +89,7 @@ const InnovationCampInfoCards = () => {
                     fontFamily: poppins.style.fontFamily,
                     fontWeight: 400,
                     fontSize: "14px",
-                    lineHeight: "22.75px",
+                    lineHeight: "1.2",
                     letterSpacing: "0px",
                     color: "#5C5C5C",
                     whiteSpace: "pre-line",

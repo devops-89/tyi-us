@@ -9,15 +9,16 @@ import PastWinnersInnovationSection from "./sections/Innovation";
 import PastWinnersGuestsSection from "./sections/Guests";
 import PastWinnersWinnerSection from "./sections/Winner";
 import Footer from "@/components/widgets/Footer";
+import AnimationWrapper from "@/components/widgets/common/AnimationWrapper";
 
 const PastWinnersLayout = () => {
   return (
     <Box>
-      <PastWinnersHeroSection />
-      <PastWinnersVideoSection />
-      <PastWinnersInnovationSection />
-      <PastWinnersGuestsSection />
-      <PastWinnersWinnerSection />
+      <AnimationWrapper><PastWinnersHeroSection /></AnimationWrapper>
+      <AnimationWrapper><PastWinnersVideoSection /></AnimationWrapper>
+      <AnimationWrapper><PastWinnersInnovationSection /></AnimationWrapper>
+      <AnimationWrapper><PastWinnersGuestsSection /></AnimationWrapper>
+      <AnimationWrapper><PastWinnersWinnerSection /></AnimationWrapper>
       <Footer />
     </Box>
   );

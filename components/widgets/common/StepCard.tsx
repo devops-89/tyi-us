@@ -51,7 +51,8 @@ const StepCard: React.FC<StepCardProps> = ({
           fontWeight: 700, 
           fontSize: "22px", 
           color: "#353333",
-          lineHeight: 1.3
+          lineHeight: 1.3,
+          textAlign: { xs: "center", md: "left" }
         }}
       >
         {title}
@@ -60,24 +61,33 @@ const StepCard: React.FC<StepCardProps> = ({
       <Typography 
         sx={{ 
           fontFamily: ibmPlexSans.style.fontFamily, 
-          fontSize: "18px", 
+          fontSize: { xs: "14px", md: "16px" },
+          lineHeight: { xs: 1.2, md: 1.4 },
           color: Colors.TEXT_MUTED, 
-          lineHeight: 1.6,
           flexGrow: 1,
-          mb: ctaText ? 2 : 0
+          mb: ctaText ? 2 : 0,
+          textAlign: { xs: "center", md: "left" }
         }}
       >
         {description}
       </Typography>
 
       {ctaText && ctaHref && (
-        <CtaButton
-          text={ctaText}
-          href={ctaHref}
-          width={ctaWidth}
-          fontSize={16} // Standard for these smaller cards
-          height={60}
-        />
+        <Box 
+          sx={{ 
+            display: "flex", 
+            justifyContent: { xs: "center", md: "flex-start" },
+            width: "100%"
+          }}
+        >
+          <CtaButton
+            text={ctaText}
+            href={ctaHref}
+            width={ctaWidth}
+            fontSize={16} 
+            height={60}
+          />
+        </Box>
       )}
     </Stack>
   );

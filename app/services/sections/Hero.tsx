@@ -23,7 +23,7 @@ const Hero = () => {
           spacing={4}
           alignItems="flex-start"
         >
-          {/* Left Content */}
+          {}
           <Box sx={{ flex: 1, pt: 4 }}>
             <Stack
               direction="row"
@@ -121,7 +121,7 @@ const Hero = () => {
             </Typography>
           </Box>
 
-          {/* Right Video Mockup */}
+          {}
           <Box
             sx={{
               flex: 1.2,
@@ -145,7 +145,7 @@ const Hero = () => {
                 fill
                 style={{ objectFit: "cover" }}
               />
-              {/* Play Button Overlay */}
+              {}
               <Box
                 sx={{
                   position: "absolute",
@@ -189,7 +189,7 @@ const Hero = () => {
                 </Box>
               </Box>
 
-              {/* Red Line Bottom Label */}
+              {}
               <Box
                 sx={{
                   position: "absolute",

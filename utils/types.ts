@@ -112,7 +112,7 @@ export interface IWebsiteData {
       cta2Href: string;
       watchLabel: string;
       watchDescription: string;
-      image: any;
+      video: any;
       imageLabel: string;
     };
     participation: {
