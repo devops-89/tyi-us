@@ -9,6 +9,7 @@ import { Colors, CONSTANTS } from "@/utils/enum";
 import { poppins, ibmPlexSans } from "@/utils/fonts";
 import { WEBSITE_DATA } from "@/utils/website";
 import SparkleLabel from "@/components/widgets/common/SparkleLabel";
+import Link from "next/link";
 
 const { competitions } = WEBSITE_DATA.about;
 
@@ -75,6 +76,8 @@ const AboutCompetitionsSection = () => {
               }}
             >
               <Button
+              component={Link} 
+                href="https://topyounginnovators.vercel.app/competitions" 
                 variant="outlined"
                 endIcon={<ArrowUpRight size={18} />}
                 sx={{

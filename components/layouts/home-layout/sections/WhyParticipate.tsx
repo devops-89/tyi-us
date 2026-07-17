@@ -184,8 +184,8 @@ const WhyParticipateSection = () => {
           alignItems="stretch"
           sx={{ mt: { xs: 5, md: 6 } }}
         >
-          {}
-          <Grid size={{ xs: 12, md: 4 }} order={{ xs: 2, md: 1 }}>
+          {/* 1. LEFT FEATURES */}
+          <Grid size={{ xs: 12, md: 4 }} order={{ xs: 1, md: 1 }}>
             <Box
               sx={{
                 display: "flex",
@@ -216,8 +216,8 @@ const WhyParticipateSection = () => {
             </Box>
           </Grid>
 
-          {}
-          <Grid size={{ xs: 12, md: 4 }} order={{ xs: 1, md: 2 }}>
+          {/* 2. IMAGE */}
+          <Grid size={{ xs: 12, md: 4 }} order={{ xs: 2, md: 2 }}>
             <Box
               sx={{
                 position: "relative",
@@ -227,6 +227,9 @@ const WhyParticipateSection = () => {
                 justifyContent: "center",
                 transform: { xs: "none", md: "scale(1.15)" },
                 mb: { xs: 2, md: 0 },
+               
+                mt: { xs: -6, md: 0 }, 
+               
               }}
             >
               <Image
@@ -238,7 +241,7 @@ const WhyParticipateSection = () => {
             </Box>
           </Grid>
 
-          {}
+          {/* 3. RIGHT FEATURES */}
           <Grid size={{ xs: 12, md: 4 }} order={{ xs: 3, md: 3 }}>
             <Box
               sx={{

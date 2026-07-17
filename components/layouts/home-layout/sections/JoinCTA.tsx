@@ -16,14 +16,27 @@ const JoinCTA = () => {
   return (
     <Box
       sx={{
-        pt: { xs: 0, sm: 2, md: 8, lg: 32 }, 
+        pt: { md: 8, lg: 32 }, 
         pb: { xs: 2, md: 10 },
+        
+      
+        "@media (max-width: 767px)": {
+          pt: "40px", 
+        },
+
+      
+        "@media (min-width: 768px) and (max-width: 899px)": {
+          pt: "100px", 
+        },
+      
+
         backgroundColor: COLORS.WHITE,
         position: "relative",
         zIndex: 10, 
         overflow: "visible", 
       }}
     >
+      
       <Box
         sx={{
           position: "absolute",
@@ -54,10 +67,10 @@ const JoinCTA = () => {
       >
         <Stack
           direction={{ xs: "column", md: "row" }}
-          spacing={{ xs: 2, sm: 14, md: 10 }}
+          spacing={{ xs: 2, sm: 5, md: 10 }} 
           alignItems="center"
         >
-          {}
+        
           <Box
             sx={{
               flex: 1,
@@ -103,7 +116,7 @@ const JoinCTA = () => {
                 />
               </Box>
 
-              {}
+         
               <Box
                 sx={{
                   position: "absolute",
@@ -137,7 +150,7 @@ const JoinCTA = () => {
                   zIndex: 3,
                 }}
               >
-                {}
+             
                 <Box
                   sx={{
                     position: "absolute",
@@ -233,7 +246,7 @@ const JoinCTA = () => {
                 </Box>
               </Box>
 
-              {}
+           
               <Box
                 sx={{
                   position: "absolute",
@@ -269,7 +282,7 @@ const JoinCTA = () => {
                   placeItems: "center",
                 }}
               >
-                {}
+             
                 <Box
                   sx={{
                     width: "80%",
@@ -348,7 +361,7 @@ const JoinCTA = () => {
             </Box>
           </Box>
 
-          {}
+       
           <Box
             sx={{
               flex: 1,
@@ -399,10 +412,9 @@ const JoinCTA = () => {
 
             <AppButton
               pill
-                component={Link}
-  href="/submit" 
+              component={Link}
+              href="/submit" 
               sx={{
-
                 backgroundColor: COLORS.SECONDARY,
                 color: COLORS.WHITE,
                 px: { xs: 3, md: 4 },

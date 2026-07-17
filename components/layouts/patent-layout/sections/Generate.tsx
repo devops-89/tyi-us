@@ -39,7 +39,7 @@ const PatentPreviewSection = () => {
     setOpenPreview(false);
   };
 
-  // 👇 Added a "preview" prop to safely scale down the image and font sizes
+  
   const CertificateImage = ({ preview = false }: { preview?: boolean }) => (
     <Box
       sx={{

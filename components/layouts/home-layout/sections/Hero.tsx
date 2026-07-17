@@ -176,7 +176,7 @@ const HomeHeroSection = () => {
             <iframe
               src={hero.video}
               title="America's Top Young Innovators Video"
-              frameBorder="0"
+             
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               referrerPolicy="strict-origin-when-cross-origin"
               allowFullScreen
@@ -186,7 +186,8 @@ const HomeHeroSection = () => {
                 left: 0,
                 width: "100%", 
                 height: "100%", 
-                objectFit: "cover" 
+                objectFit: "cover",
+                border: 0  
               }}
             />
           </Box>

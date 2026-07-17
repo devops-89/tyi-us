@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import {
   Box,
@@ -8,6 +8,8 @@ import {
   Stack,
   Typography,
   IconButton,
+  useTheme,
+  useMediaQuery,
 } from "@mui/material";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
@@ -20,20 +22,48 @@ const CARD_GAP = 20;
 
 const SuccessStoriesSection = () => {
   const successStoriesData = WEBSITE_DATA.patent.SuccessStoriesData;
-  const stories = successStoriesData.stories;
+  const originalStories = successStoriesData.stories;
   
-  const [activeIndex, setActiveIndex] = useState(0);
+  const theme = useTheme();
+  const isDesktop = useMediaQuery(theme.breakpoints.up("md"));
+  
+  
+  const extendedStories = [...originalStories, ...originalStories, ...originalStories];
+  
+ 
+  const [activeIndex, setActiveIndex] = useState(originalStories.length);
+  const [isTransitioning, setIsTransitioning] = useState(false);
+  
+ 
+  const [isClickDisabled, setIsClickDisabled] = useState(false);
 
-  
-  const maxIndex = stories.length - 1;
-
-  
   const handlePrev = () => {
-    setActiveIndex((prev) => (prev === 0 ? maxIndex : prev - 1));
+    if (isClickDisabled) return;
+    setIsClickDisabled(true);
+    setIsTransitioning(true);
+    setActiveIndex((prev) => prev - 1);
   };
 
   const handleNext = () => {
-    setActiveIndex((prev) => (prev === maxIndex ? 0 : prev + 1));
+    if (isClickDisabled) return;
+    setIsClickDisabled(true);
+    setIsTransitioning(true);
+    setActiveIndex((prev) => prev + 1);
+  };
+
+  
+  const handleTransitionEnd = () => {
+    setIsTransitioning(false);
+    setIsClickDisabled(false);
+    
+  
+    if (activeIndex >= originalStories.length * 2) {
+      setActiveIndex(activeIndex - originalStories.length);
+    } 
+ 
+    else if (activeIndex < originalStories.length) {
+      setActiveIndex(activeIndex + originalStories.length);
+    }
   };
 
   return (
@@ -45,7 +75,6 @@ const SuccessStoriesSection = () => {
           px: { xs: 2, sm: 3, md: 4 },
         }}
       >
-        {}
         <Box
           sx={{
             display: "flex",
@@ -63,7 +92,6 @@ const SuccessStoriesSection = () => {
           />
         </Box>
 
-        {}
         <Stack
           direction="row"
           justifyContent="space-between"
@@ -138,18 +166,20 @@ const SuccessStoriesSection = () => {
             position: "relative",
           }}
         >
+        
           <Box
+            onTransitionEnd={handleTransitionEnd}
             sx={{
               display: "flex",
               gap: `${CARD_GAP}px`,
-              transition: "transform 0.45s ease",
+              transition: isTransitioning ? "transform 0.45s ease" : "none",
               transform: {
                 xs: `translateX(calc(-${activeIndex} * (100% + ${CARD_GAP}px)))`,
                 md: `translateX(calc(-${activeIndex} * (50% + ${CARD_GAP / 2}px)))`,
               },
             }}
           >
-            {stories.map((story, index) => (
+            {extendedStories.map((story, index) => (
               <Box
                 key={index}
                 sx={{
@@ -199,8 +229,7 @@ const SuccessStoriesSection = () => {
                       fontFamily: poppins.style.fontFamily,
                       fontWeight: 600,
                       fontSize: { xs: "16px", md: "20px" },
-                  lineHeight: { xs: 1.2, md: 1.4 },
-
+                      lineHeight: { xs: 1.2, md: 1.4 },
                       letterSpacing: "-0.45px",
                       color: COLORS.BLACK,
                       mb: 2,
@@ -214,8 +243,7 @@ const SuccessStoriesSection = () => {
                       fontFamily: poppins.style.fontFamily,
                       fontWeight: 400,
                       fontSize: { xs: "14px", md: "16px" },
-                  lineHeight: { xs: 1.2, md: 1.4 },
-
+                      lineHeight: { xs: 1.2, md: 1.4 },
                       letterSpacing: "0px",
                       color: "#5C5C5C",
                       mb: 2,
@@ -232,9 +260,8 @@ const SuccessStoriesSection = () => {
                         sx={{
                           fontFamily: poppins.style.fontFamily,
                           fontWeight: 600,
-                         fontSize: { xs: "14px", md: "16px" },
-                  lineHeight: { xs: 1.2, md: 1.4 },
-
+                          fontSize: { xs: "14px", md: "16px" },
+                          lineHeight: { xs: 1.2, md: 1.4 },
                           letterSpacing: "0px",
                           color: "#5C5C5C",
                           mb: 0.5,

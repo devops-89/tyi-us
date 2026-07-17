@@ -2,6 +2,8 @@ import React from "react";
 import { IWebsiteData } from "./types";
 import { ASSETS } from "./assets";
 import { Colors } from "./enum";
+import { StudentIcon, ParentsIcon, HobbyistIcon } from "@/components/widgets/icons/icon"; 
+ 
 import {
   Medal,
   GraduationCap,
@@ -521,10 +523,14 @@ innovationCampData: {
   buttonText: "See Event Recap",
 
   sliderImages: [
-    ASSETS.IMAGES.HERO1,
-    ASSETS.IMAGES.HERO2,
-    ASSETS.IMAGES.HERO3,
-    ASSETS.IMAGES.HERO4,
+    
+    ASSETS.IMAGES.INNOVATION_02,
+    ASSETS.IMAGES.INNOVATION_03,
+    ASSETS.IMAGES.INNOVATION_04,
+    ASSETS.IMAGES.INNOVATION_05,
+    ASSETS.IMAGES.INNOVATION_06,
+    ASSETS.IMAGES.INNOVATION_07,
+    ASSETS.IMAGES.INNOVATION_01,
     
   ],
 
@@ -694,28 +700,28 @@ PatentMatterCard:[
   },
 ],
 
-BigData:{
-  sparkle: "Which One Are You",
-
-  title: "Who Is This For",
-
-  description: "Anyone With A Spark Of Curiosity Or A Big Idea",
-
-  items: [
-    {
-      title1: "STUDENTS WITH",
-      title2: "IDEAS",
+ BigData: {
+      sparkle: "Which One Are You",
+      title: "Who Is This For",
+      description: "Anyone With A Spark Of Curiosity Or A Big Idea",
+      items: [
+        {
+          title1: "STUDENTS WITH",
+          title2: "IDEAS",
+         
+        },
+        {
+          title1: "PARENTS GUIDING",
+          title2: "YOUNG INNOVATORS",
+         
+        },
+        {
+          title1: "HOBBYISTS AND",
+          title2: "TINKERERS",
+        
+        },
+      ],
     },
-    {
-      title1: "PARENTS GUIDING",
-      title2: "YOUNG INNOVATORS",
-    },
-    {
-      title1: "HOBBYISTS AND",
-      title2: "TINKERERS",
-    },
-  ],
-},
 
 CaseStudiesData: {
   sparkle: "Read In Details",
@@ -879,35 +885,43 @@ PatentServiceData:{
   ],
 },
 
-SuccessStoriesData:{
+SuccessStoriesData: {
   sparkle: "Real Stories",
-
   title: "Success Stories",
-
   stories: [
     {
-      image: ASSETS.IMAGES.PATENT_SUCCESS,
-      title:
-        "Madhalasa Iyer: From Teen Researcher to Global Problem Solver",
-
-      description:
-        "From winning global writing awards to publishing scientific research, Madhalasa Iyer is proof that compassion and curiosity can fuel real-world impact",
-
+      image: ASSETS.IMAGES.PATENT_STORY_4,
+      title: "UVSET: Where Student Innovation Addresses Global Health Crisis",
+      description: "How DiscoverSTEM Students Took on COVID-19 Crisis and Built a Startup to Solve It",
       points: [
-        "TEDx and EarthX Speaker",
-        "Accepted to Princeton University (Ivy League)",
-        "Author of Award-Winning Children's Book Motley",
-        "2 US Patents Granted",
+        "$750K LOIs Secured",
+        "Oslo Innovation Week 2022 Award",
+        "Click here for the UVSET website",
       ],
     },
     {
-      image: ASSETS.IMAGES.PATENT_SUCCESS,
-      title:
-        "Madhalasa Iyer: From Teen Researcher to Global Problem Solver",
-
-      description:
-        "From winning global writing awards to publishing scientific research, Madhalasa Iyer is proof that compassion and curiosity can fuel real-world impact",
-
+      image: ASSETS.IMAGES.PATENT_STORY_1,
+      title: "Bilal Ali Shah: From Curious Kid to Multi-Patent Inventor",
+      description: "From a 9-year-old dreamer to a 6-patent inventor shaping satellites & clean-water tech.",
+      points: [
+        "6 Patents Granted",
+        "Nominated TIME Magazine Kid-of-the-year",
+      ],
+    },
+    {
+      image: ASSETS.IMAGES.PATENT_STORY_2,
+      title: "Isha Agrawal: Transforming the World with Storytelling and Science",
+      description: "From mentoring young minds to filing 5 patents in Neurotech, Aerospace, Health & Science, and AI – she’s redefining what’s possible in STEM.",
+      points: [
+        "3 US Patents Granted",
+        "NASA GeneLab intern",
+        "Accepted to Cornell University (Ivy League)",
+      ],
+    },
+    {
+      image: ASSETS.IMAGES.PATENT_STORY_3,
+      title: "Madhalasa Iyer: From Teen Researcher to Global Problem Solver",
+      description: "From winning global writing awards to publishing scientific research, Madhalasa Iyer is proof that compassion and curiosity can fuel real-world impact.",
       points: [
         "TEDx and EarthX Speaker",
         "Accepted to Princeton University (Ivy League)",
@@ -917,7 +931,6 @@ SuccessStoriesData:{
     },
   ],
 },
-
 
 }
 

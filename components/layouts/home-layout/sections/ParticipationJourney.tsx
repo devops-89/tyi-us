@@ -38,7 +38,7 @@ const ParticipationJourneySection = () => {
         position: "relative",
         overflow: "hidden"}}
     >
-      {}
+     
       <Box
         sx={{
           position: "absolute",
@@ -51,6 +51,7 @@ const ParticipationJourneySection = () => {
           pointerEvents: "none",
         }}
       >
+        
         <Image
           src="/images/icons/top-young-innovators.png"
           alt=""
@@ -59,24 +60,7 @@ const ParticipationJourneySection = () => {
         />
       </Box>
 
-      <Box
-        sx={{
-          position: "absolute",
-          left: 0,
-          bottom: { xs: 40, md: 100 },
-          width: { xs: 80, md: 180 },
-          height: { xs: 50, md: 120 },
-          zIndex: 1,
-          opacity: { xs: 0.35, md: 0.6 },
-        }}
-      >
-        <Image
-          src={ASSETS.IMAGES.ICON_DOTS}
-          alt=""
-          fill
-          style={{ objectFit: "contain", objectPosition: "bottom left" }}
-        />
-      </Box>
+     
 
       <Container
         maxWidth={false}
