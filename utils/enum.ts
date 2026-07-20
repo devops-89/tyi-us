@@ -1,6 +1,6 @@
 export enum Colors {
-  PRIMARY = "#1C4282", 
-  SECONDARY = "#E31837", 
+  PRIMARY = "#E31837", 
+  SECONDARY = "#006e2c", 
   WHITE = "#FFFFFF",
   BLACK = "#000000",
   GRAY_LIGHT = "#F5F5F5",
@@ -15,12 +15,13 @@ export enum Colors {
   FOOTER_TEXT = "#E1E1E1",
   FOOTER_DIVIDER = "rgba(152, 152, 152, 0.6)",
   CHALLENGE_FADE_L1 = "#37569E",
-  CHALLENGE_FADE_L3 = "#F2787F",
+  CHALLENGE_FADE_L3 = "#62ec99",
   SUBMIT_ACCENT = "#DC1D40",
   SUBMIT_ACCENT_BG = "#FCECEF",
   SOCIAL_ICON = "#D60E34",
   SOCIAL_ICON_SOFT = "#FFF0F3",
   SOCIAL_ICON_BORDER = "rgba(214, 14, 52, 0.15)",
+  BUTTON_SHADOW ="rgba(56, 143, 41, 0.08)",
 }
 
 export const COLORS = Colors;
@@ -30,3 +31,8 @@ export const CONSTANTS = {
   NAV_HEIGHT: 80,
   MAX_WIDTH: 1322,
 };
+
+
+// PRIMARY = "#E31837", 
+//   SECONDARY =  "#006e2c",
+// "#1C4282",

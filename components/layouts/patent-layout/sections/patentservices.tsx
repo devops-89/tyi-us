@@ -44,11 +44,11 @@ const PatentServiceSection = () => {
             >
               <SparkleLabel
                 text={patentService.sparkle}
-                fontSize={18}
-                sparkleSize={35}
+               fontSize={{sx:"16px", md:"18px"}}
+              sparkleSize={35}
               type="blue-star"
                 sparklePosition="both"
-                color={COLORS.PRIMARY}
+               
               />
             </Box>
 
@@ -109,7 +109,7 @@ const PatentServiceSection = () => {
                     top: "-47.2px",
                     right: "-47.2px",
                     borderRadius: "50%",
-                    backgroundColor: COLORS.CHALLENGE_FADE_L1,
+                    backgroundColor: COLORS.SECONDARY,
                   }}
                 />
 
@@ -118,7 +118,7 @@ const PatentServiceSection = () => {
                     width: 48,
                     height: 48,
                     borderRadius: "14px",
-                    backgroundColor: COLORS.SUBMIT_ACCENT_BG,
+                    backgroundColor: COLORS.BUTTON_SHADOW,
                     color: COLORS.SECONDARY,
                     display: "flex",
                     alignItems: "center",

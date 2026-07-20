@@ -31,7 +31,8 @@ const ChallengeHeroSection = () => {
       >
         <Box sx={{ maxWidth: 1180, mx: "auto", pt: { xs: 2, md: 4 } }}>
           <Box sx={{ display: "flex", justifyContent: "center", mb: 3 }}>
-            <SparkleLabel text={hero.sparkle} type="red-star" fontSize="18px" />
+            <SparkleLabel text={hero.sparkle} type="red-star" color={Colors.SECONDARY} fontSize={{sx:"16px", md:"18px"}}
+ sparkleSize={35} />
           </Box>
 
           <Typography
@@ -42,7 +43,7 @@ const ChallengeHeroSection = () => {
               color: "#0A0A0A",
               textAlign: "center",
               letterSpacing: "-0.2px",
-              lineHeight: { xs: 1.25, md: 1.22653 },
+              lineHeight: { xs: 1.1, md: 1.22653 },
               whiteSpace: "pre-line",
               mb: { xs: 2, md: 3 },
             }}
@@ -117,10 +118,11 @@ const ChallengeHeroSection = () => {
                 fontWeight: 600,
                 fontSize: { xs: "14px", md: "18px" }, 
                 textTransform: "none",
-                backgroundColor: "transparent",
+                 backgroundColor: Colors.BUTTON_SHADOW,
                 "&:hover": {
                   backgroundColor: "rgba(227, 24, 55, 0.05)",
                   borderColor: Colors.SECONDARY,
+                  color: Colors.PRIMARY,
                 },
               }}
             >

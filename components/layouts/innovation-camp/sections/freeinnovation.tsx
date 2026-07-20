@@ -67,7 +67,7 @@ const InnovationCampSection = () => {
                   type="blue-star"
                   sparklePosition="both"
                   sparkleSize={35}
-                  color={COLORS.PRIMARY}
+                  
                 />
               </Box>
             </Box>

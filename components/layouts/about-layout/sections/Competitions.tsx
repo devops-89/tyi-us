@@ -32,7 +32,7 @@ const AboutCompetitionsSection = () => {
             justifyContent: { xs: "center", md: "flex-start" },
           }}
         >
-          <SparkleLabel text={competitions.sparkle} />
+          <SparkleLabel text={competitions.sparkle} fontSize={{sx:"16px", md:"18px"}} />
         </Box>
 
         <Grid container spacing={{ xs: 5, md: 6 }} alignItems="center">
@@ -83,9 +83,9 @@ const AboutCompetitionsSection = () => {
                 sx={{
                   borderRadius: "50px",
                   px: { xs: 2.5, md: 3 },
-                  borderColor: Colors.SECONDARY,
-                  color: Colors.SECONDARY,
-                  backgroundColor: "rgba(214,14,52,0.08)",
+                 borderColor: Colors.SECONDARY,
+                color: Colors.SECONDARY,
+               backgroundColor: Colors.BUTTON_SHADOW,
                   textTransform: "none",
                   fontFamily: poppins.style.fontFamily,
                   fontWeight: 600,
@@ -101,8 +101,9 @@ const AboutCompetitionsSection = () => {
                   },
 
                   "&:hover": {
-                    borderColor: Colors.SECONDARY,
-                    backgroundColor: "rgba(214,14,52,0.12)",
+                    backgroundColor: Colors.SOCIAL_ICON_BORDER,
+                  borderColor: Colors.PRIMARY,
+                  color: Colors.PRIMARY,
                   },
                 }}
               >

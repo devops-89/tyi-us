@@ -31,21 +31,22 @@ const HomeHeroSection = () => {
           px: { xs: 2, sm: 3, md: 4 },
         }}
       >
-        {}
+        
         <Stack
           direction={{ xs: "column", md: "row" }}
           spacing={{ xs: 4, md: 6 }}
           alignItems="flex-start"
         >
-          {}
+    
           <Box sx={{ flex: 1, pt: { xs: 1, md: 4 }, width: "100%" }}>
             <Box sx={{ mb: 2 }}>
               <SparkleLabel
                 text={hero.sparkle}
+                color={Colors.SECONDARY}
                 fontSize={18}
                 sparklePosition="right"
                 customIcon={
-                  <Box sx={{ width: 18, height: 18, position: "relative" }}>
+                  <Box sx={{ width: 35, height: 35, position: "relative" }}>
                     <Image
                       src={ASSETS.IMAGES.ICON_RED_STAR}
                       alt="red star"

@@ -41,7 +41,7 @@ const YoungMindsSection = () => {
             >
               <SparkleLabel
                 text={youngMinds.sparkle}
-                fontSize= "18px"
+               fontSize={{sx:"16px", md:"18px"}}
                 sparklePosition="both"
               />
             </Box>

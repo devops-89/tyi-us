@@ -32,7 +32,7 @@ const SparkleLabel: React.FC<SparkleLabelProps> = ({
   const displayText = isObject ? text.text : text;
 
   const color =
-    propColor || (isObject && text.color ? text.color : Colors.PRIMARY);
+    propColor || (isObject && text.color ? text.color : Colors.SECONDARY);
 
   const sparklePosition =
     propSparklePosition ||

@@ -133,11 +133,11 @@ const PatentPreviewSection = () => {
         >
           <SparkleLabel
             text="Own Your Patent"
-            fontSize={18}
-            sparkleSize={35}
+             fontSize={{sx:"16px", md:"18px"}}
+              sparkleSize={35}
             type="blue-star"
             sparklePosition="both"
-            color={COLORS.PRIMARY}
+          
           />
         </Box>
 

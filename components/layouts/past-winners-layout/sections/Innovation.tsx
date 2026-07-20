@@ -56,7 +56,7 @@ const PastWinnersInnovationSection = () => {
       <Container maxWidth={false} sx={{ maxWidth: 1920 }}>
         <Box sx={{ maxWidth: 1454, mx: "auto" }}>
           <Box sx={{ mb: 2 }}>
-            <SparkleLabel text={innovation.sparkle} />
+            <SparkleLabel text={innovation.sparkle} fontSize={{sx:"16px", md:"18px"}} />
           </Box>
 
           <Typography
@@ -66,7 +66,7 @@ const PastWinnersInnovationSection = () => {
               fontSize: { xs: 30, md: 34, lg: 40 }, 
               color: Colors.BLACK,
               lineHeight: { xs: 1, md: 1.4 }, 
-              
+
               mb: 1,
             }}
           >

@@ -102,7 +102,7 @@ const ChallengeSection = () => {
             </Box>
           </Grid>
 
-          {}
+    
           <Grid
             size={{ xs: 12, md: 6 }}
             sx={{ display: "flex", flexDirection: "column" }}

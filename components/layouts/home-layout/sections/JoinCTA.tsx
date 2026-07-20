@@ -377,8 +377,9 @@ const JoinCTA = () => {
                 text="Join Us"
                 sparklePosition="both"
                 type="diamond"
-                color={COLORS.PRIMARY}
-                fontSize={18}
+                
+                fontSize={{sx:"16px", md:"18px"}}
+                  sparkleSize={35}
               />
             </Box>
 
@@ -426,7 +427,7 @@ const JoinCTA = () => {
                 gap: 1,
                 mb: { xs: 6, sm: 4, md: 0 },
                 "&:hover": {
-                  backgroundColor: COLORS.SECONDARY,
+                  backgroundColor: COLORS.PRIMARY,
                   boxShadow: "0 8px 24px rgba(214,14,52,0.25)",
                 },
               }}

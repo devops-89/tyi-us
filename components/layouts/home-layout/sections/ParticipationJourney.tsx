@@ -76,7 +76,8 @@ const ParticipationJourneySection = () => {
           <Box sx={{ mb: 2 }}>
             <SparkleLabel
               text={participation.sparkle}
-              fontSize={18}
+              fontSize={{sx:"16px", md:"18px"}}
+                  sparkleSize={18}
               sparklePosition="both"
             />
           </Box>

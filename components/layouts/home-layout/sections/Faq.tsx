@@ -44,7 +44,7 @@ const FaqSection = () => {
           spacing={{ xs: 5, md: 10 }}
           alignItems="flex-start"
         >
-          {}
+        
           <Box
             sx={{
               flex: 1,
@@ -91,15 +91,16 @@ const FaqSection = () => {
                 py: 1,
                 borderColor: Colors.SECONDARY,
                 color: Colors.SECONDARY,
-                backgroundColor: "rgba(227, 24, 55, 0.08)",
+               backgroundColor: Colors.BUTTON_SHADOW,
                 textTransform: "none",
                 fontFamily: ibmPlexSans.style.fontFamily,
                 fontWeight: 400,
                 fontSize: { xs: "15px", md: "18px" },
                 width: { xs: "100%", sm: "fit-content" },
                 "&:hover": {
-                  backgroundColor: "rgba(227, 24, 55, 0.12)",
-                  borderColor: Colors.SECONDARY,
+                  backgroundColor: Colors.SOCIAL_ICON_BORDER,
+                  borderColor: Colors.PRIMARY,
+                  color: Colors.PRIMARY,
                 },
               }}
             >

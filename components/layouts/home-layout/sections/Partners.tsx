@@ -76,8 +76,9 @@ const PartnersSection = () => {
           >
             <SparkleLabel
               text="Connect With Us"
-              color="#1C4282"
-              fontSize={18}
+             
+             fontSize={{sx:"16px", md:"18px"}}
+                  sparkleSize={18}
             />
           </Box>
 

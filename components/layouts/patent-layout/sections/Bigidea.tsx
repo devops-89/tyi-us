@@ -53,11 +53,12 @@ const WhoIsThisForSection = () => {
           >
             <SparkleLabel
               text={whoIsThisFor.sparkle}
-              fontSize={18}
+             fontSize={{sx:"16px", md:"18px"}}
               sparkleSize={35}
+
               type="blue-star"
               sparklePosition="both"
-              color={COLORS.PRIMARY}
+             
             />
           </Box>
 

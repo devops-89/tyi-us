@@ -61,7 +61,7 @@ const SelectionFlowSection = () => {
         overflow: "hidden"
       }}
     >
-      {}
+      
       <Box
         sx={{
           position: "absolute",
@@ -98,7 +98,7 @@ const SelectionFlowSection = () => {
           <Box sx={{ mb: 2, py: { xs: 4, md: 6 } }}>
             <SparkleLabel
               text="Selection Flow"
-              fontSize={18}
+              fontSize={{ sx: "16px", md: "18px" }}
               sparklePosition="both"
             />
           </Box>

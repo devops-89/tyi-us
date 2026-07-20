@@ -22,20 +22,21 @@ const ScaleSection = () => {
         <Box sx={{ mb: { xs: 3, md: 2 } }}>
           <SparkleLabel
             text="The Scale of the Challenge"
-            fontSize={18}
+            fontSize={{sx:"16px", md:"18px"}}
+                  sparkleSize={35}
             sparklePosition="both"
             type="diamond"
-            color={COLORS.PRIMARY}
+            
           />
         </Box>
 
-        {}
+      
         <Grid 
           container 
           spacing={{ xs: 5, sm: 3, md: 5, lg: 8 }} 
           alignItems={{ xs: "center", sm: "stretch" }}
         >
-          {}
+      
           <Grid size={{ xs: 12, sm: 4, md: 5 }}>
             <Box
               sx={{
@@ -59,9 +60,9 @@ const ScaleSection = () => {
             </Box>
           </Grid>
 
-          {}
+      
           <Grid size={{ xs: 12, sm: 8, md: 7 }}>
-            <Box sx={{ pl: { xs: 0, sm: 2, md: 5, lg: 10 } }}> {}
+            <Box sx={{ pl: { xs: 0, sm: 2, md: 5, lg: 10 } }}> 
               <Typography
                 sx={{
                   fontFamily: poppins.style.fontFamily,
@@ -150,7 +151,7 @@ const ScaleSection = () => {
                 ))}
               </Stack>
 
-              {}
+          
               <Stack
                 direction={{ xs: "column", sm: "row" }}
                 spacing={2}
@@ -178,7 +179,7 @@ const ScaleSection = () => {
                 <AppButton
                   pill
                   sx={{
-                    backgroundColor: "rgba(227, 24, 55, 0.08)",
+                    backgroundColor: "rgba(56, 143, 41, 0.08)",
                     color: COLORS.SECONDARY,
                     border: `1px solid ${COLORS.SECONDARY}`,
                     fontSize: { xs: "13px", sm: "14px", md: "16px", lg: "18px" },
@@ -187,7 +188,8 @@ const ScaleSection = () => {
                     width: { xs: "200px", sm: "auto" },
                     whiteSpace: "nowrap",
                     "&:hover": {
-                      backgroundColor: "rgba(227, 24, 55, 0.15)",
+                      backgroundColor: "rgba(213, 69, 69, 0.15)",
+                        color: COLORS.PRIMARY,
                     },
                   }}
                 >

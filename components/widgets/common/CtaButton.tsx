@@ -43,9 +43,12 @@ export const CtaButton: React.FC<CtaButtonProps> = ({
         px: { xs: 2.5, md: 5 }, 
         width: width,
         borderRadius: "50px",
-        backgroundColor: variant === "contained" ? COLORS.SUBMIT_ACCENT : COLORS.SUBMIT_ACCENT_BG,
-        borderColor: variant === "outlined" ? COLORS.SUBMIT_ACCENT : "transparent",
-        color: variant === "contained" ? COLORS.WHITE : COLORS.SUBMIT_ACCENT,
+        
+        // --- ONLY COLORS CHANGED ---
+        backgroundColor: variant === "contained" ? COLORS.SECONDARY : "transparent",
+        borderColor: variant === "outlined" ? COLORS.SECONDARY : "transparent",
+        color: variant === "contained" ? COLORS.WHITE : COLORS.SECONDARY,
+        
         fontFamily: poppins.style.fontFamily,
         fontWeight: 600,
         fontSize: fontSize,
@@ -56,8 +59,11 @@ export const CtaButton: React.FC<CtaButtonProps> = ({
           height: { xs: 18, md: 22 }
         },
         "&:hover": { 
-          backgroundColor: variant === "contained" ? COLORS.PRIMARY : "#f9dfe6",
-          borderColor: variant === "outlined" ? COLORS.SUBMIT_ACCENT : "transparent",
+          // --- ONLY COLORS CHANGED ---
+          backgroundColor: variant === "contained" ? "#c61530" : "rgba(214, 20, 48, 0.04)",
+          borderColor: variant === "outlined" ? "#c61530" : "transparent",
+          color: variant === "contained" ? COLORS.WHITE : "#c61530",
+          
           boxShadow: variant === "contained" ? "0px 15px 40px rgba(220, 29, 64, 0.2)" : "none",
         },
         ...sx,
@@ -68,7 +74,6 @@ export const CtaButton: React.FC<CtaButtonProps> = ({
   );
 };
 
-
 interface DualCtaProps {
   primaryText: string;
   primaryHref: string;
@@ -76,7 +81,6 @@ interface DualCtaProps {
   secondaryHref: string;
   showIcon?: boolean;
 }
-
 export const DualCta: React.FC<DualCtaProps> = ({
   primaryText,
   primaryHref,
@@ -85,26 +89,66 @@ export const DualCta: React.FC<DualCtaProps> = ({
   showIcon = true,
 }) => {
   return (
-    <Stack 
-      direction={{ xs: "column", sm: "row" }} 
-      spacing={{ xs: 2.5, sm: 3 }} 
+    <Stack
+      direction={{ xs: "column", sm: "row" }}
+      spacing={{ xs: 2.5, sm: 3 }}
       alignItems="center"
     >
-      <CtaButton
-        text={primaryText}
+      {/* Primary Button (Contained) */}
+      <Button
+        component={Link}
         href={primaryHref}
         variant="contained"
-        width={{ xs: "100%", sm: 237 }}
-        showIcon={showIcon}
-      />
-
-      <CtaButton
-        text={secondaryText}
+        endIcon={showIcon ? <ArrowUpRight size={18} /> : null}
+        sx={{
+          height: { xs: 40, md: 48 },
+          borderRadius: "50px",
+          px: { xs: 2.5, md: 4 },
+          backgroundColor: COLORS.SECONDARY,
+          color: COLORS.WHITE,
+          fontFamily: poppins.style.fontFamily,
+          fontWeight: 600,
+          fontSize: { xs: "14px", md: "16px" },
+          textTransform: "none",
+          boxShadow: "none",
+          width: { xs: "100%", sm: 237 },
+          "&:hover": {
+            backgroundColor: "#c61530",
+            boxShadow: "none",
+          },
+        }}
+      >
+        {primaryText}
+      </Button>
+      {/* Secondary Button (Outlined) */}
+      <Button
+        component={Link}
         href={secondaryHref}
         variant="outlined"
-        width={{ xs: "100%", sm: 216 }}
-        showIcon={showIcon}
-      />
+        endIcon={showIcon ? <ArrowUpRight size={18} /> : null}
+        sx={{
+          height: { xs: 40, md: 48 },
+          borderRadius: "50px",
+          px: { xs: 2.5, md: 4 },
+          borderColor: COLORS.SECONDARY,
+          color: COLORS.SECONDARY,
+          backgroundColor: "transparent",
+          fontFamily: poppins.style.fontFamily,
+          fontWeight: 600,
+          fontSize: { xs: "14px", md: "16px" },
+          textTransform: "none",
+          boxShadow: "none",
+          width: { xs: "100%", sm: 216 },
+          "&:hover": {
+            borderColor: "#c61530",
+            color: "#c61530",
+            backgroundColor: "rgba(214, 20, 48, 0.04)",
+            boxShadow: "none",
+          },
+        }}
+      >
+        {secondaryText}
+      </Button>
     </Stack>
   );
 };

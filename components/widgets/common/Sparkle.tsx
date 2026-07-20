@@ -11,7 +11,7 @@ interface SparkleProps {
 }
 
 const Sparkle: React.FC<SparkleProps> = ({
-  color = Colors.SECONDARY,
+  color = Colors.PRIMARY,
   size = "20px",
   sx = {},
 }) => {

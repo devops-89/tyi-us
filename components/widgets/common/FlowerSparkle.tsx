@@ -2,6 +2,7 @@
 
 import React from "react";
 import { Box } from "@mui/material";
+import { Colors } from "@/utils/enum";
 
 interface FlowerSparkleProps {
   color?: string;
@@ -10,7 +11,7 @@ interface FlowerSparkleProps {
 }
 
 const FlowerSparkle: React.FC<FlowerSparkleProps> = ({ 
-  color = "#1C4282", 
+  color = Colors.PRIMARY,
   size = "24px",
   sx = {}
 }) => {

@@ -36,7 +36,8 @@ const RulesSection = () => {
                 text={rulesData.sparkle}
                 sparklePosition="both"
                 type="flower"
-                fontSize="18px"
+                fontSize={{sx:"16px", md:"18px"}}
+ 
               />
             </Box>
 
@@ -117,7 +118,7 @@ const RulesSection = () => {
                       flexDirection: "column",
                     }}
                   >
-                    <Box component="span" sx={{ color: "#1B3E8C" }}>
+                    <Box component="span" sx={{ color: Colors.SECONDARY }}>
                       Learn.
                     </Box>
                     <Box component="span" sx={{ color: "#A32448" }}>

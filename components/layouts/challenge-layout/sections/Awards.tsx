@@ -8,6 +8,7 @@ import { Colors, CONSTANTS } from "@/utils/enum";
 import { poppins, ibmPlexSans } from "@/utils/fonts";
 import { WEBSITE_DATA } from "@/utils/website";
 import { ASSETS } from "@/utils/assets";
+import SparkleLabel from "@/components/widgets/common/SparkleLabel";
 
 const { awards } = WEBSITE_DATA.challenge;
 
@@ -31,36 +32,25 @@ const AwardsSection = () => {
               alignItems="center"
               sx={{ px: { xs: 1, md: 3 }, py: 0.5 }}
             >
-              <Box sx={{ position: "relative", width: 20, height: 20 }}>
-                <Image
-                  src={ASSETS.IMAGES.ICON_BLUESTAR}
-                  alt="star"
-                  fill
-                  style={{ objectFit: "contain" }}
-                />
-              </Box>
-
-              <Typography
+              <Box
                 sx={{
-                  fontFamily: poppins.style.fontFamily,
-                  fontWeight: 500,
-                  fontSize: { xs: 15, md: 16 },
-                  color: Colors.PRIMARY,
-                  textTransform: "capitalize",
-                  textAlign: "center",
+                  maxWidth: { xs: "300px", sm: "100%" },
+                  textAlign: { xs: "center", md: "left" },
                 }}
               >
-                {awards.sparkle}
-              </Typography>
-
-              <Box sx={{ position: "relative", width: 20, height: 20 }}>
-                <Image
-                  src={ASSETS.IMAGES.ICON_BLUESTAR}
-                  alt="star"
-                  fill
-                  style={{ objectFit: "contain" }}
+                <SparkleLabel
+                  text={awards.sparkle}
+                  fontSize={{sx:"16px", md:"18px"}}
+                  
+                  
+                  type="blue-star"
+                  sparklePosition="both"
+                  sparkleSize={35}
+                  
                 />
               </Box>
+
+              
             </Stack>
           </Box>
 
@@ -115,19 +105,19 @@ const AwardsSection = () => {
                         borderColor: "rgba(27, 62, 140, 0.2)",
                         "& .icon-circle": {
                           transform: "scale(1.1)",
-                          boxShadow: "0px 12px 30px rgba(27, 62, 140, 0.3)",
+                          boxShadow: "0px 12px 30px rgba(32, 138, 36, 0.3)",
                         },
                         "& .icon-circle::after": {
                           transform: "scale(1.15)",
                           borderColor: "rgba(27, 62, 140, 0.3)",
                         },
                         "& .card-main-text": {
-                          color: "#1B3E8C",
+                          color: Colors.SECONDARY
                         },
                       },
                     }}
                   >
-                    {}
+                
                     <Box
                       sx={{
                         backgroundColor: "#F4F7FC",
@@ -142,7 +132,7 @@ const AwardsSection = () => {
                           fontFamily: poppins.style.fontFamily,
                           fontWeight: 600,
                           fontSize: "13px",
-                          color: "#1B3E8C",
+                          color: Colors.SECONDARY,
                           textTransform: "uppercase",
                           letterSpacing: "0.5px",
                         }}
@@ -153,14 +143,14 @@ const AwardsSection = () => {
                       </Typography>
                     </Box>
 
-                    {}
+                 
                     <Box
                       className="icon-circle"
                       sx={{
                         width: { xs: 80, md: 90 },
                         height: { xs: 80, md: 90 },
                         borderRadius: "50%",
-                        backgroundColor: "#1B3E8C",
+                        backgroundColor:Colors.SECONDARY,
                         display: "flex",
                         alignItems: "center",
                         justifyContent: "center",

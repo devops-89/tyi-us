@@ -31,7 +31,7 @@ const PastWinnersHeroSection = () => {
           {}
           <Box sx={{ flex: 1, pt: 1, width: "100%" }}>
             <Box sx={{ mb: 2 }}>
-              <SparkleLabel text={hero.sparkle} />
+              <SparkleLabel text={hero.sparkle} fontSize={{sx:"16px", md:"18px"}} />
             </Box>
 
             <Typography
@@ -61,7 +61,7 @@ const PastWinnersHeroSection = () => {
             </Typography>
 
             <Stack direction="column" spacing={2} alignItems="flex-start">
-              {}
+          
               <Button
                 component={Link}
                 href="/recap"
@@ -72,8 +72,8 @@ const PastWinnersHeroSection = () => {
                   borderRadius: "50px",
                   px: { xs: 2.5, md: 3 }, 
                   width: { xs: "230px", sm: "auto" }, 
-                  borderColor: "rgba(227, 24, 55, 0.2)",
-                  backgroundColor: "rgba(227, 24, 55, 0.05)",
+                  borderColor: Colors.SECONDARY,
+                 backgroundColor: Colors.BUTTON_SHADOW,
                   color: Colors.SECONDARY,
                   fontFamily: poppins.style.fontFamily,
                   fontWeight: 600,
@@ -83,7 +83,7 @@ const PastWinnersHeroSection = () => {
                   alignItems: "center",
                   justifyContent: "center",
                   "&:hover": { 
-                    borderColor: Colors.SECONDARY, 
+                    borderColor: Colors.PRIMARY, 
                     backgroundColor: "rgba(227, 24, 55, 0.1)" 
                   },
                 }}
@@ -91,7 +91,7 @@ const PastWinnersHeroSection = () => {
                 {hero.cta1Text}
               </Button>
 
-              {}
+           
               <Button
                 component={Link}
                 href="/moments"
@@ -107,6 +107,8 @@ const PastWinnersHeroSection = () => {
                   fontWeight: 600,
                   fontSize: "14px",
                   textTransform: "none",
+                   borderColor: Colors.SECONDARY,
+              
                   backgroundColor: Colors.WHITE,
                   display: "flex",
                   alignItems: "center",
