@@ -16,8 +16,8 @@ const PastWinnersHeroSection = () => {
   return (
     <Box
       sx={{
-        pt: { xs: 0, sm: 3, md: 10 },
-        pb: { xs: 4, sm: 6, md: 10 },
+        pt: { xs: 0, sm: 3, md: 6 },
+        pb: { xs: 4, sm: 6, md: 4 },
         backgroundColor: Colors.WHITE,
         position: "relative",
       }}

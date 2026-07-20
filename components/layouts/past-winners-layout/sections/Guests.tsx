@@ -14,7 +14,7 @@ const PastWinnersGuestsSection = () => {
   return (
     <Box sx={{py: { xs: 4, md: 6 }, backgroundColor: Colors.WHITE}}>
       <Container maxWidth={false} sx={{ maxWidth: CONSTANTS.MAX_WIDTH }}>
-        <Stack spacing={2} alignItems="center" sx={{ mb: 6 }}>
+        <Stack spacing={2} alignItems="center" sx={{ mb: {xs: 4, md: 6 } }}>
           <Typography sx={{ fontFamily: poppins.style.fontFamily, fontWeight: 700, fontSize: { xs: 28, md: 32 }, color: Colors.BLACK }}>
             {guests.title}
           </Typography>
@@ -23,7 +23,7 @@ const PastWinnersGuestsSection = () => {
           </Typography>
         </Stack>
 
-        <Grid container spacing={6} justifyContent="center">
+        <Grid container spacing={4} justifyContent="center">
           {guests.items.map((g) => (
             <Grid key={g.name} size={{ xs: 12, md: 4 }}>
               {}

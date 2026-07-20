@@ -65,7 +65,8 @@ const PastWinnersInnovationSection = () => {
               fontWeight: 700,
               fontSize: { xs: 30, md: 34, lg: 40 }, 
               color: Colors.BLACK,
-              lineHeight: 1.1,
+              lineHeight: { xs: 1, md: 1.4 }, 
+              
               mb: 1,
             }}
           >

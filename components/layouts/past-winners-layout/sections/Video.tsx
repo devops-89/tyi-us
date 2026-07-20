@@ -55,6 +55,7 @@ const PastWinnersVideoSection = () => {
             fontSize: { xs: 24, md: 32 },
             color: Colors.BLACK,
             textAlign: "center",
+             lineHeight: { xs: 1.2, md: 1.4 }, 
             mb: 1,
           }}
         >
