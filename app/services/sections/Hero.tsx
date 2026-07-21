@@ -2,7 +2,7 @@
 
 import React from "react";
 import { Box, Container, Typography, Stack, IconButton } from "@mui/material";
-import { COLORS, CONSTANTS } from "@/utils/enum";
+import { Colors, CONSTANTS } from "@/utils/enum";
 import { poppins, ibmPlexSans } from "@/utils/fonts";
 import Image from "next/image";
 import { Play } from "lucide-react";
@@ -13,7 +13,7 @@ const Hero = () => {
       sx={{
         pt: { xs: 8, md: 12 },
         pb: { xs: 8, md: 10 },
-        backgroundColor: COLORS.WHITE,
+        backgroundColor: Colors.WHITE,
         position: "relative",
       }}
     >
@@ -45,7 +45,7 @@ const Hero = () => {
               <Box
                 component="span"
                 sx={{
-                  color: COLORS.SECONDARY,
+                  color: Colors.SECONDARY,
                   fontSize: "24px",
                   lineHeight: 1,
                 }}
@@ -59,7 +59,7 @@ const Hero = () => {
                 fontFamily: poppins.style.fontFamily,
                 fontWeight: 600,
                 fontSize: "28px",
-                color: COLORS.BLACK,
+                color: Colors.BLACK,
                 mb: 1,
               }}
             >
@@ -72,8 +72,8 @@ const Hero = () => {
                   fontFamily: poppins.style.fontFamily,
                   fontWeight: 800,
                   fontSize: { xs: "32px", md: "48px" },
-                  backgroundColor: COLORS.BLACK,
-                  color: COLORS.WHITE,
+                  backgroundColor: Colors.BLACK,
+                  color: Colors.WHITE,
                   display: "inline-block",
                   px: 3,
                   py: 1,
@@ -91,8 +91,8 @@ const Hero = () => {
                   fontFamily: poppins.style.fontFamily,
                   fontWeight: 700,
                   fontSize: { xs: "32px", md: "42px" },
-                  backgroundColor: COLORS.BLACK,
-                  color: COLORS.WHITE,
+                  backgroundColor: Colors.BLACK,
+                  color: Colors.WHITE,
                   display: "inline-block",
                   px: 3,
                   py: 1,
@@ -198,7 +198,7 @@ const Hero = () => {
                   backgroundColor: "#fff",
                   p: "10px 20px",
                   borderRadius: "10px",
-                  borderBottom: `4px solid ${COLORS.SECONDARY}`,
+                  borderBottom: `4px solid ${Colors.SECONDARY}`,
                   boxShadow: "0 4px 20px rgba(0,0,0,0.1)",
                 }}
               >

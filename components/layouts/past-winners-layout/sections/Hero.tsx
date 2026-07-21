@@ -31,7 +31,7 @@ const PastWinnersHeroSection = () => {
           {}
           <Box sx={{ flex: 1, pt: 1, width: "100%" }}>
             <Box sx={{ mb: 2 }}>
-              <SparkleLabel text={hero.sparkle} fontSize={{sx:"16px", md:"18px"}} />
+              <SparkleLabel text={hero.sparkle} fontSize={{ xs:"16px", md:"18px"}} />
             </Box>
 
             <Typography

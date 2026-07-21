@@ -30,7 +30,7 @@ const AboutPartnerSection = () => {
             justifyContent: { xs: "center", md: "flex-start" },
           }}
         >
-          <SparkleLabel text={partner.sparkle} fontSize={{sx:"16px", md:"18px"}} />
+          <SparkleLabel text={partner.sparkle} fontSize={{ xs:"16px", md:"18px"}} />
         </Box>
 
         <Typography

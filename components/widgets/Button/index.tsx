@@ -1,7 +1,7 @@
 "use client";
 
 import { Button as MuiButton, ButtonProps, styled } from "@mui/material";
-import { COLORS } from "@/utils/enum";
+import { Colors } from "@/utils/enum";
 import { ArrowUpRight } from "lucide-react";
 import { ibmPlexSans } from "@/utils/fonts";
 
@@ -29,21 +29,21 @@ const StyledButton = styled(MuiButton, {
   },
 
   ...(variant === "contained" && {
-    backgroundColor: COLORS.SECONDARY,
-    color: COLORS.WHITE,
+    backgroundColor: Colors.SECONDARY,
+    color: Colors.WHITE,
     "&:hover": {
-      backgroundColor: COLORS.PRIMARY,
+      backgroundColor: Colors.PRIMARY,
       transform: "translateY(-1px)",
       boxShadow: "0 8px 20px rgba(227, 24, 55, 0.25)",
     },
   }),
 
   ...(variant === "outlined" && {
-    borderColor: COLORS.SECONDARY,
-    color: COLORS.SECONDARY,
+    borderColor: Colors.SECONDARY,
+    color: Colors.SECONDARY,
     "&:hover": {
-      borderColor: COLORS.PRIMARY,
-      color: COLORS.PRIMARY,
+      borderColor: Colors.PRIMARY,
+      color: Colors.PRIMARY,
       backgroundColor: "transparent",
       transform: "translateY(-1px)",
     },

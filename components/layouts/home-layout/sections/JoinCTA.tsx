@@ -4,7 +4,7 @@ import React from "react";
 import { Box, Container, Stack, Typography } from "@mui/material";
 import { ArrowUpRight } from "lucide-react";
 
-import { COLORS, CONSTANTS } from "@/utils/enum";
+import { Colors, CONSTANTS } from "@/utils/enum";
 import { poppins, ibmPlexSans } from "@/utils/fonts";
 import AppButton from "@/components/widgets/Button";
 import Image from "next/image";
@@ -30,7 +30,7 @@ const JoinCTA = () => {
         },
       
 
-        backgroundColor: COLORS.WHITE,
+        backgroundColor: Colors.WHITE,
         position: "relative",
         zIndex: 10, 
         overflow: "visible", 
@@ -146,7 +146,7 @@ const JoinCTA = () => {
                   },
                   borderRadius: "50%",
                   border: "0.5px solid #101010",
-                  backgroundColor: COLORS.WHITE, 
+                  backgroundColor: Colors.WHITE, 
                   zIndex: 3,
                 }}
               >
@@ -217,7 +217,7 @@ const JoinCTA = () => {
                         lg: "10px", 
                       },
                       fontWeight: 500,
-                      color: COLORS.SECONDARY,
+                      color: Colors.SECONDARY,
                       lineHeight: 1.35,
                     }}
                   >
@@ -234,7 +234,7 @@ const JoinCTA = () => {
                         lg: "14px", 
                       },
                       fontWeight: 700,
-                      color: COLORS.SECONDARY,
+                      color: Colors.SECONDARY,
                       lineHeight: 1.2,
                       mt: 0.3,
                     }}
@@ -274,7 +274,7 @@ const JoinCTA = () => {
                     md: "30px",
                     lg: "45px",
                   },
-                  backgroundColor: COLORS.WHITE,
+                  backgroundColor: Colors.WHITE,
                   borderRadius: "200px",
                   boxShadow: "0px 30px 80px rgba(47, 65, 88, 0.2)", 
                   zIndex: 3,
@@ -332,7 +332,7 @@ const JoinCTA = () => {
                         lg: "14px", 
                       },
                       fontWeight: 600,
-                      color: COLORS.SECONDARY,
+                      color: Colors.SECONDARY,
                       lineHeight: 1.15,
                     }}
                   >
@@ -349,7 +349,7 @@ const JoinCTA = () => {
                         lg: "10px", 
                       },
                       fontWeight: 500,
-                      color: COLORS.SECONDARY,
+                      color: Colors.SECONDARY,
                       lineHeight: 1.2,
                       mt: 0.2,
                     }}
@@ -378,7 +378,7 @@ const JoinCTA = () => {
                 sparklePosition="both"
                 type="diamond"
                 
-                fontSize={{sx:"16px", md:"18px"}}
+                fontSize={{ xs:"16px", md:"18px"}}
                   sparkleSize={35}
               />
             </Box>
@@ -389,7 +389,7 @@ const JoinCTA = () => {
                 fontFamily: poppins.style.fontFamily,
                 fontWeight: 400,
                 fontSize: { xs: "24px", md: "28px" },
-                color: COLORS.BLACK,
+                color: Colors.BLACK,
                 lineHeight: 1.2,
                 mb: 2,
               }}
@@ -401,7 +401,7 @@ const JoinCTA = () => {
               sx={{
                 fontFamily: ibmPlexSans.style.fontFamily,
                 fontSize: { xs: "14px", md: "16px" },
-                color: COLORS.TEXT_MUTED,
+                color: Colors.TEXT_MUTED,
                 mb: { xs: 4.5, md: 3.5 },
                 maxWidth: { xs: "100%", md: "480px" },
                 lineHeight: { xs: "28px", md: "26px" },
@@ -416,8 +416,8 @@ const JoinCTA = () => {
               component={Link}
               href="/submit" 
               sx={{
-                backgroundColor: COLORS.SECONDARY,
-                color: COLORS.WHITE,
+                backgroundColor: Colors.SECONDARY,
+                color: Colors.WHITE,
                 px: { xs: 3, md: 4 },
                 py: 1.2,
                 fontSize: { xs: "16px", md: "18px" },
@@ -427,7 +427,7 @@ const JoinCTA = () => {
                 gap: 1,
                 mb: { xs: 6, sm: 4, md: 0 },
                 "&:hover": {
-                  backgroundColor: COLORS.PRIMARY,
+                  backgroundColor: Colors.PRIMARY,
                   boxShadow: "0 8px 24px rgba(214,14,52,0.25)",
                 },
               }}

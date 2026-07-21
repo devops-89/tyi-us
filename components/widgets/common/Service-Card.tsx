@@ -2,7 +2,7 @@
 
 import React from "react";
 import { Box, Typography, Stack, Paper } from "@mui/material";
-import { COLORS } from "@/utils/enum";
+import { Colors } from "@/utils/enum";
 import { poppins, ibmPlexSans } from "@/utils/fonts";
 import * as LucideIcons from "lucide-react";
 
@@ -23,15 +23,15 @@ const ServiceCard: React.FC<IServiceCardProps> = ({ title, description, iconName
         p: 4,
         height: "100%",
         borderRadius: "20px",
-        border: `1px solid ${COLORS.BORDER}`,
+        border: `1px solid ${Colors.BORDER}`,
         transition: "all 0.3s ease",
         "&:hover": {
           transform: "translateY(-10px)",
           boxShadow: "0 20px 40px rgba(0,0,0,0.05)",
-          borderColor: COLORS.SECONDARY,
+          borderColor: Colors.SECONDARY,
           "& .icon-box": {
-            backgroundColor: COLORS.SECONDARY,
-            color: COLORS.WHITE,
+            backgroundColor: Colors.SECONDARY,
+            color: Colors.WHITE,
           }
         },
       }}
@@ -47,7 +47,7 @@ const ServiceCard: React.FC<IServiceCardProps> = ({ title, description, iconName
             display: "flex", 
             alignItems: "center", 
             justifyContent: "center",
-            color: COLORS.PRIMARY,
+            color: Colors.PRIMARY,
             transition: "all 0.3s ease",
           }}
         >
@@ -59,7 +59,7 @@ const ServiceCard: React.FC<IServiceCardProps> = ({ title, description, iconName
             fontFamily: poppins.style.fontFamily, 
             fontWeight: 700,
             fontSize: "1.25rem",
-            color: COLORS.PRIMARY
+            color: Colors.PRIMARY
           }}
         >
           {title}
@@ -68,7 +68,7 @@ const ServiceCard: React.FC<IServiceCardProps> = ({ title, description, iconName
           variant="body2" 
           sx={{ 
             fontFamily: ibmPlexSans.style.fontFamily,
-            color: COLORS.GRAY_DARK,
+            color: Colors.GRAY_DARK,
             lineHeight: 1.6,
             fontSize: "0.95rem"
           }}

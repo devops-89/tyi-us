@@ -139,7 +139,7 @@ const WhyParticipateSection = () => {
               sparklePosition="both"
               type="diamond"
              
-             fontSize={{sx:"16px", md:"18px"}}
+             fontSize={{ xs:"16px", md:"18px"}}
                   sparkleSize={35}
             />
           </Box>

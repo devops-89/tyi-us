@@ -1,13 +1,13 @@
 import React from "react";
 import { Box, Container, Typography, Button } from "@mui/material";
 
-import { COLORS, CONSTANTS } from "@/utils/enum";
+import { Colors, CONSTANTS } from "@/utils/enum";
 import { poppins } from "@/utils/fonts";
 import Link from "next/link";
 
 const ProtectIdeaSection = () => {
   return (
-    <Box sx={{py: { xs: 4, md: 6 }, backgroundColor: COLORS.WHITE}}>
+    <Box sx={{py: { xs: 4, md: 6 }, backgroundColor: Colors.WHITE}}>
       <Container
         maxWidth={false}
         sx={{
@@ -23,7 +23,7 @@ const ProtectIdeaSection = () => {
             mx: "auto",
             position: "relative",
             overflow: "hidden",
-            backgroundColor: COLORS.BLACK,
+            backgroundColor: Colors.BLACK,
             borderRadius: "25px",
             px: { xs: 3, sm: 4, md: 5 },
             py: { xs: 4, md: 7 },
@@ -87,7 +87,7 @@ const ProtectIdeaSection = () => {
                 },
                 lineHeight: "100%",
                 letterSpacing: "-0.02em",
-                color: COLORS.WHITE,
+                color: Colors.WHITE,
                 maxWidth: 430,
               }}
             >
@@ -98,7 +98,7 @@ const ProtectIdeaSection = () => {
 
             <Box
               sx={{
-                color: COLORS.WHITE,
+                color: Colors.WHITE,
                 display: "flex",
                 flexDirection: "column",
                 alignItems: "flex-start",
@@ -113,7 +113,7 @@ const ProtectIdeaSection = () => {
                   lineHeight: { xs: 1.2, md: 1.4 },
                     
                     letterSpacing: "-0.02em",
-                    color: COLORS.WHITE,
+                    color: Colors.WHITE,
                     mb: 4,
                   }}
                 >
@@ -127,7 +127,7 @@ const ProtectIdeaSection = () => {
                  fontSize: { xs: "14px", md: "16px" },
                   lineHeight: { xs: 1.2, md: 1.4 },
                     letterSpacing: "-0.02em",
-                    color: COLORS.WHITE,
+                    color: Colors.WHITE,
                   }}
                 >
                   • 100% Confidentiality guaranteed
@@ -145,8 +145,8 @@ const ProtectIdeaSection = () => {
     px: "25px",
     py: "10px",
     gap: "12px",
-    backgroundColor: COLORS.SECONDARY,
-    color: COLORS.WHITE,
+    backgroundColor: Colors.SECONDARY,
+    color: Colors.WHITE,
     fontFamily: poppins.style.fontFamily,
     fontWeight: 400,
     fontSize: "16px",
@@ -157,7 +157,7 @@ const ProtectIdeaSection = () => {
     ml: { xs: 0, md: "auto" },
     mr: { xs: 0, md: "70px" },
     "&:hover": {
-      backgroundColor: COLORS.PRIMARY,
+      backgroundColor: Colors.PRIMARY,
       boxShadow: "none",
     },
   }}

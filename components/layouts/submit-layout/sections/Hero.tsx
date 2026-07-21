@@ -3,7 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import { Box, Container, Stack, Typography } from "@mui/material";
-import { COLORS, CONSTANTS } from "@/utils/enum";
+import { Colors, CONSTANTS } from "@/utils/enum";
 import { poppins, ibmPlexSans } from "@/utils/fonts";
 import { WEBSITE_DATA } from "@/utils/website";
 import { DualCta } from "@/components/widgets/common/CtaButton";
@@ -14,7 +14,7 @@ const SubmitHeroSection = () => {
   return (
     <Box
       sx={{
-        backgroundColor: COLORS.WHITE,
+        backgroundColor: Colors.WHITE,
         pt: { xs: 1, md: 12 },
         pb: { xs: 4, md: 12 },
       }}
@@ -43,7 +43,7 @@ const SubmitHeroSection = () => {
                 fontFamily: poppins.style.fontFamily,
                 fontWeight: 500,
                 fontSize: { xs: "28px", sm: "32px", md: "45px" },
-                color: COLORS.BLACK,
+                color: Colors.BLACK,
                 lineHeight: { xs: 1.25, md: 1.15 },
                 letterSpacing: "-0.4px",
                 mb: 2,
@@ -59,7 +59,7 @@ const SubmitHeroSection = () => {
                fontSize: { xs: "14px", md: "16px" },
                   lineHeight: { xs: 1.2, md: 1.4 },
                 fontWeight: 400,
-                color: COLORS.TEXT_MUTED,
+                color: Colors.TEXT_MUTED,
                 textAlign: { xs: "justify", md: "left" },
                 letterSpacing: "0.2px",
                 whiteSpace: "pre-line",

@@ -3,7 +3,7 @@
 import React from "react";
 import { Box, Container, Grid, Typography, Stack } from "@mui/material";
 
-import { COLORS, CONSTANTS } from "@/utils/enum";
+import { Colors, CONSTANTS } from "@/utils/enum";
 import { poppins } from "@/utils/fonts";
 import SparkleLabel from "@/components/widgets/common/SparkleLabel";
 import { WEBSITE_DATA } from "@/utils/website";
@@ -12,7 +12,7 @@ const ModulesCoveredSection = () => {
   const modulesData = WEBSITE_DATA.innovation.ModuleItem;
 
   return (
-    <Box sx={{py: { xs: 4, md: 6 }, backgroundColor: COLORS.WHITE}}>
+    <Box sx={{py: { xs: 4, md: 6 }, backgroundColor: Colors.WHITE}}>
       <Container
         maxWidth={false}
         sx={{
@@ -24,7 +24,7 @@ const ModulesCoveredSection = () => {
           <Box sx={{ display: "flex", justifyContent: "center", mb: 2 }}>
             <SparkleLabel
               text="8 Module Covered"
-             fontSize={{sx:"16px", md:"18px"}}
+             fontSize={{ xs:"16px", md:"18px"}}
  sparkleSize={35}
 
                               type="blue-star"
@@ -39,7 +39,7 @@ const ModulesCoveredSection = () => {
               fontFamily: poppins.style.fontFamily,
               fontWeight: 500,
               fontSize: { xs: "24px", sm: "30px", md: "45px" },
-              color: COLORS.BLACK,
+              color: Colors.BLACK,
               lineHeight: 1.2,
             }}
           >
@@ -76,11 +76,11 @@ const ModulesCoveredSection = () => {
                       width: 56,
                       height: 56,
                       borderRadius: "14px",
-                      backgroundColor: COLORS.SECONDARY,
+                      backgroundColor: Colors.SECONDARY,
                       display: "flex",
                       alignItems: "center",
                       justifyContent: "center",
-                      color: COLORS.WHITE,
+                      color: Colors.WHITE,
                       flexShrink: 0,
                     }}
                   >
@@ -120,7 +120,7 @@ const ModulesCoveredSection = () => {
                     fontSize: "18px",
                     lineHeight: "25.2px",
                     letterSpacing: "-0.18px",
-                    color: COLORS.BLACK,
+                    color: Colors.BLACK,
                   }}
                 >
                   {item.title}
@@ -133,7 +133,7 @@ const ModulesCoveredSection = () => {
                     fontSize: "14px",
                     lineHeight: "22.4px",
                     letterSpacing: "0px",
-                    color: COLORS.TEXT_MUTED,
+                    color: Colors.TEXT_MUTED,
                   }}
                 >
                   {item.desc}
@@ -146,7 +146,7 @@ const ModulesCoveredSection = () => {
                     fontSize: "13px",
                     lineHeight: "19.5px",
                     letterSpacing: "0px",
-                    color: COLORS.TEXT_MUTED,
+                    color: Colors.TEXT_MUTED,
                     mt: "auto",
                   }}
                 >

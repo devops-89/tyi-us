@@ -4,7 +4,7 @@ import React from "react";
 import Image from "next/image";
 import { Box, Container, Grid, Stack, Typography } from "@mui/material";
 
-import { COLORS, CONSTANTS } from "@/utils/enum";
+import { Colors, CONSTANTS } from "@/utils/enum";
 import { poppins } from "@/utils/fonts";
 import SparkleLabel from "@/components/widgets/common/SparkleLabel";
 import { WEBSITE_DATA } from "@/utils/website";
@@ -13,7 +13,7 @@ const WhyPatentMatterSection = () => {
   const patentMatterCards = WEBSITE_DATA.patent.PatentMatterCard;
 
   return (
-    <Box sx={{py: { xs: 4, md: 6 }, backgroundColor: COLORS.WHITE}}>
+    <Box sx={{py: { xs: 4, md: 6 }, backgroundColor: Colors.WHITE}}>
       <Container
         maxWidth={false}
         sx={{
@@ -41,7 +41,7 @@ const WhyPatentMatterSection = () => {
             >
               <SparkleLabel
                 text="Patents Helps"
-                fontSize={{sx:"16px", md:"18px"}}
+                fontSize={{ xs:"16px", md:"18px"}}
               sparkleSize={35}
                 type="blue-star"
                 sparklePosition="both"
@@ -61,7 +61,7 @@ const WhyPatentMatterSection = () => {
                   lg: "36.8px",
                 },
                 letterSpacing: "-0.8px",
-                color: COLORS.BLACK,
+                color: Colors.BLACK,
               }}
             >
               Why Patent Matter

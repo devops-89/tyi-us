@@ -53,7 +53,7 @@ const FaqSection = () => {
             }}
           >
             <Box sx={{ mb: 1.5 }}>
-              <SparkleLabel text={faqs.sparkle}  fontSize={{ sx: "16px", md: "18px" }}  />
+              <SparkleLabel text={faqs.sparkle}  fontSize={{ xs: "16px", md: "18px" }}  />
             </Box>
 
             <Typography

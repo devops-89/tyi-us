@@ -10,9 +10,10 @@ import LearningOutcomesSection from "./sections/Learning";
 import InnovationCampInfoCards from "./sections/Deadline";
 
 import PartnersSection from "../home-layout/sections/Partners";
-import InnovationCampSection from "./sections/Freeinnovation";
+
 import SelectionFlowSection from "./sections/Selectionflow";
 import AnimationWrapper from "@/components/widgets/common/AnimationWrapper";
+import InnovationCampSection from "./sections/freeinnovation";
 
 const InnovationCamp = () => {
   return (

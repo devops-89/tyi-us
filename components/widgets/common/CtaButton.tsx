@@ -5,7 +5,7 @@ import Link from "next/link";
 import { Stack, Button } from "@mui/material";
 import { ArrowUpRight } from "lucide-react";
 
-import { COLORS } from "@/utils/enum";
+import { Colors } from "@/utils/enum";
 import { poppins } from "@/utils/fonts";
 
 
@@ -45,9 +45,9 @@ export const CtaButton: React.FC<CtaButtonProps> = ({
         borderRadius: "50px",
         
         // --- ONLY COLORS CHANGED ---
-        backgroundColor: variant === "contained" ? COLORS.SECONDARY : "transparent",
-        borderColor: variant === "outlined" ? COLORS.SECONDARY : "transparent",
-        color: variant === "contained" ? COLORS.WHITE : COLORS.SECONDARY,
+        backgroundColor: variant === "contained" ? Colors.SECONDARY : "transparent",
+        borderColor: variant === "outlined" ? Colors.SECONDARY : "transparent",
+        color: variant === "contained" ? Colors.WHITE : Colors.SECONDARY,
         
         fontFamily: poppins.style.fontFamily,
         fontWeight: 600,
@@ -62,7 +62,7 @@ export const CtaButton: React.FC<CtaButtonProps> = ({
           // --- ONLY COLORS CHANGED ---
           backgroundColor: variant === "contained" ? "#c61530" : "rgba(214, 20, 48, 0.04)",
           borderColor: variant === "outlined" ? "#c61530" : "transparent",
-          color: variant === "contained" ? COLORS.WHITE : "#c61530",
+          color: variant === "contained" ? Colors.WHITE : "#c61530",
           
           boxShadow: variant === "contained" ? "0px 15px 40px rgba(220, 29, 64, 0.2)" : "none",
         },
@@ -104,8 +104,8 @@ export const DualCta: React.FC<DualCtaProps> = ({
           height: { xs: 40, md: 48 },
           borderRadius: "50px",
           px: { xs: 2.5, md: 4 },
-          backgroundColor: COLORS.SECONDARY,
-          color: COLORS.WHITE,
+          backgroundColor: Colors.SECONDARY,
+          color: Colors.WHITE,
           fontFamily: poppins.style.fontFamily,
           fontWeight: 600,
           fontSize: { xs: "14px", md: "16px" },
@@ -130,8 +130,8 @@ export const DualCta: React.FC<DualCtaProps> = ({
           height: { xs: 40, md: 48 },
           borderRadius: "50px",
           px: { xs: 2.5, md: 4 },
-          borderColor: COLORS.SECONDARY,
-          color: COLORS.SECONDARY,
+          borderColor: Colors.SECONDARY,
+          color: Colors.SECONDARY,
           backgroundColor: "transparent",
           fontFamily: poppins.style.fontFamily,
           fontWeight: 600,

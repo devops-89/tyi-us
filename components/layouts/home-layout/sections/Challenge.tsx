@@ -2,7 +2,7 @@
 
 import React from "react";
 import { Box, Container, Typography, Grid } from "@mui/material";
-import { COLORS, CONSTANTS } from "@/utils/enum";
+import { Colors, CONSTANTS } from "@/utils/enum";
 import { poppins, ibmPlexSans } from "@/utils/fonts";
 import AppButton from "@/components/widgets/Button";
 import Image from "next/image";
@@ -12,7 +12,7 @@ import Link from "next/link";
 const ChallengeSection = () => {
   return (
     <Box
-      sx={{py: { xs: 4, md: 6 }, backgroundColor: COLORS.WHITE}}
+      sx={{py: { xs: 4, md: 6 }, backgroundColor: Colors.WHITE}}
     >
       <Container
         maxWidth={false}
@@ -34,7 +34,7 @@ const ChallengeSection = () => {
                   fontFamily: poppins.style.fontFamily,
                   fontWeight: 400,
                   fontSize: { xs: "24px", sm: "26px", md: "28px" },
-                  color: COLORS.BLACK,
+                  color: Colors.BLACK,
                   mb: 2,
                   lineHeight: { xs: 1.25, md: 1.1 },
                 }}
@@ -46,7 +46,7 @@ const ChallengeSection = () => {
                 sx={{
                   fontFamily: ibmPlexSans.style.fontFamily,
                   fontSize: { xs: "14px", md: "16px" },
-                  color: COLORS.TEXT_MUTED,
+                  color: Colors.TEXT_MUTED,
                   lineHeight: { xs: 1.2, md: 1.4 },
                   mb: { xs: 3, md: 4 },
                   maxWidth: "600px",
@@ -120,7 +120,7 @@ const ChallengeSection = () => {
                   fontFamily: poppins.style.fontFamily,
                   fontWeight: 400,
                   fontSize: { xs: "24px", sm: "26px", md: "28px" },
-                  color: COLORS.BLACK,
+                  color: Colors.BLACK,
                   mb: 2,
                   lineHeight: { xs: 1.25, md: 1.25 },
                 }}
@@ -132,7 +132,7 @@ const ChallengeSection = () => {
                 sx={{
                   fontFamily: ibmPlexSans.style.fontFamily,
                   fontSize: { xs: "14px", md: "16px" },
-                  color: COLORS.TEXT_MUTED,
+                  color: Colors.TEXT_MUTED,
                     lineHeight: { xs: 1.2, md: 1.4 },
                   mb: { xs: 3, md: 4 },
                   maxWidth: { xs: "100%", md: "520px" },

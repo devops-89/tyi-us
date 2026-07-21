@@ -3,7 +3,7 @@
 import React from "react";
 import { Box, Container, Typography } from "@mui/material";
 
-import { COLORS, CONSTANTS } from "@/utils/enum";
+import { Colors, CONSTANTS } from "@/utils/enum";
 import { poppins } from "@/utils/fonts";
 import SparkleLabel from "@/components/widgets/common/SparkleLabel";
 import { WEBSITE_DATA } from "@/utils/website";
@@ -13,7 +13,7 @@ const PatentServiceSection = () => {
 
   return (
     <Box
-      sx={{py: { xs: 4, md: 6 }, backgroundColor: COLORS.WHITE,
+      sx={{py: { xs: 4, md: 6 }, backgroundColor: Colors.WHITE,
         
         overflow: "hidden"}}
     >
@@ -44,7 +44,7 @@ const PatentServiceSection = () => {
             >
               <SparkleLabel
                 text={patentService.sparkle}
-               fontSize={{sx:"16px", md:"18px"}}
+               fontSize={{ xs:"16px", md:"18px"}}
               sparkleSize={35}
               type="blue-star"
                 sparklePosition="both"
@@ -60,7 +60,7 @@ const PatentServiceSection = () => {
                 lineHeight: { xs: "38px", sm: "42px", md: "44px", lg: "48px" },
                 letterSpacing: "-0.01em",
                 textTransform: "capitalize",
-                color: COLORS.BLACK,
+                color: Colors.BLACK,
               }}
             >
               {patentService.title}
@@ -87,7 +87,7 @@ const PatentServiceSection = () => {
                   width: "100%",
                   maxWidth: { xs: "100%", lg: 290 },
                   minHeight: { xs: 340, md: 383.137 },
-                  backgroundColor: COLORS.WHITE,
+                  backgroundColor: Colors.WHITE,
                   borderTop: "0.8px solid #0000000D",
                   borderLeft: "0.8px solid #0000001A",
                   borderRight: "0.8px solid #0000001A",
@@ -109,7 +109,7 @@ const PatentServiceSection = () => {
                     top: "-47.2px",
                     right: "-47.2px",
                     borderRadius: "50%",
-                    backgroundColor: COLORS.SECONDARY,
+                    backgroundColor: Colors.SECONDARY,
                   }}
                 />
 
@@ -118,8 +118,8 @@ const PatentServiceSection = () => {
                     width: 48,
                     height: 48,
                     borderRadius: "14px",
-                    backgroundColor: COLORS.BUTTON_SHADOW,
-                    color: COLORS.SECONDARY,
+                    backgroundColor: Colors.BUTTON_SHADOW,
+                    color: Colors.SECONDARY,
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
@@ -143,7 +143,7 @@ const PatentServiceSection = () => {
                     fontSize: "18px",
                     lineHeight: "27px",
                     letterSpacing: "-0.45px",
-                    color: COLORS.SECONDARY,
+                    color: Colors.SECONDARY,
                     minHeight: "60px",
                     mb: 2,
                     position: "relative",

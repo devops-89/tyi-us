@@ -31,7 +31,7 @@ const ChallengeHeroSection = () => {
       >
         <Box sx={{ maxWidth: 1180, mx: "auto", pt: { xs: 2, md: 4 } }}>
           <Box sx={{ display: "flex", justifyContent: "center", mb: 3 }}>
-            <SparkleLabel text={hero.sparkle} type="red-star" color={Colors.SECONDARY} fontSize={{sx:"16px", md:"18px"}}
+            <SparkleLabel text={hero.sparkle} type="red-star" color={Colors.SECONDARY} fontSize={{ xs:"16px", md:"18px"}}
  sparkleSize={35} />
           </Box>
 

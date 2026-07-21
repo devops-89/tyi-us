@@ -13,7 +13,7 @@ import {
 } from "@mui/material";
 import CloseIcon from "@mui/icons-material/Close";
 
-import { COLORS, CONSTANTS } from "@/utils/enum";
+import { Colors, CONSTANTS } from "@/utils/enum";
 import { poppins } from "@/utils/fonts";
 import SparkleLabel from "@/components/widgets/common/SparkleLabel";
 import { ASSETS } from "@/utils/assets";
@@ -79,7 +79,7 @@ const PatentPreviewSection = () => {
               ? { xs: "10px", sm: "14px", md: "15px" }
               : { xs: "12px", sm: "18px", md: "22px" },
             fontWeight: 600,
-            color: COLORS.BLACK,
+            color: Colors.BLACK,
             textAlign: "center",
             width: "80%",
             lineHeight: 1.2,
@@ -102,7 +102,7 @@ const PatentPreviewSection = () => {
               ? { xs: "8px", sm: "11px", md: "13px" }
               : { xs: "10px", sm: "15px", md: "18px" },
             fontWeight: 500,
-            color: COLORS.BLACK,
+            color: Colors.BLACK,
             textAlign: "center",
             width: "80%",
             lineHeight: 1.2,
@@ -115,7 +115,7 @@ const PatentPreviewSection = () => {
   );
 
   return (
-    <Box sx={{py: { xs: 4, md: 6 }, backgroundColor: COLORS.WHITE}}>
+    <Box sx={{py: { xs: 4, md: 6 }, backgroundColor: Colors.WHITE}}>
       <Container
         maxWidth={false}
         sx={{
@@ -133,7 +133,7 @@ const PatentPreviewSection = () => {
         >
           <SparkleLabel
             text="Own Your Patent"
-             fontSize={{sx:"16px", md:"18px"}}
+             fontSize={{ xs:"16px", md:"18px"}}
               sparkleSize={35}
             type="blue-star"
             sparklePosition="both"
@@ -149,7 +149,7 @@ const PatentPreviewSection = () => {
             lineHeight: { xs: 1.2, sm: 1.4, md: 1.6 },
             letterSpacing: "-0.01em",
             textTransform: "capitalize",
-            color: COLORS.BLACK,
+            color: Colors.BLACK,
             maxWidth: 1160,
             mx: "auto",
             mb: 2,
@@ -166,7 +166,7 @@ const PatentPreviewSection = () => {
                   lineHeight: { xs: 1.2, md: 1.4 },
             letterSpacing: "-0.02em",
             textTransform: "capitalize",
-            color: COLORS.TEXT_MUTED,
+            color: Colors.TEXT_MUTED,
             textAlign: {md:"left", xs:"justify"},
             maxWidth: 1160,
             mx: "auto",
@@ -211,7 +211,7 @@ const PatentPreviewSection = () => {
                 maxWidth: "100%",
                 "& .MuiOutlinedInput-root": {
                   borderRadius: "10px",
-                  backgroundColor: COLORS.SUBMIT_ACCENT_BG,
+                  backgroundColor: Colors.SUBMIT_ACCENT_BG,
                   height: 50,
                   "& fieldset": {
                     border: "0.8px solid #00000080",
@@ -220,7 +220,7 @@ const PatentPreviewSection = () => {
                     border: "0.8px solid #00000080",
                   },
                   "&.Mui-focused fieldset": {
-                    border: `0.8px solid ${COLORS.PRIMARY}`,
+                    border: `0.8px solid ${Colors.PRIMARY}`,
                   },
                 },
                 "& input": {
@@ -244,7 +244,7 @@ const PatentPreviewSection = () => {
                 maxWidth: "100%",
                 "& .MuiOutlinedInput-root": {
                   borderRadius: "10px",
-                  backgroundColor: COLORS.SUBMIT_ACCENT_BG,
+                  backgroundColor: Colors.SUBMIT_ACCENT_BG,
                   height: 50,
                   "& fieldset": {
                     border: "0.8px solid #00000080",
@@ -253,7 +253,7 @@ const PatentPreviewSection = () => {
                     border: "0.8px solid #00000080",
                   },
                   "&.Mui-focused fieldset": {
-                    border: `0.8px solid ${COLORS.PRIMARY}`,
+                    border: `0.8px solid ${Colors.PRIMARY}`,
                   },
                 },
                 "& input": {
@@ -287,15 +287,15 @@ const PatentPreviewSection = () => {
                 height: 41,
                 borderRadius: "32px",
                 p: { xs: "10px", sm: "8px", md: "10px" },
-                backgroundColor: COLORS.SECONDARY,
-                color: COLORS.WHITE,
+                backgroundColor: Colors.SECONDARY,
+                color: Colors.WHITE,
                 fontFamily: poppins.style.fontFamily,
                 fontSize: { xs: "13px", sm: "11px", md: "13px" },
                 fontWeight: 600,
                 textTransform: "none",
                 boxShadow: "none",
                 "&:hover": {
-                  backgroundColor: COLORS.PRIMARY,
+                  backgroundColor: Colors.PRIMARY,
                   boxShadow: "none",
                 },
               }}
@@ -312,15 +312,15 @@ const PatentPreviewSection = () => {
                 height: 41,
                 borderRadius: "32px",
                 p: { xs: "10px", sm: "8px", md: "10px" },
-                backgroundColor: COLORS.SUBMIT_ACCENT_BG,
-                color: COLORS.BLACK,
+                backgroundColor: Colors.SUBMIT_ACCENT_BG,
+                color: Colors.BLACK,
                 fontFamily: poppins.style.fontFamily,
                 fontSize: { xs: "13px", sm: "11px", md: "13px" },
                 fontWeight: 500,
                 textTransform: "none",
                 boxShadow: "none",
                 "&:hover": {
-                  backgroundColor: COLORS.SOCIAL_ICON_SOFT,
+                  backgroundColor: Colors.SOCIAL_ICON_SOFT,
                   boxShadow: "none",
                 },
               }}
@@ -337,15 +337,15 @@ const PatentPreviewSection = () => {
                 height: 41,
                 borderRadius: "32px",
                 p: { xs: "10px", sm: "8px", md: "10px" },
-                backgroundColor: COLORS.SUBMIT_ACCENT_BG,
-                color: COLORS.BLACK,
+                backgroundColor: Colors.SUBMIT_ACCENT_BG,
+                color: Colors.BLACK,
                 fontFamily: poppins.style.fontFamily,
                 fontSize: { xs: "13px", sm: "11px", md: "13px" },
                 fontWeight: 500,
                 textTransform: "none",
                 boxShadow: "none",
                 "&:hover": {
-                  backgroundColor: COLORS.SOCIAL_ICON_SOFT,
+                  backgroundColor: Colors.SOCIAL_ICON_SOFT,
                   boxShadow: "none",
                 },
               }}
@@ -363,11 +363,10 @@ const PatentPreviewSection = () => {
           onClose={() => setOpenPreview(false)}
           maxWidth="md"
           fullWidth
-          PaperProps={{
-            sx: {
+          PaperProps={{ xs: {
               borderRadius: "16px",
               p: { xs: 1.5, sm: 2, md: 3 },
-              backgroundColor: COLORS.WHITE,
+              backgroundColor: Colors.WHITE,
             },
           }}
         >
@@ -379,9 +378,9 @@ const PatentPreviewSection = () => {
                 right: { xs: 0, sm: 4 },
                 top: { xs: 0, sm: 4 },
                 zIndex: 2,
-                backgroundColor: COLORS.SUBMIT_ACCENT_BG,
+                backgroundColor: Colors.SUBMIT_ACCENT_BG,
                 "&:hover": {
-                  backgroundColor: COLORS.SOCIAL_ICON_SOFT,
+                  backgroundColor: Colors.SOCIAL_ICON_SOFT,
                 },
               }}
             >

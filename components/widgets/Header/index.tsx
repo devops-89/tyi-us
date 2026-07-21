@@ -11,7 +11,7 @@ import {
 } from "@mui/material";
 import Link from "next/link";
 import Image from "next/image";
-import { COLORS, CONSTANTS } from "@/utils/enum";
+import { Colors, CONSTANTS } from "@/utils/enum";
 import { NAV_ITEMS } from "@/public/data/navigation";
 import { poppins } from "@/utils/fonts";
 import { ArrowUpRight, Plus } from "lucide-react";
@@ -26,9 +26,9 @@ const Header = () => {
         position: "fixed",
         top: 0,
         zIndex: 1000,
-        backgroundColor: COLORS.NAV_BG,
+        backgroundColor: Colors.NAV_BG,
         backdropFilter: "blur(50px)",
-        borderBottom: `1px solid ${COLORS.BORDER}`,
+        borderBottom: `1px solid ${Colors.BORDER}`,
         display: "flex",
         alignItems: "center",
       }}
@@ -65,8 +65,8 @@ const Header = () => {
                 href={item.href}
                 sx={{ 
                   textDecoration: "none",
-                  color: COLORS.BLACK,
-                  "&:hover": { color: COLORS.SECONDARY }
+                  color: Colors.BLACK,
+                  "&:hover": { color: Colors.SECONDARY }
                 }}
               >
                 <Typography 
@@ -90,7 +90,7 @@ const Header = () => {
             endIcon={
               <Box 
                 sx={{ 
-                  backgroundColor: COLORS.WHITE, 
+                  backgroundColor: Colors.WHITE, 
                   borderRadius: "50%", 
                   width: 32, 
                   height: 32, 
@@ -100,11 +100,11 @@ const Header = () => {
                   ml: 1
                 }}
               >
-                <ArrowUpRight size={18} color={COLORS.SECONDARY} />
+                <ArrowUpRight size={18} color={Colors.SECONDARY} />
               </Box>
             }
             sx={{
-              backgroundColor: COLORS.SECONDARY,
+              backgroundColor: Colors.SECONDARY,
               borderRadius: "50px",
               px: "6px",
               py: "6px",
@@ -115,7 +115,7 @@ const Header = () => {
               fontSize: "14px",
               boxShadow: "none",
               "&:hover": {
-                backgroundColor: COLORS.PRIMARY,
+                backgroundColor: Colors.PRIMARY,
                 boxShadow: "0 10px 20px rgba(0,0,0,0.1)"
               }
             }}

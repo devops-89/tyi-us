@@ -24,7 +24,7 @@ export enum Colors {
   BUTTON_SHADOW ="rgba(56, 143, 41, 0.08)",
 }
 
-export const COLORS = Colors;
+
 
 
 export const CONSTANTS = {

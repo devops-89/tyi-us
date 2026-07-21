@@ -32,7 +32,7 @@ const AboutCompetitionsSection = () => {
             justifyContent: { xs: "center", md: "flex-start" },
           }}
         >
-          <SparkleLabel text={competitions.sparkle} fontSize={{sx:"16px", md:"18px"}} />
+          <SparkleLabel text={competitions.sparkle} fontSize={{ xs:"16px", md:"18px"}} />
         </Box>
 
         <Grid container spacing={{ xs: 5, md: 6 }} alignItems="center">
