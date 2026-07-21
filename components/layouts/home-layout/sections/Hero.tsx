@@ -6,7 +6,7 @@ import Link from "next/link";
 import { Box, Container, Stack, Typography, Button } from "@mui/material";
 import { ArrowUpRight } from "lucide-react";
 
-import { Colors, CONSTANTS } from "@/utils/enum";
+import { COLORS, Colors, CONSTANTS } from "@/utils/enum";
 import { poppins, ibmPlexSans } from "@/utils/fonts";
 import { WEBSITE_DATA } from "@/utils/website";
 import { ASSETS } from "@/utils/assets";
@@ -31,29 +31,21 @@ const HomeHeroSection = () => {
           px: { xs: 2, sm: 3, md: 4 },
         }}
       >
-        {}
+     
         <Stack
           direction={{ xs: "column", md: "row" }}
           spacing={{ xs: 4, md: 6 }}
           alignItems="flex-start"
         >
-          {}
+       
           <Box sx={{ flex: 1, pt: { xs: 1, md: 4 }, width: "100%" }}>
             <Box sx={{ mb: 2 }}>
               <SparkleLabel
                 text={hero.sparkle}
-                fontSize={18}
+                fontSize={{ xs:"16px", md:"18px"}}
                 sparklePosition="right"
-                customIcon={
-                  <Box sx={{ width: 18, height: 18, position: "relative" }}>
-                    <Image
-                      src={ASSETS.IMAGES.ICON_RED_STAR}
-                      alt="red star"
-                      fill
-                      style={{ objectFit: "contain" }}
-                    />
-                  </Box>
-                }
+                type="diamond"
+                sparkleSize={35}
               />
             </Box>
 
@@ -151,8 +143,8 @@ const HomeHeroSection = () => {
                 },
 
                 "&:hover": {
-                  backgroundColor: "#c61530",
-                  boxShadow: "none",
+                 backgroundColor: COLORS.PRIMARY,
+               boxShadow: "0 8px 24px rgba(52, 96, 183, 0.25)",
                 },
               }}
             >
@@ -160,7 +152,7 @@ const HomeHeroSection = () => {
             </Button>
           </Box>
 
-          {}
+       
           <Box
             sx={{
               flex: { xs: "none", md: 1.2 },
@@ -193,7 +185,7 @@ const HomeHeroSection = () => {
           </Box>
         </Stack>
 
-        {}
+     
         <Stack
           direction={{ xs: "column", lg: "row" }}
           spacing={{ xs: 2, lg: 8 }}
@@ -204,7 +196,7 @@ const HomeHeroSection = () => {
             width: "100%",
           }}
         >
-          {}
+       
           <Typography
             sx={{
               fontFamily: ibmPlexSans.style.fontFamily,
@@ -268,7 +260,7 @@ const HomeHeroSection = () => {
           </Button>
         </Stack>
 
-        {}
+     
         <Box
           sx={{
             mt: { xs: 5, md: 8 },

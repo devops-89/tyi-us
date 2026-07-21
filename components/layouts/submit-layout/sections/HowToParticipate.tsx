@@ -41,7 +41,8 @@ const HowToParticipateSection = () => {
                 text={howToParticipate.sparkle}
                 type="blue-star"
                 sparklePosition="both"
-                sparkleSize={14}
+                fontSize={{ xs:"16px", md:"18px"}}
+                sparkleSize={35}
               />
             </Box>
 

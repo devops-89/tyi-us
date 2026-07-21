@@ -36,7 +36,8 @@ const RulesSection = () => {
                 text={rulesData.sparkle}
                 sparklePosition="both"
                 type="flower"
-                fontSize="18px"
+               fontSize={{ xs:"16px", md:"18px"}}
+
               />
             </Box>
 
@@ -225,8 +226,8 @@ const RulesSection = () => {
                       textTransform: "none",
                       boxShadow: "0 4px 14px rgba(227, 24, 55, 0.3)",
                       "&:hover": {
-                        backgroundColor: Colors.PRIMARY,
-                        boxShadow: "0 6px 20px rgba(227, 24, 55, 0.4)",
+                          backgroundColor: Colors.PRIMARY,
+                        boxShadow: "0 8px 24px rgba(52, 96, 183, 0.25)",
                       },
                     }}
                   >

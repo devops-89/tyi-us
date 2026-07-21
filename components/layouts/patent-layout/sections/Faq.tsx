@@ -44,7 +44,7 @@ const FaqSection = () => {
           spacing={{ xs: 5, md: 10 }}
           alignItems="flex-start"
         >
-          {}
+      
           <Box
             sx={{
               flex: 1,
@@ -53,7 +53,7 @@ const FaqSection = () => {
             }}
           >
             <Box sx={{ mb: 1.5 }}>
-              <SparkleLabel text={faqs.sparkle}  fontSize={18} />
+              <SparkleLabel text={faqs.sparkle}  fontSize={{ xs:"16px", md:"18px"}} />
             </Box>
 
             <Typography
@@ -108,7 +108,7 @@ const FaqSection = () => {
             </Button>
           </Box>
 
-          {}
+         
           <Box sx={{ flex: 1.3, width: "100%" }}>
             <Stack spacing={2}>
               {rows.map(({ question, answer, idx }) => {

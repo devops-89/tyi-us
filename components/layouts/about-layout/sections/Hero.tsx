@@ -43,7 +43,7 @@ const AboutHeroSection = () => {
                   justifyContent: { xs: "center", md: "flex-start" },
                 }}
               >
-                <SparkleLabel text={hero.sparkle} />
+                <SparkleLabel text={hero.sparkle} fontSize={{ xs:"16px", md:"18px"}}/>
               </Box>
 
               <Typography

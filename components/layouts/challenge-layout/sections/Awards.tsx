@@ -8,6 +8,7 @@ import { Colors, CONSTANTS } from "@/utils/enum";
 import { poppins, ibmPlexSans } from "@/utils/fonts";
 import { WEBSITE_DATA } from "@/utils/website";
 import { ASSETS } from "@/utils/assets";
+import SparkleLabel from "@/components/widgets/common/SparkleLabel";
 
 const { awards } = WEBSITE_DATA.challenge;
 
@@ -31,36 +32,23 @@ const AwardsSection = () => {
               alignItems="center"
               sx={{ px: { xs: 1, md: 3 }, py: 0.5 }}
             >
-              <Box sx={{ position: "relative", width: 20, height: 20 }}>
-                <Image
-                  src={ASSETS.IMAGES.ICON_BLUESTAR}
-                  alt="star"
-                  fill
-                  style={{ objectFit: "contain" }}
-                />
-              </Box>
-
-              <Typography
+             <Box
                 sx={{
-                  fontFamily: poppins.style.fontFamily,
-                  fontWeight: 500,
-                  fontSize: { xs: 15, md: 16 },
-                  color: Colors.PRIMARY,
-                  textTransform: "capitalize",
-                  textAlign: "center",
+                  maxWidth: { xs: "300px", sm: "100%" },
+                  textAlign: { xs: "center", md: "left" },
                 }}
               >
-                {awards.sparkle}
-              </Typography>
-
-              <Box sx={{ position: "relative", width: 20, height: 20 }}>
-                <Image
-                  src={ASSETS.IMAGES.ICON_BLUESTAR}
-                  alt="star"
-                  fill
-                  style={{ objectFit: "contain" }}
+                <SparkleLabel
+                  text={awards.sparkle}
+                  fontSize={{ xs:"16px", md:"18px"}}
+                  type="blue-star"
+                  sparklePosition="both"
+                  sparkleSize={35}
+                  
                 />
               </Box>
+
+             
             </Stack>
           </Box>
 

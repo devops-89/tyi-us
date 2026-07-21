@@ -34,7 +34,8 @@ const StyledButton = styled(MuiButton, {
     "&:hover": {
       backgroundColor: COLORS.PRIMARY,
       transform: "translateY(-1px)",
-      boxShadow: "0 8px 20px rgba(227, 24, 55, 0.25)",
+       boxShadow: "0 8px 24px rgba(52, 96, 183, 0.25)",
+
     },
   }),
 

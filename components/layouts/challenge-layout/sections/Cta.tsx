@@ -84,7 +84,8 @@ const ChallengeCtaSection = () => {
                   text={cta.sparkle}
                   sparklePosition="both"
                   type="diamond"
-                  fontSize="18px"
+                  fontSize={{ xs:"16px", md:"18px"}}
+
                 />
               </Box>
 

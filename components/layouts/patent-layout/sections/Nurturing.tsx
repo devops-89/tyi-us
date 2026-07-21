@@ -26,12 +26,11 @@ const getEmbedUrl = (url?: string) => {
     return `${url}${url.includes("?") ? "&" : "?"}autoplay=1&mute=1`;
   }
 
-  // If a standard YouTube ID was found, format it as an embed link with autoplay and mute
   if (videoId) {
     return `https://www.youtube.com/embed/${videoId}?autoplay=1&mute=1`;
   }
 
-  // Fallback for non-YouTube videos (e.g. Vimeo, raw mp4)
+
   return `${url}${url.includes("?") ? "&" : "?"}autoplay=1&mute=1`;
 };
 
@@ -80,7 +79,7 @@ const NurturingYoungInventorsSection = () => {
             >
               <SparkleLabel
                 text={data.sparkle}
-                fontSize={18}
+            fontSize={{ xs:"16px", md:"18px"}}
                 sparkleSize={35}
                type="blue-star"
                 sparklePosition="both"
@@ -159,7 +158,7 @@ const NurturingYoungInventorsSection = () => {
             ))}
           </Box>
 
-          {}
+     
           <Box
             sx={{
               position: "relative",

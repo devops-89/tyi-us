@@ -24,7 +24,7 @@ const ModulesCoveredSection = () => {
           <Box sx={{ display: "flex", justifyContent: "center", mb: 2 }}>
             <SparkleLabel
               text="8 Module Covered"
-               fontSize= "18px"
+              fontSize={{ xs:"16px", md:"18px"}}
                               type="blue-star"
                              sparklePosition="both"
                              sparkleSize={35}

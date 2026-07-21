@@ -61,7 +61,7 @@ const SelectionFlowSection = () => {
         overflow: "hidden"
       }}
     >
-      {}
+ 
       <Box
         sx={{
           position: "absolute",
@@ -93,12 +93,12 @@ const SelectionFlowSection = () => {
           px: { xs: 2, sm: 3, md: 4 },
         }}
       >
-        {}
+   
         <Stack alignItems="center" textAlign="center" sx={{ mb: { xs: 6, md: 8 } }}>
           <Box sx={{ mb: 2, py: { xs: 4, md: 6 } }}>
             <SparkleLabel
               text="Selection Flow"
-              fontSize={18}
+             fontSize={{ xs:"16px", md:"18px"}}
               sparklePosition="both"
             />
           </Box>
@@ -118,7 +118,7 @@ const SelectionFlowSection = () => {
           </Typography>
         </Stack>
 
-        {}
+    
         <Box
           sx={{
             display: 'grid',
@@ -172,7 +172,7 @@ const SelectionFlowSection = () => {
                   }
                 }}
               >
-                {}
+            
                 <Typography
                   className="watermark"
                   sx={{
@@ -191,7 +191,7 @@ const SelectionFlowSection = () => {
                   {String(index + 1).padStart(2, '0')}
                 </Typography>
 
-                {}
+             
                 <Stack 
                   direction="row" 
                   justifyContent="space-between" 
@@ -243,7 +243,7 @@ const SelectionFlowSection = () => {
                   </Box>
                 </Stack>
 
-                {}
+      
                 <Stack 
                   direction="row" 
                   justifyContent="space-between" 

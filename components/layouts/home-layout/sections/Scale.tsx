@@ -19,23 +19,31 @@ const ScaleSection = () => {
           px: { xs: 2, sm: 3, md: 4 },
         }}
       >
-        <Box sx={{ mb: { xs: 3, md: 2 } }}>
+        
+        <Box 
+          sx={{ 
+            mb: { xs: 3, md: 2 }, 
+            display: "flex", 
+            justifyContent: { xs: "center", md: "flex-start" } 
+          }}
+        >
           <SparkleLabel
             text="The Scale of the Challenge"
-            fontSize={18}
+            fontSize={{xs:"16px", md:"18px"}} 
+            sparkleSize={35}
             sparklePosition="both"
             type="diamond"
             color={COLORS.PRIMARY}
           />
         </Box>
 
-        {}
+       
         <Grid 
           container 
           spacing={{ xs: 5, sm: 3, md: 5, lg: 8 }} 
           alignItems={{ xs: "center", sm: "stretch" }}
         >
-          {}
+         
           <Grid size={{ xs: 12, sm: 4, md: 5 }}>
             <Box
               sx={{
@@ -59,9 +67,9 @@ const ScaleSection = () => {
             </Box>
           </Grid>
 
-          {}
+         
           <Grid size={{ xs: 12, sm: 8, md: 7 }}>
-            <Box sx={{ pl: { xs: 0, sm: 2, md: 5, lg: 10 } }}> {}
+            <Box sx={{ pl: { xs: 0, sm: 2, md: 5, lg: 10 } }}>
               <Typography
                 sx={{
                   fontFamily: poppins.style.fontFamily,
@@ -99,7 +107,7 @@ const ScaleSection = () => {
                   mb: 3,
                   maxWidth: "840px",
                   lineHeight: { xs: 1.6, md: 1.55 },
-                  textAlign: { xs: "justify", sm: "left" },
+                  textAlign: { xs: "center", sm: "left" }, // FIX 2: Changed from "justify" to "center"
                 }}
               >
                 Unlock your creativity and join the world&apos;s most exciting
@@ -108,7 +116,7 @@ const ScaleSection = () => {
                 innovation.
               </Typography>
 
-              {}
+             
               <Stack
                 direction={{ xs: "column", sm: "row" }}
                 spacing={{ xs: 3, sm: 4, md: 4, lg: 6 }}
@@ -150,7 +158,7 @@ const ScaleSection = () => {
                 ))}
               </Stack>
 
-              {}
+             
               <Stack
                 direction={{ xs: "column", sm: "row" }}
                 spacing={2}

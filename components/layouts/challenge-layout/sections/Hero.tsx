@@ -31,7 +31,8 @@ const ChallengeHeroSection = () => {
       >
         <Box sx={{ maxWidth: 1180, mx: "auto", pt: { xs: 2, md: 4 } }}>
           <Box sx={{ display: "flex", justifyContent: "center", mb: 3 }}>
-            <SparkleLabel text={hero.sparkle} type="red-star" fontSize="18px" />
+            <SparkleLabel text={hero.sparkle} type="red-star" fontSize={{ xs:"16px", md:"18px"}} sparkleSize={35}
+ />
           </Box>
 
           <Typography
@@ -93,8 +94,8 @@ const ChallengeHeroSection = () => {
                 textTransform: "none",
                 boxShadow: "none",
                 "&:hover": {
-                  backgroundColor: "#c61530",
-                  boxShadow: "none",
+                  backgroundColor: Colors.PRIMARY,
+                                    boxShadow: "0 8px 24px rgba(52, 96, 183, 0.25)",
                 },
               }}
             >

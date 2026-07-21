@@ -50,7 +50,7 @@ const PatentSection = () => {
               >
                 <SparkleLabel
                   text={patentData.sparkle}
-                  fontSize={{ xs: "14px", md: 16 }}
+                fontSize={{ xs:"16px", md:"18px"}}
                   sparkleSize={35}
                   type="blue-star"
                   sparklePosition="both"

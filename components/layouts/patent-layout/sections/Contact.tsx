@@ -29,7 +29,7 @@ const ProtectIdeaSection = () => {
             py: { xs: 4, md: 7 },
           }}
         >
-          {}
+        
           <Box
             sx={{
               position: "absolute",
@@ -45,7 +45,7 @@ const ProtectIdeaSection = () => {
             }}
           />
 
-          {}
+    
           <Box
             sx={{
               position: "absolute",

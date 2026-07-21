@@ -28,10 +28,11 @@ const PastWinnersHeroSection = () => {
           spacing={4}
           alignItems="flex-start"
         >
-          {}
+        
           <Box sx={{ flex: 1, pt: 1, width: "100%" }}>
             <Box sx={{ mb: 2 }}>
-              <SparkleLabel text={hero.sparkle} />
+              <SparkleLabel text={hero.sparkle} fontSize={{ xs:"16px", md:"18px"}} sparkleSize={20}
+/>
             </Box>
 
             <Typography
@@ -61,7 +62,7 @@ const PastWinnersHeroSection = () => {
             </Typography>
 
             <Stack direction="column" spacing={2} alignItems="flex-start">
-              {}
+            
               <Button
                 component={Link}
                 href="/recap"
@@ -91,7 +92,7 @@ const PastWinnersHeroSection = () => {
                 {hero.cta1Text}
               </Button>
 
-              {}
+            
               <Button
                 component={Link}
                 href="/moments"
@@ -122,7 +123,7 @@ const PastWinnersHeroSection = () => {
             </Stack>
           </Box>
 
-          {}
+        
           <Box
             sx={{
               flex: { xs: "none", md: 1.2 }, 
@@ -142,7 +143,7 @@ const PastWinnersHeroSection = () => {
               priority
             />
 
-            {}
+          
             <Box
               sx={{
                 position: "absolute",

@@ -58,7 +58,7 @@ export const CtaButton: React.FC<CtaButtonProps> = ({
         "&:hover": { 
           backgroundColor: variant === "contained" ? COLORS.PRIMARY : "#f9dfe6",
           borderColor: variant === "outlined" ? COLORS.SUBMIT_ACCENT : "transparent",
-          boxShadow: variant === "contained" ? "0px 15px 40px rgba(220, 29, 64, 0.2)" : "none",
+          boxShadow: variant === "contained" ? "0 8px 24px rgba(52, 96, 183, 0.25)" : "none",
         },
         ...sx,
       }}

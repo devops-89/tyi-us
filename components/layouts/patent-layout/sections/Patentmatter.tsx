@@ -41,7 +41,7 @@ const WhyPatentMatterSection = () => {
             >
               <SparkleLabel
                 text="Patents Helps"
-                fontSize={18}
+                fontSize={{ xs:"16px", md:"18px"}}
                 sparkleSize={35}
                 type="blue-star"
                 sparklePosition="both"

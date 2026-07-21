@@ -22,7 +22,7 @@ const ChallengeSection = () => {
         }}
       >
         <Grid container spacing={{ xs: 5, md: 6 }} alignItems="stretch">
-          {}
+         
           <Grid
             size={{ xs: 12, md: 6 }}
             sx={{ display: "flex", flexDirection: "column" }}
@@ -102,7 +102,7 @@ const ChallengeSection = () => {
             </Box>
           </Grid>
 
-          {}
+         
           <Grid
             size={{ xs: 12, md: 6 }}
             sx={{ display: "flex", flexDirection: "column" }}

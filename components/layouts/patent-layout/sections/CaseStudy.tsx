@@ -41,7 +41,7 @@ const CaseStudiesSection = () => {
             >
               <SparkleLabel
                 text={caseStudies.sparkle}
-                fontSize={18}
+              fontSize={{ xs:"16px", md:"18px"}}
                 sparkleSize={35}
                type="blue-star"
                 sparklePosition="both"

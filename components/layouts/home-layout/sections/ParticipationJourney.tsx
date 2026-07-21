@@ -71,12 +71,12 @@ const ParticipationJourneySection = () => {
           px: { xs: 2, sm: 3, md: 4 },
         }}
       >
-        {}
+       
         <Stack alignItems="center" textAlign="center" sx={{ mb: { xs: 6, md: 8 } }}>
           <Box sx={{ mb: 2 }}>
             <SparkleLabel
               text={participation.sparkle}
-              fontSize={18}
+               fontSize={{xs:"16px", md:"18px"}}
               sparklePosition="both"
             />
           </Box>
@@ -109,7 +109,7 @@ const ParticipationJourneySection = () => {
           </Typography>
         </Stack>
 
-        {}
+       
         <Box
           sx={{
             display: 'grid',
@@ -163,7 +163,7 @@ const ParticipationJourneySection = () => {
                   }
                 }}
               >
-                {}
+               
                 <Typography
                   className="watermark"
                   sx={{
@@ -182,7 +182,7 @@ const ParticipationJourneySection = () => {
                   {String(index + 1).padStart(2, '0')}
                 </Typography>
 
-                {}
+               
                 <Stack 
                   direction="row" 
                   justifyContent="space-between" 
@@ -234,7 +234,7 @@ const ParticipationJourneySection = () => {
                   </Box>
                 </Stack>
 
-                {}
+               
                 <Stack 
                   direction="row" 
                   justifyContent="space-between" 
@@ -268,7 +268,7 @@ const ParticipationJourneySection = () => {
                   </Box>
                 </Stack>
 
-                {}
+               
                 <Typography
                   className="card-desc"
                   sx={{

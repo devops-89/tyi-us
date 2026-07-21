@@ -63,7 +63,7 @@ const InnovationCampSection = () => {
               >
                 <SparkleLabel
                   text={innovationCampData.sparkle}
-                  fontSize={{sx:"16px", md:"18px"}}
+                  fontSize={{ xs:"16px", md:"18px"}}
                   type="blue-star"
                   sparklePosition="both"
                   sparkleSize={35}

@@ -20,12 +20,12 @@ const getEmbedUrl = (url?: string) => {
     return `${url}${url.includes("?") ? "&" : "?"}autoplay=1&mute=1`;
   }
 
-  // If a standard YouTube ID was found, format it as an embed link with autoplay and mute
+ 
   if (videoId) {
     return `https://www.youtube.com/embed/${videoId}?autoplay=1&mute=1`;
   }
 
-  // Fallback for non-YouTube videos (e.g. Vimeo, raw mp4)
+  
   return `${url}${url.includes("?") ? "&" : "?"}autoplay=1&mute=1`;
 };
 
@@ -39,7 +39,7 @@ const PastWinnersVideoSection = () => {
           sx={{
             fontFamily: poppins.style.fontFamily,
             fontWeight: 600,
-            fontSize: 14,
+            fontSize: { xs: "14px", md: "16px" },
             color: Colors.SECONDARY,
             textAlign: "center",
             mb: 2,
@@ -73,7 +73,7 @@ const PastWinnersVideoSection = () => {
           {video.description}
         </Typography>
 
-        {}
+      
         <Box
           sx={{
             position: "relative",
