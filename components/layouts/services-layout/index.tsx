@@ -11,7 +11,6 @@ const ServicesLayout = () => {
     <Box>
       <AnimationWrapper><Hero /></AnimationWrapper>
       <AnimationWrapper><ServicesList /></AnimationWrapper>
-      {}
     </Box>
   );
 };

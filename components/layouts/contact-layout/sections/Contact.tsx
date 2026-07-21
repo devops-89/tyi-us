@@ -135,7 +135,6 @@ const ContactSection = () => {
               {contact.description}
             </Typography>
 
-            {}
             <RadioGroup
               name="inquiryType"
               value={formik.values.inquiryType}

@@ -145,10 +145,12 @@ To help participants bring their ideas to life, we’ve partnered with one of th
         {
           title: "America's Top Young Innovators",
           image: ASSETS.IMAGES.ABOUT_GLOBAL_USA,
+          logo: ASSETS.IMAGES.LOGO,
         },
         {
           title: "UAE's Top Young Innovators",
           image: ASSETS.IMAGES.ABOUT_GLOBAL_UAE,
+          logo: ASSETS.IMAGES.LOGO_UAE,
         },
       ],
     },

@@ -115,7 +115,6 @@ const AwardsSection = () => {
                       },
                     }}
                   >
-                    {}
                     <Box
                       sx={{
                         backgroundColor: "#F4F7FC",
@@ -141,7 +140,6 @@ const AwardsSection = () => {
                       </Typography>
                     </Box>
 
-                    {}
                     <Box
                       className="icon-circle"
                       sx={{
@@ -190,7 +188,6 @@ const AwardsSection = () => {
                       )}
                     </Box>
 
-                    {}
                     <Stack spacing={0.8} sx={{ px: { xs: 0, md: 1 } }}>
                       {labelTop && (
                         <Typography

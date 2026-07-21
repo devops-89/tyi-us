@@ -139,12 +139,12 @@ export interface IWebsiteData {
       image1: any;
       image2: any;
     };
-    competitions: {
+       competitions: {
       sparkle: string;
       title: string;
       description: string;
       buttonText: string;
-      items: { title: string; image: any }[];
+      items: { title: string; image: any; logo: any }[]; 
     };
     partner: {
       sparkle: string;

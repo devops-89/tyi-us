@@ -40,7 +40,6 @@ const Header = () => {
           alignItems="center"
           spacing={2}
         >
-          {}
           <Link href="/" style={{ textDecoration: "none" }}>
             <Box sx={{ display: "flex", alignItems: "center", gap: 2 }}>
               <Image 
@@ -53,7 +52,6 @@ const Header = () => {
             </Box>
           </Link>
 
-          {}
           <Stack direction="row" spacing={4} alignItems="center">
             {NAV_ITEMS.map((item) => (
               <Stack 
@@ -84,7 +82,6 @@ const Header = () => {
             ))}
           </Stack>
 
-          {}
           <Button
             variant="contained"
             endIcon={

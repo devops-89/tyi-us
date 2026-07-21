@@ -8,7 +8,7 @@ import { Colors } from "@/utils/enum";
 interface IMetricsCardProps {
   label: string;
   value: string;
-  color: keyof typeof COLORS;
+  color: keyof typeof Colors;
 }
 
 const MetricsCard: React.FC<IMetricsCardProps> = ({ label, value, color }) => {
@@ -33,7 +33,7 @@ const MetricsCard: React.FC<IMetricsCardProps> = ({ label, value, color }) => {
         sx={{ 
           fontFamily: poppins.style.fontFamily, 
           fontWeight: 800, 
-          color: COLORS[color],
+          color: Colors[color],
           fontSize: { xs: "2rem", md: "2.5rem" },
           mb: 1
         }}

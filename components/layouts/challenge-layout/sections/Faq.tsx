@@ -38,7 +38,6 @@ const ChallengeFaqSection = () => {
           spacing={{ xs: 5, md: 10 }}
           alignItems="flex-start"
         >
-          {}
           <Grid size={{ xs: 12, md: 5 }}>
             <Box
               sx={{
@@ -95,7 +94,6 @@ const ChallengeFaqSection = () => {
             </Box>
           </Grid>
 
-          {}
           <Grid size={{ xs: 12, md: 7 }}>
             <Stack spacing={0} sx={{ mt: { xs: 0, md: -1.5 } }}>
               {faqItems.items.map((item, idx) => {
