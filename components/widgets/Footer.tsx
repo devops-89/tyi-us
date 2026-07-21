@@ -4,7 +4,7 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { Box, Container, Grid, Typography, Stack, IconButton, Divider } from "@mui/material";
-import { COLORS, CONSTANTS } from "@/utils/enum";
+import { Colors, CONSTANTS } from "@/utils/enum";
 import { poppins, ibmPlexSans } from "@/utils/fonts";
 import { ASSETS } from "@/utils/assets";
 import { WEBSITE_DATA } from "@/utils/website";
@@ -17,7 +17,7 @@ const Footer = ({ variant = "usa" }: { variant?: FooterVariant }) => {
   const hqLabel = variant === "uae" ? footerData.hqLabelUAE : footerData.hqLabelUSA;
 
   const linkStyle = {
-    color: COLORS.FOOTER_TEXT,
+    color: Colors.FOOTER_TEXT,
     fontSize: "15px",
     fontFamily: ibmPlexSans.style.fontFamily,
     textDecoration: "none",
@@ -28,7 +28,7 @@ const Footer = ({ variant = "usa" }: { variant?: FooterVariant }) => {
   return (
     <Box
       component="footer"
-      sx={{ backgroundColor: COLORS.FOOTER_BG, color: COLORS.WHITE }}
+      sx={{ backgroundColor: Colors.FOOTER_BG, color: Colors.WHITE }}
     >
       {}
       <Container maxWidth={false} sx={{ maxWidth: CONSTANTS.MAX_WIDTH, pt: { xs: 7, md: 9 }, pb: { xs: 5, md: 7 } }}>
@@ -51,7 +51,7 @@ const Footer = ({ variant = "usa" }: { variant?: FooterVariant }) => {
                 sx={{
                   fontFamily: ibmPlexSans.style.fontFamily,
                   fontSize: "14px",
-                  color: COLORS.FOOTER_TEXT,
+                  color: Colors.FOOTER_TEXT,
                   lineHeight: "24px",
                   maxWidth: 300,
                   textAlign: "justify",
@@ -69,13 +69,13 @@ const Footer = ({ variant = "usa" }: { variant?: FooterVariant }) => {
                     href={href}
                     aria-label={label}
                     sx={{
-                      backgroundColor: COLORS.WHITE,
+                      backgroundColor: Colors.WHITE,
                       width: 38,
                       height: 38,
-                      color: COLORS.SOCIAL_ICON,
+                      color: Colors.SOCIAL_ICON,
                       borderRadius: "50%",
                       "&:hover": {
-                        backgroundColor: COLORS.GRAY_LIGHT,
+                        backgroundColor: Colors.GRAY_LIGHT,
                         transform: "translateY(-2px)",
                       },
                       transition: "all 0.2s ease",
@@ -96,7 +96,7 @@ const Footer = ({ variant = "usa" }: { variant?: FooterVariant }) => {
                   fontFamily: poppins.style.fontFamily,
                   fontWeight: 700,
                   fontSize: "18px",
-                  color: COLORS.WHITE,
+                  color: Colors.WHITE,
                   letterSpacing: "0.2px",
                 }}
               >
@@ -120,7 +120,7 @@ const Footer = ({ variant = "usa" }: { variant?: FooterVariant }) => {
                   fontFamily: poppins.style.fontFamily,
                   fontWeight: 700,
                   fontSize: "18px",
-                  color: COLORS.WHITE,
+                  color: Colors.WHITE,
                   letterSpacing: "0.2px",
                 }}
               >
@@ -144,7 +144,7 @@ const Footer = ({ variant = "usa" }: { variant?: FooterVariant }) => {
                   fontFamily: poppins.style.fontFamily,
                   fontWeight: 700,
                   fontSize: "18px",
-                  color: COLORS.WHITE,
+                  color: Colors.WHITE,
                   letterSpacing: "0.2px",
                 }}
               >
@@ -166,7 +166,7 @@ const Footer = ({ variant = "usa" }: { variant?: FooterVariant }) => {
                       </Box>
                       <Typography
                         sx={{
-                          color: COLORS.FOOTER_TEXT,
+                          color: Colors.FOOTER_TEXT,
                           fontSize: "14px",
                           fontFamily: ibmPlexSans.style.fontFamily,
                           lineHeight: "22px",
@@ -198,7 +198,7 @@ const Footer = ({ variant = "usa" }: { variant?: FooterVariant }) => {
             sx={{
               fontFamily: ibmPlexSans.style.fontFamily,
               fontSize: "14px",
-              color: COLORS.FOOTER_TEXT,
+              color: Colors.FOOTER_TEXT,
             }}
           >
             {footerData.copyrightTemplate.replace("{orgName}", orgName)}
@@ -207,7 +207,7 @@ const Footer = ({ variant = "usa" }: { variant?: FooterVariant }) => {
             <Link
               href="#"
               style={{
-                color: COLORS.WHITE,
+                color: Colors.WHITE,
                 fontSize: "14px",
                 fontFamily: ibmPlexSans.style.fontFamily,
                 textDecoration: "none",
@@ -218,7 +218,7 @@ const Footer = ({ variant = "usa" }: { variant?: FooterVariant }) => {
             <Link
               href="#"
               style={{
-                color: COLORS.WHITE,
+                color: Colors.WHITE,
                 fontSize: "14px",
                 fontFamily: ibmPlexSans.style.fontFamily,
                 textDecoration: "none",

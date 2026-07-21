@@ -13,7 +13,7 @@ import {
 } from "@mui/material";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
-import { COLORS, CONSTANTS } from "@/utils/enum";
+import { Colors, CONSTANTS } from "@/utils/enum";
 import { poppins } from "@/utils/fonts";
 import SparkleLabel from "@/components/widgets/common/SparkleLabel";
 import { WEBSITE_DATA } from "@/utils/website";
@@ -67,7 +67,7 @@ const SuccessStoriesSection = () => {
   };
 
   return (
-    <Box sx={{py: { xs: 4, md: 6 }, backgroundColor: COLORS.WHITE}}>
+    <Box sx={{py: { xs: 4, md: 6 }, backgroundColor: Colors.WHITE}}>
       <Container
         maxWidth={false}
         sx={{
@@ -88,7 +88,7 @@ const SuccessStoriesSection = () => {
             sparkleSize={35}
             type="blue-star"
             sparklePosition="both"
-            color={COLORS.PRIMARY}
+            color={Colors.PRIMARY}
           />
         </Box>
 
@@ -109,7 +109,7 @@ const SuccessStoriesSection = () => {
               lineHeight: { xs: "28px", sm: "42px", md: "48px" },
               letterSpacing: "-0.01em",
               textTransform: "capitalize",
-              color: COLORS.BLACK,
+              color: Colors.BLACK,
             }}
           >
             {successStoriesData.title}
@@ -129,7 +129,7 @@ const SuccessStoriesSection = () => {
                 width: { xs: 32, md: 48 },
                 height: { xs: 32, md: 48 },
                 border: "1px solid #E5E5E5",
-                backgroundColor: COLORS.WHITE,
+                backgroundColor: Colors.WHITE,
                 "&:hover": { backgroundColor: "#F6F6F6" },
                 "& svg": {
                   width: { xs: 16, md: 20 },
@@ -146,7 +146,7 @@ const SuccessStoriesSection = () => {
                 width: { xs: 32, md: 48 },
                 height: { xs: 32, md: 48 },
                 border: "1px solid #E5E5E5",
-                backgroundColor: COLORS.WHITE,
+                backgroundColor: Colors.WHITE,
                 "&:hover": { backgroundColor: "#F6F6F6" },
                 "& svg": {
                   width: { xs: 16, md: 20 },
@@ -192,7 +192,7 @@ const SuccessStoriesSection = () => {
                     md: `calc(50% - ${CARD_GAP / 2}px)`,
                   },
                   minHeight: { xs: "auto", md: 543 },
-                  backgroundColor: COLORS.WHITE,
+                  backgroundColor: Colors.WHITE,
                   borderRadius: "16px",
                   overflow: "hidden",
                   border: "0.8px solid #0000001A",
@@ -231,7 +231,7 @@ const SuccessStoriesSection = () => {
                       fontSize: { xs: "16px", md: "20px" },
                       lineHeight: { xs: 1.2, md: 1.4 },
                       letterSpacing: "-0.45px",
-                      color: COLORS.BLACK,
+                      color: Colors.BLACK,
                       mb: 2,
                     }}
                   >

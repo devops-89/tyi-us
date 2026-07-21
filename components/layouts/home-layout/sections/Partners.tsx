@@ -4,7 +4,7 @@ import React from "react";
 import Image from "next/image";
 import { Box, Container, Stack, Typography } from "@mui/material";
 
-import { COLORS, CONSTANTS } from "@/utils/enum";
+import { Colors, CONSTANTS } from "@/utils/enum";
 import { poppins, ibmPlexSans } from "@/utils/fonts";
 import SparkleLabel from "@/components/widgets/common/SparkleLabel";
 import { ASSETS } from "@/utils/assets";
@@ -14,7 +14,7 @@ const PartnersSection = () => {
     <Box
       sx={{
         py: { xs: 4, md: 20 },
-        backgroundColor: COLORS.WHITE,
+        backgroundColor: Colors.WHITE,
         position: "relative",
         overflow: "hidden",
       }}
@@ -76,7 +76,7 @@ const PartnersSection = () => {
           >
             <SparkleLabel
               text="Connect With Us"
-              color={COLORS.PRIMARY}
+              color={Colors.PRIMARY}
                fontSize={{ xs:"16px", md:"18px"}}
  
             />
@@ -99,7 +99,7 @@ const PartnersSection = () => {
                   fontFamily: poppins.style.fontFamily,
                   fontWeight: 400,
                   fontSize: { xs: 30, sm: 34, md: 45 },
-                  color: COLORS.BLACK,
+                  color: Colors.BLACK,
                   lineHeight: 1.25,
                   mb: 1.5,
                 }}
@@ -112,7 +112,7 @@ const PartnersSection = () => {
                   fontFamily: ibmPlexSans.style.fontFamily,
                   fontWeight: 400,
                   fontSize: { xs: 14, md: 16 },
-                  color: COLORS.TEXT_MUTED,
+                  color: Colors.TEXT_MUTED,
                   lineHeight: { xs: 1.6, md: 1.6 },
                 }}
               >

@@ -3,7 +3,7 @@
 import React from "react";
 import { Box, Container, Typography } from "@mui/material";
 
-import { COLORS, CONSTANTS } from "@/utils/enum";
+import { Colors, CONSTANTS } from "@/utils/enum";
 import { poppins } from "@/utils/fonts";
 import SparkleLabel from "@/components/widgets/common/SparkleLabel";
 import { WEBSITE_DATA } from "@/utils/website";
@@ -14,7 +14,7 @@ const LearningOutcomesSection = () => {
 
   return (
     <Box
-      sx={{py: { xs: 4, md: 6 }, backgroundColor: COLORS.WHITE}}
+      sx={{py: { xs: 4, md: 6 }, backgroundColor: Colors.WHITE}}
     >
       <Container
         maxWidth={false}
@@ -42,7 +42,7 @@ const LearningOutcomesSection = () => {
                type="blue-star"
               sparklePosition="both"
               sparkleSize={35}
-              color={COLORS.PRIMARY}
+              color={Colors.PRIMARY}
             />
           </Box>
 
@@ -59,7 +59,7 @@ const LearningOutcomesSection = () => {
               },
               letterSpacing: "-0.03em",
               textAlign: "center",
-              color: COLORS.BLACK,
+              color: Colors.BLACK,
               mb: { xs: 2.5, md: 4 },
               maxWidth: "1000px",
               mx: "auto",
@@ -77,7 +77,7 @@ const LearningOutcomesSection = () => {
               letterSpacing: "-0.02em",
               textAlign: {xs:"justify", md:"center"},
               textTransform: "capitalize",
-              color: COLORS.TEXT_MUTED,
+              color: Colors.TEXT_MUTED,
               maxWidth: "1100px",
               mx: "auto",
             }}

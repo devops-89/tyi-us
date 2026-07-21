@@ -23,7 +23,7 @@ export enum Colors {
   SOCIAL_ICON_BORDER = "rgba(214, 14, 52, 0.15)",
 }
 
-export const COLORS = Colors;
+
 
 
 export const CONSTANTS = {

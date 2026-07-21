@@ -15,7 +15,7 @@ import {
 } from "@mui/material";
 import Link from "next/link";
 import Image from "next/image";
-import { COLORS, CONSTANTS } from "@/utils/enum";
+import { Colors, CONSTANTS } from "@/utils/enum";
 import { NAV_ITEMS } from "@/public/data/navigation";
 import { ibmPlexSans } from "@/utils/fonts";
 import { ArrowUpRight, ChevronDown, Menu, X } from "lucide-react";
@@ -52,9 +52,9 @@ const Navbar = () => {
           position: "fixed",
           top: 0,
           zIndex: 1000,
-          backgroundColor: COLORS.WHITE,
+          backgroundColor: Colors.WHITE,
           boxShadow: "0px 0px 5px rgba(0,0,0,0.1)",
-          borderBottom: `1px solid ${COLORS.BORDER}`,
+          borderBottom: `1px solid ${Colors.BORDER}`,
           display: "flex",
           alignItems: "center",
         }}
@@ -97,8 +97,8 @@ const Navbar = () => {
                     }
                     sx={{
                       cursor: "pointer",
-                      color: COLORS.BLACK,
-                      "&:hover": { color: COLORS.SECONDARY },
+                      color: Colors.BLACK,
+                      "&:hover": { color: Colors.SECONDARY },
                       transition: "color 0.2s ease",
                     }}
                   >
@@ -124,8 +124,8 @@ const Navbar = () => {
                     href={item.href}
                     sx={{
                       textDecoration: "none",
-                      color: COLORS.BLACK,
-                      "&:hover": { color: COLORS.SECONDARY },
+                      color: Colors.BLACK,
+                      "&:hover": { color: Colors.SECONDARY },
                       transition: "color 0.2s ease",
                     }}
                   >
@@ -185,7 +185,7 @@ const Navbar = () => {
                 endIcon={
                   <Box
                     sx={{
-                      backgroundColor: COLORS.WHITE,
+                      backgroundColor: Colors.WHITE,
                       borderRadius: "50%",
                       width: 30,
                       height: 30,
@@ -196,11 +196,11 @@ const Navbar = () => {
                       mr: 1,
                     }}
                   >
-                    <ArrowUpRight size={20} color={COLORS.SECONDARY} />
+                    <ArrowUpRight size={20} color={Colors.SECONDARY} />
                   </Box>
                 }
                 sx={{
-                  backgroundColor: COLORS.SECONDARY,
+                  backgroundColor: Colors.SECONDARY,
                   borderRadius: "50px",
                   px: "4px",
                   py: "7px",
@@ -211,7 +211,7 @@ const Navbar = () => {
                   fontSize: "14px",
                   boxShadow: "none",
                   "&:hover": {
-                    backgroundColor: COLORS.PRIMARY,
+                    backgroundColor: Colors.PRIMARY,
                     boxShadow: "0 8px 20px rgba(227, 24, 55, 0.2)",
                   },
                 }}
@@ -256,7 +256,7 @@ const Navbar = () => {
                       }
                       sx={{
                         cursor: "pointer",
-                        color: COLORS.BLACK,
+                        color: Colors.BLACK,
                       }}
                     >
                       <Typography
@@ -291,9 +291,9 @@ const Navbar = () => {
                               fontWeight: 500,
                               fontSize: "15px",
                               textDecoration: "none",
-                              color: COLORS.TEXT_MUTED,
+                              color: Colors.TEXT_MUTED,
                               "&:hover": {
-                                color: COLORS.SECONDARY,
+                                color: Colors.SECONDARY,
                               },
                             }}
                           >
@@ -317,7 +317,7 @@ const Navbar = () => {
                   onClick={() => setOpen(false)}
                   sx={{
                     textDecoration: "none",
-                    color: COLORS.BLACK,
+                    color: Colors.BLACK,
                   }}
                 >
                   <Typography
@@ -338,14 +338,14 @@ const Navbar = () => {
               endIcon={<ArrowUpRight size={18} />}
               sx={{
                 mt: 2,
-                backgroundColor: COLORS.SECONDARY,
+                backgroundColor: Colors.SECONDARY,
                 borderRadius: "50px",
                 textTransform: "none",
                 fontFamily: ibmPlexSans.style.fontFamily,
                 fontWeight: 600,
                 fontSize: "14px",
                 "&:hover": {
-                  backgroundColor: COLORS.PRIMARY,
+                  backgroundColor: Colors.PRIMARY,
                 },
               }}
             >

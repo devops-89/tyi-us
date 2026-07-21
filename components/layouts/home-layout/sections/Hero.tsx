@@ -6,7 +6,7 @@ import Link from "next/link";
 import { Box, Container, Stack, Typography, Button } from "@mui/material";
 import { ArrowUpRight } from "lucide-react";
 
-import { COLORS, Colors, CONSTANTS } from "@/utils/enum";
+import { Colors, CONSTANTS } from "@/utils/enum";
 import { poppins, ibmPlexSans } from "@/utils/fonts";
 import { WEBSITE_DATA } from "@/utils/website";
 import { ASSETS } from "@/utils/assets";
@@ -143,7 +143,7 @@ const HomeHeroSection = () => {
                 },
 
                 "&:hover": {
-                 backgroundColor: COLORS.PRIMARY,
+                 backgroundColor: Colors.PRIMARY,
                boxShadow: "0 8px 24px rgba(52, 96, 183, 0.25)",
                 },
               }}

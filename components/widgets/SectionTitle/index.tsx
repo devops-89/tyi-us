@@ -2,7 +2,7 @@
 
 import React from "react";
 import { Box, Typography, Stack } from "@mui/material";
-import { COLORS } from "@/utils/enum";
+import { Colors } from "@/utils/enum";
 import { STYLES } from "@/utils/styles";
 
 interface ISectionTitleProps {
@@ -28,7 +28,7 @@ const SectionTitle: React.FC<ISectionTitleProps> = ({
         variant="h2" 
         sx={{ 
           ...STYLES.HEADING, 
-          color: light ? COLORS.WHITE : COLORS.PRIMARY,
+          color: light ? Colors.WHITE : Colors.PRIMARY,
           fontSize: { xs: "2rem", md: "3rem" },
           position: "relative",
           display: "inline-block",
@@ -41,7 +41,7 @@ const SectionTitle: React.FC<ISectionTitleProps> = ({
             transform: align === "center" ? "translateX(-50%)" : "none",
             width: "60px",
             height: "4px",
-            backgroundColor: COLORS.SECONDARY,
+            backgroundColor: Colors.SECONDARY,
             borderRadius: "2px",
           }
         }}
@@ -53,7 +53,7 @@ const SectionTitle: React.FC<ISectionTitleProps> = ({
           variant="body1" 
           sx={{ 
             ...STYLES.SUBHEADING,
-            color: light ? "rgba(255,255,255,0.7)" : COLORS.GRAY_DARK,
+            color: light ? "rgba(255,255,255,0.7)" : Colors.GRAY_DARK,
           }}
         >
           {subtitle}

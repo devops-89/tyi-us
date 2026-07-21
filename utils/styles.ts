@@ -1,4 +1,4 @@
-import { COLORS } from "./enum";
+import { Colors } from "./enum";
 
 export const STYLES = {
   CONTAINER: {
@@ -11,11 +11,11 @@ export const STYLES = {
   },
   HEADING: {
     fontWeight: 800,
-    color: COLORS.PRIMARY,
+    color: Colors.PRIMARY,
     lineHeight: 1.2,
   },
   SUBHEADING: {
-    color: COLORS.GRAY_DARK,
+    color: Colors.GRAY_DARK,
     opacity: 0.8,
     maxWidth: "600px",
   },

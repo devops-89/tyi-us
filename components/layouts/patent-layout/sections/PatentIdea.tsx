@@ -4,7 +4,7 @@ import React from "react";
 import Image from "next/image";
 import { Box, Container, Stack, Typography } from "@mui/material";
 
-import { COLORS, CONSTANTS } from "@/utils/enum";
+import { Colors, CONSTANTS } from "@/utils/enum";
 import { poppins } from "@/utils/fonts";
 import SparkleLabel from "@/components/widgets/common/SparkleLabel";
 import { WEBSITE_DATA } from "@/utils/website";
@@ -14,7 +14,7 @@ const PatentSection = () => {
 
   return (
     <Box
-      sx={{py: { xs: 4, md: 6 }, backgroundColor: COLORS.WHITE}}
+      sx={{py: { xs: 4, md: 6 }, backgroundColor: Colors.WHITE}}
     >
       <Container
         maxWidth={false}
@@ -54,7 +54,7 @@ const PatentSection = () => {
                   sparkleSize={35}
                   type="blue-star"
                   sparklePosition="both"
-                  color={COLORS.PRIMARY}
+                  color={Colors.PRIMARY}
                 />
               </Box>
             </Box>
@@ -72,7 +72,7 @@ const PatentSection = () => {
                 },
                 letterSpacing: "-0.01em",
                 textTransform: "capitalize",
-                color: COLORS.BLACK,
+                color: Colors.BLACK,
                 mb: 2,
                 whiteSpace: "pre-line",
               }}
@@ -88,7 +88,7 @@ const PatentSection = () => {
                   lineHeight: { xs: 1.2, md: 1.4 },
                 letterSpacing: "-0.02em",
                 textTransform: "capitalize",
-                color: COLORS.TEXT_MUTED,
+                color: Colors.TEXT_MUTED,
                 maxWidth: { xs: "100%", md: 520 },
                 mx: { xs: "auto", md: 0 },
               }}
@@ -129,7 +129,7 @@ const PatentSection = () => {
               fontWeight: 400,
               fontSize: { xs: "14px", md: "16px" },
                   lineHeight: { xs: 1.2, md: 1.4 },
-              color: COLORS.TEXT_MUTED,
+              color: Colors.TEXT_MUTED,
              
               letterSpacing: "-0.02em",
               textTransform: "capitalize",
@@ -141,7 +141,7 @@ const PatentSection = () => {
               component="span"
               sx={{
                 fontWeight: 700,
-                color: COLORS.BLACK,
+                color: Colors.BLACK,
               }}
             >
               {patentData.paragraph1Prefix}
@@ -155,7 +155,7 @@ const PatentSection = () => {
               fontWeight: 400,
               fontSize: { xs: "14px", md: "16px" },
                   lineHeight: { xs: 1.2, md: 1.4 },
-              color: COLORS.TEXT_MUTED,
+              color: Colors.TEXT_MUTED,
               
               letterSpacing: "-0.02em",
               textTransform: "capitalize",
@@ -172,7 +172,7 @@ const PatentSection = () => {
               fontWeight: 600,
               fontSize: { xs: "14px", md: "16px" },
               lineHeight: { xs: 1.2, md: 1.4 },
-              color: COLORS.SECONDARY,
+              color: Colors.SECONDARY,
               textAlign: "center",
               mt: { xs: 4, md: 5 },
              

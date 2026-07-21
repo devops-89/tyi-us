@@ -7,7 +7,7 @@ import {
   Typography,
 } from "@mui/material";
 
-import { COLORS, CONSTANTS } from "@/utils/enum";
+import { Colors, CONSTANTS } from "@/utils/enum";
 import { poppins } from "@/utils/fonts";
 import SparkleLabel from "@/components/widgets/common/SparkleLabel";
 import { WEBSITE_DATA } from "@/utils/website";
@@ -39,7 +39,7 @@ const NurturingYoungInventorsSection = () => {
 
   return (
     <Box
-      sx={{py: { xs: 4, md: 6 }, backgroundColor: COLORS.WHITE}}
+      sx={{py: { xs: 4, md: 6 }, backgroundColor: Colors.WHITE}}
     >
       <Container
         maxWidth={false}
@@ -83,7 +83,7 @@ const NurturingYoungInventorsSection = () => {
                 sparkleSize={35}
                type="blue-star"
                 sparklePosition="both"
-                color={COLORS.PRIMARY}
+                color={Colors.PRIMARY}
               />
             </Box>
 
@@ -99,7 +99,7 @@ const NurturingYoungInventorsSection = () => {
                 },
                 letterSpacing: "-0.01em",
                 textTransform: "capitalize",
-                color: COLORS.BLACK,
+                color: Colors.BLACK,
                 mb: { xs: 3, md: 4 },
                 textAlign: {
                   xs: "center",
@@ -132,7 +132,7 @@ const NurturingYoungInventorsSection = () => {
                   lineHeight: { xs: 1.6, md: 1.4 },
                   letterSpacing: "-0.02em",
                   textTransform: "capitalize",
-                  color: COLORS.TEXT_MUTED,
+                  color: Colors.TEXT_MUTED,
                   mb: 0.6,
                 }}
               >
@@ -147,7 +147,7 @@ const NurturingYoungInventorsSection = () => {
                   lineHeight: { xs: 1.6, md: 1.4 },
                     letterSpacing: "-0.02em",
                     textTransform: "capitalize",
-                    color: COLORS.BLACK,
+                    color: Colors.BLACK,
                   }}
                 >
                   {item.highlight}
@@ -165,7 +165,7 @@ const NurturingYoungInventorsSection = () => {
               width: "100%",
               maxWidth: 1160,
               height: { xs: 230, sm: 420, md: 560, lg: 658 },
-              backgroundColor: COLORS.BLACK,
+              backgroundColor: Colors.BLACK,
               borderRadius: "29px",
               mx: "auto",
               overflow: "hidden",

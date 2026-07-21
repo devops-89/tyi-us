@@ -4,7 +4,7 @@ import React from "react";
 import { Box, Container, Grid, Typography } from "@mui/material";
 import { StudentIcon, HobbyistIcon, ParentsIcon } from "@/components/widgets/icons/icon";
 
-import { COLORS, CONSTANTS } from "@/utils/enum";
+import { Colors, CONSTANTS } from "@/utils/enum";
 import { poppins } from "@/utils/fonts";
 import SparkleLabel from "@/components/widgets/common/SparkleLabel";
 import { WEBSITE_DATA } from "@/utils/website";
@@ -26,7 +26,7 @@ const WhoIsThisForSection = () => {
     <Box
       sx={{
         py: { xs: 4, md: 8 }, 
-        backgroundColor: COLORS.SUBMIT_ACCENT_BG,
+        backgroundColor: Colors.SUBMIT_ACCENT_BG,
         mt: { xs: 4, sm: 6, md: 8 },
         mb: { xs: 4, sm: 6, md: 6 }
       }}
@@ -57,7 +57,7 @@ const WhoIsThisForSection = () => {
               sparkleSize={35}
               type="blue-star"
               sparklePosition="both"
-              color={COLORS.PRIMARY}
+              color={Colors.PRIMARY}
             />
           </Box>
 
@@ -74,7 +74,7 @@ const WhoIsThisForSection = () => {
               letterSpacing: "-0.01em",
               textAlign: "center",
               textTransform: "capitalize",
-              color: COLORS.BLACK,
+              color: Colors.BLACK,
               mb: 2,
             }}
           >
@@ -90,7 +90,7 @@ const WhoIsThisForSection = () => {
               letterSpacing: "-0.02em",
               textAlign: "center",
               textTransform: "capitalize",
-              color: COLORS.TEXT_MUTED,
+              color: Colors.TEXT_MUTED,
               maxWidth: 1100,
               mx: "auto",
             }}
@@ -131,7 +131,7 @@ const WhoIsThisForSection = () => {
                     width: { xs: 110, sm: 120, md: 129 },
                     height: { xs: 110, sm: 120, md: 129 },
                     borderRadius: "50%",
-                    backgroundColor: COLORS.WHITE,
+                    backgroundColor: Colors.WHITE,
                     mx: "auto",
                     mb: { xs: 3, md: 4 },
                     display: "flex",
@@ -168,7 +168,7 @@ const WhoIsThisForSection = () => {
                     letterSpacing: "-0.02em",
                     textAlign: "center",
                     textTransform: "uppercase",
-                    color: COLORS.BLACK,
+                    color: Colors.BLACK,
                     transition: "color 0.3s ease", 
                   }}
                 >
@@ -191,7 +191,7 @@ const WhoIsThisForSection = () => {
                     letterSpacing: "-0.02em",
                     textAlign: "center",
                     textTransform: "uppercase",
-                    color: COLORS.BLACK,
+                    color: Colors.BLACK,
                     transition: "color 0.3s ease", 
                   }}
                 >

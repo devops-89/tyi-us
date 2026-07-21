@@ -4,7 +4,7 @@ import React from "react";
 import Image from "next/image";
 import { Box, Container, Grid, Stack, Typography } from "@mui/material";
 
-import { COLORS, CONSTANTS } from "@/utils/enum";
+import { Colors, CONSTANTS } from "@/utils/enum";
 import { poppins } from "@/utils/fonts";
 import SparkleLabel from "@/components/widgets/common/SparkleLabel";
 import { WEBSITE_DATA } from "@/utils/website";
@@ -13,7 +13,7 @@ const CaseStudiesSection = () => {
   const caseStudies = WEBSITE_DATA.patent.CaseStudiesData;
 
   return (
-    <Box sx={{py: { xs: 4, md: 6 }, backgroundColor: COLORS.WHITE}}>
+    <Box sx={{py: { xs: 4, md: 6 }, backgroundColor: Colors.WHITE}}>
       <Container
         maxWidth={false}
         sx={{
@@ -45,7 +45,7 @@ const CaseStudiesSection = () => {
                 sparkleSize={35}
                type="blue-star"
                 sparklePosition="both"
-                color={COLORS.PRIMARY}
+                color={Colors.PRIMARY}
               />
             </Box>
 
@@ -57,7 +57,7 @@ const CaseStudiesSection = () => {
                 lineHeight: { xs: "38px", sm: "42px", md: "48px" },
                 letterSpacing: "-0.01em",
                 textTransform: "capitalize",
-                color: COLORS.BLACK,
+                color: Colors.BLACK,
               }}
             >
               {caseStudies.title}
@@ -80,7 +80,7 @@ const CaseStudiesSection = () => {
                       md: 290,
                     },
                     minHeight: 411.14,
-                    backgroundColor: COLORS.WHITE,
+                    backgroundColor: Colors.WHITE,
                     borderRadius: "16px",
                     border: "0.8px solid #0000001A",
                     overflow: "hidden",
@@ -100,7 +100,7 @@ const CaseStudiesSection = () => {
                         sm: 250,
                         md: 180,
                       },
-                      backgroundColor: COLORS.WHITE,
+                      backgroundColor: Colors.WHITE,
                     }}
                   >
                     <Image
@@ -204,7 +204,7 @@ const CaseStudiesSection = () => {
                           fontWeight: 400,
                           fontSize: "14px",
                           lineHeight: "20px",
-                          color: COLORS.PRIMARY,
+                          color: Colors.PRIMARY,
                           textDecoration: "none",
                         }}
                       >
@@ -222,7 +222,7 @@ const CaseStudiesSection = () => {
                           fontWeight: 400,
                           fontSize: "14px",
                           lineHeight: "20px",
-                          color: COLORS.PRIMARY,
+                          color: Colors.PRIMARY,
                           textDecoration: "none",
                         }}
                       >
