@@ -28,7 +28,6 @@ const PastWinnersHeroSection = () => {
           spacing={4}
           alignItems="flex-start"
         >
-          {}
           <Box sx={{ flex: 1, pt: 1, width: "100%" }}>
             <Box sx={{ mb: 2 }}>
               <SparkleLabel text={hero.sparkle} fontSize={{ xs:"16px", md:"18px"}} />
@@ -123,8 +122,6 @@ const PastWinnersHeroSection = () => {
               </Button>
             </Stack>
           </Box>
-
-          {}
           <Box
             sx={{
               flex: { xs: "none", md: 1.2 }, 
@@ -143,8 +140,6 @@ const PastWinnersHeroSection = () => {
               style={{ objectFit: "cover" }}
               priority
             />
-
-            {}
             <Box
               sx={{
                 position: "absolute",

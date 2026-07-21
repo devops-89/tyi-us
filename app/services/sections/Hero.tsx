@@ -23,7 +23,6 @@ const Hero = () => {
           spacing={4}
           alignItems="flex-start"
         >
-          {}
           <Box sx={{ flex: 1, pt: 4 }}>
             <Stack
               direction="row"
@@ -120,8 +119,6 @@ const Hero = () => {
               Patent Certificates.
             </Typography>
           </Box>
-
-          {}
           <Box
             sx={{
               flex: 1.2,
@@ -145,7 +142,6 @@ const Hero = () => {
                 fill
                 style={{ objectFit: "cover" }}
               />
-              {}
               <Box
                 sx={{
                   position: "absolute",
@@ -188,8 +184,6 @@ const Hero = () => {
                   </Typography>
                 </Box>
               </Box>
-
-              {}
               <Box
                 sx={{
                   position: "absolute",

@@ -29,7 +29,6 @@ const ProtectIdeaSection = () => {
             py: { xs: 4, md: 7 },
           }}
         >
-          {}
           <Box
             sx={{
               position: "absolute",
@@ -44,8 +43,6 @@ const ProtectIdeaSection = () => {
               pointerEvents: "none",
             }}
           />
-
-          {}
           <Box
             sx={{
               position: "absolute",

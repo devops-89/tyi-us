@@ -191,8 +191,6 @@ const AwardsSection = () => {
                         />
                       )}
                     </Box>
-
-                    {}
                     <Stack spacing={0.8} sx={{ px: { xs: 0, md: 1 } }}>
                       {labelTop && (
                         <Typography

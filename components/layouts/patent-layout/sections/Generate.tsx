@@ -356,8 +356,6 @@ const PatentPreviewSection = () => {
         </Box>
 
         <CertificateImage />
-
-        {}
         <Dialog
           open={openPreview}
           onClose={() => setOpenPreview(false)}

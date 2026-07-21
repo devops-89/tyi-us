@@ -26,7 +26,6 @@ const PastWinnersGuestsSection = () => {
         <Grid container spacing={4} justifyContent="center">
           {guests.items.map((g) => (
             <Grid key={g.name} size={{ xs: 12, md: 4 }}>
-              {}
               <Stack spacing={2} alignItems={{ xs: "center", md: "flex-start" }}>
                 <Box sx={{ position: "relative", width: "100%", height: 387, borderRadius: "18px", overflow: "hidden" }}>
                   <Image src={g.image} alt={g.name} fill style={{ objectFit: "cover" }} />

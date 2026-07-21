@@ -108,8 +108,6 @@ const ScaleSection = () => {
                 build groundbreaking ideas, and gain recognition for your
                 innovation.
               </Typography>
-
-              {}
               <Stack
                 direction={{ xs: "column", sm: "row" }}
                 spacing={{ xs: 3, sm: 4, md: 4, lg: 6 }}

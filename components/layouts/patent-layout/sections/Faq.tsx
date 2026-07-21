@@ -108,8 +108,6 @@ const FaqSection = () => {
               {faqs.buttonText}
             </Button>
           </Box>
-
-          {}
           <Box sx={{ flex: 1.3, width: "100%" }}>
             <Stack spacing={2}>
               {rows.map(({ question, answer, idx }) => {

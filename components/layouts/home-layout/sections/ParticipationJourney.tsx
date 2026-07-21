@@ -71,7 +71,6 @@ const ParticipationJourneySection = () => {
           px: { xs: 2, sm: 3, md: 4 },
         }}
       >
-        {}
         <Stack alignItems="center" textAlign="center" sx={{ mb: { xs: 6, md: 8 } }}>
           <Box sx={{ mb: 2 }}>
             <SparkleLabel
@@ -109,8 +108,6 @@ const ParticipationJourneySection = () => {
             {participation.description}
           </Typography>
         </Stack>
-
-        {}
         <Box
           sx={{
             display: 'grid',
@@ -143,7 +140,7 @@ const ParticipationJourneySection = () => {
                   '&:hover': {
                     borderColor: Colors.SECONDARY,
                     transform: 'translateY(-10px)', 
-                    boxShadow: '0 20px 40px rgba(227, 24, 55, 0.08)',
+                    boxShadow: Colors.BUTTON_SHADOW,
                     
                     '& .step-badge': {
                       backgroundColor: Colors.SECONDARY,
@@ -164,7 +161,7 @@ const ParticipationJourneySection = () => {
                   }
                 }}
               >
-                {}
+              
                 <Typography
                   className="watermark"
                   sx={{
@@ -173,7 +170,7 @@ const ParticipationJourneySection = () => {
                     right: '0px',
                     fontSize: '140px',
                     fontWeight: 800,
-                    color: 'rgba(227, 24, 55, 0.04)',
+                    color: Colors.BUTTON_SHADOW,
                     lineHeight: 1,
                     fontFamily: poppins.style.fontFamily,
                     zIndex: 0,
@@ -183,7 +180,7 @@ const ParticipationJourneySection = () => {
                   {String(index + 1).padStart(2, '0')}
                 </Typography>
 
-                {}
+           
                 <Stack 
                   direction="row" 
                   justifyContent="space-between" 
@@ -235,7 +232,7 @@ const ParticipationJourneySection = () => {
                   </Box>
                 </Stack>
 
-                {}
+              
                 <Stack 
                   direction="row" 
                   justifyContent="space-between" 
@@ -268,8 +265,6 @@ const ParticipationJourneySection = () => {
                     <ArrowUpRight size={22} />
                   </Box>
                 </Stack>
-
-                {}
                 <Typography
                   className="card-desc"
                   sx={{

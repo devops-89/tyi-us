@@ -8,6 +8,7 @@ export const ASSETS = {
     IMAGE38: "/images/hero-section/image38.png",
     IMAGE_WHAT_WAITING: "/images/hero-section/what-are-you-waiting-for.png",
     LOGO: "/images/logo/UAE-TYI-Logo-Green.png",
+    LOGO_US: "/images/logo/USA-TYI-Logo.svg",
     FOOTER_LOGO: "/images/logo/USA TYI New Logo 1.png",
     ICON_DOTS: "/images/icons/dot-icon.png",
     ICON_BLUESTAR: "/images/icons/green star.png",

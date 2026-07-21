@@ -26,7 +26,6 @@ const Hero = () => {
           spacing={4}
           alignItems="flex-start"
         >
-          {}
           <Box sx={{ flex: 1, pt: 4 }}>
             <Box sx={{ mb: 2 }}>
               <SparkleLabel 
@@ -111,7 +110,6 @@ const Hero = () => {
             </Typography>
 
             <Stack direction="column" spacing={5} alignItems="flex-start">
-              {}
               <Button
                 component={Link}
                 href={hero.cta1Href}
@@ -136,8 +134,6 @@ const Hero = () => {
               >
                 {hero.cta1Text}
               </Button>
-
-              {}
               <Stack direction={{ xs: "column", lg: "row" }} spacing={3} alignItems="flex-start">
                 <Button
                   component={Link}
@@ -179,8 +175,6 @@ const Hero = () => {
               </Stack>
             </Stack>
           </Box>
-
-          {}
           <Box
             sx={{
               flex: 1.2,
@@ -199,8 +193,6 @@ const Hero = () => {
               style={{ objectFit: "cover" }}
               priority
             />
-
-            {}
             <Box
               sx={{
                 position: "absolute",
@@ -268,8 +260,6 @@ const Hero = () => {
                 </Typography>
               </Box>
             </Box>
-
-            {}
             <Box
               sx={{
                 position: "absolute",

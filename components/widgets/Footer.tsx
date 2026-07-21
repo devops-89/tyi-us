@@ -30,7 +30,6 @@ const Footer = ({ variant = "usa" }: { variant?: FooterVariant }) => {
       component="footer"
       sx={{ backgroundColor: Colors.FOOTER_BG, color: Colors.WHITE }}
     >
-      {}
       <Container maxWidth={false} sx={{ maxWidth: CONSTANTS.MAX_WIDTH, pt: { xs: 7, md: 9 }, pb: { xs: 5, md: 7 } }}>
         <Grid container spacing={{ xs: 5, md: 4 }}>
 
@@ -45,8 +44,6 @@ const Footer = ({ variant = "usa" }: { variant?: FooterVariant }) => {
                   style={{ width: "100%", height: "auto", objectFit: "contain" }}
                 />
               </Box>
-
-              {}
               <Typography
                 sx={{
                   fontFamily: ibmPlexSans.style.fontFamily,
@@ -59,8 +56,6 @@ const Footer = ({ variant = "usa" }: { variant?: FooterVariant }) => {
               >
                 {footerData.description}
               </Typography>
-
-              {}
               <Stack direction="row" spacing={1.5} flexWrap="wrap">
                 {footerData.socialLinks.map(({ Icon, href, label }, idx) => (
                   <IconButton
@@ -87,8 +82,6 @@ const Footer = ({ variant = "usa" }: { variant?: FooterVariant }) => {
               </Stack>
             </Stack>
           </Grid>
-
-          {}
           <Grid size={{ xs: 12, sm: 4, md: 2.5 }}>
             <Stack spacing={3}>
               <Typography
@@ -111,8 +104,6 @@ const Footer = ({ variant = "usa" }: { variant?: FooterVariant }) => {
               </Stack>
             </Stack>
           </Grid>
-
-          {}
           <Grid size={{ xs: 12, sm: 4, md: 3 }}>
             <Stack spacing={3}>
               <Typography
@@ -135,8 +126,6 @@ const Footer = ({ variant = "usa" }: { variant?: FooterVariant }) => {
               </Stack>
             </Stack>
           </Grid>
-
-          {}
           <Grid size={{ xs: 12, sm: 4, md: 3 }}>
             <Stack spacing={3}>
               <Typography
@@ -183,8 +172,6 @@ const Footer = ({ variant = "usa" }: { variant?: FooterVariant }) => {
 
         </Grid>
       </Container>
-
-      {}
       <Container maxWidth={false} sx={{ maxWidth: CONSTANTS.MAX_WIDTH, pb: 4 }}>
         <Divider sx={{ borderColor: "rgba(255,255,255,0.12)" }} />
         <Stack

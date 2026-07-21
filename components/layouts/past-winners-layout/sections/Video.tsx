@@ -72,8 +72,6 @@ const PastWinnersVideoSection = () => {
         >
           {video.description}
         </Typography>
-
-        {}
         <Box
           sx={{
             position: "relative",

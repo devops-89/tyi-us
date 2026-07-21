@@ -136,7 +136,7 @@ To help participants bring their ideas to life, we’ve partnered with one of th
       image1: ASSETS.IMAGES.ABOUT_BOOKS,
       image2: ASSETS.IMAGES.ABOUT_YOUNG_STUDENTS,
     },
-    competitions: {
+       competitions: {
       sparkle: "Global Stages",
       title: "Our Global Competitions",
       description: "Celebrating young innovators through competitions across the globe, providing them with a platform for creativity, innovation, and real-world problem solving.",
@@ -145,10 +145,12 @@ To help participants bring their ideas to life, we’ve partnered with one of th
         {
           title: "America's Top Young Innovators",
           image: ASSETS.IMAGES.ABOUT_GLOBAL_USA,
+          logo: ASSETS.IMAGES.LOGO_US, 
         },
         {
           title: "UAE's Top Young Innovators",
           image: ASSETS.IMAGES.ABOUT_GLOBAL_UAE,
+          logo: ASSETS.IMAGES.LOGO, 
         },
       ],
     },

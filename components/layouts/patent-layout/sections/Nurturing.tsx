@@ -158,8 +158,6 @@ const NurturingYoungInventorsSection = () => {
               </Typography>
             ))}
           </Box>
-
-          {}
           <Box
             sx={{
               position: "relative",

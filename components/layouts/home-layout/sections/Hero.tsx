@@ -160,8 +160,6 @@ const HomeHeroSection = () => {
               {hero.cta1Text}
             </Button>
           </Box>
-
-          {}
           <Box
             sx={{
               flex: { xs: "none", md: 1.2 },
@@ -193,8 +191,6 @@ const HomeHeroSection = () => {
             />
           </Box>
         </Stack>
-
-        {}
         <Stack
           direction={{ xs: "column", lg: "row" }}
           spacing={{ xs: 2, lg: 8 }}
@@ -205,7 +201,6 @@ const HomeHeroSection = () => {
             width: "100%",
           }}
         >
-          {}
           <Typography
             sx={{
               fontFamily: ibmPlexSans.style.fontFamily,
@@ -268,8 +263,6 @@ const HomeHeroSection = () => {
             {hero.cta2Text}
           </Button>
         </Stack>
-
-        {}
         <Box
           sx={{
             mt: { xs: 5, md: 8 },
