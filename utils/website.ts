@@ -150,7 +150,7 @@ To help participants bring their ideas to life, we’ve partnered with one of th
         {
           title: "UAE's Top Young Innovators",
           image: ASSETS.IMAGES.ABOUT_GLOBAL_UAE,
-           logo: ASSETS.IMAGES.LOGO,
+           logo: ASSETS.IMAGES.LOGO_UAE,
         },
       ],
     },
@@ -820,7 +820,7 @@ Nurturing:  {
 
   title: "Nurturing Young Inventors",
 
-  videoUrl: "https://www.youtube.com/watch?v=YOUR_VIDEO_ID",
+   videoUrl: "https://www.youtube.com/watch?v=TVls4uiWbC4",
 
   items: [
     {

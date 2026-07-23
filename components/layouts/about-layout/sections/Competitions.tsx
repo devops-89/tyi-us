@@ -4,7 +4,7 @@ import React from "react";
 import Image from "next/image";
 import { Box, Container, Grid, Typography, Button } from "@mui/material";
 import { ArrowUpRight } from "lucide-react";
-// 👇 Variants added to the import here
+
 import { motion, Variants } from "framer-motion";
 
 import { Colors, CONSTANTS } from "@/utils/enum";
