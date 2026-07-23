@@ -139,7 +139,7 @@ To help participants bring their ideas to life, we’ve partnered with one of th
     competitions: {
       sparkle: "Global Stages",
       title: "Our Global Competitions",
-      description: "Celebrating young innovators through competitions across the globe, providing them with a platform for creativity, innovation, and real-world problem solving.",
+      description: "Celebrating young innovators through competitions across the globe, providing them with a platform for creativity, innovation, and real-world problem-solving.",
       buttonText: "Explore More",
       items: [
         {
