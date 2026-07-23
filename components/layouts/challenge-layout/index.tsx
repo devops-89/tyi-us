@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import AnimationWrapper from "@/components/widgets/common/AnimationWrapper";
 import { Box } from "@mui/material";
 
 import ChallengeHeroSection from "./sections/Hero";
@@ -16,12 +17,24 @@ const ChallengeLayout = () => {
   return (
     <Box>
       <ChallengeHeroSection />
-      <YoungMindsSection />
-      <AwardsSection />
-      <RulesSection />
-      <ScoreBreakdownSection />
-      <ChallengeFaqSection />
-      <ChallengeCtaSection />
+      <AnimationWrapper>
+        <YoungMindsSection />
+      </AnimationWrapper>
+      <AnimationWrapper>
+        <AwardsSection />
+      </AnimationWrapper>
+      <AnimationWrapper>
+        <RulesSection />
+      </AnimationWrapper>
+      <AnimationWrapper>
+        <ScoreBreakdownSection />
+      </AnimationWrapper>
+      <AnimationWrapper>
+        <ChallengeFaqSection />
+      </AnimationWrapper>
+      <AnimationWrapper>
+        <ChallengeCtaSection />
+      </AnimationWrapper>
       <Footer />
     </Box>
   );

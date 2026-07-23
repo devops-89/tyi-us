@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import AnimationWrapper from "@/components/widgets/common/AnimationWrapper";
 import { Box } from "@mui/material";
 
 import ContactSection from "./sections/Contact";

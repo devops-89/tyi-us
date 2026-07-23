@@ -1,0 +1,265 @@
+﻿"use client";
+
+import React from "react";
+import { Box } from "@mui/material";
+
+import AboutHeroSection from "./sections/Hero";
+import AboutPartnerSection from "./sections/Partner";
+import AboutCompetitionsSection from "./sections/Competitions";
+import Footer from "@/components/widgets/Footer";
+import CultureOfInnovationSection from "./sections/CultureOfInnovation";
+
+const AboutLayout = () => {
+  return (
+    <Box>
+      <AboutHeroSection />
+      <CultureOfInnovationSection/>
+      <AboutPartnerSection />
+      <AboutCompetitionsSection />
+      <Footer />
+    </Box>
+  );
+};
+
+export default AboutLayout;
+
+"use client";
+
+import React from "react";
+import { Box } from "@mui/material";
+
+import ChallengeHeroSection from "./sections/Hero";
+import YoungMindsSection from "./sections/YoungMinds";
+import AwardsSection from "./sections/Awards";
+import RulesSection from "./sections/Rules";
+import ScoreBreakdownSection from "./sections/ScoreBreakdown";
+import ChallengeFaqSection from "./sections/Faq";
+import ChallengeCtaSection from "./sections/Cta";
+import Footer from "@/components/widgets/Footer";
+
+const ChallengeLayout = () => {
+  return (
+    <Box>
+      <ChallengeHeroSection />
+      <YoungMindsSection />
+      <AwardsSection />
+      <RulesSection />
+      <ScoreBreakdownSection />
+      <ChallengeFaqSection />
+      <ChallengeCtaSection />
+      <Footer />
+    </Box>
+  );
+};
+
+export default ChallengeLayout;
+
+"use client";
+
+import React from "react";
+import { Box } from "@mui/material";
+
+import ContactSection from "./sections/Contact";
+import Footer from "@/components/widgets/Footer";
+
+const ContactLayout = () => {
+  return (
+    <Box>
+      <ContactSection />
+      <Footer variant="uae" />
+    </Box>
+  );
+};
+
+export default ContactLayout;
+
+"use client";
+
+import React from "react";
+import Hero from "./sections/Hero";
+import ChallengeSection from "./sections/Challenge";
+import ScaleSection from "./sections/Scale";
+import { Box } from "@mui/material";
+import Footer from "@/components/widgets/Footer";
+import ParticipationJourneySection from "./sections/ParticipationJourney";
+import WhyParticipateSection from "./sections/WhyParticipate";
+import PartnersSection from "./sections/Partners";
+import FaqSection from "./sections/Faq";
+
+import JoinCTA from "./sections/JoinCTA";
+import AnimationWrapper from "@/components/widgets/common/AnimationWrapper";
+
+const HomeLayout = () => {
+  return (
+    <Box>
+      <AnimationWrapper>
+        <Hero />
+      </AnimationWrapper>
+      <AnimationWrapper>
+        <ChallengeSection />
+      </AnimationWrapper>
+      <AnimationWrapper>
+        <ScaleSection />
+      </AnimationWrapper>
+      <AnimationWrapper>
+        <ParticipationJourneySection />
+      </AnimationWrapper>
+      <AnimationWrapper>
+        <WhyParticipateSection />
+      </AnimationWrapper>
+      <AnimationWrapper>
+        <JoinCTA />
+      </AnimationWrapper>
+      <AnimationWrapper>
+        <FaqSection />
+      </AnimationWrapper>
+      <AnimationWrapper>
+        <PartnersSection />
+      </AnimationWrapper>
+      <Footer />
+    </Box>
+  );
+};
+
+export default HomeLayout;
+"use client";
+
+import React from "react";
+import { Box } from "@mui/material";
+
+
+import Footer from "@/components/widgets/Footer";
+import ModulesCoveredSection from "./sections/Module";
+import LearningOutcomesSection from "./sections/Learning";
+import InnovationCampInfoCards from "./sections/Deadline";
+
+import PartnersSection from "../home-layout/sections/Partners";
+
+import SelectionFlowSection from "./sections/Selectionflow";
+import InnovationCampSection from "./sections/freeinnovation";
+
+
+
+
+const InnovationCamp = () => {
+  return (
+    <Box>
+     <InnovationCampSection/>
+     <ModulesCoveredSection/>
+     <LearningOutcomesSection/>
+     <InnovationCampInfoCards/>
+     <SelectionFlowSection/>
+     <PartnersSection/>
+    <Footer />
+    </Box>
+  );
+};
+
+export default InnovationCamp;
+
+"use client";
+
+import React from "react";
+import { Box } from "@mui/material";
+
+import PastWinnersHeroSection from "./sections/Hero";
+import PastWinnersVideoSection from "./sections/Video";
+import PastWinnersInnovationSection from "./sections/Innovation";
+import PastWinnersGuestsSection from "./sections/Guests";
+import PastWinnersWinnerSection from "./sections/Winner";
+import Footer from "@/components/widgets/Footer";
+
+const PastWinnersLayout = () => {
+  return (
+    <Box>
+      <PastWinnersHeroSection />
+      <PastWinnersVideoSection />
+      <PastWinnersInnovationSection />
+      <PastWinnersGuestsSection />
+      <PastWinnersWinnerSection />
+      <Footer />
+    </Box>
+  );
+};
+
+export default PastWinnersLayout;
+
+"use client";
+
+import React from "react";
+import { Box } from "@mui/material";
+import Footer from "@/components/widgets/Footer";
+import PatentSection from "./sections/PatentIdea";
+import WhyPatentMatterSection from "./sections/Patentmatter";
+import WhoIsThisForSection from "./sections/Bigidea";
+import PatentPreviewSection from "./sections/Generate";
+import NurturingYoungInventorsSection from "./sections/Nurturing";
+import PatentServiceSection from "./sections/patentservices";
+import CaseStudiesSection from "./sections/CaseStudy";
+import SuccessStoriesSection from "./sections/SuccessStory";
+import FaqSection from "./sections/Faq";
+import ProtectIdeaSection from "./sections/Contact";
+
+
+
+
+const GetPatent = () => {
+  return (
+    <Box>
+   
+     <PatentSection/>
+     <WhyPatentMatterSection/>
+     <WhoIsThisForSection/>
+     <PatentPreviewSection/>
+     <NurturingYoungInventorsSection/>
+     <PatentServiceSection/>
+     <CaseStudiesSection/>
+     <SuccessStoriesSection/>
+     <FaqSection/>
+     <ProtectIdeaSection/>
+      <Footer />
+    </Box>
+  );
+};
+
+export default GetPatent;
+
+"use client";
+
+import React from "react";
+import Hero from "./sections/Hero";
+import ServicesList from "./sections/ServicesList";
+import { Box } from "@mui/material";
+
+const ServicesLayout = () => {
+  return (
+    <Box>
+      <Hero />
+      <ServicesList />
+      {/* Add more sections as needed */}
+    </Box>
+  );
+};
+
+export default ServicesLayout;
+"use client";
+
+import React from "react";
+import { Box } from "@mui/material";
+
+import SubmitHeroSection from "./sections/Hero";
+import HowToParticipateSection from "./sections/HowToParticipate";
+import Footer from "@/components/widgets/Footer";
+
+const SubmitLayout = () => {
+  return (
+    <Box>
+      <SubmitHeroSection />
+      <HowToParticipateSection />
+      <Footer />
+    </Box>
+  );
+};
+
+export default SubmitLayout;
+

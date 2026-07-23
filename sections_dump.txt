@@ -1,0 +1,2054 @@
+﻿"use client";
+
+import React from "react";
+import { Box, Container, Typography, Grid } from "@mui/material";
+import { COLORS, CONSTANTS } from "@/utils/enum";
+import { poppins, ibmPlexSans } from "@/utils/fonts";
+import AppButton from "@/components/widgets/Button";
+import Image from "next/image";
+import { ASSETS } from "@/utils/assets";
+import Link from "next/link";
+
+const ChallengeSection = () => {
+  return (
+    <Box
+      sx={{py: { xs: 4, md: 6 }, backgroundColor: COLORS.WHITE}}
+    >
+      <Container
+        maxWidth={false}
+        sx={{
+          maxWidth: CONSTANTS.MAX_WIDTH,
+          px: { xs: 2, sm: 3, md: 4 },
+        }}
+      >
+        <Grid container spacing={{ xs: 5, md: 6 }} alignItems="stretch">
+         
+          <Grid
+            size={{ xs: 12, md: 6 }}
+            sx={{ display: "flex", flexDirection: "column" }}
+          >
+            <Box sx={{ pr: { xs: 0, md: 10 }, flex: 1 }}>
+              <Typography
+                variant="h3"
+                sx={{
+                  fontFamily: poppins.style.fontFamily,
+                  fontWeight: 400,
+                  fontSize: { xs: "24px", sm: "26px", md: "28px" },
+                  color: COLORS.BLACK,
+                  mb: 2,
+                  lineHeight: { xs: 1.25, md: 1.1 },
+                }}
+              >
+                The Ultimate Innovation Challenge for Young Minds!
+              </Typography>
+
+              <Typography
+                sx={{
+                  fontFamily: ibmPlexSans.style.fontFamily,
+                  fontSize: { xs: "14px", md: "16px" },
+                  color: COLORS.TEXT_MUTED,
+                  lineHeight: { xs: 1.2, md: 1.4 },
+                  mb: { xs: 3, md: 4 },
+                  maxWidth: "600px",
+                  textAlign:  "justify" ,
+                }}
+              >
+                Top Young Innovators, a globally recognized innovation challenge for young minds, is now in India. We are here to inspire, nurture, and discover the country's next generation of innovators and problem-solvers. 
+              </Typography>
+
+
+
+
+              <AppButton
+               component={Link}
+  href="/challenge" 
+                pill
+                sx={{
+                  mb: { xs: 4, md: 8 },
+      fontSize: { xs: "14px", md: "18px" },
+      padding: { xs: "8px 15px", md: "12px 32px" },
+      
+      display: "flex",
+      mx: "auto",
+      "@media (min-width: 768px)": {
+        display: "inline-flex",
+        mx: 0,
+      },
+                }}
+              >
+               Know More About the Competition
+              </AppButton>
+
+            </Box>
+
+            <Box
+              sx={{
+                borderRadius: { xs: "20px", md: "32px" },
+                overflow: "hidden",
+                position: "relative",
+                height: { xs: "280px", sm: "350px", md: "520px" },
+                mt: "auto",
+                border: "1px solid #EAEAEA",
+              }}
+            >
+              <Image
+                src={ASSETS.IMAGES.HERO2}
+                alt="Students innovating"
+                fill
+                style={{ objectFit: "cover" }}
+              />
+            </Box>
+          </Grid>
+
+         
+          <Grid
+            size={{ xs: 12, md: 6 }}
+            sx={{ display: "flex", flexDirection: "column" }}
+          >
+            <Box
+              sx={{
+                flex: 1,
+                pt: { xs: 0, md: 24 },
+                ml: { xs: 0, md: "auto" },
+                maxWidth: { xs: "100%", md: "520px" },
+              }}
+            >
+              <Typography
+                sx={{
+                  fontFamily: poppins.style.fontFamily,
+                  fontWeight: 400,
+                  fontSize: { xs: "24px", sm: "26px", md: "28px" },
+                  color: COLORS.BLACK,
+                  mb: 2,
+                  lineHeight: { xs: 1.25, md: 1.25 },
+                }}
+              >
+                Got an Idea That Can Change the World?
+              </Typography>
+
+              <Typography
+                sx={{
+                  fontFamily: ibmPlexSans.style.fontFamily,
+                  fontSize: { xs: "14px", md: "16px" },
+                  color: COLORS.TEXT_MUTED,
+                    lineHeight: { xs: 1.2, md: 1.4 },
+                  mb: { xs: 3, md: 4 },
+                  maxWidth: { xs: "100%", md: "520px" },
+                   textAlign:  "justify" ,
+                }}
+              >
+                If you are aged between 10 to 22 years and have an idea that can make a difference or simply the curiosity to solve real-world problems, Indiaâ€™s Top Young Innovators gives you the opportunity to learn, innovate, showcase your creativity, win the title and get global recognition.
+              </Typography>
+            </Box>
+
+            <Box
+              sx={{
+                borderRadius: { xs: "20px", md: "32px" },
+                overflow: "hidden",
+                position: "relative",
+                height: { xs: "280px", sm: "350px", md: "460px" },
+                mt: { xs: 0, md: 0 },
+                border: "1px solid #EAEAEA",
+              }}
+            >
+              <Image
+                src={ASSETS.IMAGES.HERO3}
+                alt="Eco Globe"
+                fill
+                style={{ objectFit: "cover" }}
+              />
+            </Box>
+          </Grid>
+        </Grid>
+      </Container>
+    </Box>
+  );
+};
+
+export default ChallengeSection;
+"use client";
+
+import React, { useMemo, useState } from "react";
+import {
+  Box,
+  Container,
+  Stack,
+  Typography,
+  IconButton,
+  Collapse,
+  Button,
+} from "@mui/material";
+import { Minus, Plus, ArrowUpRight } from "lucide-react";
+import { Colors, CONSTANTS } from "@/utils/enum";
+import { poppins, ibmPlexSans } from "@/utils/fonts";
+import { WEBSITE_DATA } from "@/utils/website";
+import SparkleLabel from "@/components/widgets/common/SparkleLabel";
+
+const { faqs } = WEBSITE_DATA.common;
+
+const FaqSection = () => {
+  const [openIndex, setOpenIndex] = useState<number>(0);
+
+  const rows = useMemo(
+    () => faqs.items.map((f, idx) => ({ ...f, idx })),
+    []
+  );
+
+  return (
+    <Box
+      sx={{py: { xs: 4, md: 4 }, backgroundColor: Colors.WHITE,
+        position: "relative",
+        overflow: "hidden"}}
+    >
+      <Container
+        maxWidth={false}
+        sx={{
+          maxWidth: CONSTANTS.MAX_WIDTH,
+          px: { xs: 2, sm: 3, md: 4 },
+        }}
+      >
+        <Stack
+          direction={{ xs: "column", md: "row" }}
+          spacing={{ xs: 5, md: 10 }}
+          alignItems="flex-start"
+        >
+   
+          <Box
+            sx={{
+              flex: 1,
+              width: "100%",
+              maxWidth: { xs: "100%", md: 560 },
+            }}
+          >
+            <Box sx={{ mb: 1.5 }}>
+              <SparkleLabel text={faqs.sparkle} fontSize={{xs:"16px", md:"18px"}} />
+            </Box>
+
+            <Typography
+              sx={{
+                fontFamily: poppins.style.fontFamily,
+                fontWeight: 400,
+                fontSize: { xs: 30, sm: 36, md: 40 , lg:45},
+                color: Colors.BLACK,
+                lineHeight: { xs: "42px", sm: "50px", md: "55px", lg:"66px" },
+                mb: 1.5,
+              }}
+            >
+              {faqs.title}
+            </Typography>
+
+            <Typography
+              sx={{
+                fontFamily: ibmPlexSans.style.fontFamily,
+                fontWeight: 400,
+                fontSize: { xs: 14, md: 16 },
+                color: Colors.TEXT_MUTED,
+                lineHeight: { xs: "24px", md: "25px" },
+                mb: 3,
+              }}
+            >
+              {faqs.description}
+            </Typography>
+
+            <Button
+              variant="outlined"
+              endIcon={<ArrowUpRight size={18} />}
+              sx={{
+                borderRadius: "50px",
+                px: { xs: 2.5, md: 3 },
+                py: 1,
+                borderColor: Colors.SECONDARY,
+                color: Colors.SECONDARY,
+                backgroundColor: "rgba(227, 24, 55, 0.08)",
+                textTransform: "none",
+                fontFamily: ibmPlexSans.style.fontFamily,
+                fontWeight: 400,
+                fontSize: { xs: "15px", md: "18px" },
+                width: { xs: "100%", sm: "fit-content" },
+                "&:hover": {
+                  backgroundColor: "rgba(227, 24, 55, 0.12)",
+                  borderColor: Colors.SECONDARY,
+                },
+              }}
+            >
+              {faqs.buttonText}
+            </Button>
+          </Box>
+
+      
+          <Box sx={{ flex: 1.3, width: "100%" }}>
+            <Stack spacing={2}>
+              {rows.map(({ question, answer, idx }) => {
+                const open = openIndex === idx;
+
+                return (
+                  <Box
+                    key={question}
+                    sx={{
+                      borderBottom: `1px solid ${Colors.BLACK}`,
+                    }}
+                  >
+                    <Stack
+                      direction="row"
+                      alignItems="center"
+                      justifyContent="space-between"
+                      sx={{
+                        py: { xs: 2, md: 1.5 },
+                        gap: 2,
+                      }}
+                    >
+                      <Typography
+                        sx={{
+                                                 fontFamily: poppins.style.fontFamily,
+                                                 fontWeight: 400,
+                          fontSize: { xs: 14, sm: 22, md: 20, lg: 26 },
+                                                 color: Colors.BLACK,
+                          lineHeight: { xs: "24px", md: "35px", lg: "40px" },
+                                                 flex: 1,
+                                               }}
+                      >
+                        {question}
+                      </Typography>
+
+                      <IconButton
+                        onClick={() =>
+                          setOpenIndex(open ? -1 : idx)
+                        }
+                        sx={{
+                          width: { xs: 36, md: 44 },
+                          height: { xs: 36, md: 44 },
+                          borderRadius: "999px",
+                          
+                          color: open ? Colors.PRIMARY : Colors.SECONDARY,
+                          flexShrink: 0,
+                          transition: "color 0.3s ease",
+                        }}
+                      >
+                        {open ? (
+                          <Minus size={22} />
+                        ) : (
+                          <Plus size={22} />
+                        )}
+                      </IconButton>
+                    </Stack>
+
+                    <Collapse
+                      in={open}
+                      timeout="auto"
+                      unmountOnExit
+                    >
+                      {answer && (
+                        <Typography
+                          sx={{
+                            pb: 2,
+                            pr: { xs: 1, md: 4 },
+                            fontFamily:
+                              ibmPlexSans.style.fontFamily,
+                            fontWeight: 400,
+                            
+                            fontSize: { xs: 14, md: 16 },
+                            color: Colors.TEXT_MUTED,
+                            lineHeight: { xs: "24px", md: "28px" },
+                          }}
+                        >
+                          {answer}
+                        </Typography>
+                      )}
+                    </Collapse>
+                  </Box>
+                );
+              })}
+            </Stack>
+          </Box>
+        </Stack>
+      </Container>
+    </Box>
+  );
+};
+
+export default FaqSection;
+"use client";
+
+import React from "react";
+import Image from "next/image";
+import Link from "next/link";
+import { Box, Container, Stack, Typography, Button } from "@mui/material";
+import { ArrowUpRight } from "lucide-react";
+
+import { Colors, CONSTANTS } from "@/utils/enum";
+import { poppins, ibmPlexSans } from "@/utils/fonts";
+import { WEBSITE_DATA } from "@/utils/website";
+import { ASSETS } from "@/utils/assets";
+import SparkleLabel from "@/components/widgets/common/SparkleLabel";
+
+const HomeHeroSection = () => {
+  const { hero } = WEBSITE_DATA.home;
+
+  return (
+    <Box
+      sx={{
+        pt: { xs: 0, md: 4 },
+        pb: { xs: 3, md: 4 },
+        backgroundColor: Colors.WHITE,
+        position: "relative",
+      }}
+    >
+      <Container
+        maxWidth={false}
+        sx={{
+          maxWidth: CONSTANTS.MAX_WIDTH,
+          px: { xs: 2, sm: 3, md: 4 },
+        }}
+      >
+     
+        <Stack
+          direction={{ xs: "column", md: "row" }}
+          spacing={{ xs: 4, md: 6 }}
+          alignItems="flex-start"
+        >
+       
+          <Box sx={{ flex: 1, pt: { xs: 1, md: 4 }, width: "100%" }}>
+            <Box sx={{ mb: 2 }}>
+              <SparkleLabel
+                text={hero.sparkle}
+                fontSize={{ xs:"16px", md:"18px"}}
+                sparklePosition="right"
+                type="diamond"
+                sparkleSize={35}
+              />
+            </Box>
+
+            <Typography
+              sx={{
+                fontFamily: poppins.style.fontFamily,
+                fontWeight: 700,
+                fontSize: { xs: "16px", md: "20px" },
+                color: Colors.BLACK,
+                mb: 1,
+              }}
+            >
+              {hero.secondaryTitle}
+            </Typography>
+
+            <Box sx={{ mb: 0, mt: 1 }}>
+              <Typography
+                sx={{
+                  fontFamily: poppins.style.fontFamily,
+                  fontWeight: 600,
+                  fontSize: { xs: "28px", sm: "36px", md: "45px" },
+                  backgroundColor: Colors.BLACK,
+                  color: Colors.WHITE,
+                  display: "inline-block",
+                  px: { xs: 2, md: 3 },
+                  py: 1,
+                  borderRadius: "15px 50px 50px 0",
+                  lineHeight: 1.1,
+                }}
+              >
+                {hero.tertiaryTitle}
+              </Typography>
+            </Box>
+
+            <Box sx={{ mb: 3, mt: 0 }}>
+              <Typography
+                sx={{
+                  fontFamily: poppins.style.fontFamily,
+                  fontWeight: 600,
+                  fontSize: { xs: "28px", sm: "36px", md: "45px" },
+                  backgroundColor: Colors.BLACK,
+                  color: Colors.WHITE,
+                  display: "inline-block",
+                  px: { xs: 2, md: 3 },
+                  py: 1,
+                  borderRadius: "0 50px 50px 15px",
+                  lineHeight: 1.1,
+                }}
+              >
+                {hero.title}
+              </Typography>
+            </Box>
+
+            <Typography
+              variant="body1"
+              sx={{
+                fontFamily: ibmPlexSans.style.fontFamily,
+                fontSize: { xs: "14px", md: "16px" },
+                color: Colors.TEXT_MUTED,
+                maxWidth: "600px",
+                textAlign: "justify",
+                lineHeight: { xs: 1.2, md: 1.4 },
+
+                mb: 3,
+              }}
+            >
+              {hero.description}
+            </Typography>
+
+            <Button
+              component={Link}
+              href={hero.cta1Href}
+              variant="contained"
+              endIcon={<ArrowUpRight size={18} />}
+              sx={{
+                height: { xs: 40, md: 48 },
+                borderRadius: "50px",
+                px: { xs: 2.5, md: 4 },
+                backgroundColor: Colors.SECONDARY,
+                color: Colors.WHITE,
+                fontFamily: poppins.style.fontFamily,
+                fontWeight: 600,
+                fontSize: { xs: "14px", md: "16px" },
+                textTransform: "none",
+                boxShadow: "none",
+                
+                
+                display: "flex",
+                mx: "auto",
+                width: "fit-content",
+                "@media (min-width: 768px)": {
+                  display: "inline-flex",
+                  mx: 0,
+                  width: "auto",
+                },
+
+                "&:hover": {
+                 backgroundColor: Colors.PRIMARY,
+               boxShadow: "0 8px 24px rgba(52, 96, 183, 0.25)",
+                },
+              }}
+            >
+              {hero.cta1Text}
+            </Button>
+          </Box>
+
+       
+          <Box
+            sx={{
+              flex: { xs: "none", md: 1.2 },
+              position: "relative",
+              width: "100%",
+              borderRadius: "24px",
+              overflow: "hidden",
+              boxShadow: "0 20px 60px rgba(0,0,0,0.1)",
+              height: { xs: "260px", sm: "340px", md: "460px" },
+              maxWidth: "840px",
+            }}
+          >
+            <iframe
+              src={hero.video}
+              title="America's Top Young Innovators Video"
+             
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerPolicy="strict-origin-when-cross-origin"
+              allowFullScreen
+              style={{ 
+                position: "absolute",
+                top: 0,
+                left: 0,
+                width: "100%", 
+                height: "100%", 
+                objectFit: "cover",
+                border: 0  
+              }}
+            />
+          </Box>
+        </Stack>
+
+     
+        <Stack
+          direction={{ xs: "column", lg: "row" }}
+          spacing={{ xs: 2, lg: 8 }}
+          alignItems={{ xs: "stretch", lg: "center" }}
+          justifyContent="space-between"
+          sx={{
+            mt: { xs: 3, md: 12 },
+            width: "100%",
+          }}
+        >
+       
+          <Typography
+            sx={{
+              fontFamily: ibmPlexSans.style.fontFamily,
+              fontSize: { xs: "14px", md: "16px" },
+              color: Colors.BLACK,
+            lineHeight: { xs: 1.2, md: 1.4 },
+
+              textAlign: "justify",
+              maxWidth: { lg: "950px" },
+              order: { xs: 1, lg: 2 },
+              flex: 1,
+              whiteSpace: "pre-line",
+              "& span": {
+                color: Colors.SECONDARY,
+                fontWeight: 700,
+              },
+            }}
+          >
+            <span>Top Young Innovators</span>{" "}
+            {hero.description2.replace("Top Young Innovators ", "")}
+          </Typography>
+
+          {/* ABOUT BUTTON */}
+          <Button
+            component={Link}
+            href={hero.cta2Href}
+            variant="outlined"
+            endIcon={<ArrowUpRight size={18} />}
+            sx={{
+              height: { xs: 40, md: 48 },
+              borderRadius: "50px",
+              px: { xs: 2.5, md: 4 },
+              border: `1px solid ${Colors.SECONDARY}`,
+              color: Colors.SECONDARY,
+              fontFamily: poppins.style.fontFamily,
+              fontWeight: 600,
+              fontSize: { xs: "14px", md: "16px" },
+              textTransform: "none",
+              backgroundColor: "transparent",
+
+              
+              width: "fit-content",
+              alignSelf: "center",
+              "@media (min-width: 768px)": {
+                alignSelf: "flex-start",
+              },
+
+              order: { xs: 2, lg: 1 },
+
+              mt: {
+                xs: 4,
+                md: 0,
+              },
+
+              "&:hover": {
+                backgroundColor: "rgba(227, 24, 55, 0.05)",
+                borderColor: Colors.SECONDARY,
+              },
+            }}
+          >
+            {hero.cta2Text}
+          </Button>
+        </Stack>
+
+     
+        <Box
+          sx={{
+            mt: { xs: 5, md: 8 },
+            width: "100%",
+            height: "1.5px",
+            backgroundColor: "rgba(0, 0, 0, 0.1)",
+          }}
+        />
+      </Container>
+    </Box>
+  );
+};
+
+export default HomeHeroSection;
+"use client";
+
+import React from "react";
+import { Box, Container, Stack, Typography } from "@mui/material";
+import { ArrowUpRight } from "lucide-react";
+
+import { COLORS, CONSTANTS } from "@/utils/enum";
+import { poppins, ibmPlexSans } from "@/utils/fonts";
+import AppButton from "@/components/widgets/Button";
+import Image from "next/image";
+import { ASSETS } from "@/utils/assets";
+import SparkleLabel from "@/components/widgets/common/SparkleLabel";
+import Link from "next/link";
+
+const JoinCTA = () => {
+  return (
+    <Box
+      sx={{
+        pt: { md: 8, lg: 32 }, 
+        pb: { xs: 2, md: 10 },
+        
+      
+        "@media (max-width: 767px)": {
+          pt: "40px", 
+        },
+
+      
+        "@media (min-width: 768px) and (max-width: 899px)": {
+          pt: "100px", 
+        },
+      
+
+        backgroundColor: COLORS.WHITE,
+        position: "relative",
+        zIndex: 10,
+        overflow: "visible",
+      }}
+    >
+      
+      <Box
+        sx={{
+          position: "absolute",
+          right: 0,
+          bottom: { md: 30 },
+          width: { md: 180 },
+          height: { md: 120 },
+          display: { xs: "none", md: "block" },
+          zIndex: 0,
+        }}
+      >
+        <Image
+          src={ASSETS.IMAGES.ICON_DOTS}
+          alt=""
+          fill
+          style={{ objectFit: "contain", objectPosition: "bottom right" }}
+        />
+      </Box>
+
+      <Container
+        maxWidth={false}
+        sx={{
+          maxWidth: CONSTANTS.MAX_WIDTH,
+          position: "relative",
+          zIndex: 1,
+          px: { xs: 0.5, sm: 0.5, md: 4, lg: 20 },
+        }}
+      >
+        <Stack
+          direction={{ xs: "column", md: "row" }}
+          spacing={{ xs: 2, sm: 5, md: 10 }} 
+          alignItems="center"
+        >
+        
+          <Box
+            sx={{
+              flex: 1,
+              order: { xs: 1, md: 1 },
+              position: "relative",
+              width: "100%",
+              display: "flex",
+              justifyContent: "center",
+            }}
+          >
+            <Box
+              sx={{
+                position: "relative",
+                width: {
+                  xs: "72vw",
+                  sm: "336px",
+                  md: "336px",
+                  lg: "518px",
+                },
+                maxWidth: "518px",
+                aspectRatio: "518 / 572",
+              }}
+            >
+              <Box
+                sx={{
+                  position: "relative",
+                  width: "100%",
+                  height: "100%",
+                  borderRadius: { xs: "24px", md: "35px" },
+                  overflow: "hidden",
+                }}
+              >
+                <Image
+                  src={ASSETS.IMAGES.IMAGE_WHAT_WAITING}
+                  alt="Students collaborating on innovation"
+                  fill
+                  priority
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  style={{
+                    objectFit: "cover",
+                    objectPosition: "center",
+                  }}
+                />
+              </Box>
+
+
+              <Box
+                sx={{
+                  position: "absolute",
+                  width: {
+                    xs: "100px",
+                    sm: "180px",
+                    md: "150px",
+                    lg: "277px",
+                  },
+                  height: {
+                    xs: "100px",
+                    sm: "180px",
+                    md: "150px",
+                    lg: "277px",
+                  },
+                  top: {
+                    xs: "-48px",
+                    sm: "-100px",
+                    md: "-74px",
+                    lg: "-154px",
+                  },
+                  right: {
+                    xs: "-28px",
+                    sm: "-72px",
+                    md: "-46px",
+                    lg: "-111px",
+                  },
+                  borderRadius: "50%",
+                  border: "0.5px solid #101010",
+                  backgroundColor: COLORS.WHITE,
+                  zIndex: 3,
+                }}
+              >
+             
+                <Box
+                  sx={{
+                    position: "absolute",
+                    top: 0,
+                    left: 0,
+                    right: 0,
+                    bottom: 0,
+                    margin: "auto",
+                    width: {
+                      xs: "78%",
+                      sm: "117px",
+                      md: "98px",
+                      lg: "180px",
+                    },
+                    height: {
+                      xs: "78%",
+                      sm: "117px",
+                      md: "98px",
+                      lg: "180px",
+                    },
+                    backgroundColor: "#FFEDF1",
+                    borderRadius: "50%",
+                    display: "flex",
+                    flexDirection: "column",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    textAlign: "center",
+                    p: { xs: 0.5, sm: 0.8, md: 1.3 },
+                  }}
+                >
+                  <Box
+                    sx={{
+                      position: "relative",
+                      width: {
+                        xs: 18,
+                        sm: 28,
+                        md: 20,
+                        lg: 43.76 
+                      },
+                      height: {
+                        xs: 18,
+                        sm: 28,
+                        md: 20,
+                        lg: 43.76 
+                      },
+                      mb: { xs: 0.3, md: 1 },
+                    }}
+                  >
+                    <Image
+                      src={ASSETS.IMAGES.ICON_CERTIFICATE}
+                      alt=""
+                      fill
+                      style={{ objectFit: "contain" }}
+                    />
+                  </Box>
+
+                  <Typography
+                    sx={{
+                      fontFamily: ibmPlexSans.style.fontFamily,
+                      fontSize: {
+                        xs: "7.5px",
+                        sm: "6.5px",
+                        md: "6.5px",
+                        lg: "10px",
+                      },
+                      fontWeight: 500,
+                      color: COLORS.SECONDARY,
+                      lineHeight: 1.35,
+                    }}
+                  >
+                    Prestigious Title of
+                  </Typography>
+
+                  <Typography
+                    sx={{
+                      fontFamily: ibmPlexSans.style.fontFamily,
+                      fontSize: {
+                        xs: "9px",
+                        sm: "9px",
+                        md: "9px",
+                        lg: "14px",
+                      },
+                      fontWeight: 700,
+                      color: COLORS.SECONDARY,
+                      lineHeight: 1.2,
+                      mt: 0.3,
+                    }}
+                  >
+                    America&apos;s Top
+                    <br />
+                    Young Innovator
+                  </Typography>
+                </Box>
+              </Box>
+
+
+              <Box
+                sx={{
+                  position: "absolute",
+                  width: {
+                    xs: "32%",
+                    sm: "140px",
+                    md: "150px",
+                    lg: "264px",
+                  },
+                  height: {
+                    xs: "40px",
+                    sm: "90px",
+                    md: "90px",
+                    lg: "140px",
+                  },
+                  left: {
+                    xs: "-40px",
+                    sm: "-70px",
+                    md: "-70px",
+                    lg: "-130px",
+                  },
+                  bottom: {
+                    xs: "15px",
+                    sm: "30px",
+                    md: "30px",
+                    lg: "45px",
+                  },
+                  backgroundColor: COLORS.WHITE,
+                  borderRadius: "200px",
+                  boxShadow: "0px 30px 80px rgba(47, 65, 88, 0.2)",
+                  zIndex: 3,
+                  display: "grid",
+                  placeItems: "center",
+                }}
+              >
+             
+                <Box
+                  sx={{
+                    width: "80%",
+                    height: "72%",
+                    borderRadius: "200px",
+                    display: "flex",
+                    flexDirection: "column",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    textAlign: "center",
+                    px: { xs: 0.2, md: 0.4 },
+                  }}
+                >
+                  <Box
+                    sx={{
+                      position: "relative",
+                      width: {
+                        xs: 10,
+                        sm: 48,
+                        md: 36,
+                        lg: 74.58 
+                      },
+                      height: {
+                        xs: 10,
+                        sm: 48,
+                        md: 36,
+                        lg: 74.58 
+                      },
+                      mb: { xs: 0.15, md: 0.3 },
+                    }}
+                  >
+                    <Image
+                      src={ASSETS.IMAGES.ICON_GLOBE_HANDS}
+                      alt=""
+                      fill
+                      style={{ objectFit: "contain" }}
+                    />
+                  </Box>
+
+                  <Typography
+                    sx={{
+                      fontFamily: ibmPlexSans.style.fontFamily,
+                      fontSize: {
+                        xs: "4px",
+                        sm: "9px",
+                        md: "8px",
+                        lg: "14px",
+                      },
+                      fontWeight: 600,
+                      color: COLORS.SECONDARY,
+                      lineHeight: 1.15,
+                    }}
+                  >
+                    Showcase your Innovation
+                  </Typography>
+
+                  <Typography
+                    sx={{
+                      fontFamily: ibmPlexSans.style.fontFamily,
+                      fontSize: {
+                        xs: "3.5px",
+                        sm: "6.5px",
+                        md: "6px",
+                        lg: "10px",
+                      },
+                      fontWeight: 500,
+                      color: COLORS.SECONDARY,
+                      lineHeight: 1.2,
+                      mt: 0.2,
+                    }}
+                  >
+                    To The World
+                  </Typography>
+                </Box>
+              </Box>
+            </Box>
+          </Box>
+
+
+          <Box
+            sx={{
+              flex: 1,
+              order: { xs: 2, md: 2 },
+              position: "relative",
+              width: "100%",
+              textAlign: { xs: "center", md: "left" },
+              mb: { xs: 8, sm: 6, md: 0 },
+            }}
+          >
+            <Box sx={{ mb: 2, mt: 4 }}>
+              <SparkleLabel
+                text="Join Us"
+                sparklePosition="both"
+                type="diamond"
+                color={COLORS.PRIMARY}
+                fontSize={{ xs:"16px", md:"18px"}}
+                sparkleSize={35}
+              />
+            </Box>
+
+            <Typography
+              variant="h2"
+              sx={{
+                fontFamily: poppins.style.fontFamily,
+                fontWeight: 400,
+                fontSize: { xs: "24px", md: "28px" },
+                color: COLORS.BLACK,
+                lineHeight: 1.2,
+                mb: 2,
+              }}
+            >
+              What are you waiting for?
+            </Typography>
+
+            <Typography
+              sx={{
+                fontFamily: ibmPlexSans.style.fontFamily,
+                fontSize: { xs: "14px", md: "16px" },
+                color: COLORS.TEXT_MUTED,
+                mb: { xs: 4.5, md: 3.5 },
+                maxWidth: { xs: "100%", md: "480px" },
+                lineHeight: { xs: "28px", md: "26px" },
+                mx: { xs: "auto", md: 0 },
+              }}
+            >
+              Solve the Worldâ€™s Biggest Problems & showcase Your Idea Globally
+            </Typography>
+
+            <AppButton
+              pill
+              component={Link}
+              href="/submit" 
+              sx={{
+                backgroundColor: COLORS.SECONDARY,
+                color: COLORS.WHITE,
+                px: { xs: 3, md: 4 },
+                py: 1.2,
+                fontSize: { xs: "16px", md: "18px" },
+                fontWeight: 600,
+                alignItems: "center",
+                display: "inline-flex",
+                gap: 1,
+                mb: { xs: 6, sm: 4, md: 0 },
+                "&:hover": {
+                  backgroundColor: COLORS.PRIMARY,
+                  boxShadow: "0 8px 24px rgba(52, 96, 183, 0.25)",
+                },
+              }}
+            >
+              Participate Now
+            </AppButton>
+          </Box>
+        </Stack>
+      </Container>
+    </Box>
+  );
+};
+
+export default JoinCTA;
+"use client";
+
+import React from "react";
+import { Box, Container, Grid } from "@mui/material";
+import { COLORS, CONSTANTS } from "@/utils/enum";
+import MetricsCard from "@/components/widgets/common/Metrics-Card";
+import { METRICS_DATA } from "@/public/data/insights";
+
+const MetricsSection = () => {
+  return (
+    <Box sx={{  py: { xs: 4, md: 8 }, backgroundColor: COLORS.WHITE }}>
+      <Container maxWidth={false} sx={{ maxWidth: CONSTANTS.MAX_WIDTH }}>
+        <Grid container spacing={4}>
+          {METRICS_DATA.map((metric, index) => (
+            <Grid size={{ xs: 6, md: 3 }} key={index}>
+              <MetricsCard {...metric} />
+            </Grid>
+          ))}
+        </Grid>
+      </Container>
+    </Box>
+  );
+};
+
+export default MetricsSection;
+"use client";
+
+import React from "react";
+import Image from "next/image";
+import { Box, Container, Stack, Typography } from "@mui/material";
+import { 
+  ArrowUpRight, 
+  ClipboardList, 
+  Compass, 
+  Send, 
+  FileText, 
+  Trophy, 
+  Award 
+} from "lucide-react";
+
+import { Colors, CONSTANTS } from "@/utils/enum";
+import { poppins, ibmPlexSans } from "@/utils/fonts";
+import { WEBSITE_DATA } from "@/utils/website";
+import SparkleLabel from "@/components/widgets/common/SparkleLabel";
+import { ASSETS } from "@/utils/assets";
+
+const { participation } = WEBSITE_DATA.home;
+
+
+const STEP_ICONS = [
+  ClipboardList,
+  Compass,
+  Send,
+  FileText,
+  Trophy,
+  Award,
+];
+
+const ParticipationJourneySection = () => {
+  return (
+    <Box
+      sx={{py: { xs: 4, md: 6 }, backgroundColor: Colors.WHITE,
+        position: "relative",
+        overflow: "hidden"}}
+    >
+     
+      <Box
+        sx={{
+          position: "absolute",
+          left: { xs: 10, md: -20 },
+          bottom: { xs: 40, md: 100 },
+          zIndex: 0,
+          width: { xs: 200, md: 500 },
+          height: { xs: 120, md: 300 },
+          opacity: { xs: 0.25, md: 0.5 },
+          pointerEvents: "none",
+        }}
+      >
+        
+        <Image
+          src="/images/icons/top-young-innovators.png"
+          alt=""
+          fill
+          style={{ objectFit: "contain", objectPosition: "left bottom" }}
+        />
+      </Box>
+
+     
+
+      <Container
+        maxWidth={false}
+        sx={{
+          maxWidth: CONSTANTS.MAX_WIDTH,
+          position: "relative",
+          zIndex: 1,
+          px: { xs: 2, sm: 3, md: 4 },
+        }}
+      >
+        {}
+        <Stack alignItems="center" textAlign="center" sx={{ mb: { xs: 6, md: 8 } }}>
+          <Box sx={{ mb: 2 }}>
+            <SparkleLabel
+              text={participation.sparkle}
+               fontSize={{xs:"16px", md:"18px"}}
+              sparklePosition="both"
+            />
+          </Box>
+
+          <Typography
+            sx={{
+              fontFamily: poppins.style.fontFamily,
+              fontWeight: 500,
+              fontSize: { xs: "28px", sm: "36px", md: "42px" },
+              color: Colors.BLACK,
+              lineHeight: 1.2,
+              mb: 2.5,
+              maxWidth: 800,
+            }}
+          >
+            {participation.title}
+          </Typography>
+
+          <Typography
+            sx={{
+              fontFamily: ibmPlexSans.style.fontFamily,
+              fontWeight: 400,
+              fontSize: { xs: "14px", md: "16px" },
+              color: Colors.TEXT_MUTED,
+              maxWidth: 900,
+              lineHeight: 1.6,
+            }}
+          >
+            {participation.description}
+          </Typography>
+        </Stack>
+
+        {}
+        <Box
+          sx={{
+            display: 'grid',
+            gridTemplateColumns: { xs: '1fr', sm: 'repeat(2, 1fr)', md: 'repeat(3, 1fr)' },
+            gap: { xs: 3, md: 4 }
+          }}
+        >
+          {participation.steps.map((step, index) => {
+            
+            const IconComponent = STEP_ICONS[index % STEP_ICONS.length];
+
+            return (
+              <Box
+                key={index}
+                sx={{
+                  position: 'relative',
+                  p: { xs: 3, md: 4 },
+                  borderRadius: '24px',
+                  border: '1px solid rgba(227, 24, 55, 0.12)',
+                  backgroundColor: Colors.WHITE,
+                  overflow: 'hidden',
+                  transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
+                  cursor: 'pointer',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  
+                  
+                  
+                  
+                  '&:hover': {
+                    borderColor: Colors.SECONDARY,
+                    transform: 'translateY(-10px)', 
+                    boxShadow: '0 20px 40px rgba(227, 24, 55, 0.08)',
+                    
+                    '& .step-badge': {
+                      backgroundColor: Colors.SECONDARY,
+                      color: Colors.WHITE,
+                    },
+                    '& .icon-wrapper': {
+                      backgroundColor: Colors.SECONDARY,
+                      color: Colors.WHITE,
+                      borderColor: Colors.SECONDARY,
+                      transform: 'scale(1.2) rotate(360deg)', 
+                    },
+                    '& .card-title': {
+                      color: Colors.SECONDARY, 
+                    },
+                    '& .card-arrow': {
+                      color: Colors.SECONDARY,
+                    }
+                  }
+                }}
+              >
+              
+                <Typography
+                  className="watermark"
+                  sx={{
+                    position: 'absolute',
+                    bottom: '-25px',
+                    right: '0px',
+                    fontSize: '140px',
+                    fontWeight: 800,
+                    color: 'rgba(227, 24, 55, 0.04)',
+                    lineHeight: 1,
+                    fontFamily: poppins.style.fontFamily,
+                    zIndex: 0,
+                    pointerEvents: 'none',
+                  }}
+                >
+                  {String(index + 1).padStart(2, '0')}
+                </Typography>
+
+           
+                <Stack 
+                  direction="row" 
+                  justifyContent="space-between" 
+                  alignItems="center" 
+                  sx={{ mb: 4, position: 'relative', zIndex: 1 }}
+                >
+                  <Box
+                    className="step-badge"
+                    sx={{
+                      px: 2,
+                      py: 0.5,
+                      borderRadius: '20px',
+                      backgroundColor: 'rgba(227, 24, 55, 0.05)',
+                      color: Colors.SECONDARY,
+                      transition: 'all 0.4s ease',
+                      display: 'flex',
+                      alignItems: 'center',
+                    }}
+                  >
+                    <Typography 
+                      sx={{ 
+                        fontFamily: ibmPlexSans.style.fontFamily, 
+                        fontWeight: 700, 
+                        fontSize: '12px', 
+                        textTransform: 'uppercase',
+                        letterSpacing: '0.5px'
+                      }}
+                    >
+                      STEP - {String(index + 1).padStart(2, '0')}
+                    </Typography>
+                  </Box>
+
+                  <Box
+                    className="icon-wrapper"
+                    sx={{
+                      width: 40,
+                      height: 40,
+                      borderRadius: '50%',
+                      border: '1px solid rgba(227, 24, 55, 0.2)',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      color: Colors.SECONDARY,
+                      transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
+                      backgroundColor: Colors.WHITE,
+                    }}
+                  >
+                    <IconComponent size={20} />
+                  </Box>
+                </Stack>
+
+              
+                <Stack 
+                  direction="row" 
+                  justifyContent="space-between" 
+                  alignItems="flex-start" 
+                  sx={{ mb: 2, position: 'relative', zIndex: 1 }}
+                >
+                  <Typography
+                    className="card-title"
+                    sx={{
+                      fontFamily: poppins.style.fontFamily,
+                      fontWeight: 700,
+                      fontSize: { xs: '20px', md: '22px' },
+                      color: Colors.BLACK,
+                      lineHeight: 1.3,
+                      pr: 2,
+                      transition: 'color 0.4s ease', 
+                    }}
+                  >
+                    {step.title}
+                  </Typography>
+                  
+                  <Box 
+                    className="card-arrow"
+                    sx={{ 
+                      color: '#D0D0D0', 
+                      mt: 0.5, 
+                      transition: 'color 0.4s ease' 
+                    }}
+                  >
+                    <ArrowUpRight size={22} />
+                  </Box>
+                </Stack>
+
+                {}
+                <Typography
+                  className="card-desc"
+                  sx={{
+                    fontFamily: ibmPlexSans.style.fontFamily,
+                    fontSize: { xs: '14px', md: '16px' },
+                    color: Colors.TEXT_MUTED,
+                    lineHeight: 1.6,
+                    position: 'relative',
+                    zIndex: 1,
+                  }}
+                >
+                  {step.description}
+                </Typography>
+              </Box>
+            );
+          })}
+        </Box>
+      </Container>
+    </Box>
+  );
+};
+
+export default ParticipationJourneySection;
+"use client";
+
+import React from "react";
+import Image from "next/image";
+import { Box, Container, Stack, Typography } from "@mui/material";
+
+import { COLORS, CONSTANTS } from "@/utils/enum";
+import { poppins, ibmPlexSans } from "@/utils/fonts";
+import SparkleLabel from "@/components/widgets/common/SparkleLabel";
+import { ASSETS } from "@/utils/assets";
+
+const PartnersSection = () => {
+  return (
+    <Box
+      sx={{
+        py: { xs: 4, md: 20 },
+        backgroundColor: COLORS.WHITE,
+        position: "relative",
+        overflow: "hidden",
+      }}
+    >
+      <Box
+        sx={{
+          position: "absolute",
+          left: 0,
+          top: 60,
+          width: { xs: 100, md: 180 },
+          height: { xs: 60, md: 120 },
+          display: { xs: "none", md: "block" },
+        }}
+      >
+        <Image
+          src={ASSETS.IMAGES.ICON_DOTS}
+          alt=""
+          fill
+          style={{ objectFit: "contain", objectPosition: "top left" }}
+        />
+      </Box>
+
+      <Box
+        sx={{
+          position: "absolute",
+          right: 0,
+          bottom: { xs: 10, md: 55 },
+          width: { xs: 100, md: 180 },
+          height: { xs: 60, md: 120 },
+          display: { xs: "none", md: "block" },
+          zIndex: 0,
+        }}
+      >
+        <Image
+          src={ASSETS.IMAGES.ICON_DOTS}
+          alt=""
+          fill
+          style={{ objectFit: "contain", objectPosition: "bottom right" }}
+        />
+      </Box>
+
+      <Container
+        maxWidth={false}
+        sx={{
+          maxWidth: CONSTANTS.MAX_WIDTH,
+          position: "relative",
+          zIndex: 1,
+          px: { xs: 2, sm: 3, md: 4 },
+        }}
+      >
+        <Stack spacing={{ xs: 3, md: 3 }}>
+          <Box
+            sx={{
+              mb: 1.5,
+              pl: { xs: 0, md: 1 },
+              display: "flex",
+              justifyContent: { xs: "center", md: "flex-start" },
+            }}
+          >
+            <SparkleLabel
+              text="Connect With Us"
+              color={COLORS.PRIMARY}
+               fontSize={{sx:"16px", md:"18px"}}
+ 
+            />
+          </Box>
+
+          <Stack
+            direction={{ xs: "column", md: "row" }}
+            alignItems={{ xs: "center", md: "center" }}
+            justifyContent="space-between"
+            spacing={{ xs: 4, md: 4 }}
+          >
+            <Box
+              sx={{
+                maxWidth: 600,
+                textAlign: { xs: "center", md: "left" },
+              }}
+            >
+              <Typography
+                sx={{
+                  fontFamily: poppins.style.fontFamily,
+                  fontWeight: 400,
+                  fontSize: { xs: 30, sm: 34, md: 45 },
+                  color: COLORS.BLACK,
+                  lineHeight: 1.25,
+                  mb: 1.5,
+                }}
+              >
+                Our Partners
+              </Typography>
+
+              <Typography
+                sx={{
+                  fontFamily: ibmPlexSans.style.fontFamily,
+                  fontWeight: 400,
+                  fontSize: { xs: 14, md: 16 },
+                  color: COLORS.TEXT_MUTED,
+                  lineHeight: { xs: 1.6, md: 1.6 },
+                }}
+              >
+                Working together to inspire the next generation of innovators.
+              </Typography>
+            </Box>
+
+            <Box
+              component="a"
+              href="https://discoverstem.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              sx={{
+                position: "relative",
+                width: { xs: 240, sm: 280, md: 387 },
+                height: { xs: 60, sm: 70, md: 97 },
+                mx: { xs: "auto", md: 0 },
+                display: "block",
+              }}
+            >
+              <Image
+                src={ASSETS.IMAGES.PARTNER_DISCOVERSTEM}
+                alt="DiscoverSTEM Foundation"
+                fill
+                style={{ objectFit: "contain" }}
+              />
+            </Box>
+          </Stack>
+        </Stack>
+      </Container>
+    </Box>
+  );
+};
+
+export default PartnersSection;
+
+"use client";
+
+import React from "react";
+import { Box, Container, Typography, Stack, Grid } from "@mui/material";
+import { COLORS, CONSTANTS } from "@/utils/enum";
+import { poppins, ibmPlexSans } from "@/utils/fonts";
+import AppButton from "@/components/widgets/Button";
+import Image from "next/image";
+import { ASSETS } from "@/utils/assets";
+import SparkleLabel from "@/components/widgets/common/SparkleLabel";
+
+const ScaleSection = () => {
+  return (
+    <Box sx={{py: { xs: 4, md: 6 }, backgroundColor: COLORS.WHITE}}>
+      <Container
+        maxWidth={false}
+        sx={{
+          maxWidth: CONSTANTS.MAX_WIDTH,
+          px: { xs: 2, sm: 3, md: 4 },
+        }}
+      >
+        
+        <Box 
+          sx={{ 
+            mb: { xs: 3, md: 2 }, 
+            display: "flex", 
+            justifyContent: { xs: "center", md: "flex-start" } 
+          }}
+        >
+          <SparkleLabel
+            text="The Scale of the Challenge"
+            fontSize={{xs:"16px", md:"18px"}} 
+            sparkleSize={35}
+            sparklePosition="both"
+            type="diamond"
+            color={COLORS.PRIMARY}
+          />
+        </Box>
+
+       
+        <Grid 
+          container 
+          spacing={{ xs: 5, sm: 3, md: 5, lg: 8 }} 
+          alignItems={{ xs: "center", sm: "stretch" }}
+        >
+         
+          <Grid size={{ xs: 12, sm: 4, md: 5 }}>
+            <Box
+              sx={{
+                position: "relative",
+                height: { xs: "260px", sm: "100%" }, 
+                width: "100%",
+                mx: "auto",
+                borderRadius: "20px",
+                overflow: "hidden",
+              }}
+            >
+              <Image
+                src={ASSETS.IMAGES.HERO4}
+                alt="Big Genius Lightbulb"
+                fill
+                style={{
+                  objectFit: "cover", 
+                  objectPosition: "center",
+                }}
+              />
+            </Box>
+          </Grid>
+
+         
+          <Grid size={{ xs: 12, sm: 8, md: 7 }}>
+            <Box sx={{ pl: { xs: 0, sm: 2, md: 5, lg: 6 } }}>
+              <Typography
+                sx={{
+                  fontFamily: poppins.style.fontFamily,
+                  fontWeight: 600,
+                  fontSize: { xs: "24px", sm: "24px", md: "28px", lg: "40px" }, 
+                  color: COLORS.BLACK,
+                  lineHeight: { xs: 1.25, md: 1.2 },
+                  mb: 2,
+                  textAlign: { xs: "center", sm: "left" },
+                }}
+              >
+                  Got What It Takes to Be the Next
+                <br />
+                <Box
+                  component="span"
+                  sx={{
+                    display: "inline-block",
+                    backgroundColor: "#F3F4F6",
+                    px: { xs: 1.5, md: 2 },
+                    py: 0.5,
+                    borderRadius: "10px",
+                    mt: 1,
+                  }}
+                >
+                  Young Genius ?
+                </Box>
+              </Typography>
+
+              <Typography
+                sx={{
+                  fontFamily: poppins.style.fontFamily,
+                  fontSize: { xs: "14px",  md: "16px" }, 
+                  fontWeight: 400,
+                  color: COLORS.TEXT_MUTED,
+                  mb: 3,
+                  maxWidth: "840px",
+                  lineHeight: { xs: 1.6, md: 1.55 },
+                  textAlign: { xs: "center", sm: "left" }, // FIX 2: Changed from "justify" to "center"
+                }}
+              >
+                 Unlock your creativity and join the world&apos;s  most exciting challenge for students. Explore your passion for science, build groundbreaking ideas, and gain recognition for your innovation.
+
+               
+              </Typography>
+
+             
+              <Stack
+                direction={{ xs: "column", sm: "row" }}
+                spacing={{ xs: 3, sm: 4, md: 4, lg: 6 }}
+                alignItems={{ xs: "center", sm: "flex-start" }}
+                sx={{ mb: { xs: 4, sm: 3, md: 3 } }}
+              >
+                {[
+                  { value: "80+", label: "Countries" },
+                  { value: "100k+", label: "Participates" },
+                  { value: "10-22", label: "Age Group" },
+                ].map((item) => (
+                  <Box
+                    key={item.label}
+                    sx={{ textAlign: { xs: "center", sm: "left" } }}
+                  >
+                    <Typography
+                      sx={{
+                        fontFamily: poppins.style.fontFamily,
+                        fontSize: { xs: "25px", sm: "28px", md: "30px", lg: "35px" },
+                        fontWeight: 700,
+                        color: COLORS.BLACK,
+                        lineHeight: 1.1,
+                      }}
+                    >
+                      {item.value}
+                    </Typography>
+
+                    <Typography
+                      sx={{
+                        fontFamily: ibmPlexSans.style.fontFamily,
+                        fontSize: { xs: "15px", sm: "15px", md: "16px", lg: "18px" },
+                        color: COLORS.TEXT_MUTED,
+                        mt: { xs: 0.5, sm: 1 },
+                      }}
+                    >
+                      {item.label}
+                    </Typography>
+                  </Box>
+                ))}
+              </Stack>
+
+
+              <Stack
+                direction={{ xs: "column", sm: "row" }}
+                spacing={2}
+                sx={{
+                  alignItems: "center",
+                  justifyContent: { xs: "center", sm: "flex-start" },
+                  flexWrap: "wrap",
+                }}
+              >
+                <AppButton
+                  pill
+                  sx={{
+                    backgroundColor: COLORS.SECONDARY,
+                    fontSize: { xs: "13px", sm: "14px", md: "16px", lg: "18px" },
+                    py: { xs: 1, sm: 1.2, md: 1.5, lg: 1.8 },
+                    px: { xs: 2.5, sm: 2.5, md: 3.5, lg: 4 },
+                    width: { xs: "200px", sm: "auto" },
+                    whiteSpace: "nowrap",
+                    "&:hover": { backgroundColor: COLORS.PRIMARY },
+                  }}
+                >
+                  Join the 2025 Challenge
+                </AppButton>
+
+                <AppButton
+                  pill
+                  sx={{
+                    backgroundColor: "rgba(227, 24, 55, 0.08)",
+                    color: COLORS.SECONDARY,
+                    border: `1px solid ${COLORS.SECONDARY}`,
+                    fontSize: { xs: "13px", sm: "14px", md: "16px", lg: "18px" },
+                    py: { xs: 1, sm: 1.2, md: 1.5, lg: 1.8 },
+                    px: { xs: 2.5, sm: 2.5, md: 3.5, lg: 4 },
+                    width: { xs: "200px", sm: "auto" },
+                    whiteSpace: "nowrap",
+                    "&:hover": {
+                      backgroundColor: "rgba(227, 24, 55, 0.15)",
+                    },
+                  }}
+                >
+                  Know the Rules
+                </AppButton>
+              </Stack>
+            </Box>
+          </Grid>
+        </Grid>
+      </Container>
+    </Box>
+  );
+};
+
+export default ScaleSection;
+"use client";
+
+import React from "react";
+import { Box, Container, Stack, Typography, Grid } from "@mui/material";
+import { Colors, CONSTANTS } from "@/utils/enum";
+import { poppins, ibmPlexSans } from "@/utils/fonts";
+import SparkleLabel from "@/components/widgets/common/SparkleLabel";
+import Image from "next/image";
+import { ASSETS } from "@/utils/assets";
+
+const featuresLeft = [
+  {
+    title: "Innovation Camp Learning",
+    desc: " Attend the Innovation Camp to learn the process of developing ideas and solutions.",
+    icon: "/images/icons/ai-innovation.png",
+  },
+  {
+    title: "Solve Real-World Problems",
+    desc: "  Identify a real-world problem and come up with an innovative solution.",
+    icon: "/images/icons/fluent_search-info-24-filled.png",
+  },
+  {
+    title: "Win the Title of Indiaâ€™s Top Young Innovator",
+    desc: ' Win the prestigious title of "India\'s Top Young Innovator."',
+    icon: "/images/icons/marketeq_reward.png",
+  },
+];
+
+const featuresRight = [
+  {
+    title: "Put Your Innovation on the World Stage",
+    desc: "Present your innovation to the world and attract potential investors.",
+    icon: "/images/icons/hugeicons_save-money-dollar.png",
+  },
+  {
+    title: "Opportunity for a US Patent",
+    desc: "Get the chance to own a US Patent for your innovation.",
+    icon: "/images/icons/streamline-ultimate_human-resources-search-men.png",
+  },
+  {
+    title: "Gain Global Recognition",
+    desc: " Receive recognition on a global platform for your innovative work",
+    icon: "/images/icons/marketeq_reward.png",
+  },
+];
+
+const FeatureItem = ({
+  align,
+  item,
+}: {
+  align: "left" | "right";
+  item: any;
+}) => (
+  <Box
+    sx={{
+      textAlign: { xs: "center", md: align },
+      mb: { xs: 4, md: 0 },
+    }}
+  >
+    <Box
+      sx={{
+        display: "flex",
+        justifyContent: {
+          xs: "center",
+          md: align === "right" ? "flex-end" : "flex-start",
+        },
+        mb: { xs: 1.5, md: 2 },
+      }}
+    >
+      <Box
+        sx={{
+          width: { xs: 44, md: 48 },
+          height: { xs: 44, md: 48 },
+          borderRadius: "50%",
+          backgroundColor: Colors.SECONDARY,
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+        }}
+      >
+        <Image
+          src={item.icon}
+          alt={item.title}
+          width={24}
+          height={24}
+          style={{ objectFit: "contain" }}
+        />
+      </Box>
+    </Box>
+
+    <Typography
+      sx={{
+        fontFamily: poppins.style.fontFamily,
+        fontWeight: 400,
+        
+        fontSize: { xs: "22px", sm: "24px", md: "28px" },
+        color: Colors.BLACK,
+        mb: 1,
+        lineHeight: { xs: 1.25, md: 1.3 },
+      }}
+    >
+      {item.title}
+    </Typography>
+
+    <Typography
+      sx={{
+        fontFamily: ibmPlexSans.style.fontFamily,
+        
+        fontSize: { xs: "14px", md: "16px" }, 
+        color: Colors.TEXT_MUTED,
+        lineHeight: { xs: 1.6, md: 1.5 },
+      }}
+    >
+      {item.desc}
+    </Typography>
+  </Box>
+);
+
+const WhyParticipateSection = () => {
+  return (
+    <Box
+      sx={{py: { xs: 4, md: 6 }, backgroundColor: Colors.WHITE}}
+    >
+      <Container
+        maxWidth={false}
+        sx={{
+          maxWidth: CONSTANTS.MAX_WIDTH,
+          px: { xs: 2, sm: 3, md: 4 },
+        }}
+      >
+        <Stack
+          spacing={2}
+          alignItems={{ xs: "center", md: "flex-start" }}
+          sx={{ mb: { xs: 3, md: 2 } }}
+        >
+          <Box sx={{ maxWidth: { xs: "290px", sm: "100%" } }}>
+            <SparkleLabel
+              text="Why Participate in the Challenge?"
+              sparklePosition="both"
+              type="diamond"
+              color={Colors.PRIMARY}
+              fontSize={{ sx: "16px", md: "18px" }}
+              sparkleSize={35} 
+            />
+          </Box>
+        </Stack>
+
+        <Grid container spacing={{ xs: 3, md: 10 }} alignItems="flex-start">
+          <Grid size={{ xs: 12, md: 6 }}>
+            <Typography
+              sx={{
+                fontFamily: poppins.style.fontFamily,
+                fontWeight: 400,
+                fontSize: { xs: "20px", sm: "24px", md: "28px" },
+                color: Colors.BLACK,
+                lineHeight: { xs: 1.25, md: 1.3 },
+                textAlign: { xs: "center", md: "left" },
+              }}
+            >
+              Why Participate in Indiaâ€™s <br /> Top Young Innovators?
+            </Typography>
+          </Grid>
+
+          <Grid size={{ xs: 12, md: 6 }}>
+            <Typography
+              sx={{
+                fontFamily: ibmPlexSans.style.fontFamily,
+                fontSize: { xs: "14px", md: "16px" },
+                fontWeight: 400,
+                color: Colors.TEXT_MUTED,
+                lineHeight: 1.6,
+                textAlign: { xs: "center", md: "right" },
+                mb: 0.5,
+              }}
+            >
+              Gain exposure, mentorship, and the chance to become a globally celebrated young innovator.
+            </Typography>
+          </Grid>
+        </Grid>
+
+        <Grid
+          container
+          spacing={{ xs: 4, md: 4 }}
+          alignItems="stretch"
+          sx={{ mt: { xs: 5, md: 6 } }}
+        >
+          {/* 1. LEFT FEATURES */}
+          <Grid size={{ xs: 12, md: 4 }} order={{ xs: 1, md: 1 }}>
+            <Box
+              sx={{
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "space-between",
+                height: "100%",
+                py: { md: 2 },
+              }}
+            >
+              {featuresLeft.map((item, index) => (
+                <Box
+                  key={index}
+                  sx={{
+                    flex: 1,
+                    display: "flex",
+                    flexDirection: "column",
+                    justifyContent:
+                      index === 0
+                        ? "flex-start"
+                        : index === 1
+                        ? "center"
+                        : "flex-end",
+                  }}
+                >
+                  <FeatureItem align="right" item={item} />
+                </Box>
+              ))}
+            </Box>
+          </Grid>
+
+          {/* 2. IMAGE */}
+          <Grid size={{ xs: 12, md: 4 }} order={{ xs: 2, md: 2 }}>
+            <Box
+              sx={{
+                position: "relative",
+                width: "100%",
+                height: { xs: 320, sm: 380, md: 600 },
+                display: "flex",
+                justifyContent: "center",
+                transform: { xs: "none", md: "scale(1.15)" },
+                mb: { xs: 2, md: 0 },
+               
+                mt: { xs: -6, md: 0 }, 
+               
+              }}
+            >
+              <Image
+                src={ASSETS.IMAGES.IMAGE37}
+                alt="Young Innovator"
+                fill
+                style={{ objectFit: "contain", objectPosition: "center" }}
+              />
+            </Box>
+          </Grid>
+
+          {/* 3. RIGHT FEATURES */}
+          <Grid size={{ xs: 12, md: 4 }} order={{ xs: 3, md: 3 }}>
+            <Box
+              sx={{
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "space-between",
+                height: "100%",
+                py: { md: 2 },
+              }}
+            >
+              {featuresRight.map((item, index) => (
+                <Box
+                  key={index}
+                  sx={{
+                    flex: 1,
+                    display: "flex",
+                    flexDirection: "column",
+                    justifyContent:
+                      index === 0
+                        ? "flex-start"
+                        : index === 1
+                        ? "center"
+                        : "flex-end",
+                  }}
+                >
+                  <FeatureItem align="left" item={item} />
+                </Box>
+              ))}
+            </Box>
+          </Grid>
+        </Grid>
+      </Container>
+    </Box>
+  );
+};
+
+export default WhyParticipateSection;

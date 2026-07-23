@@ -147,8 +147,7 @@ const Navbar = () => {
               anchorEl={anchorEl}
               open={Boolean(anchorEl)}
               onClose={handleDesktopDropdownClose}
-              PaperProps={{
-                sx: {
+              PaperProps={{ xs: {
                   mt: 1.5,
                   borderRadius: "12px",
                   boxShadow: "0 10px 30px rgba(0,0,0,0.12)",

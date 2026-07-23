@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import AnimationWrapper from "@/components/widgets/common/AnimationWrapper";
 import { Box } from "@mui/material";
 import Footer from "@/components/widgets/Footer";
 import PatentSection from "./sections/PatentIdea";
@@ -22,15 +23,33 @@ const GetPatent = () => {
     <Box>
    
      <PatentSection/>
-     <WhyPatentMatterSection/>
-     <WhoIsThisForSection/>
-     <PatentPreviewSection/>
-     <NurturingYoungInventorsSection/>
-     <PatentServiceSection/>
-     <CaseStudiesSection/>
-     <SuccessStoriesSection/>
-     <FaqSection/>
-     <ProtectIdeaSection/>
+     <AnimationWrapper>
+        <WhyPatentMatterSection/>
+      </AnimationWrapper>
+     <AnimationWrapper>
+        <WhoIsThisForSection/>
+      </AnimationWrapper>
+     <AnimationWrapper>
+        <PatentPreviewSection/>
+      </AnimationWrapper>
+     <AnimationWrapper>
+        <NurturingYoungInventorsSection/>
+      </AnimationWrapper>
+     <AnimationWrapper>
+        <PatentServiceSection/>
+      </AnimationWrapper>
+     <AnimationWrapper>
+        <CaseStudiesSection/>
+      </AnimationWrapper>
+     <AnimationWrapper>
+        <SuccessStoriesSection/>
+      </AnimationWrapper>
+     <AnimationWrapper>
+        <FaqSection/>
+      </AnimationWrapper>
+     <AnimationWrapper>
+        <ProtectIdeaSection/>
+      </AnimationWrapper>
       <Footer />
     </Box>
   );

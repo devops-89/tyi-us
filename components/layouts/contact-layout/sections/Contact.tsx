@@ -99,7 +99,7 @@ const ContactSection = () => {
               backdropFilter: "blur(7.5px)",
             }}
           >
-            <SparkleLabel text={contact.sparkle} fontSize={{sx:"16px", md:"18px"}}/>
+            <SparkleLabel text={contact.sparkle} fontSize={{ xs:"16px", md:"18px"}}/>
           </Stack>
         </Box>
 
@@ -135,7 +135,7 @@ const ContactSection = () => {
               {contact.description}
             </Typography>
 
-            {}
+            
             <RadioGroup
               name="inquiryType"
               value={formik.values.inquiryType}

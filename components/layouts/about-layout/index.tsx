@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import AnimationWrapper from "@/components/widgets/common/AnimationWrapper";
 import { Box } from "@mui/material";
 
 import AboutHeroSection from "./sections/Hero";
@@ -13,9 +14,15 @@ const AboutLayout = () => {
   return (
     <Box>
       <AboutHeroSection />
-      <CultureOfInnovationSection/>
-      <AboutPartnerSection />
-      <AboutCompetitionsSection />
+      <AnimationWrapper>
+        <CultureOfInnovationSection/>
+      </AnimationWrapper>
+      <AnimationWrapper>
+        <AboutPartnerSection />
+      </AnimationWrapper>
+      <AnimationWrapper>
+        <AboutCompetitionsSection />
+      </AnimationWrapper>
       <Footer />
     </Box>
   );

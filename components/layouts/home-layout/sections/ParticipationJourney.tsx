@@ -71,7 +71,7 @@ const ParticipationJourneySection = () => {
           px: { xs: 2, sm: 3, md: 4 },
         }}
       >
-        {}
+        
         <Stack alignItems="center" textAlign="center" sx={{ mb: { xs: 6, md: 8 } }}>
           <Box sx={{ mb: 2 }}>
             <SparkleLabel
@@ -109,7 +109,7 @@ const ParticipationJourneySection = () => {
           </Typography>
         </Stack>
 
-        {}
+        
         <Box
           sx={{
             display: 'grid',
@@ -268,7 +268,7 @@ const ParticipationJourneySection = () => {
                   </Box>
                 </Stack>
 
-                {}
+                
                 <Typography
                   className="card-desc"
                   sx={{

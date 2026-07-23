@@ -41,7 +41,7 @@ const PastWinnersVideoSection = () => {
           sx={{
             fontFamily: poppins.style.fontFamily,
             fontWeight: 600,
-            fontSize: { sx: "14px", md: "16px" },
+            fontSize: { xs: "14px", md: "16px" },
             color: Colors.SECONDARY,
             textAlign: "center",
             mb: 2,

@@ -133,7 +133,7 @@ const RulesSection = () => {
             </Grid>
 
             <Grid size={{ xs: 12, md: 6 }}>
-              <Stack spacing={{ xs: 3, md: 3, lg: 4 }} sx={{ pt: { xs: 0, md: 2 } }}> {}
+              <Stack spacing={{ xs: 3, md: 3, lg: 4 }} sx={{ pt: { xs: 0, md: 2 } }}> 
                 {rulesData.rules.map((ruleText: string, idx: number) => {
                   const parts = ruleText.split("contact us");
 

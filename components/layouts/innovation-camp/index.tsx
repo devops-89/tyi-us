@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import AnimationWrapper from "@/components/widgets/common/AnimationWrapper";
 import { Box } from "@mui/material";
 
 
@@ -21,11 +22,21 @@ const InnovationCamp = () => {
   return (
     <Box>
      <InnovationCampSection/>
-     <ModulesCoveredSection/>
-     <LearningOutcomesSection/>
-     <InnovationCampInfoCards/>
-     <SelectionFlowSection/>
-     <PartnersSection/>
+     <AnimationWrapper>
+        <ModulesCoveredSection/>
+      </AnimationWrapper>
+     <AnimationWrapper>
+        <LearningOutcomesSection/>
+      </AnimationWrapper>
+     <AnimationWrapper>
+        <InnovationCampInfoCards/>
+      </AnimationWrapper>
+     <AnimationWrapper>
+        <SelectionFlowSection/>
+      </AnimationWrapper>
+     <AnimationWrapper>
+        <PartnersSection/>
+      </AnimationWrapper>
     <Footer />
     </Box>
   );

@@ -172,7 +172,7 @@ const SelectionFlowSection = () => {
                   }
                 }}
               >
-                {}
+                
                 <Typography
                   className="watermark"
                   sx={{
@@ -191,7 +191,7 @@ const SelectionFlowSection = () => {
                   {String(index + 1).padStart(2, '0')}
                 </Typography>
 
-                {}
+                
                 <Stack 
                   direction="row" 
                   justifyContent="space-between" 
@@ -243,7 +243,7 @@ const SelectionFlowSection = () => {
                   </Box>
                 </Stack>
 
-                {}
+                
                 <Stack 
                   direction="row" 
                   justifyContent="space-between" 

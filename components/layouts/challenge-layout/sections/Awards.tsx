@@ -40,7 +40,7 @@ const AwardsSection = () => {
               >
                 <SparkleLabel
                   text={awards.sparkle}
-                  fontSize={{sx:"16px", md:"18px"}}
+                  fontSize={{ xs:"16px", md:"18px"}}
                   type="blue-star"
                   sparklePosition="both"
                   sparkleSize={35}
@@ -115,7 +115,7 @@ const AwardsSection = () => {
                       },
                     }}
                   >
-                    {}
+                    
                     <Box
                       sx={{
                         backgroundColor: "#F4F7FC",
@@ -141,7 +141,7 @@ const AwardsSection = () => {
                       </Typography>
                     </Box>
 
-                    {}
+                    
                     <Box
                       className="icon-circle"
                       sx={{
@@ -190,7 +190,7 @@ const AwardsSection = () => {
                       )}
                     </Box>
 
-                    {}
+                    
                     <Stack spacing={0.8} sx={{ px: { xs: 0, md: 1 } }}>
                       {labelTop && (
                         <Typography

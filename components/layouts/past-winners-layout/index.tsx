@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import AnimationWrapper from "@/components/widgets/common/AnimationWrapper";
 import { Box } from "@mui/material";
 
 import PastWinnersHeroSection from "./sections/Hero";
@@ -14,10 +15,18 @@ const PastWinnersLayout = () => {
   return (
     <Box>
       <PastWinnersHeroSection />
-      <PastWinnersVideoSection />
-      <PastWinnersInnovationSection />
-      <PastWinnersGuestsSection />
-      <PastWinnersWinnerSection />
+      <AnimationWrapper>
+        <PastWinnersVideoSection />
+      </AnimationWrapper>
+      <AnimationWrapper>
+        <PastWinnersInnovationSection />
+      </AnimationWrapper>
+      <AnimationWrapper>
+        <PastWinnersGuestsSection />
+      </AnimationWrapper>
+      <AnimationWrapper>
+        <PastWinnersWinnerSection />
+      </AnimationWrapper>
       <Footer />
     </Box>
   );

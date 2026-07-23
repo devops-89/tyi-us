@@ -133,7 +133,7 @@ const PatentPreviewSection = () => {
         >
           <SparkleLabel
             text="Own Your Patent"
-         fontSize={{sx:"16px", md:"18px"}}
+         fontSize={{ xs:"16px", md:"18px"}}
             sparkleSize={35}
             type="blue-star"
             sparklePosition="both"
@@ -363,8 +363,7 @@ const PatentPreviewSection = () => {
           onClose={() => setOpenPreview(false)}
           maxWidth="md"
           fullWidth
-          PaperProps={{
-            sx: {
+          PaperProps={{ xs: {
               borderRadius: "16px",
               p: { xs: 1.5, sm: 2, md: 3 },
               backgroundColor: COLORS.WHITE,
