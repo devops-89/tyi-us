@@ -52,20 +52,21 @@ const CountUp = ({ value }: { value: string | number }) => {
 
 const PastWinnersInnovationSection = () => {
   return (
-    <Box sx={{ py: { xs: 4, md: 12 }, backgroundColor: Colors.WHITE }}>
+    <Box sx={{py: { xs: 4, md: 6 }, backgroundColor: Colors.WHITE}}>
       <Container maxWidth={false} sx={{ maxWidth: 1920 }}>
         <Box sx={{ maxWidth: 1454, mx: "auto" }}>
           <Box sx={{ mb: 2 }}>
-            <SparkleLabel text={innovation.sparkle} />
+            <SparkleLabel text={innovation.sparkle}  fontSize={{sx:"16px", md:"18px"}} />
           </Box>
 
           <Typography
             sx={{
               fontFamily: poppins.style.fontFamily,
               fontWeight: 700,
-              fontSize: { xs: 30, md: 34, lg: 40 }, // Decreased on 1024px (md), original on 1440px (lg)
+              fontSize: { xs: 30, md: 34, lg: 40 }, 
               color: Colors.BLACK,
-              lineHeight: 1.1,
+              lineHeight: { xs: 1, md: 1.4 }, 
+              
               mb: 1,
             }}
           >
@@ -78,7 +79,8 @@ const PastWinnersInnovationSection = () => {
           <Typography
             sx={{
               fontFamily: ibmPlexSans.style.fontFamily,
-              fontSize: { xs: 16, md: 16, lg: 18 }, // Decreased on 1024px (md), original on 1440px (lg)
+              fontSize: { xs: "14px", md: "16px" },
+                  lineHeight: { xs: 1.2, md: 1.4 },
               color: Colors.TEXT_MUTED,
               mb: { xs: 3, md: 6 },
             }}
@@ -125,7 +127,7 @@ const PastWinnersInnovationSection = () => {
                   sx={{
                     fontFamily: poppins.style.fontFamily,
                     fontWeight: 600,
-                    fontSize: { xs: 18, md: 19, lg: 22 }, // Decreased on 1024px (md), original on 1440px (lg)
+                    fontSize: { xs: 18, md: 19, lg: 24 }, 
                     color: Colors.BLACK,
                     mb: 2,
                   }}
@@ -137,9 +139,10 @@ const PastWinnersInnovationSection = () => {
                   <Typography
                     sx={{
                       fontFamily: ibmPlexSans.style.fontFamily,
-                      fontSize: { xs: 15, md: 16, lg: 18 }, // Decreased on 1024px (md), original on 1440px (lg)
+                     fontSize: { xs: "14px", md: "16px" },
+                  lineHeight: { xs: 1.2, md: 1.4 },
                       color: Colors.TEXT_MUTED,
-                      textAlign: { xs: "left", md: "justify" },
+                      textAlign:  "justify" ,
                     }}
                   >
                     {card.desc1}
@@ -148,9 +151,10 @@ const PastWinnersInnovationSection = () => {
                   <Typography
                     sx={{
                       fontFamily: ibmPlexSans.style.fontFamily,
-                      fontSize: { xs: 15, md: 16, lg: 18 }, // Decreased on 1024px (md), original on 1440px (lg)
+                     fontSize: { xs: "14px", md: "16px" },
+                  lineHeight: { xs: 1.2, md: 1.4 },
                       color: Colors.TEXT_MUTED,
-                      textAlign: { xs: "left", md: "justify" },
+                      textAlign: "justify",
                     }}
                   >
                     {card.desc2}
@@ -173,7 +177,7 @@ const PastWinnersInnovationSection = () => {
                   sx={{
                     fontFamily: poppins.style.fontFamily,
                     fontWeight: 700,
-                    fontSize: { xs: 36, md: 38, lg: 44 }, // Decreased on 1024px (md), original on 1440px (lg)
+                    fontSize: { xs: 25, md: 28, lg: 34 }, 
                     color: Colors.BLACK,
                   }}
                 >
@@ -184,7 +188,7 @@ const PastWinnersInnovationSection = () => {
                   sx={{
                     fontFamily: ibmPlexSans.style.fontFamily,
                     fontWeight: 600,
-                    fontSize: { xs: 16, md: 16, lg: 18 }, // Decreased on 1024px (md), original on 1440px (lg)
+                    fontSize: { xs: 16, md: 16, lg: 18 }, 
                     color: Colors.TEXT_MUTED,
                     textAlign: "center",
                   }}

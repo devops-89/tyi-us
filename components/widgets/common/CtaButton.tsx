@@ -5,17 +5,17 @@ import Link from "next/link";
 import { Stack, Button } from "@mui/material";
 import { ArrowUpRight } from "lucide-react";
 
-import { COLORS } from "@/utils/enum";
+import { Colors } from "@/utils/enum";
 import { poppins } from "@/utils/fonts";
 
-// --- Single CTA Button ---
+
 interface CtaButtonProps {
   text: string;
   href: string;
   variant?: "contained" | "outlined";
   width?: string | number | object;
-  height?: string | number | object; // Changed from number to support responsive objects
-  fontSize?: string | number | object; // Changed to support responsive objects
+  height?: string | number | object; 
+  fontSize?: string | number | object; 
   showIcon?: boolean;
   sx?: object;
 }
@@ -25,8 +25,8 @@ export const CtaButton: React.FC<CtaButtonProps> = ({
   href,
   variant = "contained",
   width = "auto",
-  height = { xs: 40, md: 60 }, // Responsive height default
-  fontSize = { xs: 14, md: 18 }, // Responsive font-size default
+  height = { xs: 40, md: 60 }, 
+  fontSize = { xs: 14, md: 18 }, 
   showIcon = true,
   sx = {},
 }) => {
@@ -40,25 +40,28 @@ export const CtaButton: React.FC<CtaButtonProps> = ({
       rel="noopener noreferrer"
       sx={{
         height: height,
-        px: { xs: 2.5, md: 5 }, // Responsive horizontal padding
+        px: { xs: 2.5, md: 5 }, 
         width: width,
         borderRadius: "50px",
-        backgroundColor: variant === "contained" ? COLORS.SUBMIT_ACCENT : COLORS.SUBMIT_ACCENT_BG,
-        borderColor: variant === "outlined" ? COLORS.SUBMIT_ACCENT : "transparent",
-        color: variant === "contained" ? COLORS.WHITE : COLORS.SUBMIT_ACCENT,
+        
+        // --- ONLY COLORS CHANGED ---
+        backgroundColor: variant === "contained" ? Colors.SECONDARY : "transparent",
+        borderColor: variant === "outlined" ? Colors.SECONDARY : "transparent",
+        color: variant === "contained" ? Colors.WHITE : Colors.SECONDARY,
+        
         fontFamily: poppins.style.fontFamily,
         fontWeight: 600,
         fontSize: fontSize,
         textTransform: "none",
         boxShadow: variant === "contained" ? "0px 10px 30px rgba(220, 29, 64, 0.15)" : "none",
-        "& .MuiButton-endIcon svg": { // Overrides the SVG icon size responsively
+        "& .MuiButton-endIcon svg": { 
           width: { xs: 18, md: 22 },
           height: { xs: 18, md: 22 }
         },
         "&:hover": { 
-          backgroundColor: variant === "contained" ? COLORS.PRIMARY : "#f9dfe6",
-          borderColor: variant === "outlined" ? COLORS.SUBMIT_ACCENT : "transparent",
-          boxShadow: variant === "contained" ? "0px 15px 40px rgba(220, 29, 64, 0.2)" : "none",
+          backgroundColor: variant === "contained" ? Colors.PRIMARY : "#f9dfe6",
+          borderColor: variant === "outlined" ? Colors.SUBMIT_ACCENT : "transparent",
+          boxShadow: variant === "contained" ? "0 8px 24px rgba(52, 96, 183, 0.25)" : "none",
         },
         ...sx,
       }}

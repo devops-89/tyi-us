@@ -14,10 +14,7 @@ const { scoreBreakdown } = WEBSITE_DATA.challenge;
 const ScoreBreakdownSection = () => {
   return (
     <Box
-      sx={{
-        py: { xs: 4, md: 12 },
-        backgroundColor: Colors.WHITE,
-      }}
+      sx={{py: { xs: 4, md: 6 }, backgroundColor: Colors.WHITE}}
     >
       <Container
         maxWidth={false}
@@ -36,7 +33,8 @@ const ScoreBreakdownSection = () => {
                 text={scoreBreakdown.sparkle}
                 sparklePosition="both"
                 type="flower"
-                fontSize="18px"
+                fontSize={{sx:"16px", md:"18px"}}
+
               />
             </Box>
 
@@ -58,10 +56,11 @@ const ScoreBreakdownSection = () => {
               sx={{
                 fontFamily: ibmPlexSans.style.fontFamily,
                 fontWeight: 400,
-                fontSize: { xs: "16px", md: "20px" },
+            fontSize: { xs: "14px", md: "16px" },
+                  lineHeight: { xs: 1.2, md: 1.4 },
                 color: Colors.TEXT_MUTED,
                 textAlign: { xs: "center", md: "right" },
-                lineHeight: 1.6,
+                
                 maxWidth: 800,
                 mb: { xs: 2, md: 0 },
               }}

@@ -17,7 +17,7 @@ const AboutHeroSection = () => {
       sx={{
         backgroundColor: Colors.WHITE,
         pt: { xs: 1, md: 12 },
-        pb: { xs: 4, md: 10 },
+        pb: { xs: 4, md: 6 },
       }}
     >
       <Container
@@ -43,7 +43,7 @@ const AboutHeroSection = () => {
                   justifyContent: { xs: "center", md: "flex-start" },
                 }}
               >
-                <SparkleLabel text={hero.sparkle} />
+                <SparkleLabel text={hero.sparkle} fontSize={{sx:"16px", md:"18px"}}/>
               </Box>
 
               <Typography
@@ -63,11 +63,12 @@ const AboutHeroSection = () => {
               <Typography
                 sx={{
                   fontFamily: ibmPlexSans.style.fontFamily,
-                  fontSize: { xs: 16, md: 18 },
+                  
                   color: Colors.TEXT_MUTED,
-                  lineHeight: { xs: "30px", md: "35px" },
+                  fontSize: { xs: "14px", md: "16px" },
+                  lineHeight: { xs: 1.2, md: 1.4 },
                   whiteSpace: "pre-line",
-                  textAlign: "left",
+                  textAlign: {md:"left", xs:"justify"},
                 }}
               >
                 {hero.description}
@@ -99,16 +100,17 @@ const AboutHeroSection = () => {
                 display: { xs: "none", md: "block" },
                 position: "relative",
                 width: "100%",
-                height: { md: 540, lg: 620 },
+                height: { md: 495, lg: 495 }, 
               }}
             >
               <Box
                 sx={{
+                  display: { md: "none", lg: "block" }, 
                   position: "absolute",
                   top: 0,
                   right: 0,
-                  width: { md: 300, lg: 427 },
-                  height: { md: 380, lg: 473 },
+                  width: { md: 427, lg: 427 }, 
+                  height: { md: 473, lg: 473 }, 
                   overflow: "hidden",
                   zIndex: 1,
                 }}
@@ -124,14 +126,14 @@ const AboutHeroSection = () => {
               <Box
                 sx={{
                   position: "absolute",
-                  top: { md: 120, lg: 93 },
+                  top: { md: 93, lg: 93 }, 
                   left: 0,
-                  width: { md: 360, lg: 481 },
-                  height: { md: 420, lg: 516 },
+                  width: { md: 481, lg: 481 }, 
+                  height: { md: 400, lg: 400 }, 
                   backgroundColor: Colors.WHITE,
-                  pr: { md: "5px", lg: "8px" },
-                  pt: { md: "5px", lg: "8px" },
-                  borderRadius: { md: "24px", lg: "30px" },
+                  pr: { md: "8px", lg: "8px" }, 
+                  pt: { md: "8px", lg: "8px" }, 
+                  borderRadius: { md: "30px", lg: "30px" }, 
                   boxSizing: "border-box",
                   zIndex: 2,
                 }}
@@ -141,7 +143,7 @@ const AboutHeroSection = () => {
                     position: "relative",
                     width: "100%",
                     height: "100%",
-                    borderRadius: { md: "18px", lg: "20px" },
+                    borderRadius: { md: "20px", lg: "20px" }, 
                     overflow: "hidden",
                   }}
                 >

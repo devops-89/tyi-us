@@ -16,15 +16,12 @@ const { cta } = WEBSITE_DATA.challenge;
 const ChallengeCtaSection = () => {
   return (
     <Box
-      sx={{
-        py: { xs: 0, md: 0 },
-        background: "linear-gradient(90deg, #D0DDF7 0%, #FFFFFF 100%)",
+      sx={{py: { xs: 4, md: 6 }, background: "linear-gradient(90deg, #D0DDF7 0%, #FFFFFF 100%)",
         position: "relative",
         overflow: { xs: "hidden", md: "visible" },
         height: { xs: "auto", md: 430 },
         display: "flex",
-        alignItems: "center",
-      }}
+        alignItems: "center"}}
     >
       <Container
         maxWidth={false}
@@ -87,7 +84,8 @@ const ChallengeCtaSection = () => {
                   text={cta.sparkle}
                   sparklePosition="both"
                   type="diamond"
-                  fontSize="18px"
+                  fontSize={{xs:"16px", md:"18px"}}
+                    sparkleSize={35}
                 />
               </Box>
 
@@ -110,9 +108,9 @@ const ChallengeCtaSection = () => {
                 sx={{
                   fontFamily: ibmPlexSans.style.fontFamily,
                   fontWeight: 400,
-                  fontSize: { xs: "16px", md: "20px" },
+                 fontSize: { xs: "14px", md: "16px" },
+                  lineHeight: { xs: 1.2, md: 1.4 },
                   color: Colors.TEXT_MUTED,
-                  lineHeight: 1.6,
                   mb: { xs: 4, md: 5 },
                   maxWidth: 600,
                   mx: { xs: "auto", md: 0 },
@@ -125,17 +123,17 @@ const ChallengeCtaSection = () => {
                 component={Link}
                 href="https://topyounginnovators.org/submit-your-entry/"
                 variant="contained"
-                endIcon={<ArrowUpRight size={18} />} // Resized icon to match mobile scale
+                endIcon={<ArrowUpRight size={18} />} 
                 sx={{
-                  height: { xs: 40, md: 56 }, // Decreased height on mobile
-                  px: { xs: 2.5, md: 6 }, // Decreased padding on mobile
-                  width: { xs: "fit-content", sm: "auto" }, // Decreased width on mobile
+                  height: { xs: 40, md: 56 }, 
+                  px: { xs: 2.5, md: 6 }, 
+                  width: { xs: "fit-content", sm: "auto" }, 
                   borderRadius: "50px",
                   backgroundColor: Colors.SECONDARY,
                   color: Colors.WHITE,
                   fontFamily: poppins.style.fontFamily,
                   fontWeight: 600,
-                  fontSize: { xs: "14px", md: "18px" }, // Decreased font-size on mobile
+                  fontSize: { xs: "14px", md: "18px" }, 
                   textTransform: "none",
                   boxShadow: "0px 10px 30px rgba(227, 24, 55, 0.2)",
                   "&:hover": {

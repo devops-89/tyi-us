@@ -13,7 +13,7 @@ const WhyPatentMatterSection = () => {
   const patentMatterCards = WEBSITE_DATA.patent.PatentMatterCard;
 
   return (
-    <Box sx={{ backgroundColor: COLORS.WHITE, py: { xs: 6, md: 9 } }}>
+    <Box sx={{py: { xs: 4, md: 6 }, backgroundColor: COLORS.WHITE}}>
       <Container
         maxWidth={false}
         sx={{
@@ -41,7 +41,7 @@ const WhyPatentMatterSection = () => {
             >
               <SparkleLabel
                 text="Patents Helps"
-                fontSize={18}
+                fontSize={{sx:"16px", md:"18px"}}
                 sparkleSize={35}
                 type="blue-star"
                 sparklePosition="both"
@@ -62,10 +62,9 @@ const WhyPatentMatterSection = () => {
                 },
                 letterSpacing: "-0.8px",
                 color: COLORS.BLACK,
-                mb:{ xs: "20px", sm: "30px", md: 13 },
               }}
             >
-              Your Ideas Deserve Protection. Here’s Why Patents Matter
+              Why Patent Matter
             </Typography>
           </Box>
 
@@ -120,7 +119,7 @@ const WhyPatentMatterSection = () => {
                         fontFamily: poppins.style.fontFamily,
                         fontWeight: 600,
                         fontSize: "20px",
-                        lineHeight: "26px",
+                        lineHeight: "24px",
                         color: "#E31837",
                         mb: 0.75,
                       }}
@@ -132,8 +131,8 @@ const WhyPatentMatterSection = () => {
                       sx={{
                         fontFamily: poppins.style.fontFamily,
                         fontWeight: 400,
-                        fontSize: "16px",
-                        lineHeight: "26px",
+                        fontSize: { xs: "14px", md: "16px" },
+                  lineHeight: { xs: 1.2, md: 1.4 },
                         color: "#5C5C5C",
                       }}
                     >

@@ -7,7 +7,7 @@ import Link from "next/link";
 
 const ProtectIdeaSection = () => {
   return (
-    <Box sx={{ backgroundColor: COLORS.WHITE, py: { xs: 4, md: 10 } }}>
+    <Box sx={{py: { xs: 4, md: 6 }, backgroundColor: COLORS.WHITE}}>
       <Container
         maxWidth={false}
         sx={{
@@ -29,7 +29,7 @@ const ProtectIdeaSection = () => {
             py: { xs: 4, md: 7 },
           }}
         >
-          {/* Ellipse 1 */}
+        
           <Box
             sx={{
               position: "absolute",
@@ -45,7 +45,7 @@ const ProtectIdeaSection = () => {
             }}
           />
 
-          {/* Ellipse 2 */}
+    
           <Box
             sx={{
               position: "absolute",
@@ -109,8 +109,9 @@ const ProtectIdeaSection = () => {
                   sx={{
                     fontFamily: poppins.style.fontFamily,
                     fontWeight: 400,
-                    fontSize: { xs: "16px", sm: "18px", md: "20px" },
-                    lineHeight: "100%",
+                    fontSize: { xs: "14px", md: "16px" },
+                  lineHeight: { xs: 1.2, md: 1.4 },
+                    
                     letterSpacing: "-0.02em",
                     color: COLORS.WHITE,
                     mb: 4,
@@ -123,8 +124,8 @@ const ProtectIdeaSection = () => {
                   sx={{
                     fontFamily: poppins.style.fontFamily,
                     fontWeight: 400,
-                    fontSize: { xs: "16px", sm: "18px", md: "20px" },
-                    lineHeight: "100%",
+                 fontSize: { xs: "14px", md: "16px" },
+                  lineHeight: { xs: 1.2, md: 1.4 },
                     letterSpacing: "-0.02em",
                     color: COLORS.WHITE,
                   }}

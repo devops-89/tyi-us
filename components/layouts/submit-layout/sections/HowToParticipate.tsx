@@ -14,10 +14,7 @@ const { howToParticipate } = WEBSITE_DATA.submit;
 const HowToParticipateSection = () => {
   return (
     <Box
-      sx={{
-        backgroundColor: Colors.WHITE,
-        pb: { xs: 6, md: 14 },
-      }}
+      sx={{py: { xs: 4, md: 6 }, backgroundColor: Colors.WHITE}}
     >
       <Container
         maxWidth={false}
@@ -44,7 +41,8 @@ const HowToParticipateSection = () => {
                 text={howToParticipate.sparkle}
                 type="blue-star"
                 sparklePosition="both"
-                sparkleSize={14}
+                fontSize={{sx:"16px", md:"18px"}}
+                sparkleSize={35}
               />
             </Box>
 
@@ -52,13 +50,13 @@ const HowToParticipateSection = () => {
               sx={{
                 fontFamily: poppins.style.fontFamily,
                 fontWeight: 600,
-                fontSize: { xs: "30px", sm: "36px", md: "40px", lg: "45px" },
+                fontSize: { xs: "24px", sm: "30px", md: "40px", lg: "45px" },
                 color: Colors.BLACK,
                 lineHeight: { xs: 1.25, md: 1, lg: 1.2 },
-                mb: 2,
-                textAlign: "center", // Center text on screens < 768px
+                
+                textAlign: "center", 
                 "@media (min-width: 768px)": {
-                  textAlign: "left", // Left-align text on screens >= 768px
+                  textAlign: "left", 
                 }
               }}
             >
@@ -70,15 +68,15 @@ const HowToParticipateSection = () => {
             <Typography
               sx={{
                 fontFamily: ibmPlexSans.style.fontFamily,
-                fontSize: { xs: "16px", md: "20px" },
+               fontSize: { xs: "14px", md: "16px" },
+                  lineHeight: { xs: 1.2, md: 1.4 },
                 color: Colors.TEXT_MUTED,
-                lineHeight: 1.65,
-                mb: 3,
+                mb: 1,
                 maxWidth: 600,
                 mx: { xs: "auto", md: 0 },
-                textAlign: "center", // Center text on screens < 768px
+                textAlign: "center", 
                 "@media (min-width: 768px)": {
-                  textAlign: "left", // Left-align text on screens >= 768px
+                  textAlign: "left", 
                 }
               }}
             >
@@ -93,12 +91,12 @@ const HowToParticipateSection = () => {
                 color: Colors.BLACK,
                 display: "flex",
                 alignItems: "center",
-                justifyContent: "center", // Center on screens < 768px
+                justifyContent: "center", 
                 gap: 1,
                 cursor: "pointer",
                 "&:hover": { color: Colors.PRIMARY },
                 "@media (min-width: 768px)": {
-                  justifyContent: "flex-start", // Left-align on screens >= 768px
+                  justifyContent: "flex-start", 
                 }
               }}
             >
@@ -119,29 +117,29 @@ const HowToParticipateSection = () => {
                     whiteSpace: "normal",
                     textAlign: "center",
                     display: "flex",
-                    mx: "auto", // Center button on screens < 768px
+                    mx: "auto", 
                     "@media (min-width: 768px)": {
                       width: "auto",
                       maxWidth: "none",
                       whiteSpace: "nowrap",
-                      mx: 0, // Left-align on screens >= 768px
+                      mx: 0, 
                     }
                   },
                   "& .MuiButton-root": {
                     width: "fit-content",
-                    height: "36px !important", // Forced height on mobile
-                    minHeight: "36px !important", // Forced minimum height on mobile
-                    px: "18px !important", // Forced padding on mobile
-                    fontSize: "13px !important", // Forced font-size on mobile
+                    height: "36px !important", 
+                    minHeight: "36px !important", 
+                    px: "18px !important", 
+                    fontSize: "13px !important", 
                     display: "flex",
-                    mx: "auto", // Center button on screens < 768px
+                    mx: "auto", 
                     "@media (min-width: 768px)": {
                       width: "auto",
-                      height: "48px !important", // Desktop height
+                      height: "48px !important", 
                       minHeight: "48px !important",
                       px: "24px !important",
                       fontSize: "16px !important",
-                      mx: 0, // Left-align on screens >= 768px
+                      mx: 0, 
                     }
                   },
                 }}

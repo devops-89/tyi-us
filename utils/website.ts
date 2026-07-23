@@ -27,16 +27,19 @@ export const WEBSITE_DATA: IWebsiteData = {
       title: "Innovators",
       subtitle: "— Grand Finale",
       description: "We celebrate the young minds who dare to dream big and make a difference. Join us as the next generation of Indian innovators learn, create, and present their bold ideas to the world and receive prestigious awards and patent certificates. ",
-      description2: `<span>Top Young Innovators</span> is a global platform dedicated to discovering and nurturing the most creative, inventive, and forward-thinking young minds, and we are now in India.
+      description2: `Top Young Innovators is a global platform dedicated to discovering and nurturing the most creative, inventive, and forward-thinking young minds, and we are now in India.
 We believe innovation is not a talent; it is a skill that can be learned and developed. Our mission is to cultivate a generation of young minds who think differently, question boldly, and develop the confidence to solve real-world challenges.
-Through <span>innovation learning</span>, mentorship, and competition, we are building a culture of creativity, problem-solving, and innovation among India's youth.`,
+Through innovation learning, mentorship, and competition, we are building a culture of creativity, problem-solving, and innovation among India's youth.`,
       cta1Text: "Submit Your Entry",
       cta1Href: "/submit",
       cta2Text: "About",
       cta2Href: "/about",
       watchLabel: "Watch",
       watchDescription: "That's how we make it work?",
-      image: ASSETS.IMAGES.HERO1,
+      
+    
+        video: "https://www.youtube.com/embed/jo5hgqxAaes?autoplay=1&mute=1&loop=1&playlist=jo5hgqxAaes&controls=1",
+      
       imageLabel: "America’s Top Young Innovators - Grand Finale 2024",
     },
     participation: {
@@ -142,10 +145,12 @@ To help participants bring their ideas to life, we’ve partnered with one of th
         {
           title: "America's Top Young Innovators",
           image: ASSETS.IMAGES.ABOUT_GLOBAL_USA,
+          logo: ASSETS.IMAGES.LOGO,
         },
         {
           title: "UAE's Top Young Innovators",
           image: ASSETS.IMAGES.ABOUT_GLOBAL_UAE,
+           logo: ASSETS.IMAGES.LOGO,
         },
       ],
     },

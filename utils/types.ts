@@ -112,7 +112,7 @@ export interface IWebsiteData {
       cta2Href: string;
       watchLabel: string;
       watchDescription: string;
-      image: any;
+      video: any;
       imageLabel: string;
     };
     participation: {
@@ -151,7 +151,7 @@ export interface IWebsiteData {
       title: string;
       description: string;
       buttonText: string;
-      items: { title: string; image: any }[];
+      items: { title: string; image: any; logo: any }[]; 
     };
     partner: {
       sparkle: string;

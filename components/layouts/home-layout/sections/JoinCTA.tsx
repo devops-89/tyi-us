@@ -10,19 +10,33 @@ import AppButton from "@/components/widgets/Button";
 import Image from "next/image";
 import { ASSETS } from "@/utils/assets";
 import SparkleLabel from "@/components/widgets/common/SparkleLabel";
+import Link from "next/link";
 
 const JoinCTA = () => {
   return (
     <Box
       sx={{
-        pt: { xs: 0, sm: 2, md: 4, lg: 18 },
+        pt: { md: 8, lg: 32 }, 
         pb: { xs: 2, md: 10 },
+        
+      
+        "@media (max-width: 767px)": {
+          pt: "40px", 
+        },
+
+      
+        "@media (min-width: 768px) and (max-width: 899px)": {
+          pt: "100px", 
+        },
+      
+
         backgroundColor: COLORS.WHITE,
         position: "relative",
         zIndex: 10,
         overflow: "visible",
       }}
     >
+      
       <Box
         sx={{
           position: "absolute",
@@ -53,9 +67,10 @@ const JoinCTA = () => {
       >
         <Stack
           direction={{ xs: "column", md: "row" }}
-          spacing={{ xs: 2, sm: 14, md: 10 }}
+          spacing={{ xs: 2, sm: 5, md: 10 }} 
           alignItems="center"
         >
+        
           <Box
             sx={{
               flex: 1,
@@ -101,6 +116,7 @@ const JoinCTA = () => {
                 />
               </Box>
 
+
               <Box
                 sx={{
                   position: "absolute",
@@ -134,6 +150,7 @@ const JoinCTA = () => {
                   zIndex: 3,
                 }}
               >
+             
                 <Box
                   sx={{
                     position: "absolute",
@@ -171,13 +188,13 @@ const JoinCTA = () => {
                         xs: 18,
                         sm: 28,
                         md: 20,
-                        lg: 43.76,
+                        lg: 43.76 
                       },
                       height: {
                         xs: 18,
                         sm: 28,
                         md: 20,
-                        lg: 43.76,
+                        lg: 43.76 
                       },
                       mb: { xs: 0.3, md: 1 },
                     }}
@@ -229,6 +246,7 @@ const JoinCTA = () => {
                 </Box>
               </Box>
 
+
               <Box
                 sx={{
                   position: "absolute",
@@ -264,6 +282,7 @@ const JoinCTA = () => {
                   placeItems: "center",
                 }}
               >
+             
                 <Box
                   sx={{
                     width: "80%",
@@ -284,13 +303,13 @@ const JoinCTA = () => {
                         xs: 10,
                         sm: 48,
                         md: 36,
-                        lg: 74.58,
+                        lg: 74.58 
                       },
                       height: {
                         xs: 10,
                         sm: 48,
                         md: 36,
-                        lg: 74.58,
+                        lg: 74.58 
                       },
                       mb: { xs: 0.15, md: 0.3 },
                     }}
@@ -342,6 +361,7 @@ const JoinCTA = () => {
             </Box>
           </Box>
 
+
           <Box
             sx={{
               flex: 1,
@@ -358,7 +378,8 @@ const JoinCTA = () => {
                 sparklePosition="both"
                 type="diamond"
                 color={COLORS.PRIMARY}
-                fontSize={18}
+                fontSize={{ xs:"16px", md:"18px"}}
+                sparkleSize={35}
               />
             </Box>
 
@@ -379,7 +400,7 @@ const JoinCTA = () => {
             <Typography
               sx={{
                 fontFamily: ibmPlexSans.style.fontFamily,
-                fontSize: { xs: "16px", md: "20px" },
+                fontSize: { xs: "14px", md: "16px" },
                 color: COLORS.TEXT_MUTED,
                 mb: { xs: 4.5, md: 3.5 },
                 maxWidth: { xs: "100%", md: "480px" },
@@ -392,6 +413,8 @@ const JoinCTA = () => {
 
             <AppButton
               pill
+              component={Link}
+              href="/submit" 
               sx={{
                 backgroundColor: COLORS.SECONDARY,
                 color: COLORS.WHITE,
@@ -404,8 +427,8 @@ const JoinCTA = () => {
                 gap: 1,
                 mb: { xs: 6, sm: 4, md: 0 },
                 "&:hover": {
-                  backgroundColor: COLORS.SECONDARY,
-                  boxShadow: "0 8px 24px rgba(214,14,52,0.25)",
+                  backgroundColor: COLORS.PRIMARY,
+                  boxShadow: "0 8px 24px rgba(52, 96, 183, 0.25)",
                 },
               }}
             >

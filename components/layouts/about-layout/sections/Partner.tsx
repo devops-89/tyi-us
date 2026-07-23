@@ -14,10 +14,7 @@ const { partner } = WEBSITE_DATA.about;
 const AboutPartnerSection = () => {
   return (
     <Box
-      sx={{
-        backgroundColor: Colors.WHITE,
-        py: { xs: 4, md: 12 },
-      }}
+      sx={{py: { xs: 4, md: 6 }, backgroundColor: Colors.WHITE}}
     >
       <Container
         maxWidth={false}
@@ -33,7 +30,7 @@ const AboutPartnerSection = () => {
             justifyContent: { xs: "center", md: "flex-start" },
           }}
         >
-          <SparkleLabel text={partner.sparkle} />
+          <SparkleLabel text={partner.sparkle} fontSize={{sx:"16px", md:"18px"}}/>
         </Box>
 
         <Typography
@@ -44,7 +41,7 @@ const AboutPartnerSection = () => {
             color: Colors.BLACK,
             mb: 1,
             lineHeight: { xs: 1.3, md: 1.2 },
-            textAlign: { xs: "center", md: "left" },
+            textAlign: "left",
           }}
         >
           {partner.titlePre}
@@ -56,11 +53,12 @@ const AboutPartnerSection = () => {
         <Typography
           sx={{
             fontFamily: ibmPlexSans.style.fontFamily,
-            fontSize: { xs: 16, md: 18 },
+            fontSize: { xs: "14px", md: "16px" },
+                  lineHeight: { xs: 1.2, md: 1.4 },
             color: Colors.TEXT_MUTED,
             mb: { xs: 4, md: 4 },
-            lineHeight: { xs: "28px", md: "normal" },
-            textAlign: { xs: "center", md: "left" },
+           
+            textAlign: { xs: "justify", md: "left" },
           }}
         >
           {partner.description}
@@ -74,7 +72,7 @@ const AboutPartnerSection = () => {
                   sx={{
                     position: "relative",
                     width: "100%",
-                    height: { xs: 180, sm: 240, md: 288 },
+                    height: { xs: 180, sm: 240, md: 250 },
                     borderRadius: 2,
                     overflow: "hidden",
                   }}
@@ -93,7 +91,7 @@ const AboutPartnerSection = () => {
                   sx={{
                     position: "relative",
                     width: "100%",
-                    height: { xs: 180, sm: 240, md: 288 },
+                    height: { xs: 180, sm: 240, md: 250 },
                     borderRadius: 2,
                     overflow: "hidden",
                   }}
@@ -112,7 +110,7 @@ const AboutPartnerSection = () => {
                   sx={{
                     position: "relative",
                     width: "100%",
-                    height: { xs: 220, sm: 300, md: 323 },
+                    height: { xs: 220, sm: 250, md: 280 },
                     borderRadius: 2,
                     overflow: "hidden",
                   }}
@@ -136,11 +134,11 @@ const AboutPartnerSection = () => {
                     sx={{
                       fontFamily: poppins.style.fontFamily,
                       fontWeight: 700,
-                      fontSize: { xs: 20, sm: 22, md: 24 },
+                      fontSize: { xs: 18, sm: 22, md: 24 },
                       color: Colors.BLACK,
                       mb: 1,
                       lineHeight: { xs: 1.3, md: 1.2 },
-                      textAlign: { xs: "center", md: "left" },
+                      textAlign: { xs: "justify", md: "left" },
                     }}
                   >
                     {f.title}
@@ -149,10 +147,11 @@ const AboutPartnerSection = () => {
                   <Typography
                     sx={{
                       fontFamily: ibmPlexSans.style.fontFamily,
-                      fontSize: { xs: 16, md: 18 },
+                    fontSize: { xs: "14px", md: "16px" },
+                  lineHeight: { xs: 1.2, md: 1.4 },
                       color: Colors.TEXT_MUTED,
-                      lineHeight: { xs: "28px", md: "32px" },
-                      textAlign: { xs: "center", md: "left" },
+                    
+                      textAlign: { xs: "justify", md: "left" },
                     }}
                   >
                     {f.desc}

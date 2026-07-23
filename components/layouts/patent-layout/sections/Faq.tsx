@@ -28,12 +28,9 @@ const FaqSection = () => {
 
   return (
     <Box
-      sx={{
-        py: { xs: 6, md: 10 },
-        backgroundColor: Colors.WHITE,
+      sx={{py: { xs: 4, md: 6 }, backgroundColor: Colors.WHITE,
         position: "relative",
-        overflow: "hidden",
-      }}
+        overflow: "hidden"}}
     >
       <Container
         maxWidth={false}
@@ -47,7 +44,7 @@ const FaqSection = () => {
           spacing={{ xs: 5, md: 10 }}
           alignItems="flex-start"
         >
-          {/* Left Content */}
+      
           <Box
             sx={{
               flex: 1,
@@ -56,7 +53,7 @@ const FaqSection = () => {
             }}
           >
             <Box sx={{ mb: 1.5 }}>
-              <SparkleLabel text={faqs.sparkle}  fontSize={18} />
+              <SparkleLabel text={faqs.sparkle}  fontSize={{sx:"16px", md:"18px"}} />
             </Box>
 
             <Typography
@@ -65,7 +62,7 @@ const FaqSection = () => {
                 fontWeight: 400,
                 fontSize: { xs: "24px", sm: "30px", md: "35px" , lg: "45px" },
                 color: Colors.BLACK,
-                lineHeight: { xs: "42px", sm: "50px", md: "50px" , lg: "66px"},
+                lineHeight: { xs: "30px", sm: "35px", md: "40px" , lg: "66px"},
                 mb: 1.5,
               }}
             >
@@ -76,9 +73,10 @@ const FaqSection = () => {
               sx={{
                 fontFamily: ibmPlexSans.style.fontFamily,
                 fontWeight: 400,
-                fontSize: { xs: 16, md: 20 },
+               fontSize: { xs: "14px", md: "16px" },
+                  lineHeight: { xs: 1.2, md: 1.4 },
                 color: Colors.TEXT_MUTED,
-                lineHeight: { xs: "28px", md: "38px" },
+               
                 mb: 3,
               }}
             >
@@ -110,7 +108,7 @@ const FaqSection = () => {
             </Button>
           </Box>
 
-          {/* FAQ Right Section */}
+         
           <Box sx={{ flex: 1.3, width: "100%" }}>
             <Stack spacing={2}>
               {rows.map(({ question, answer, idx }) => {
@@ -153,8 +151,9 @@ const FaqSection = () => {
                           width: { xs: 36, md: 44 },
                           height: { xs: 36, md: 44 },
                           borderRadius: "999px",
-                          color: Colors.BLACK,
+                          color: open ? Colors.PRIMARY : Colors.SECONDARY,
                           flexShrink: 0,
+                          transition: "color 0.2s",
                         }}
                       >
                         {open ? (
@@ -178,9 +177,10 @@ const FaqSection = () => {
                             fontFamily:
                               ibmPlexSans.style.fontFamily,
                             fontWeight: 400,
-                            fontSize: { xs: 16, md: 20 },
+                           fontSize: { xs: "14px", md: "16px" },
+                  lineHeight: { xs: 1.2, md: 1.4 },
                             color: Colors.TEXT_MUTED,
-                            lineHeight: { xs: "28px", md: "38px" },
+                            
                           }}
                         >
                           {answer}

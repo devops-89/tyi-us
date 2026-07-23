@@ -15,7 +15,7 @@ const SubmitHeroSection = () => {
     <Box
       sx={{
         backgroundColor: COLORS.WHITE,
-        pt: { xs: 0, md: 12 },
+        pt: { xs: 1, md: 12 },
         pb: { xs: 4, md: 12 },
       }}
     >
@@ -56,10 +56,11 @@ const SubmitHeroSection = () => {
             <Typography
               sx={{
                 fontFamily: ibmPlexSans.style.fontFamily,
-                fontSize: { xs: "16px", md: "20px" },
+               fontSize: { xs: "14px", md: "16px" },
+                  lineHeight: { xs: 1.2, md: 1.4 },
                 fontWeight: 400,
                 color: COLORS.TEXT_MUTED,
-                lineHeight: 1.6,
+                textAlign: { xs: "justify", md: "left" },
                 letterSpacing: "0.2px",
                 whiteSpace: "pre-line",
                 maxWidth: { xs: "100%", md: 554 },

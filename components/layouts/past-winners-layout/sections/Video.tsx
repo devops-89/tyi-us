@@ -9,16 +9,39 @@ import { Colors, CONSTANTS } from "@/utils/enum";
 import { poppins } from "@/utils/fonts";
 import { WEBSITE_DATA } from "@/utils/website";
 
+
+const getEmbedUrl = (url?: string) => {
+  if (!url) return "";
+
+  let videoId = "";
+  if (url.includes("watch?v=")) {
+    videoId = url.split("watch?v=")[1].split("&")[0];
+  } else if (url.includes("youtu.be/")) {
+    videoId = url.split("youtu.be/")[1].split("?")[0];
+  } else if (url.includes("embed/")) {
+    return `${url}${url.includes("?") ? "&" : "?"}autoplay=1&mute=1`;
+  }
+
+ 
+  if (videoId) {
+    return `https://www.youtube.com/embed/${videoId}?autoplay=1&mute=1`;
+  }
+
+  
+  return `${url}${url.includes("?") ? "&" : "?"}autoplay=1&mute=1`;
+};
+
 const PastWinnersVideoSection = () => {
   const { video } = WEBSITE_DATA.pastWinners;
+  
   return (
-    <Box sx={{ py: { xs: 4, md: 10 }, backgroundColor: Colors.WHITE }}>
+    <Box sx={{py: { xs: 4, md: 6 }, backgroundColor: Colors.WHITE}}>
       <Container maxWidth={false} sx={{ maxWidth: CONSTANTS.MAX_WIDTH }}>
         <Typography
           sx={{
             fontFamily: poppins.style.fontFamily,
             fontWeight: 600,
-            fontSize: 14,
+            fontSize: { sx: "14px", md: "16px" },
             color: Colors.SECONDARY,
             textAlign: "center",
             mb: 2,
@@ -34,14 +57,24 @@ const PastWinnersVideoSection = () => {
             fontSize: { xs: 24, md: 32 },
             color: Colors.BLACK,
             textAlign: "center",
+             lineHeight: { xs: 1.2, md: 1.4 }, 
             mb: 1,
           }}
         >
           {video.title}
         </Typography>
-        <Typography sx={{ color: Colors.TEXT_MUTED, textAlign: "center", mb: 5 }}>
+        <Typography 
+          sx={{ 
+            color: Colors.TEXT_MUTED, 
+            textAlign: "center", 
+            mb: 5,
+            fontSize: { xs: "14px", md: "16px" },
+            lineHeight: { xs: 1.2, md: 1.4 }, 
+          }}
+        >
           {video.description}
         </Typography>
+
 
         <Box
           sx={{
@@ -53,63 +86,20 @@ const PastWinnersVideoSection = () => {
             backgroundColor: "#7c7c7c",
           }}
         >
-          <Image src={video.image} alt="Event recap video" fill style={{ objectFit: "cover" }} />
-          <Box sx={{ position: "absolute", inset: 0, backgroundColor: "rgba(0,0,0,0.3)" }} />
-
-          {/* Centered Play Button Overlay */}
-          <Box
-            sx={{
+          <iframe
+            src={getEmbedUrl(video.image)} 
+            title="Past Winners Video"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+            style={{
               position: "absolute",
-              left: "50%",
-              top: "50%",
-              transform: "translate(-50%, -50%)",
-              display: "flex",
-              flexDirection: { xs: "column", sm: "row" }, // Stacks vertically on mobile to prevent overflow
-              alignItems: "center",
-              justifyContent: "center",
-              gap: { xs: 1.5, sm: 2 },
-              color: Colors.WHITE,
-              textAlign: { xs: "center", sm: "left" },
-              width: "90%", // Prevents side edge clipping on extra small screens
-              maxWidth: "400px",
-            }}
-          >
-            <Box
-              sx={{
-                width: { xs: 48, sm: 60 }, // Scaled down on mobile
-                height: { xs: 48, sm: 60 }, // Scaled down on mobile
-                borderRadius: "50%",
-                border: "2px solid #fff",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                flexShrink: 0,
+              top: 0,
+              left: 0,
+              width: "100%",
+              height: "100%",
+              border: 0,
               }}
-            >
-              <Play size={18} />
-            </Box>
-            <Box>
-              <Typography 
-                sx={{ 
-                  fontFamily: poppins.style.fontFamily, 
-                  fontWeight: 700, 
-                  fontSize: { xs: 12, sm: 14 }, // Responsive text
-                  lineHeight: { xs: "18px", sm: "24px" } 
-                }}
-              >
-                {video.watchLabel}
-              </Typography>
-              <Typography 
-                sx={{ 
-                  fontFamily: poppins.style.fontFamily, 
-                  fontSize: { xs: 11, sm: 14 }, // Responsive text
-                  lineHeight: { xs: "16px", sm: "24px" } 
-                }}
-              >
-                {video.watchDesc}
-              </Typography>
-            </Box>
-          </Box>
+          />
         </Box>
       </Container>
     </Box>

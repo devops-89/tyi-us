@@ -13,11 +13,9 @@ const PatentServiceSection = () => {
 
   return (
     <Box
-      sx={{
-        backgroundColor: COLORS.WHITE,
-        py: { xs: 4, md: 9 },
-        overflow: "hidden",
-      }}
+      sx={{py: { xs: 4, md: 6 }, backgroundColor: COLORS.WHITE,
+        
+        overflow: "hidden"}}
     >
       <Container
         maxWidth={false}
@@ -46,7 +44,7 @@ const PatentServiceSection = () => {
             >
               <SparkleLabel
                 text={patentService.sparkle}
-                fontSize={18}
+                fontSize={{sx:"16px", md:"18px"}}
                 sparkleSize={35}
               type="blue-star"
                 sparklePosition="both"

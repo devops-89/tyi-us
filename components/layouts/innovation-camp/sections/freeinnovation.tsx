@@ -5,7 +5,7 @@ import Image from "next/image";
 import { Box, Container, Stack, Typography, Button } from "@mui/material";
 import { ArrowUpRight } from "lucide-react";
 
-import { Colors, COLORS, CONSTANTS } from "@/utils/enum";
+import { Colors, CONSTANTS } from "@/utils/enum";
 import { poppins } from "@/utils/fonts";
 import SparkleLabel from "@/components/widgets/common/SparkleLabel";
 import { WEBSITE_DATA } from "@/utils/website";
@@ -25,7 +25,7 @@ const InnovationCampSection = () => {
   }, [innovationCampData.sliderImages.length]);
 
   return (
-    <Box sx={{ backgroundColor: COLORS.WHITE, py: { xs: 1, md: 8 } }}>
+    <Box sx={{py: { xs: 4, md: 6 }, backgroundColor: Colors.WHITE}}>
       <Container
         maxWidth={false}
         sx={{
@@ -63,11 +63,11 @@ const InnovationCampSection = () => {
               >
                 <SparkleLabel
                   text={innovationCampData.sparkle}
-                  fontSize={{sx:"16px", md:"18px"}}
+                  fontSize={{ xs:"16px", md:"18px"}}
                   type="blue-star"
                   sparklePosition="both"
                   sparkleSize={35}
-                  color={COLORS.PRIMARY}
+                  color={Colors.PRIMARY}
                 />
               </Box>
             </Box>
@@ -77,10 +77,10 @@ const InnovationCampSection = () => {
                 fontFamily: poppins.style.fontFamily,
                 fontWeight: 400,
                 fontSize: { xs: "24px", sm: "30px", md: "45px" },
-                lineHeight: { xs: "38px", sm: "42px", md: "48px" },
+                lineHeight: { xs: "30px", sm: "35px", md: "48px" },
                 letterSpacing: "-0.01em",
                 textTransform: "capitalize",
-                color: COLORS.BLACK,
+                color: Colors.BLACK,
                 mb: 2,
                 whiteSpace: "pre-line",
               }}
@@ -92,11 +92,11 @@ const InnovationCampSection = () => {
               sx={{
                 fontFamily: poppins.style.fontFamily,
                 fontWeight: 400,
-                fontSize: { xs: "16px", sm: "18px", md: "22px" },
-                lineHeight: { xs: "28px", sm: "32px", md: "35px" },
+                fontSize: { xs: "14px", md: "16px" },
+                  lineHeight: { xs: 1.2, md: 1.4 },
                 letterSpacing: "-0.02em",
                 textTransform: "capitalize",
-                color: COLORS.TEXT_MUTED,
+                color: Colors.TEXT_MUTED,
                 maxWidth: { xs: "100%", md: 520 },
                 mb: 3,
               }}
@@ -118,7 +118,7 @@ const InnovationCampSection = () => {
                 boxShadow: "none",
                 px: { xs: 2.5, sm: 4 },
                 
-                // Centering and Sizing responsive styles (< 768px in center, >= 768px left-aligned)
+                
                 display: "flex",
                 mx: "auto",
                 width: "fit-content",
@@ -131,13 +131,13 @@ const InnovationCampSection = () => {
                   height: 54,
                   fontSize: "18px",
                 },
-                "@media (min-width: 900px)": { // md breakpoint
+                "@media (min-width: 900px)": { 
                   height: 60,
                   fontSize: "20px",
                 },
 
                 "&:hover": {
-                  backgroundColor: COLORS.PRIMARY,
+                  backgroundColor: Colors.PRIMARY,
                   boxShadow: "none",
                 },
               }}
@@ -181,7 +181,7 @@ const InnovationCampSection = () => {
                     height: index === activeImage ? 7 : 5,
                     borderRadius: "50%",
                     backgroundColor:
-                      index === activeImage ? COLORS.BLACK : "#D9D9D9",
+                      index === activeImage ? Colors.BLACK : "#D9D9D9",
                     cursor: "pointer",
                   }}
                 />
@@ -195,18 +195,18 @@ const InnovationCampSection = () => {
             mt: { xs: 6, md: 10 },
             maxWidth: CONSTANTS.MAX_WIDTH,
             mx: "auto",
-            textAlign: "center",
+            textAlign: {xs:"justify", md:"center"},
           }}
         >
           <Typography
             sx={{
               fontFamily: poppins.style.fontFamily,
               fontWeight: 400,
-              fontSize: { xs: "16px", sm: "18px", md: "22px" },
-              lineHeight: { xs: "28px", sm: "32px", md: "35px" },
+             fontSize: { xs: "14px", md: "16px" },
+                  lineHeight: { xs: 1.2, md: 1.4 },
               letterSpacing: "-0.02em",
               textTransform: "capitalize",
-              color: COLORS.TEXT_MUTED,
+              color: Colors.TEXT_MUTED,
               mb: 3,
             }}
           >
@@ -217,11 +217,11 @@ const InnovationCampSection = () => {
             sx={{
               fontFamily: poppins.style.fontFamily,
               fontWeight: 400,
-              fontSize: { xs: "16px", sm: "18px", md: "22px" },
-              lineHeight: { xs: "28px", sm: "32px", md: "35px" },
+              fontSize: { xs: "14px", md: "16px" },
+                  lineHeight: { xs: 1.2, md: 1.4 },
               letterSpacing: "-0.02em",
               textTransform: "capitalize",
-              color: COLORS.TEXT_MUTED,
+              color: Colors.TEXT_MUTED,
               mb: 4,
             }}
           >
@@ -232,14 +232,14 @@ const InnovationCampSection = () => {
             sx={{
               fontFamily: poppins.style.fontFamily,
               fontWeight: 400,
-              fontSize: { xs: "15px", sm: "17px", md: "22px" },
-              lineHeight: { xs: "26px", sm: "30px", md: "35px" },
+            fontSize: { xs: "14px", md: "16px" },
+                  lineHeight: { xs: 1.2, md: 1.4 },
               letterSpacing: "-0.02em",
               textTransform: "capitalize",
-              color: COLORS.TEXT_MUTED,
+              color: Colors.TEXT_MUTED,
             }}
           >
-            <Box component="span" sx={{ color: COLORS.SECONDARY }}>
+            <Box component="span" sx={{ color: Colors.SECONDARY }}>
               Note:
             </Box>{" "}
             {innovationCampData.note}

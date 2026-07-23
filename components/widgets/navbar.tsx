@@ -66,7 +66,7 @@ const Navbar = () => {
                 sx={{
                   display: "flex",
                   alignItems: "center",
-                  width: { xs: "100px", lg: "180px" },
+                  width: { xs: "100px", lg: "150px" },
                 }}
               >
                 <Image

@@ -15,7 +15,7 @@ const { rules: rulesData } = WEBSITE_DATA.challenge;
 
 const RulesSection = () => {
   return (
-    <Box sx={{ py: { xs: 4, md: 12 }, backgroundColor: Colors.WHITE }}>
+    <Box sx={{py: { xs: 4, md: 6 }, backgroundColor: Colors.WHITE}}>
       <Container
         maxWidth={false}
         sx={{
@@ -36,7 +36,8 @@ const RulesSection = () => {
                 text={rulesData.sparkle}
                 sparklePosition="both"
                 type="flower"
-                fontSize="18px"
+               fontSize={{ xs:"16px", md:"18px"}}
+
               />
             </Box>
 
@@ -44,7 +45,7 @@ const RulesSection = () => {
               sx={{
                 fontFamily: poppins.style.fontFamily,
                 fontWeight: 500,
-                fontSize: { xs: "24px", sm: "30px", md: "38px", lg: "45px" }, // Decreased on 1024px (md)
+                fontSize: { xs: "24px", sm: "30px", md: "38px", lg: "45px" }, 
                 color: Colors.BLACK,
                 lineHeight: { xs: 1.2, md: 1.1 },
                 mb: 1.5,
@@ -56,9 +57,10 @@ const RulesSection = () => {
             <Typography
               sx={{
                 fontFamily: ibmPlexSans.style.fontFamily,
-                fontSize: { xs: "16px", md: "17px", lg: "20px" }, // Decreased on 1024px (md)
+                fontSize: { xs: "14px", md: "16px" },
+                  lineHeight: { xs: 1.2, md: 1.4 },
                 color: Colors.TEXT_MUTED,
-                lineHeight: 1.6,
+               
                 maxWidth: 800,
                 mx: { xs: "auto", md: 0 },
               }}
@@ -74,7 +76,7 @@ const RulesSection = () => {
                   sx={{
                     position: "relative",
                     width: "100%",
-                    height: { xs: 320, sm: 420, md: 600, lg: 575 }, // Increased main image height on 1024px (md)
+                    height: { xs: 320, sm: 420, md: 600, lg: 575 }, 
                     borderRadius: { xs: "22px", md: "30px" },
                     overflow: "hidden",
                     boxShadow: "0px 10px 30px rgba(0,0,0,0.05)",
@@ -91,8 +93,8 @@ const RulesSection = () => {
                 <Box
                   sx={{
                     position: "absolute",
-                    bottom: { xs: 0, md: -60, lg: -80 }, // Adjusted offset on 1024px (md) to prevent screen cutoff
-                    right: { xs: 16, md: -30, lg: -50 }, // Adjusted offset on 1024px (md) to prevent screen cutoff
+                    bottom: { xs: 0, md: -60, lg: -80 }, 
+                    right: { xs: 16, md: -30, lg: -50 }, 
                     width: { xs: 150, sm: 180, md: 220 },
                     height: { xs: 150, sm: 190, md: 240 },
                     borderRadius: { xs: "22px", md: "30px" },
@@ -131,7 +133,7 @@ const RulesSection = () => {
             </Grid>
 
             <Grid size={{ xs: 12, md: 6 }}>
-              <Stack spacing={{ xs: 3, md: 3, lg: 4 }} sx={{ pt: { xs: 0, md: 2 } }}> {/* Adjusted spacing on md */}
+              <Stack spacing={{ xs: 3, md: 3, lg: 4 }} sx={{ pt: { xs: 0, md: 2 } }}> {}
                 {rulesData.rules.map((ruleText: string, idx: number) => {
                   const parts = ruleText.split("contact us");
 
@@ -155,29 +157,31 @@ const RulesSection = () => {
                           mt: 0.5,
                         }}
                       >
-                        <Box sx={{ width: 14, height: 10, position: "relative" }}>
-                          <svg
-                            viewBox="0 0 14 11"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M1 5.5L4.5 9L12.5 1"
-                              stroke="white"
-                              strokeWidth="2.5"
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                            />
-                          </svg>
-                        </Box>
+                        <svg
+                          width="14"
+                          height="11"
+                          viewBox="0 0 14 11"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                          style={{ display: "block" }}
+                        >
+                          <path
+                            d="M1 5.5L4.5 9L12.5 1"
+                            stroke="white"
+                            strokeWidth="2.5"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          />
+                        </svg>
                       </Box>
 
                       <Typography
                         sx={{
                           fontFamily: ibmPlexSans.style.fontFamily,
-                          fontSize: { xs: "16px", md: "17px", lg: "20px" }, // Decreased on 1024px (md)
+                          fontSize: { xs: "14px", md: "16px" },
+                           lineHeight: { xs: 1.2, md: 1.4 },
                           color: "#333333",
-                          lineHeight: { xs: 1.65, md: 1.6 },
+                         
                           textAlign: { xs: "left", md: "justify" },
                         }}
                       >
@@ -211,19 +215,19 @@ const RulesSection = () => {
                     variant="contained"
                     endIcon={<ArrowUpRight size={18} />}
                     sx={{
-                      height: { xs: 40, md: 48, lg: 56 }, // Decreased height on 1024px (md) to 48px
-                      px: { xs: 2.5, md: 4, lg: 5 }, // Decreased padding on 1024px (md) to 4
+                      height: { xs: 40, md: 48, lg: 56 }, 
+                      px: { xs: 2.5, md: 4, lg: 5 }, 
                       width: { xs: "fit-content", sm: "auto" },
                       borderRadius: "50px",
                       backgroundColor: Colors.SECONDARY,
                       fontFamily: ibmPlexSans.style.fontFamily,
                       fontWeight: 600,
-                      fontSize: { xs: 14, md: 16, lg: 18 }, // Decreased size on 1024px (md) to 16px
+                      fontSize: { xs: 14, md: 16, lg: 18 }, 
                       textTransform: "none",
                       boxShadow: "0 4px 14px rgba(227, 24, 55, 0.3)",
                       "&:hover": {
-                        backgroundColor: Colors.PRIMARY,
-                        boxShadow: "0 6px 20px rgba(227, 24, 55, 0.4)",
+                          backgroundColor: Colors.PRIMARY,
+                        boxShadow: "0 8px 24px rgba(52, 96, 183, 0.25)",
                       },
                     }}
                   >

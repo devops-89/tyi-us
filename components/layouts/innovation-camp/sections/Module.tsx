@@ -12,7 +12,7 @@ const ModulesCoveredSection = () => {
   const modulesData = WEBSITE_DATA.innovation.ModuleItem;
 
   return (
-    <Box sx={{ backgroundColor: COLORS.WHITE, py: { xs: 4, md: 10 } }}>
+    <Box sx={{py: { xs: 4, md: 6 }, backgroundColor: COLORS.WHITE}}>
       <Container
         maxWidth={false}
         sx={{
@@ -24,11 +24,11 @@ const ModulesCoveredSection = () => {
           <Box sx={{ display: "flex", justifyContent: "center", mb: 2 }}>
             <SparkleLabel
               text="8 Module Covered"
-              fontSize="18px"
-              type="blue-star"
-              sparklePosition="both"
-              sparkleSize={35}
-              color={COLORS.PRIMARY}
+              fontSize={{sx:"16px", md:"18px"}}
+                              type="blue-star"
+                             sparklePosition="both"
+                             sparkleSize={35}
+                             color={COLORS.PRIMARY}
             />
           </Box>
 
@@ -119,7 +119,6 @@ const ModulesCoveredSection = () => {
                     lineHeight: "25.2px",
                     letterSpacing: "-0.18px",
                     color: COLORS.BLACK,
-                    minHeight: { xs: "auto", sm: "75.6px" }, // Reserves space for up to 3 lines of title text
                   }}
                 >
                   {item.title}

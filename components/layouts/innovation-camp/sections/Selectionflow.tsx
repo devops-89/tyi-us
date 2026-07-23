@@ -2,8 +2,16 @@
 
 import React from "react";
 import Image from "next/image";
-import { Box, Container, Stack, Typography, Button } from "@mui/material";
-import { ArrowLeft, ArrowRight } from "lucide-react";
+import { Box, Container, Stack, Typography } from "@mui/material";
+import { 
+  ArrowUpRight, 
+  ClipboardList, 
+  Compass, 
+  Send, 
+  FileText, 
+  Trophy, 
+  Award 
+} from "lucide-react";
 
 import { Colors, CONSTANTS } from "@/utils/enum";
 import { poppins, ibmPlexSans } from "@/utils/fonts";
@@ -33,36 +41,27 @@ const selectionSteps = [
   },
 ];
 
+
+const STEP_ICONS = [
+  ClipboardList,
+  Compass,
+  Send,
+  FileText,
+  Trophy,
+  Award,
+];
+
 const SelectionFlowSection = () => {
-  const [activeStep, setActiveStep] = React.useState(0);
-  const totalSteps = selectionSteps.length;
-
-  const handleNext = () => {
-    setActiveStep((prev) => (prev + 1) % totalSteps);
-  };
-
-  const handlePrev = () => {
-    setActiveStep((prev) => (prev - 1 + totalSteps) % totalSteps);
-  };
-
-  const orderedSteps = selectionSteps
-    .map((step, index) => ({ ...step, originalIndex: index }))
-    .slice(activeStep)
-    .concat(
-      selectionSteps
-        .map((step, index) => ({ ...step, originalIndex: index }))
-        .slice(0, activeStep)
-    );
-
   return (
     <Box
       sx={{
-        py: { xs: 6, md: 18 },
+        py: { xs: 4, md: 6 }, 
         backgroundColor: Colors.WHITE,
         position: "relative",
-        overflow: "hidden",
+        overflow: "hidden"
       }}
     >
+      
       <Box
         sx={{
           position: "absolute",
@@ -83,24 +82,7 @@ const SelectionFlowSection = () => {
         />
       </Box>
 
-      <Box
-        sx={{
-          position: "absolute",
-          left: 0,
-          bottom: { xs: 40, md: 100 },
-          width: { xs: 80, md: 180 },
-          height: { xs: 50, md: 120 },
-          zIndex: 1,
-          opacity: { xs: 0.35, md: 0.6 },
-        }}
-      >
-        <Image
-          src={ASSETS.IMAGES.ICON_DOTS}
-          alt=""
-          fill
-          style={{ objectFit: "contain", objectPosition: "bottom left" }}
-        />
-      </Box>
+      
 
       <Container
         maxWidth={false}
@@ -111,222 +93,194 @@ const SelectionFlowSection = () => {
           px: { xs: 2, sm: 3, md: 4 },
         }}
       >
-        <Stack
-          direction={{ xs: "column", md: "row" }}
-          spacing={{ xs: 5, md: 8 }}
-          alignItems="flex-start"
-        >
-          {/* Left Navigation & Info Area */}
-          <Box sx={{ flex: 1, minWidth: 0, width: "100%" }}>
-            <Box sx={{ mb: 1.5 }}>
-              <SparkleLabel
-                text="Selection Flow"
-                fontSize={18}
-                sparklePosition="both"
-              />
-            </Box>
-
-            <Typography
-              sx={{
-                fontFamily: poppins.style.fontFamily,
-                fontWeight: 400,
-                fontSize: { xs: "24px", md: "28px" },
-                color: Colors.BLACK,
-                lineHeight: { xs: 1.3, md: 1.25 },
-                mb: 4, // Increased spacing since there is no description below
-                maxWidth: 600,
-              }}
-            >
-              How to Join the Innovation Camp
-            </Typography>
-
-            <Stack direction="row" spacing={1.5}>
-              <Button
-                type="button"
-                onClick={handlePrev}
-                variant="contained"
-                sx={{
-                  minWidth: 0,
-                  width: { xs: 40, md: 44 },
-                  height: { xs: 40, md: 44 },
-                  borderRadius: "50%",
-                  backgroundColor: Colors.SECONDARY,
-                  "&:hover": { backgroundColor: Colors.PRIMARY },
-                }}
-              >
-                <ArrowLeft size={18} />
-              </Button>
-
-              <Button
-                type="button"
-                onClick={handleNext}
-                variant="contained"
-                sx={{
-                  minWidth: 0,
-                  width: { xs: 40, md: 44 },
-                  height: { xs: 40, md: 44 },
-                  borderRadius: "50%",
-                  backgroundColor: Colors.PRIMARY,
-                  "&:hover": { backgroundColor: "#000080" },
-                }}
-              >
-                <ArrowRight size={18} />
-              </Button>
-            </Stack>
+    
+        <Stack alignItems="center" textAlign="center" sx={{ mb: { xs: 6, md: 8 } }}>
+          <Box sx={{ mb: 2, py: { xs: 4, md: 6 } }}>
+            <SparkleLabel
+              text="Selection Flow"
+              fontSize={{ xs: "16px", md: "18px" }}
+              sparklePosition="both"
+            />
           </Box>
 
-          {/* Right Journey List */}
-          <Box
+          <Typography
             sx={{
-              flex: 1.5,
-              minWidth: 0,
-              position: "relative",
-              width: "100%",
+              fontFamily: poppins.style.fontFamily,
+              fontWeight: 500,
+              fontSize: { xs: "28px", sm: "36px", md: "42px" },
+              color: Colors.BLACK,
+              lineHeight: 1.2,
+              mb: 2.5,
+              maxWidth: 800,
             }}
           >
-            <Stack direction="row" spacing={{ xs: 2, md: 4 }} alignItems="stretch">
-              <Box sx={{ flex: 1 }}>
-                {orderedSteps.map((s, displayIdx) => {
-                  const idx = s.originalIndex;
-                  const isLast = displayIdx === orderedSteps.length - 1;
-                  const isActive = idx === activeStep;
-
-                  return (
-                    <Stack
-                      key={s.stepLabel}
-                      direction="row"
-                      spacing={{ xs: 2, md: 5 }}
-                    >
-                      {/* Connector Line */}
-                      <Box
-                        sx={{
-                          display: "flex",
-                          flexDirection: "column",
-                          alignItems: "center",
-                          width: { xs: 16, md: 20 },
-                          flexShrink: 0,
-                        }}
-                      >
-                        <Box
-                          sx={{
-                            width: { xs: 12, md: 14 },
-                            height: { xs: 12, md: 14 },
-                            borderRadius: "50%",
-                            backgroundColor: isActive
-                              ? Colors.PRIMARY
-                              : Colors.SECONDARY,
-                            mt: 1.2,
-                            zIndex: 2,
-                            transition: "background-color 0.3s ease",
-                          }}
-                        />
-
-                        {!isLast && (
-                          <Box
-                            sx={{
-                              width: 2,
-                              flex: 1,
-                              backgroundColor: Colors.SECONDARY,
-                              my: 0.5,
-                            }}
-                          />
-                        )}
-                      </Box>
-
-                      {/* Content Area */}
-                      <Box
-                        sx={{
-                          flex: 1,
-                          pb: {
-                            xs: isLast ? 0 : 4,
-                            md: isLast ? 0 : 8,
-                          },
-                          opacity: isActive ? 1 : 0.6,
-                          transition: "opacity 0.3s ease",
-                          minWidth: 0,
-                        }}
-                      >
-                        {/* Step Label Box */}
-                        <Box
-                          onClick={() => setActiveStep(idx)}
-                          sx={{
-                            display: "inline-flex",
-                            alignItems: "center",
-                            justifyContent: "center",
-                            border: `1px solid ${
-                              isActive ? Colors.PRIMARY : "#E0E0E0"
-                            }`,
-                            borderRadius: "999px",
-                            px: { xs: 2, md: 2.5 },
-                            py: 0.8,
-                            mb: 1.5,
-                            cursor: "pointer",
-                            backgroundColor: isActive
-                              ? "rgba(0, 0, 128, 0.05)"
-                              : "transparent",
-                            transition: "all 0.3s ease",
-                          }}
-                        >
-                          <Typography
-                            sx={{
-                              fontFamily: ibmPlexSans.style.fontFamily,
-                              fontWeight: 700,
-                              fontSize: 12,
-                              color: isActive
-                                ? Colors.PRIMARY
-                                : Colors.TEXT_MUTED,
-                            }}
-                          >
-                            {s.stepLabel}
-                          </Typography>
-                        </Box>
-
-                        {/* Description Text (Title omitted) */}
-                        <Typography
-                          sx={{
-                            fontFamily: poppins.style.fontFamily,
-                            fontWeight: 400,
-                            fontSize: { xs: "16px", md: "20px" },
-                            color: Colors.TEXT_MUTED,
-                            lineHeight: 1.6,
-                            textAlign: { xs: "left", md: "justify" },
-                          }}
-                        >
-                          {s.description}
-                        </Typography>
-                      </Box>
-
-                      {/* Visual indicator bar on the side */}
-                      <Box
-                        sx={{
-                          width: 6,
-                          backgroundColor: "#F0F0F0",
-                          borderRadius: "4px",
-                          position: "relative",
-                          display: { xs: "none", md: "block" },
-                          overflow: "hidden",
-                          mb: isLast ? 0 : 4,
-                        }}
-                      >
-                        <Box
-                          sx={{
-                            position: "absolute",
-                            top: 0,
-                            left: 0,
-                            right: 0,
-                            height: isActive ? "100%" : "0%",
-                            backgroundColor: Colors.PRIMARY,
-                            transition: "height 0.4s ease-out",
-                          }}
-                        />
-                      </Box>
-                    </Stack>
-                  );
-                })}
-              </Box>
-            </Stack>
-          </Box>
+            How to Join the Innovation Camp
+          </Typography>
         </Stack>
+
+       
+        <Box
+          sx={{
+            display: 'grid',
+            gridTemplateColumns: { xs: '1fr', sm: 'repeat(2, 1fr)', md: 'repeat(3, 1fr)' },
+            gap: { xs: 3, md: 4 }
+          }}
+        >
+          {selectionSteps.map((step, index) => {
+            
+            const IconComponent = STEP_ICONS[index % STEP_ICONS.length];
+
+            return (
+              <Box
+                key={index}
+                sx={{
+                  position: 'relative',
+                  p: { xs: 3, md: 4 },
+                  borderRadius: '24px',
+                  border: '1px solid rgba(227, 24, 55, 0.12)',
+                  backgroundColor: Colors.WHITE,
+                  overflow: 'hidden',
+                  transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
+                  cursor: 'pointer',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  
+                  
+                  
+                  
+                  '&:hover': {
+                    borderColor: Colors.SECONDARY,
+                    transform: 'translateY(-10px)', 
+                    boxShadow: '0 20px 40px rgba(227, 24, 55, 0.08)',
+                    
+                    '& .step-badge': {
+                      backgroundColor: Colors.SECONDARY,
+                      color: Colors.WHITE,
+                    },
+                    '& .icon-wrapper': {
+                      backgroundColor: Colors.SECONDARY,
+                      color: Colors.WHITE,
+                      borderColor: Colors.SECONDARY,
+                      transform: 'scale(1.2) rotate(360deg)', 
+                    },
+                    '& .card-title': {
+                      color: Colors.SECONDARY, 
+                    },
+                    '& .card-arrow': {
+                      color: Colors.SECONDARY,
+                    }
+                  }
+                }}
+              >
+                {}
+                <Typography
+                  className="watermark"
+                  sx={{
+                    position: 'absolute',
+                    bottom: '-25px',
+                    right: '0px',
+                    fontSize: '140px',
+                    fontWeight: 800,
+                    color: 'rgba(227, 24, 55, 0.04)',
+                    lineHeight: 1,
+                    fontFamily: poppins.style.fontFamily,
+                    zIndex: 0,
+                    pointerEvents: 'none',
+                  }}
+                >
+                  {String(index + 1).padStart(2, '0')}
+                </Typography>
+
+                {}
+                <Stack 
+                  direction="row" 
+                  justifyContent="space-between" 
+                  alignItems="center" 
+                  sx={{ mb: 4, position: 'relative', zIndex: 1 }}
+                >
+                  <Box
+                    className="step-badge"
+                    sx={{
+                      px: 2,
+                      py: 0.5,
+                      borderRadius: '20px',
+                      backgroundColor: 'rgba(227, 24, 55, 0.05)',
+                      color: Colors.SECONDARY,
+                      transition: 'all 0.4s ease',
+                      display: 'flex',
+                      alignItems: 'center',
+                    }}
+                  >
+                    <Typography 
+                      sx={{ 
+                        fontFamily: ibmPlexSans.style.fontFamily, 
+                        fontWeight: 700, 
+                        fontSize: '12px', 
+                        textTransform: 'uppercase',
+                        letterSpacing: '0.5px'
+                      }}
+                    >
+                      STEP - {String(index + 1).padStart(2, '0')}
+                    </Typography>
+                  </Box>
+
+                  <Box
+                    className="icon-wrapper"
+                    sx={{
+                      width: 40,
+                      height: 40,
+                      borderRadius: '50%',
+                      border: '1px solid rgba(227, 24, 55, 0.2)',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      color: Colors.SECONDARY,
+                      transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
+                      backgroundColor: Colors.WHITE,
+                    }}
+                  >
+                    <IconComponent size={20} />
+                  </Box>
+                </Stack>
+
+                {}
+                <Stack 
+                  direction="row" 
+                  justifyContent="space-between" 
+                  alignItems="flex-start" 
+                  sx={{ position: 'relative', zIndex: 1 }}
+                >
+                  <Typography
+                    className="card-title"
+                    sx={{
+                      fontFamily: ibmPlexSans.style.fontFamily,
+                      fontSize: { xs: '15px', md: '17px' },
+                      fontWeight: 500,
+                      color: Colors.BLACK,
+                      lineHeight: 1.5,
+                      pr: 2,
+                      transition: 'color 0.4s ease', 
+                    }}
+                  >
+                    {step.description}
+                  </Typography>
+                  
+                  <Box 
+                    className="card-arrow"
+                    sx={{ 
+                      color: '#D0D0D0', 
+                      mt: 0.5, 
+                      transition: 'color 0.4s ease',
+                      flexShrink: 0 
+                    }}
+                  >
+                    <ArrowUpRight size={22} />
+                  </Box>
+                </Stack>
+              </Box>
+            );
+          })}
+        </Box>
       </Container>
     </Box>
   );
