@@ -111,7 +111,7 @@ const ChallengeSection = () => {
               sx={{
                 flex: 1,
                 pt: { xs: 0, md: 24 },
-                ml: { xs: 0, md: "auto" },
+                ml: { xs: 0, md: "5px" },
                 maxWidth: { xs: "100%", md: "520px" },
               }}
             >
