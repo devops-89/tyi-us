@@ -4,7 +4,7 @@ import React from "react";
 import Image from "next/image";
 import { Box, Container, Grid, Stack, Typography } from "@mui/material";
 
-import { Colors, CONSTANTS } from "@/utils/enum";
+import { COLORS, CONSTANTS } from "@/utils/enum";
 import { poppins, ibmPlexSans } from "@/utils/fonts";
 import { WEBSITE_DATA } from "@/utils/website";
 import SparkleLabel from "@/components/widgets/common/SparkleLabel";
@@ -14,7 +14,7 @@ const { partner } = WEBSITE_DATA.about;
 const AboutPartnerSection = () => {
   return (
     <Box
-      sx={{py: { xs: 4, md: 6 }, backgroundColor: Colors.WHITE}}
+      sx={{py: { xs: 4, md: 6 }, backgroundColor: COLORS.WHITE}}
     >
       <Container
         maxWidth={false}
@@ -38,14 +38,14 @@ const AboutPartnerSection = () => {
             fontFamily: poppins.style.fontFamily,
             fontWeight: 700,
             fontSize: { xs: 24, sm: 28, md: 32 },
-            color: Colors.BLACK,
+            color: COLORS.BLACK,
             mb: 1,
             lineHeight: { xs: 1.3, md: 1.2 },
             textAlign: "left",
           }}
         >
           {partner.titlePre}
-          <Box component="span" sx={{ color: Colors.SECONDARY }}>
+          <Box component="span" sx={{ color: COLORS.SECONDARY }}>
             {partner.titleAccent}
           </Box>
         </Typography>
@@ -55,7 +55,7 @@ const AboutPartnerSection = () => {
             fontFamily: ibmPlexSans.style.fontFamily,
             fontSize: { xs: "14px", md: "16px" },
                   lineHeight: { xs: 1.2, md: 1.4 },
-            color: Colors.TEXT_MUTED,
+            color: COLORS.TEXT_MUTED,
             mb: { xs: 4, md: 4 },
            
             textAlign: { xs: "justify", md: "left" },
@@ -135,7 +135,7 @@ const AboutPartnerSection = () => {
                       fontFamily: poppins.style.fontFamily,
                       fontWeight: 700,
                       fontSize: { xs: 18, sm: 22, md: 24 },
-                      color: Colors.BLACK,
+                      color: COLORS.BLACK,
                       mb: 1,
                       lineHeight: { xs: 1.3, md: 1.2 },
                       textAlign: { xs: "justify", md: "left" },
@@ -149,7 +149,7 @@ const AboutPartnerSection = () => {
                       fontFamily: ibmPlexSans.style.fontFamily,
                     fontSize: { xs: "14px", md: "16px" },
                   lineHeight: { xs: 1.2, md: 1.4 },
-                      color: Colors.TEXT_MUTED,
+                      color: COLORS.TEXT_MUTED,
                     
                       textAlign: { xs: "justify", md: "left" },
                     }}

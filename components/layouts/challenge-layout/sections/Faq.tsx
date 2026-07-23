@@ -11,7 +11,7 @@ import {
 } from "@mui/material";
 import { Minus, Plus } from "lucide-react";
 
-import { Colors, CONSTANTS } from "@/utils/enum";
+import { COLORS, CONSTANTS } from "@/utils/enum";
 import { poppins, ibmPlexSans } from "@/utils/fonts";
 import { WEBSITE_DATA } from "@/utils/website";
 import SparkleLabel from "@/components/widgets/common/SparkleLabel";
@@ -24,7 +24,7 @@ const ChallengeFaqSection = () => {
 
   return (
     <Box
-      sx={{py: { xs: 4, md: 6 }, backgroundColor: Colors.WHITE}}
+      sx={{py: { xs: 4, md: 6 }, backgroundColor: COLORS.WHITE}}
     >
       <Container
         maxWidth={false}
@@ -71,7 +71,7 @@ const ChallengeFaqSection = () => {
                   fontFamily: poppins.style.fontFamily,
                   fontWeight: 500,
                   fontSize: { xs: "24px", sm: "30px", md: "45px" },
-                  color: Colors.BLACK,
+                  color: COLORS.BLACK,
                   lineHeight: { xs: 1.25, md: 1.2 },
                   mb: 2,
                 }}
@@ -85,7 +85,7 @@ const ChallengeFaqSection = () => {
                   fontSize: { xs: "14px", md: "16px" },
                   lineHeight: { xs: 1.2, md: 1.4 },
                   fontWeight: 400,
-                  color: Colors.TEXT_MUTED,
+                  color: COLORS.TEXT_MUTED,
                   maxWidth: { xs: "100%", md: 520 },
                   mx: { xs: "auto", md: 0 },
                 }}
@@ -120,9 +120,9 @@ const ChallengeFaqSection = () => {
                         cursor: "pointer",
                         gap: 2,
                         "&:hover": {
-                          color: Colors.SECONDARY,
+                          color: COLORS.SECONDARY,
                           "& .faq-icon": {
-                            color: Colors.SECONDARY,
+                            color: COLORS.SECONDARY,
                           },
                         },
                         transition: "all 0.2s ease-in-out",
@@ -137,7 +137,7 @@ const ChallengeFaqSection = () => {
                             sm: "18px",
                             md: "22px",
                           },
-                          color: Colors.BLACK,
+                          color: COLORS.BLACK,
                           lineHeight: { xs: 1.5, md: 1.4 },
                           flex: 1,
                         }}
@@ -148,7 +148,7 @@ const ChallengeFaqSection = () => {
                       <Box
                         className="faq-icon"
                         sx={{
-                          color: isOpen ? Colors.PRIMARY : Colors.SECONDARY,
+                          color: isOpen ? COLORS.PRIMARY : COLORS.SECONDARY,
                           flexShrink: 0,
                           display: "flex",
                           alignItems: "center",
@@ -184,7 +184,7 @@ const ChallengeFaqSection = () => {
                           fontWeight: 400,
                          fontSize: { xs: "14px", md: "16px" },
                   lineHeight: { xs: 1.2, md: 1.4 },
-                          color: Colors.TEXT_MUTED,
+                          color: COLORS.TEXT_MUTED,
                          
                           maxWidth: {
                             xs: "100%",

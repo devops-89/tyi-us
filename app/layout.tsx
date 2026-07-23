@@ -16,7 +16,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${poppins.variable} ${ibmPlexSans.variable}`}>
-      <body style={{ margin: 0, padding: 0, fontFamily: ibmPlexSans.style.fontFamily }}>
+      <body suppressHydrationWarning={true} style={{ margin: 0, padding: 0, fontFamily: ibmPlexSans.style.fontFamily }}>
         <Navbar/>
         
         <Box component="main" sx={{ pt: "100px" }}>

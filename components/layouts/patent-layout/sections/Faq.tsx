@@ -11,7 +11,7 @@ import {
   Button,
 } from "@mui/material";
 import { Minus, Plus, ArrowUpRight } from "lucide-react";
-import { Colors, CONSTANTS } from "@/utils/enum";
+import { COLORS, CONSTANTS } from "@/utils/enum";
 import { poppins, ibmPlexSans } from "@/utils/fonts";
 import { WEBSITE_DATA } from "@/utils/website";
 import SparkleLabel from "@/components/widgets/common/SparkleLabel";
@@ -28,7 +28,7 @@ const FaqSection = () => {
 
   return (
     <Box
-      sx={{py: { xs: 4, md: 6 }, backgroundColor: Colors.WHITE,
+      sx={{py: { xs: 4, md: 6 }, backgroundColor: COLORS.WHITE,
         position: "relative",
         overflow: "hidden"}}
     >
@@ -61,7 +61,7 @@ const FaqSection = () => {
                 fontFamily: poppins.style.fontFamily,
                 fontWeight: 400,
                 fontSize: { xs: "24px", sm: "30px", md: "35px" , lg: "45px" },
-                color: Colors.BLACK,
+                color: COLORS.BLACK,
                 lineHeight: { xs: "30px", sm: "35px", md: "40px" , lg: "66px"},
                 mb: 1.5,
               }}
@@ -75,7 +75,7 @@ const FaqSection = () => {
                 fontWeight: 400,
                fontSize: { xs: "14px", md: "16px" },
                   lineHeight: { xs: 1.2, md: 1.4 },
-                color: Colors.TEXT_MUTED,
+                color: COLORS.TEXT_MUTED,
                
                 mb: 3,
               }}
@@ -90,8 +90,8 @@ const FaqSection = () => {
                 borderRadius: "50px",
                 px: { xs: 2.5, md: 3 },
                 py: 1,
-                borderColor: Colors.SECONDARY,
-                color: Colors.SECONDARY,
+                borderColor: COLORS.SECONDARY,
+                color: COLORS.SECONDARY,
                 backgroundColor: "rgba(227, 24, 55, 0.08)",
                 textTransform: "none",
                 fontFamily: ibmPlexSans.style.fontFamily,
@@ -100,7 +100,7 @@ const FaqSection = () => {
                 width: { xs: "100%", sm: "fit-content" },
                 "&:hover": {
                   backgroundColor: "rgba(227, 24, 55, 0.12)",
-                  borderColor: Colors.SECONDARY,
+                  borderColor: COLORS.SECONDARY,
                 },
               }}
             >
@@ -118,7 +118,7 @@ const FaqSection = () => {
                   <Box
                     key={question}
                     sx={{
-                      borderBottom: `1px solid ${Colors.BLACK}`,
+                      borderBottom: `1px solid ${COLORS.BLACK}`,
                     }}
                   >
                     <Stack
@@ -135,7 +135,7 @@ const FaqSection = () => {
                           fontFamily: poppins.style.fontFamily,
                           fontWeight: 400,
                           fontSize: { xs: 18, sm: 22, md: 22, lg: 28 },
-                          color: Colors.BLACK,
+                          color: COLORS.BLACK,
                           lineHeight: { xs: "28px", md: "50px", lg: "84px" },
                           flex: 1,
                         }}
@@ -151,7 +151,7 @@ const FaqSection = () => {
                           width: { xs: 36, md: 44 },
                           height: { xs: 36, md: 44 },
                           borderRadius: "999px",
-                          color: open ? Colors.PRIMARY : Colors.SECONDARY,
+                          color: open ? COLORS.PRIMARY : COLORS.SECONDARY,
                           flexShrink: 0,
                           transition: "color 0.2s",
                         }}
@@ -179,7 +179,7 @@ const FaqSection = () => {
                             fontWeight: 400,
                            fontSize: { xs: "14px", md: "16px" },
                   lineHeight: { xs: 1.2, md: 1.4 },
-                            color: Colors.TEXT_MUTED,
+                            color: COLORS.TEXT_MUTED,
                             
                           }}
                         >

@@ -6,7 +6,7 @@ import Image from "next/image";
 import { Box, Container, Typography, Button, Grid } from "@mui/material";
 import { ArrowUpRight } from "lucide-react";
 
-import { Colors, CONSTANTS } from "@/utils/enum";
+import { COLORS, CONSTANTS } from "@/utils/enum";
 import { poppins, ibmPlexSans } from "@/utils/fonts";
 import { WEBSITE_DATA } from "@/utils/website";
 import SparkleLabel from "@/components/widgets/common/SparkleLabel";
@@ -94,7 +94,7 @@ const ChallengeCtaSection = () => {
                   fontFamily: poppins.style.fontFamily,
                   fontWeight: 500,
                   fontSize: { xs: "24px", sm: "30px", md: "45px" },
-                  color: Colors.BLACK,
+                  color: COLORS.BLACK,
                   lineHeight: { xs: 1.25, md: 1.15 },
                   mb: 2,
                   maxWidth: 700,
@@ -110,7 +110,7 @@ const ChallengeCtaSection = () => {
                   fontWeight: 400,
                  fontSize: { xs: "14px", md: "16px" },
                   lineHeight: { xs: 1.2, md: 1.4 },
-                  color: Colors.TEXT_MUTED,
+                  color: COLORS.TEXT_MUTED,
                   mb: { xs: 4, md: 5 },
                   maxWidth: 600,
                   mx: { xs: "auto", md: 0 },
@@ -129,8 +129,8 @@ const ChallengeCtaSection = () => {
                   px: { xs: 2.5, md: 6 }, 
                   width: { xs: "fit-content", sm: "auto" }, 
                   borderRadius: "50px",
-                  backgroundColor: Colors.SECONDARY,
-                  color: Colors.WHITE,
+                  backgroundColor: COLORS.SECONDARY,
+                  color: COLORS.WHITE,
                   fontFamily: poppins.style.fontFamily,
                   fontWeight: 600,
                   fontSize: { xs: "14px", md: "18px" }, 

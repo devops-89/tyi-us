@@ -7,7 +7,7 @@ import { ArrowUpRight } from "lucide-react";
 
 import { motion, Variants } from "framer-motion";
 
-import { Colors, CONSTANTS } from "@/utils/enum";
+import { COLORS, CONSTANTS } from "@/utils/enum";
 import { poppins, ibmPlexSans } from "@/utils/fonts";
 import { WEBSITE_DATA } from "@/utils/website";
 import SparkleLabel from "@/components/widgets/common/SparkleLabel";
@@ -35,7 +35,7 @@ const staggerContainer: Variants = {
 
 const AboutCompetitionsSection = () => {
   return (
-    <Box sx={{ py: { xs: 4, md: 6 }, backgroundColor: Colors.WHITE, overflow: "hidden" }}>
+    <Box sx={{ py: { xs: 4, md: 6 }, backgroundColor: COLORS.WHITE, overflow: "hidden" }}>
       <Container
         maxWidth={false}
         sx={{
@@ -74,7 +74,7 @@ const AboutCompetitionsSection = () => {
                     fontFamily: poppins.style.fontFamily,
                     fontWeight: 700,
                     fontSize: { xs: 24, sm: 28, md: 32 },
-                    color: Colors.BLACK,
+                    color: COLORS.BLACK,
                     mb: 2,
                     lineHeight: { xs: 1.2, md: 1.2 },
                     textAlign: { xs: "center", md: "left" },
@@ -88,7 +88,7 @@ const AboutCompetitionsSection = () => {
                 <Typography
                   sx={{
                     fontFamily: ibmPlexSans.style.fontFamily,
-                    color: Colors.TEXT_MUTED,
+                    color: COLORS.TEXT_MUTED,
                     fontSize: { xs: "14px", md: "16px" },
                     lineHeight: { xs: 1.2, md: 1.4 },
                     mb: { xs: 3, md: 4 },
@@ -117,9 +117,9 @@ const AboutCompetitionsSection = () => {
                     sx={{
                       borderRadius: "50px",
                       px: { xs: 2.5, md: 3 },
-                      borderColor: Colors.SECONDARY,
-                      color: Colors.SECONDARY,
-                      backgroundColor: Colors.WHITE,
+                      borderColor: COLORS.SECONDARY,
+                      color: COLORS.SECONDARY,
+                      backgroundColor: COLORS.WHITE,
                       textTransform: "none",
                       fontFamily: poppins.style.fontFamily,
                       fontWeight: 600,
@@ -132,9 +132,9 @@ const AboutCompetitionsSection = () => {
                         fontSize: "16px",
                       },
                       "&:hover": {
-                        backgroundColor: Colors.SUBMIT_ACCENT_BG,
-                        borderColor: Colors.SECONDARY,
-                        color: Colors.SECONDARY,
+                        backgroundColor: COLORS.SUBMIT_ACCENT_BG,
+                        borderColor: COLORS.SECONDARY,
+                        color: COLORS.SECONDARY,
                       },
                     }}
                   >

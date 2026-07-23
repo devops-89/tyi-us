@@ -185,16 +185,16 @@ const JoinCTA = () => {
                     sx={{
                       position: "relative",
                       width: {
-                        xs: 18,
-                        sm: 28,
-                        md: 20,
-                        lg: 43.76 
+                        xs: 70,
+                        sm: 90,
+                        md: 100,
+                        lg: 170
                       },
                       height: {
-                        xs: 18,
-                        sm: 28,
-                        md: 20,
-                        lg: 43.76 
+                        xs: 70,
+                        sm: 90,
+                        md: 100,
+                        lg: 170 
                       },
                       mb: { xs: 0.3, md: 1 },
                     }}
@@ -207,42 +207,7 @@ const JoinCTA = () => {
                     />
                   </Box>
 
-                  <Typography
-                    sx={{
-                      fontFamily: ibmPlexSans.style.fontFamily,
-                      fontSize: {
-                        xs: "7.5px",
-                        sm: "6.5px",
-                        md: "6.5px",
-                        lg: "10px",
-                      },
-                      fontWeight: 500,
-                      color: COLORS.SECONDARY,
-                      lineHeight: 1.35,
-                    }}
-                  >
-                    Prestigious Title of
-                  </Typography>
-
-                  <Typography
-                    sx={{
-                      fontFamily: ibmPlexSans.style.fontFamily,
-                      fontSize: {
-                        xs: "9px",
-                        sm: "9px",
-                        md: "9px",
-                        lg: "14px",
-                      },
-                      fontWeight: 700,
-                      color: COLORS.SECONDARY,
-                      lineHeight: 1.2,
-                      mt: 0.3,
-                    }}
-                  >
-                    America&apos;s Top
-                    <br />
-                    Young Innovator
-                  </Typography>
+                 
                 </Box>
               </Box>
 

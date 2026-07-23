@@ -4,7 +4,7 @@ import React from "react";
 import Image from "next/image";
 import { Box, Container, Stack, Typography, Grid } from "@mui/material";
 
-import { Colors, CONSTANTS } from "@/utils/enum";
+import { COLORS, CONSTANTS } from "@/utils/enum";
 import { poppins, ibmPlexSans } from "@/utils/fonts";
 import { WEBSITE_DATA } from "@/utils/website";
 import SparkleLabel from "@/components/widgets/common/SparkleLabel";
@@ -14,7 +14,7 @@ const { scoreBreakdown } = WEBSITE_DATA.challenge;
 const ScoreBreakdownSection = () => {
   return (
     <Box
-      sx={{py: { xs: 4, md: 6 }, backgroundColor: Colors.WHITE}}
+      sx={{py: { xs: 4, md: 6 }, backgroundColor: COLORS.WHITE}}
     >
       <Container
         maxWidth={false}
@@ -43,7 +43,7 @@ const ScoreBreakdownSection = () => {
                 fontFamily: poppins.style.fontFamily,
                 fontWeight: 500,
                 fontSize: { xs: "24px", sm: "30px", md: "45px" },
-                color: Colors.BLACK,
+                color: COLORS.BLACK,
                 textAlign: { xs: "center", md: "right" },
                 lineHeight: { xs: 1.25, md: 1.2 },
                 mb: 1,
@@ -58,7 +58,7 @@ const ScoreBreakdownSection = () => {
                 fontWeight: 400,
             fontSize: { xs: "14px", md: "16px" },
                   lineHeight: { xs: 1.2, md: 1.4 },
-                color: Colors.TEXT_MUTED,
+                color: COLORS.TEXT_MUTED,
                 textAlign: { xs: "center", md: "right" },
                 
                 maxWidth: 800,
@@ -120,7 +120,7 @@ const ScoreBreakdownSection = () => {
                         fontFamily: poppins.style.fontFamily,
                         fontWeight: 500,
                         fontSize: { xs: "20px", md: "22px" },
-                        color: Colors.BLACK,
+                        color: COLORS.BLACK,
                         lineHeight: 1.25,
                       }}
                     >
@@ -133,7 +133,7 @@ const ScoreBreakdownSection = () => {
                           fontFamily: ibmPlexSans.style.fontFamily,
                           fontWeight: 400,
                           fontSize: { xs: "15px", md: "16px" },
-                          color: Colors.TEXT_MUTED,
+                          color: COLORS.TEXT_MUTED,
                           lineHeight: 1.5,
                         }}
                       >
@@ -146,7 +146,7 @@ const ScoreBreakdownSection = () => {
                         fontFamily: poppins.style.fontFamily,
                         fontWeight: 500,
                         fontSize: { xs: "17px", md: "18px" },
-                        color: Colors.SECONDARY,
+                        color: COLORS.SECONDARY,
                       }}
                     >
                       {c.marks}
@@ -160,7 +160,7 @@ const ScoreBreakdownSection = () => {
                       aspectRatio: "1/1",
                       borderRadius: { xs: "10px", md: "12px" },
                       overflow: "hidden",
-                      backgroundColor: Colors.GRAY_LIGHT,
+                      backgroundColor: COLORS.GRAY_LIGHT,
                       boxShadow: "0px 10px 30px rgba(0,0,0,0.05)",
                     }}
                   >

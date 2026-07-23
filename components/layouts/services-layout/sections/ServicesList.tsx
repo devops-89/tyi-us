@@ -1,5 +1,5 @@
 import { Box, Container, Grid } from "@mui/material";
-import { Colors, CONSTANTS } from "@/utils/enum";
+import { COLORS, CONSTANTS } from "@/utils/enum";
 import { WEBSITE_DATA } from "@/utils/website";
 import SectionTitle from "@/components/widgets/SectionTitle";
 import ServiceCard from "@/components/widgets/common/Service-Card";
@@ -7,7 +7,7 @@ import ServiceCard from "@/components/widgets/common/Service-Card";
 const ServicesList = () => {
   const { list } = WEBSITE_DATA.services;
   return (
-    <Box sx={{ py: { xs: 8, md: 12 }, backgroundColor: Colors.WHITE }}>
+    <Box sx={{ py: { xs: 8, md: 12 }, backgroundColor: COLORS.WHITE }}>
       <Container maxWidth={false} sx={{ maxWidth: CONSTANTS.MAX_WIDTH }}>
         <SectionTitle 
           title={list.title} 

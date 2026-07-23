@@ -4,7 +4,7 @@ import React from "react";
 import Image from "next/image";
 import { Box, Container, Grid, Typography } from "@mui/material";
 
-import { Colors, CONSTANTS } from "@/utils/enum";
+import { COLORS, CONSTANTS } from "@/utils/enum";
 import { poppins, ibmPlexSans } from "@/utils/fonts";
 import { WEBSITE_DATA } from "@/utils/website";
 import SparkleLabel from "@/components/widgets/common/SparkleLabel";
@@ -15,7 +15,7 @@ const AboutHeroSection = () => {
   return (
     <Box
       sx={{
-        backgroundColor: Colors.WHITE,
+        backgroundColor: COLORS.WHITE,
         pt: { xs: 1, md: 12 },
         pb: { xs: 4, md: 6 },
       }}
@@ -51,7 +51,7 @@ const AboutHeroSection = () => {
                   fontFamily: poppins.style.fontFamily,
                   fontWeight: 700,
                   fontSize: { xs: 30, md: 40 },
-                  color: Colors.BLACK,
+                  color: COLORS.BLACK,
                   mb: 2,
                   lineHeight: { xs: 1.25, md: "48px" },
                   textAlign: { xs: "center", md: "left" },
@@ -64,7 +64,7 @@ const AboutHeroSection = () => {
                 sx={{
                   fontFamily: ibmPlexSans.style.fontFamily,
                   
-                  color: Colors.TEXT_MUTED,
+                  color: COLORS.TEXT_MUTED,
                   fontSize: { xs: "14px", md: "16px" },
                   lineHeight: { xs: 1.2, md: 1.4 },
                   whiteSpace: "pre-line",
@@ -130,7 +130,7 @@ const AboutHeroSection = () => {
                   left: 0,
                   width: { md: 481, lg: 481 }, 
                   height: { md: 400, lg: 400 }, 
-                  backgroundColor: Colors.WHITE,
+                  backgroundColor: COLORS.WHITE,
                   pr: { md: "8px", lg: "8px" }, 
                   pt: { md: "8px", lg: "8px" }, 
                   borderRadius: { md: "30px", lg: "30px" }, 

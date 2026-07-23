@@ -4,7 +4,7 @@ import React from "react";
 import Image from "next/image";
 import { Stack, Typography, Box } from "@mui/material";
 import { ibmPlexSans } from "@/utils/fonts";
-import { Colors } from "@/utils/enum";
+import { COLORS } from "@/utils/enum";
 import { ISparkleText } from "@/utils/types";
 import { ASSETS } from "@/utils/assets";
 
@@ -32,7 +32,7 @@ const SparkleLabel: React.FC<SparkleLabelProps> = ({
   const displayText = isObject ? text.text : text;
 
   const color =
-    propColor || (isObject && text.color ? text.color : Colors.PRIMARY);
+    propColor || (isObject && text.color ? text.color : COLORS.PRIMARY);
 
   const sparklePosition =
     propSparklePosition ||

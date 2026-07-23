@@ -2,7 +2,7 @@
 
 import React from "react";
 import { Box, Container, Stack, Typography, Grid } from "@mui/material";
-import { Colors, CONSTANTS } from "@/utils/enum";
+import { COLORS, CONSTANTS } from "@/utils/enum";
 import { poppins, ibmPlexSans } from "@/utils/fonts";
 import SparkleLabel from "@/components/widgets/common/SparkleLabel";
 import Image from "next/image";
@@ -72,7 +72,7 @@ const FeatureItem = ({
           width: { xs: 44, md: 48 },
           height: { xs: 44, md: 48 },
           borderRadius: "50%",
-          backgroundColor: Colors.SECONDARY,
+          backgroundColor: COLORS.SECONDARY,
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
@@ -94,7 +94,7 @@ const FeatureItem = ({
         fontWeight: 400,
         
         fontSize: { xs: "22px", sm: "24px", md: "28px" },
-        color: Colors.BLACK,
+        color: COLORS.BLACK,
         mb: 1,
         lineHeight: { xs: 1.25, md: 1.3 },
       }}
@@ -107,7 +107,7 @@ const FeatureItem = ({
         fontFamily: ibmPlexSans.style.fontFamily,
         
         fontSize: { xs: "14px", md: "16px" }, 
-        color: Colors.TEXT_MUTED,
+        color: COLORS.TEXT_MUTED,
         lineHeight: { xs: 1.6, md: 1.5 },
       }}
     >
@@ -119,7 +119,7 @@ const FeatureItem = ({
 const WhyParticipateSection = () => {
   return (
     <Box
-      sx={{py: { xs: 4, md: 6 }, backgroundColor: Colors.WHITE}}
+      sx={{py: { xs: 4, md: 6 }, backgroundColor: COLORS.WHITE}}
     >
       <Container
         maxWidth={false}
@@ -138,7 +138,7 @@ const WhyParticipateSection = () => {
               text="Why Participate in the Challenge?"
               sparklePosition="both"
               type="diamond"
-              color={Colors.PRIMARY}
+              color={COLORS.PRIMARY}
               fontSize={{ xs: "16px", md: "18px" }}
               sparkleSize={35} 
             />
@@ -152,7 +152,7 @@ const WhyParticipateSection = () => {
                 fontFamily: poppins.style.fontFamily,
                 fontWeight: 400,
                 fontSize: { xs: "20px", sm: "24px", md: "28px" },
-                color: Colors.BLACK,
+                color: COLORS.BLACK,
                 lineHeight: { xs: 1.25, md: 1.3 },
                 textAlign: { xs: "center", md: "left" },
               }}
@@ -167,7 +167,7 @@ const WhyParticipateSection = () => {
                 fontFamily: ibmPlexSans.style.fontFamily,
                 fontSize: { xs: "14px", md: "16px" },
                 fontWeight: 400,
-                color: Colors.TEXT_MUTED,
+                color: COLORS.TEXT_MUTED,
                 lineHeight: 1.6,
                 textAlign: { xs: "center", md: "right" },
                 mb: 0.5,

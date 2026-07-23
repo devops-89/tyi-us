@@ -4,7 +4,7 @@ import React from "react";
 import Image from "next/image";
 import { Box, Container, Grid, Stack, Typography } from "@mui/material";
 
-import { Colors, CONSTANTS } from "@/utils/enum";
+import { COLORS, CONSTANTS } from "@/utils/enum";
 import { poppins, ibmPlexSans } from "@/utils/fonts";
 import { WEBSITE_DATA } from "@/utils/website";
 import { ASSETS } from "@/utils/assets";
@@ -15,7 +15,7 @@ const { awards } = WEBSITE_DATA.challenge;
 const AwardsSection = () => {
   return (
     <Box
-      sx={{py: { xs: 4, md: 6 }, backgroundColor: Colors.WHITE}}
+      sx={{py: { xs: 4, md: 6 }, backgroundColor: COLORS.WHITE}}
     >
       <Container
         maxWidth={false}
@@ -57,7 +57,7 @@ const AwardsSection = () => {
               fontFamily: poppins.style.fontFamily,
               fontWeight: 500,
               fontSize: { xs: "24px", sm: "30px", md: "45px" },
-              color: Colors.BLACK,
+              color: COLORS.BLACK,
               textAlign: "center",
               lineHeight: { xs: 1.25, md: 1.2 },
               mb: 1,
@@ -71,7 +71,7 @@ const AwardsSection = () => {
               fontFamily: ibmPlexSans.style.fontFamily,
               fontSize: { xs: "14px", md: "16px" },
                   lineHeight: { xs: 1.2, md: 1.4 },
-              color: Colors.TEXT_MUTED,
+              color: COLORS.TEXT_MUTED,
               textAlign: "center",
              mb: { xs: 5, md: 8 },
               maxWidth: 800,
@@ -87,7 +87,7 @@ const AwardsSection = () => {
                 <Grid key={i} size={{ xs: 12, sm: 6, md: 3 }}>
                   <Box
                     sx={{
-                      backgroundColor: Colors.WHITE,
+                      backgroundColor: COLORS.WHITE,
                       border: "1px solid rgba(0, 0, 0, 0.08)",
                       borderRadius: "24px",
                       p: { xs: 3, md: 4 },
@@ -184,7 +184,7 @@ const AwardsSection = () => {
                       ) : (
                         <Icon
                           size={40}
-                          color={Colors.WHITE}
+                          color={COLORS.WHITE}
                           strokeWidth={1.5}
                         />
                       )}
@@ -197,7 +197,7 @@ const AwardsSection = () => {
                           sx={{
                             fontFamily: ibmPlexSans.style.fontFamily,
                             fontSize: { xs: 14, md: 15 },
-                            color: Colors.TEXT_MUTED,
+                            color: COLORS.TEXT_MUTED,
                             lineHeight: 1.3,
                           }}
                         >
@@ -225,7 +225,7 @@ const AwardsSection = () => {
                           sx={{
                             fontFamily: ibmPlexSans.style.fontFamily,
                             fontSize: { xs: 14, md: 15 },
-                            color: Colors.TEXT_MUTED,
+                            color: COLORS.TEXT_MUTED,
                             lineHeight: 1.5,
                           }}
                         >

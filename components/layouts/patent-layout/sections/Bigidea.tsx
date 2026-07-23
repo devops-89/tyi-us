@@ -4,7 +4,7 @@ import React from "react";
 import { Box, Container, Grid, Typography } from "@mui/material";
 
 
-import { Colors, CONSTANTS } from "@/utils/enum";
+import { COLORS, CONSTANTS } from "@/utils/enum";
 import { poppins } from "@/utils/fonts";
 import SparkleLabel from "@/components/widgets/common/SparkleLabel";
 import { WEBSITE_DATA } from "@/utils/website";
@@ -27,7 +27,7 @@ const WhoIsThisForSection = () => {
     <Box
       sx={{
         py: { xs: 4, md: 8 }, 
-        backgroundColor: Colors.SUBMIT_ACCENT_BG,
+        backgroundColor: COLORS.SUBMIT_ACCENT_BG,
         mt: { xs: 4, sm: 6, md: 8 },
         mb: { xs: 4, sm: 6, md: 6 }
       }}
@@ -58,7 +58,7 @@ const WhoIsThisForSection = () => {
               sparkleSize={35}
               type="blue-star"
               sparklePosition="both"
-              color={Colors.PRIMARY}
+              color={COLORS.PRIMARY}
             />
           </Box>
 
@@ -75,7 +75,7 @@ const WhoIsThisForSection = () => {
               letterSpacing: "-0.01em",
               textAlign: "center",
               textTransform: "capitalize",
-              color: Colors.BLACK,
+              color: COLORS.BLACK,
               mb: 2,
             }}
           >
@@ -91,7 +91,7 @@ const WhoIsThisForSection = () => {
               letterSpacing: "-0.02em",
               textAlign: "center",
               textTransform: "capitalize",
-              color: Colors.TEXT_MUTED,
+              color: COLORS.TEXT_MUTED,
               maxWidth: 1100,
               mx: "auto",
             }}
@@ -132,7 +132,7 @@ const WhoIsThisForSection = () => {
                     width: { xs: 110, sm: 120, md: 129 },
                     height: { xs: 110, sm: 120, md: 129 },
                     borderRadius: "50%",
-                    backgroundColor: Colors.WHITE,
+                    backgroundColor: COLORS.WHITE,
                     mx: "auto",
                     mb: { xs: 3, md: 4 },
                     display: "flex",
@@ -169,7 +169,7 @@ const WhoIsThisForSection = () => {
                     letterSpacing: "-0.02em",
                     textAlign: "center",
                     textTransform: "uppercase",
-                    color: Colors.BLACK,
+                    color: COLORS.BLACK,
                     transition: "color 0.3s ease", 
                   }}
                 >
@@ -192,7 +192,7 @@ const WhoIsThisForSection = () => {
                     letterSpacing: "-0.02em",
                     textAlign: "center",
                     textTransform: "uppercase",
-                    color: Colors.BLACK,
+                    color: COLORS.BLACK,
                     transition: "color 0.3s ease", 
                   }}
                 >

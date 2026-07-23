@@ -5,7 +5,7 @@ import Image from "next/image";
 import { Box, Container, Typography } from "@mui/material";
 import { Play } from "lucide-react";
 
-import { Colors, CONSTANTS } from "@/utils/enum";
+import { COLORS, CONSTANTS } from "@/utils/enum";
 import { poppins } from "@/utils/fonts";
 import { WEBSITE_DATA } from "@/utils/website";
 
@@ -35,14 +35,14 @@ const PastWinnersVideoSection = () => {
   const { video } = WEBSITE_DATA.pastWinners;
   
   return (
-    <Box sx={{py: { xs: 4, md: 6 }, backgroundColor: Colors.WHITE}}>
+    <Box sx={{py: { xs: 4, md: 6 }, backgroundColor: COLORS.WHITE}}>
       <Container maxWidth={false} sx={{ maxWidth: CONSTANTS.MAX_WIDTH }}>
         <Typography
           sx={{
             fontFamily: poppins.style.fontFamily,
             fontWeight: 600,
             fontSize: { xs: "14px", md: "16px" },
-            color: Colors.SECONDARY,
+            color: COLORS.SECONDARY,
             textAlign: "center",
             mb: 2,
           }}
@@ -55,7 +55,7 @@ const PastWinnersVideoSection = () => {
             fontFamily: poppins.style.fontFamily,
             fontWeight: 700,
             fontSize: { xs: 24, md: 32 },
-            color: Colors.BLACK,
+            color: COLORS.BLACK,
             textAlign: "center",
              lineHeight: { xs: 1.2, md: 1.4 }, 
             mb: 1,
@@ -65,7 +65,7 @@ const PastWinnersVideoSection = () => {
         </Typography>
         <Typography 
           sx={{ 
-            color: Colors.TEXT_MUTED, 
+            color: COLORS.TEXT_MUTED, 
             textAlign: "center", 
             mb: 5,
             fontSize: { xs: "14px", md: "16px" },

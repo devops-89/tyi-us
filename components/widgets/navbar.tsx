@@ -73,7 +73,7 @@ const Navbar = () => {
                   src={ASSETS.IMAGES.LOGO}
                   alt="Logo"
                   width={120}
-                  height={46}
+                  height={40}
                   style={{ objectFit: "contain", width: "100%", height: "auto" }}
                 />
               </Box>
@@ -147,7 +147,8 @@ const Navbar = () => {
               anchorEl={anchorEl}
               open={Boolean(anchorEl)}
               onClose={handleDesktopDropdownClose}
-              PaperProps={{ xs: {
+              PaperProps={{
+                sx: {
                   mt: 1.5,
                   borderRadius: "12px",
                   boxShadow: "0 10px 30px rgba(0,0,0,0.12)",
@@ -346,6 +347,7 @@ const Navbar = () => {
                 fontSize: "14px",
                 "&:hover": {
                   backgroundColor: COLORS.PRIMARY,
+                  boxShadow: "0 8px 24px rgba(52, 96, 183, 0.25)",
                 },
               }}
             >

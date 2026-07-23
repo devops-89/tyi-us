@@ -17,7 +17,7 @@ import { ArrowUpRight } from "lucide-react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 
-import { Colors, CONSTANTS } from "@/utils/enum";
+import { COLORS, CONSTANTS } from "@/utils/enum";
 import { poppins, ibmPlexSans } from "@/utils/fonts";
 import { WEBSITE_DATA } from "@/utils/website";
 import SparkleLabel from "@/components/widgets/common/SparkleLabel";
@@ -27,7 +27,7 @@ const fieldSx = {
   "& .MuiInputBase-root:hover:not(.Mui-disabled):before": {
     borderBottomColor: "#A9A9A9",
   },
-  "& .MuiInputBase-root:after": { borderBottomColor: Colors.BLACK },
+  "& .MuiInputBase-root:after": { borderBottomColor: COLORS.BLACK },
   "& .MuiInputBase-input": {
     fontFamily: poppins.style.fontFamily,
     fontSize: { xs: 14, md: 16 },
@@ -70,7 +70,7 @@ const ContactSection = () => {
 
   return (
     <Box
-      sx={{py: { xs: 4, md: 6 }, backgroundColor: Colors.WHITE}}
+      sx={{py: { xs: 4, md: 6 }, backgroundColor: COLORS.WHITE}}
     >
       <Container
         maxWidth={false}
@@ -94,7 +94,7 @@ const ContactSection = () => {
               px: 2.5,
               py: 1.25,
               borderRadius: "40px",
-              border: `1px solid ${Colors.BORDER}`,
+              border: `1px solid ${COLORS.BORDER}`,
               backgroundColor: "rgba(255,255,255,0.5)",
               backdropFilter: "blur(7.5px)",
             }}
@@ -110,7 +110,7 @@ const ContactSection = () => {
                 fontFamily: poppins.style.fontFamily,
                 fontWeight: 700,
                 fontSize: { xs: 30, sm: 34, md: 40 },
-                color: Colors.BLACK,
+                color: COLORS.BLACK,
                 letterSpacing: "-0.4px",
                 mb: 2,
                 lineHeight: { xs: 1.25, md: 1.2 },
@@ -125,7 +125,7 @@ const ContactSection = () => {
                 fontFamily: ibmPlexSans.style.fontFamily,
                fontSize: { xs: "14px", md: "16px" },
                   lineHeight: { xs: 1.2, md: 1.4 },
-                color: Colors.TEXT_MUTED,
+                color: COLORS.TEXT_MUTED,
                
                 mb: { xs: 3, md: 4 },
                 whiteSpace: "pre-line",
@@ -158,9 +158,9 @@ const ContactSection = () => {
                         mr: 1.5,
                         alignSelf: "flex-start",
                         mt: "4px", 
-                        color: Colors.SECONDARY,
+                        color: COLORS.SECONDARY,
                         "&.Mui-checked": {
-                          color: Colors.SECONDARY,
+                          color: COLORS.SECONDARY,
                         },
                       }}
                     />
@@ -191,7 +191,7 @@ const ContactSection = () => {
                 fontFamily: ibmPlexSans.style.fontFamily,
                 fontSize: { xs: "14px", md: "16px" },
                   lineHeight: { xs: 1.2, md: 1.4 },
-                color: Colors.TEXT_MUTED,
+                color: COLORS.TEXT_MUTED,
             
                 mb: 4,
                 whiteSpace: "pre-line",
@@ -288,11 +288,11 @@ const ContactSection = () => {
                     endIcon={<ArrowUpRight size={18} />}
                     sx={{
                       borderRadius: "50px",
-                      backgroundColor: Colors.SECONDARY,
+                      backgroundColor: COLORS.SECONDARY,
                       fontFamily: poppins.style.fontFamily,
                       fontWeight: 600,
                       textTransform: "none",
-                      "&:hover": { backgroundColor: Colors.PRIMARY },
+                      "&:hover": { backgroundColor: COLORS.PRIMARY },
 
                       
                       width: "fit-content",

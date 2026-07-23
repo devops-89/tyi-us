@@ -4,7 +4,7 @@ import React from "react";
 import Image from "next/image";
 import { Box, Stack, Typography } from "@mui/material";
 
-import { Colors } from "@/utils/enum";
+import { COLORS } from "@/utils/enum";
 import { poppins, ibmPlexSans } from "@/utils/fonts";
 import CtaButton from "@/components/widgets/common/CtaButton";
 
@@ -63,7 +63,7 @@ const StepCard: React.FC<StepCardProps> = ({
           fontFamily: ibmPlexSans.style.fontFamily, 
           fontSize: { xs: "14px", md: "16px" },
           lineHeight: { xs: 1.2, md: 1.4 },
-          color: Colors.TEXT_MUTED, 
+          color: COLORS.TEXT_MUTED, 
           flexGrow: 1,
           mb: ctaText ? 2 : 0,
           textAlign: { xs: "center", md: "left" }

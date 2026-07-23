@@ -5,7 +5,7 @@ import Link from "next/link";
 import { Stack, Button } from "@mui/material";
 import { ArrowUpRight } from "lucide-react";
 
-import { Colors } from "@/utils/enum";
+import { COLORS } from "@/utils/enum";
 import { poppins } from "@/utils/fonts";
 
 
@@ -45,9 +45,9 @@ export const CtaButton: React.FC<CtaButtonProps> = ({
         borderRadius: "50px",
         
         // --- ONLY COLORS CHANGED ---
-        backgroundColor: variant === "contained" ? Colors.SECONDARY : "transparent",
-        borderColor: variant === "outlined" ? Colors.SECONDARY : "transparent",
-        color: variant === "contained" ? Colors.WHITE : Colors.SECONDARY,
+        backgroundColor: variant === "contained" ? COLORS.SECONDARY : "transparent",
+        borderColor: variant === "outlined" ? COLORS.SECONDARY : "transparent",
+        color: variant === "contained" ? COLORS.WHITE : COLORS.SECONDARY,
         
         fontFamily: poppins.style.fontFamily,
         fontWeight: 600,
@@ -59,8 +59,8 @@ export const CtaButton: React.FC<CtaButtonProps> = ({
           height: { xs: 18, md: 22 }
         },
         "&:hover": { 
-          backgroundColor: variant === "contained" ? Colors.PRIMARY : "#f9dfe6",
-          borderColor: variant === "outlined" ? Colors.SUBMIT_ACCENT : "transparent",
+          backgroundColor: variant === "contained" ? COLORS.PRIMARY : "#f9dfe6",
+          borderColor: variant === "outlined" ? COLORS.SUBMIT_ACCENT : "transparent",
           boxShadow: variant === "contained" ? "0 8px 24px rgba(52, 96, 183, 0.25)" : "none",
         },
         ...sx,

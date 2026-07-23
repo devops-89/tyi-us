@@ -18,7 +18,7 @@ const AnimationWrapper: React.FC<AnimationWrapperProps> = ({
     <motion.div
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "0px 0px -10% 0px" }}
+      viewport={{ once: false, margin: "0px 0px -20% 0px" }}
       transition={{ duration, delay, ease: "easeOut" }}
     >
       {children}

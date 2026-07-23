@@ -5,7 +5,7 @@ import Image from "next/image";
 import { Box, Container, Stack, Typography, Button } from "@mui/material";
 import { ArrowUpRight } from "lucide-react";
 
-import { Colors, CONSTANTS } from "@/utils/enum";
+import { COLORS, CONSTANTS } from "@/utils/enum";
 import { poppins } from "@/utils/fonts";
 import SparkleLabel from "@/components/widgets/common/SparkleLabel";
 import { WEBSITE_DATA } from "@/utils/website";
@@ -25,7 +25,7 @@ const InnovationCampSection = () => {
   }, [innovationCampData.sliderImages.length]);
 
   return (
-    <Box sx={{py: { xs: 4, md: 6 }, backgroundColor: Colors.WHITE}}>
+    <Box sx={{py: { xs: 4, md: 6 }, backgroundColor: COLORS.WHITE}}>
       <Container
         maxWidth={false}
         sx={{
@@ -67,7 +67,7 @@ const InnovationCampSection = () => {
                   type="blue-star"
                   sparklePosition="both"
                   sparkleSize={35}
-                  color={Colors.PRIMARY}
+                  color={COLORS.PRIMARY}
                 />
               </Box>
             </Box>
@@ -80,7 +80,7 @@ const InnovationCampSection = () => {
                 lineHeight: { xs: "30px", sm: "35px", md: "48px" },
                 letterSpacing: "-0.01em",
                 textTransform: "capitalize",
-                color: Colors.BLACK,
+                color: COLORS.BLACK,
                 mb: 2,
                 whiteSpace: "pre-line",
               }}
@@ -96,7 +96,7 @@ const InnovationCampSection = () => {
                   lineHeight: { xs: 1.2, md: 1.4 },
                 letterSpacing: "-0.02em",
                 textTransform: "capitalize",
-                color: Colors.TEXT_MUTED,
+                color: COLORS.TEXT_MUTED,
                 maxWidth: { xs: "100%", md: 520 },
                 mb: 3,
               }}
@@ -109,8 +109,8 @@ const InnovationCampSection = () => {
               endIcon={<ArrowUpRight size={18} />}
               sx={{
                 borderRadius: "50px",
-                backgroundColor: Colors.SECONDARY,
-                color: Colors.WHITE,
+                backgroundColor: COLORS.SECONDARY,
+                color: COLORS.WHITE,
                 fontFamily: "PolySans Trial, sans-serif",
                 fontWeight: 400,
                 lineHeight: "20px",
@@ -137,7 +137,7 @@ const InnovationCampSection = () => {
                 },
 
                 "&:hover": {
-                  backgroundColor: Colors.PRIMARY,
+                  backgroundColor: COLORS.PRIMARY,
                   boxShadow: "none",
                 },
               }}
@@ -181,7 +181,7 @@ const InnovationCampSection = () => {
                     height: index === activeImage ? 7 : 5,
                     borderRadius: "50%",
                     backgroundColor:
-                      index === activeImage ? Colors.BLACK : "#D9D9D9",
+                      index === activeImage ? COLORS.BLACK : "#D9D9D9",
                     cursor: "pointer",
                   }}
                 />
@@ -206,7 +206,7 @@ const InnovationCampSection = () => {
                   lineHeight: { xs: 1.2, md: 1.4 },
               letterSpacing: "-0.02em",
               textTransform: "capitalize",
-              color: Colors.TEXT_MUTED,
+              color: COLORS.TEXT_MUTED,
               mb: 3,
             }}
           >
@@ -221,7 +221,7 @@ const InnovationCampSection = () => {
                   lineHeight: { xs: 1.2, md: 1.4 },
               letterSpacing: "-0.02em",
               textTransform: "capitalize",
-              color: Colors.TEXT_MUTED,
+              color: COLORS.TEXT_MUTED,
               mb: 4,
             }}
           >
@@ -236,10 +236,10 @@ const InnovationCampSection = () => {
                   lineHeight: { xs: 1.2, md: 1.4 },
               letterSpacing: "-0.02em",
               textTransform: "capitalize",
-              color: Colors.TEXT_MUTED,
+              color: COLORS.TEXT_MUTED,
             }}
           >
-            <Box component="span" sx={{ color: Colors.SECONDARY }}>
+            <Box component="span" sx={{ color: COLORS.SECONDARY }}>
               Note:
             </Box>{" "}
             {innovationCampData.note}

@@ -13,7 +13,7 @@ import {
   Award 
 } from "lucide-react";
 
-import { Colors, CONSTANTS } from "@/utils/enum";
+import { COLORS, CONSTANTS } from "@/utils/enum";
 import { poppins, ibmPlexSans } from "@/utils/fonts";
 import SparkleLabel from "@/components/widgets/common/SparkleLabel";
 import { ASSETS } from "@/utils/assets";
@@ -56,7 +56,7 @@ const SelectionFlowSection = () => {
     <Box
       sx={{
         py: { xs: 4, md: 6 }, 
-        backgroundColor: Colors.WHITE,
+        backgroundColor: COLORS.WHITE,
         position: "relative",
         overflow: "hidden"
       }}
@@ -108,7 +108,7 @@ const SelectionFlowSection = () => {
               fontFamily: poppins.style.fontFamily,
               fontWeight: 500,
               fontSize: { xs: "28px", sm: "36px", md: "42px" },
-              color: Colors.BLACK,
+              color: COLORS.BLACK,
               lineHeight: 1.2,
               mb: 2.5,
               maxWidth: 800,
@@ -138,7 +138,7 @@ const SelectionFlowSection = () => {
                   p: { xs: 3, md: 4 },
                   borderRadius: '24px',
                   border: '1px solid rgba(227, 24, 55, 0.12)',
-                  backgroundColor: Colors.WHITE,
+                  backgroundColor: COLORS.WHITE,
                   overflow: 'hidden',
                   transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
                   cursor: 'pointer',
@@ -149,25 +149,25 @@ const SelectionFlowSection = () => {
                   
                   
                   '&:hover': {
-                    borderColor: Colors.SECONDARY,
+                    borderColor: COLORS.SECONDARY,
                     transform: 'translateY(-10px)', 
                     boxShadow: '0 20px 40px rgba(227, 24, 55, 0.08)',
                     
                     '& .step-badge': {
-                      backgroundColor: Colors.SECONDARY,
-                      color: Colors.WHITE,
+                      backgroundColor: COLORS.SECONDARY,
+                      color: COLORS.WHITE,
                     },
                     '& .icon-wrapper': {
-                      backgroundColor: Colors.SECONDARY,
-                      color: Colors.WHITE,
-                      borderColor: Colors.SECONDARY,
+                      backgroundColor: COLORS.SECONDARY,
+                      color: COLORS.WHITE,
+                      borderColor: COLORS.SECONDARY,
                       transform: 'scale(1.2) rotate(360deg)', 
                     },
                     '& .card-title': {
-                      color: Colors.SECONDARY, 
+                      color: COLORS.SECONDARY, 
                     },
                     '& .card-arrow': {
-                      color: Colors.SECONDARY,
+                      color: COLORS.SECONDARY,
                     }
                   }
                 }}
@@ -205,7 +205,7 @@ const SelectionFlowSection = () => {
                       py: 0.5,
                       borderRadius: '20px',
                       backgroundColor: 'rgba(227, 24, 55, 0.05)',
-                      color: Colors.SECONDARY,
+                      color: COLORS.SECONDARY,
                       transition: 'all 0.4s ease',
                       display: 'flex',
                       alignItems: 'center',
@@ -234,9 +234,9 @@ const SelectionFlowSection = () => {
                       display: 'flex',
                       alignItems: 'center',
                       justifyContent: 'center',
-                      color: Colors.SECONDARY,
+                      color: COLORS.SECONDARY,
                       transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
-                      backgroundColor: Colors.WHITE,
+                      backgroundColor: COLORS.WHITE,
                     }}
                   >
                     <IconComponent size={20} />
@@ -256,7 +256,7 @@ const SelectionFlowSection = () => {
                       fontFamily: ibmPlexSans.style.fontFamily,
                       fontSize: { xs: '15px', md: '17px' },
                       fontWeight: 500,
-                      color: Colors.BLACK,
+                      color: COLORS.BLACK,
                       lineHeight: 1.5,
                       pr: 2,
                       transition: 'color 0.4s ease', 

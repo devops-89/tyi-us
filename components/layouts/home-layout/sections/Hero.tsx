@@ -6,7 +6,7 @@ import Link from "next/link";
 import { Box, Container, Stack, Typography, Button } from "@mui/material";
 import { ArrowUpRight } from "lucide-react";
 
-import { Colors, CONSTANTS } from "@/utils/enum";
+import { COLORS, CONSTANTS } from "@/utils/enum";
 import { poppins, ibmPlexSans } from "@/utils/fonts";
 import { WEBSITE_DATA } from "@/utils/website";
 import { ASSETS } from "@/utils/assets";
@@ -20,7 +20,7 @@ const HomeHeroSection = () => {
       sx={{
         pt: { xs: 0, md: 4 },
         pb: { xs: 3, md: 4 },
-        backgroundColor: Colors.WHITE,
+        backgroundColor: COLORS.WHITE,
         position: "relative",
       }}
     >
@@ -54,7 +54,7 @@ const HomeHeroSection = () => {
                 fontFamily: poppins.style.fontFamily,
                 fontWeight: 700,
                 fontSize: { xs: "16px", md: "20px" },
-                color: Colors.BLACK,
+                color: COLORS.BLACK,
                 mb: 1,
               }}
             >
@@ -67,8 +67,8 @@ const HomeHeroSection = () => {
                   fontFamily: poppins.style.fontFamily,
                   fontWeight: 600,
                   fontSize: { xs: "28px", sm: "36px", md: "45px" },
-                  backgroundColor: Colors.BLACK,
-                  color: Colors.WHITE,
+                  backgroundColor: COLORS.BLACK,
+                  color: COLORS.WHITE,
                   display: "inline-block",
                   px: { xs: 2, md: 3 },
                   py: 1,
@@ -86,8 +86,8 @@ const HomeHeroSection = () => {
                   fontFamily: poppins.style.fontFamily,
                   fontWeight: 600,
                   fontSize: { xs: "28px", sm: "36px", md: "45px" },
-                  backgroundColor: Colors.BLACK,
-                  color: Colors.WHITE,
+                  backgroundColor: COLORS.BLACK,
+                  color: COLORS.WHITE,
                   display: "inline-block",
                   px: { xs: 2, md: 3 },
                   py: 1,
@@ -104,7 +104,7 @@ const HomeHeroSection = () => {
               sx={{
                 fontFamily: ibmPlexSans.style.fontFamily,
                 fontSize: { xs: "14px", md: "16px" },
-                color: Colors.TEXT_MUTED,
+                color: COLORS.TEXT_MUTED,
                 maxWidth: "600px",
                 textAlign: "justify",
                 lineHeight: { xs: 1.2, md: 1.4 },
@@ -124,8 +124,8 @@ const HomeHeroSection = () => {
                 height: { xs: 40, md: 48 },
                 borderRadius: "50px",
                 px: { xs: 2.5, md: 4 },
-                backgroundColor: Colors.SECONDARY,
-                color: Colors.WHITE,
+                backgroundColor: COLORS.SECONDARY,
+                color: COLORS.WHITE,
                 fontFamily: poppins.style.fontFamily,
                 fontWeight: 600,
                 fontSize: { xs: "14px", md: "16px" },
@@ -143,7 +143,7 @@ const HomeHeroSection = () => {
                 },
 
                 "&:hover": {
-                 backgroundColor: Colors.PRIMARY,
+                 backgroundColor: COLORS.PRIMARY,
                boxShadow: "0 8px 24px rgba(52, 96, 183, 0.25)",
                 },
               }}
@@ -201,7 +201,7 @@ const HomeHeroSection = () => {
             sx={{
               fontFamily: ibmPlexSans.style.fontFamily,
               fontSize: { xs: "14px", md: "16px" },
-              color: Colors.BLACK,
+              color: COLORS.BLACK,
             lineHeight: { xs: 1.2, md: 1.4 },
 
               textAlign: "justify",
@@ -210,7 +210,7 @@ const HomeHeroSection = () => {
               flex: 1,
               whiteSpace: "pre-line",
               "& span": {
-                color: Colors.SECONDARY,
+                color: COLORS.SECONDARY,
                 fontWeight: 700,
               },
             }}
@@ -229,8 +229,8 @@ const HomeHeroSection = () => {
               height: { xs: 40, md: 48 },
               borderRadius: "50px",
               px: { xs: 2.5, md: 4 },
-              border: `1px solid ${Colors.SECONDARY}`,
-              color: Colors.SECONDARY,
+              border: `1px solid ${COLORS.SECONDARY}`,
+              color: COLORS.SECONDARY,
               fontFamily: poppins.style.fontFamily,
               fontWeight: 600,
               fontSize: { xs: "14px", md: "16px" },
@@ -253,7 +253,7 @@ const HomeHeroSection = () => {
 
               "&:hover": {
                 backgroundColor: "rgba(227, 24, 55, 0.05)",
-                borderColor: Colors.SECONDARY,
+                borderColor: COLORS.SECONDARY,
               },
             }}
           >

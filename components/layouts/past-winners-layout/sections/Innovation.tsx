@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import { Box, Container, Grid, Stack, Typography } from "@mui/material";
 
-import { Colors } from "@/utils/enum";
+import { COLORS } from "@/utils/enum";
 import { poppins, ibmPlexSans } from "@/utils/fonts";
 import { WEBSITE_DATA } from "@/utils/website";
 import SparkleLabel from "@/components/widgets/common/SparkleLabel";
@@ -52,7 +52,7 @@ const CountUp = ({ value }: { value: string | number }) => {
 
 const PastWinnersInnovationSection = () => {
   return (
-    <Box sx={{py: { xs: 4, md: 6 }, backgroundColor: Colors.WHITE}}>
+    <Box sx={{py: { xs: 4, md: 6 }, backgroundColor: COLORS.WHITE}}>
       <Container maxWidth={false} sx={{ maxWidth: 1920 }}>
         <Box sx={{ maxWidth: 1454, mx: "auto" }}>
           <Box sx={{ mb: 2 }}>
@@ -64,14 +64,14 @@ const PastWinnersInnovationSection = () => {
               fontFamily: poppins.style.fontFamily,
               fontWeight: 700,
               fontSize: { xs: 30, md: 34, lg: 40 }, 
-              color: Colors.BLACK,
+              color: COLORS.BLACK,
               lineHeight: { xs: 1, md: 1.4 }, 
               
               mb: 1,
             }}
           >
             {innovation.title}{" "}
-            <Box component="span" sx={{ color: Colors.SECONDARY }}>
+            <Box component="span" sx={{ color: COLORS.SECONDARY }}>
               {innovation.titleAccent}
             </Box>
           </Typography>
@@ -81,7 +81,7 @@ const PastWinnersInnovationSection = () => {
               fontFamily: ibmPlexSans.style.fontFamily,
               fontSize: { xs: "14px", md: "16px" },
                   lineHeight: { xs: 1.2, md: 1.4 },
-              color: Colors.TEXT_MUTED,
+              color: COLORS.TEXT_MUTED,
               mb: { xs: 3, md: 6 },
             }}
           >
@@ -128,7 +128,7 @@ const PastWinnersInnovationSection = () => {
                     fontFamily: poppins.style.fontFamily,
                     fontWeight: 600,
                     fontSize: { xs: 18, md: 19, lg: 24 }, 
-                    color: Colors.BLACK,
+                    color: COLORS.BLACK,
                     mb: 2,
                   }}
                 >
@@ -141,7 +141,7 @@ const PastWinnersInnovationSection = () => {
                       fontFamily: ibmPlexSans.style.fontFamily,
                      fontSize: { xs: "14px", md: "16px" },
                   lineHeight: { xs: 1.2, md: 1.4 },
-                      color: Colors.TEXT_MUTED,
+                      color: COLORS.TEXT_MUTED,
                       textAlign:  "justify" ,
                     }}
                   >
@@ -153,7 +153,7 @@ const PastWinnersInnovationSection = () => {
                       fontFamily: ibmPlexSans.style.fontFamily,
                      fontSize: { xs: "14px", md: "16px" },
                   lineHeight: { xs: 1.2, md: 1.4 },
-                      color: Colors.TEXT_MUTED,
+                      color: COLORS.TEXT_MUTED,
                       textAlign: "justify",
                     }}
                   >
@@ -178,7 +178,7 @@ const PastWinnersInnovationSection = () => {
                     fontFamily: poppins.style.fontFamily,
                     fontWeight: 700,
                     fontSize: { xs: 25, md: 28, lg: 34 }, 
-                    color: Colors.BLACK,
+                    color: COLORS.BLACK,
                   }}
                 >
                   <CountUp value={m.value} />
@@ -189,7 +189,7 @@ const PastWinnersInnovationSection = () => {
                     fontFamily: ibmPlexSans.style.fontFamily,
                     fontWeight: 600,
                     fontSize: { xs: 16, md: 16, lg: 18 }, 
-                    color: Colors.TEXT_MUTED,
+                    color: COLORS.TEXT_MUTED,
                     textAlign: "center",
                   }}
                 >

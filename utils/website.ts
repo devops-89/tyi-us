@@ -394,7 +394,7 @@ To help participants bring their ideas to life, we’ve partnered with one of th
       sparkle: "Grand Finale",
       title: "America’s Top Young Innovator 2024 — Grand National Showcase",
       description: "Highlighting visionary youth innovations that are transforming the world with fresh, powerful ideas.",
-      image: ASSETS.IMAGES.PAST_WINNERS_VIDEO_BANNER,
+      image: "https://youtu.be/ZN5YOD-jGss?si=cOplL4dGPJuTvRbm",
       watchLabel: "Watch",
       watchDesc: "That's how we make it work?",
     },

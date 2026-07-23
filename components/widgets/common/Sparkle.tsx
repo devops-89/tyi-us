@@ -2,7 +2,7 @@
 
 import React from "react";
 import { Box } from "@mui/material";
-import { Colors } from "@/utils/enum";
+import { COLORS } from "@/utils/enum";
 
 interface SparkleProps {
   color?: string;
@@ -11,7 +11,7 @@ interface SparkleProps {
 }
 
 const Sparkle: React.FC<SparkleProps> = ({
-  color = Colors.SECONDARY,
+  color = COLORS.SECONDARY,
   size = "20px",
   sx = {},
 }) => {

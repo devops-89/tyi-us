@@ -13,7 +13,7 @@ import {
   Award 
 } from "lucide-react";
 
-import { Colors, CONSTANTS } from "@/utils/enum";
+import { COLORS, CONSTANTS } from "@/utils/enum";
 import { poppins, ibmPlexSans } from "@/utils/fonts";
 import { WEBSITE_DATA } from "@/utils/website";
 import SparkleLabel from "@/components/widgets/common/SparkleLabel";
@@ -34,7 +34,7 @@ const STEP_ICONS = [
 const ParticipationJourneySection = () => {
   return (
     <Box
-      sx={{py: { xs: 4, md: 6 }, backgroundColor: Colors.WHITE,
+      sx={{py: { xs: 4, md: 6 }, backgroundColor: COLORS.WHITE,
         position: "relative",
         overflow: "hidden"}}
     >
@@ -86,7 +86,7 @@ const ParticipationJourneySection = () => {
               fontFamily: poppins.style.fontFamily,
               fontWeight: 500,
               fontSize: { xs: "28px", sm: "36px", md: "42px" },
-              color: Colors.BLACK,
+              color: COLORS.BLACK,
               lineHeight: 1.2,
               mb: 2.5,
               maxWidth: 800,
@@ -100,7 +100,7 @@ const ParticipationJourneySection = () => {
               fontFamily: ibmPlexSans.style.fontFamily,
               fontWeight: 400,
               fontSize: { xs: "14px", md: "16px" },
-              color: Colors.TEXT_MUTED,
+              color: COLORS.TEXT_MUTED,
               maxWidth: 900,
               lineHeight: 1.6,
             }}
@@ -129,7 +129,7 @@ const ParticipationJourneySection = () => {
                   p: { xs: 3, md: 4 },
                   borderRadius: '24px',
                   border: '1px solid rgba(227, 24, 55, 0.12)',
-                  backgroundColor: Colors.WHITE,
+                  backgroundColor: COLORS.WHITE,
                   overflow: 'hidden',
                   transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
                   cursor: 'pointer',
@@ -140,25 +140,25 @@ const ParticipationJourneySection = () => {
                   
                   
                   '&:hover': {
-                    borderColor: Colors.SECONDARY,
+                    borderColor: COLORS.SECONDARY,
                     transform: 'translateY(-10px)', 
                     boxShadow: '0 20px 40px rgba(227, 24, 55, 0.08)',
                     
                     '& .step-badge': {
-                      backgroundColor: Colors.SECONDARY,
-                      color: Colors.WHITE,
+                      backgroundColor: COLORS.SECONDARY,
+                      color: COLORS.WHITE,
                     },
                     '& .icon-wrapper': {
-                      backgroundColor: Colors.SECONDARY,
-                      color: Colors.WHITE,
-                      borderColor: Colors.SECONDARY,
+                      backgroundColor: COLORS.SECONDARY,
+                      color: COLORS.WHITE,
+                      borderColor: COLORS.SECONDARY,
                       transform: 'scale(1.2) rotate(360deg)', 
                     },
                     '& .card-title': {
-                      color: Colors.SECONDARY, 
+                      color: COLORS.SECONDARY, 
                     },
                     '& .card-arrow': {
-                      color: Colors.SECONDARY,
+                      color: COLORS.SECONDARY,
                     }
                   }
                 }}
@@ -196,7 +196,7 @@ const ParticipationJourneySection = () => {
                       py: 0.5,
                       borderRadius: '20px',
                       backgroundColor: 'rgba(227, 24, 55, 0.05)',
-                      color: Colors.SECONDARY,
+                      color: COLORS.SECONDARY,
                       transition: 'all 0.4s ease',
                       display: 'flex',
                       alignItems: 'center',
@@ -225,9 +225,9 @@ const ParticipationJourneySection = () => {
                       display: 'flex',
                       alignItems: 'center',
                       justifyContent: 'center',
-                      color: Colors.SECONDARY,
+                      color: COLORS.SECONDARY,
                       transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
-                      backgroundColor: Colors.WHITE,
+                      backgroundColor: COLORS.WHITE,
                     }}
                   >
                     <IconComponent size={20} />
@@ -247,7 +247,7 @@ const ParticipationJourneySection = () => {
                       fontFamily: poppins.style.fontFamily,
                       fontWeight: 700,
                       fontSize: { xs: '20px', md: '22px' },
-                      color: Colors.BLACK,
+                      color: COLORS.BLACK,
                       lineHeight: 1.3,
                       pr: 2,
                       transition: 'color 0.4s ease', 
@@ -274,7 +274,7 @@ const ParticipationJourneySection = () => {
                   sx={{
                     fontFamily: ibmPlexSans.style.fontFamily,
                     fontSize: { xs: '14px', md: '16px' },
-                    color: Colors.TEXT_MUTED,
+                    color: COLORS.TEXT_MUTED,
                     lineHeight: 1.6,
                     position: 'relative',
                     zIndex: 1,

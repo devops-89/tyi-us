@@ -6,7 +6,7 @@ import Image from "next/image";
 import { Box, Container, Stack, Typography, Button } from "@mui/material";
 import { ArrowUpRight } from "lucide-react";
 
-import { Colors } from "@/utils/enum";
+import { COLORS } from "@/utils/enum";
 import { poppins, ibmPlexSans } from "@/utils/fonts";
 import { WEBSITE_DATA } from "@/utils/website";
 import SparkleLabel from "@/components/widgets/common/SparkleLabel";
@@ -17,7 +17,7 @@ const ChallengeHeroSection = () => {
   return (
     <Box
       sx={{
-        backgroundColor: Colors.WHITE,
+        backgroundColor: COLORS.WHITE,
         pt: { xs: 0, md: 4 },
         pb: { xs: 4, md: 10 },
       }}
@@ -57,7 +57,7 @@ const ChallengeHeroSection = () => {
               fontFamily: ibmPlexSans.style.fontFamily,
               fontWeight: 400,
            fontSize: { xs: "14px", md: "16px" },
-              color: Colors.TEXT_MUTED,
+              color: COLORS.TEXT_MUTED,
               textAlign: "center",
               maxWidth: { xs: "100%", md: 1000 },
               mx: "auto",
@@ -86,15 +86,15 @@ const ChallengeHeroSection = () => {
                 borderRadius: "50px",
                 px: { xs: 2.5, md: 4 }, 
                 width: { xs: "220px", sm: "auto" }, 
-                backgroundColor: Colors.SECONDARY,
-                color: Colors.WHITE,
+                backgroundColor: COLORS.SECONDARY,
+                color: COLORS.WHITE,
                 fontFamily: poppins.style.fontFamily,
                 fontWeight: 600,
                 fontSize: { xs: "14px", md: "18px" }, 
                 textTransform: "none",
                 boxShadow: "none",
                 "&:hover": {
-                  backgroundColor: Colors.PRIMARY,
+                  backgroundColor: COLORS.PRIMARY,
                                     boxShadow: "0 8px 24px rgba(52, 96, 183, 0.25)",
                 },
               }}
@@ -112,8 +112,8 @@ const ChallengeHeroSection = () => {
                 borderRadius: "50px",
                 px: { xs: 2.5, md: 4 }, 
                 width: { xs: "220px", sm: "auto" }, 
-                border: `1px solid ${Colors.SECONDARY}`,
-                color: Colors.SECONDARY,
+                border: `1px solid ${COLORS.SECONDARY}`,
+                color: COLORS.SECONDARY,
                 fontFamily: poppins.style.fontFamily,
                 fontWeight: 600,
                 fontSize: { xs: "14px", md: "18px" }, 
@@ -121,7 +121,7 @@ const ChallengeHeroSection = () => {
                 backgroundColor: "transparent",
                 "&:hover": {
                   backgroundColor: "rgba(227, 24, 55, 0.05)",
-                  borderColor: Colors.SECONDARY,
+                  borderColor: COLORS.SECONDARY,
                 },
               }}
             >

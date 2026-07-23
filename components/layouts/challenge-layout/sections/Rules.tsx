@@ -6,7 +6,7 @@ import Image from "next/image";
 import { Box, Container, Stack, Typography, Button, Grid } from "@mui/material";
 import { ArrowUpRight } from "lucide-react";
 
-import { Colors, CONSTANTS } from "@/utils/enum";
+import { COLORS, CONSTANTS } from "@/utils/enum";
 import { poppins, ibmPlexSans } from "@/utils/fonts";
 import { WEBSITE_DATA } from "@/utils/website";
 import SparkleLabel from "@/components/widgets/common/SparkleLabel";
@@ -15,7 +15,7 @@ const { rules: rulesData } = WEBSITE_DATA.challenge;
 
 const RulesSection = () => {
   return (
-    <Box sx={{py: { xs: 4, md: 6 }, backgroundColor: Colors.WHITE}}>
+    <Box sx={{py: { xs: 4, md: 6 }, backgroundColor: COLORS.WHITE}}>
       <Container
         maxWidth={false}
         sx={{
@@ -46,7 +46,7 @@ const RulesSection = () => {
                 fontFamily: poppins.style.fontFamily,
                 fontWeight: 500,
                 fontSize: { xs: "24px", sm: "30px", md: "38px", lg: "45px" }, 
-                color: Colors.BLACK,
+                color: COLORS.BLACK,
                 lineHeight: { xs: 1.2, md: 1.1 },
                 mb: 1.5,
               }}
@@ -59,7 +59,7 @@ const RulesSection = () => {
                 fontFamily: ibmPlexSans.style.fontFamily,
                 fontSize: { xs: "14px", md: "16px" },
                   lineHeight: { xs: 1.2, md: 1.4 },
-                color: Colors.TEXT_MUTED,
+                color: COLORS.TEXT_MUTED,
                
                 maxWidth: 800,
                 mx: { xs: "auto", md: 0 },
@@ -98,7 +98,7 @@ const RulesSection = () => {
                     width: { xs: 150, sm: 180, md: 220 },
                     height: { xs: 150, sm: 190, md: 240 },
                     borderRadius: { xs: "22px", md: "30px" },
-                    backgroundColor: Colors.WHITE,
+                    backgroundColor: COLORS.WHITE,
                     boxShadow: "0px 15px 50px rgba(0,0,0,0.12)",
                     display: "flex",
                     alignItems: "center",
@@ -150,7 +150,7 @@ const RulesSection = () => {
                           width: { xs: 24, md: 28 },
                           height: { xs: 24, md: 28 },
                           borderRadius: "50%",
-                          backgroundColor: Colors.SECONDARY,
+                          backgroundColor: COLORS.SECONDARY,
                           display: "flex",
                           alignItems: "center",
                           justifyContent: "center",
@@ -191,7 +191,7 @@ const RulesSection = () => {
                             <Link
                               href="/contact"
                               style={{
-                                color: Colors.SECONDARY,
+                                color: COLORS.SECONDARY,
                                 fontWeight: 500,
                                 textDecoration: "none",
                               }}
@@ -219,14 +219,14 @@ const RulesSection = () => {
                       px: { xs: 2.5, md: 4, lg: 5 }, 
                       width: { xs: "fit-content", sm: "auto" },
                       borderRadius: "50px",
-                      backgroundColor: Colors.SECONDARY,
+                      backgroundColor: COLORS.SECONDARY,
                       fontFamily: ibmPlexSans.style.fontFamily,
                       fontWeight: 600,
                       fontSize: { xs: 14, md: 16, lg: 18 }, 
                       textTransform: "none",
                       boxShadow: "0 4px 14px rgba(227, 24, 55, 0.3)",
                       "&:hover": {
-                          backgroundColor: Colors.PRIMARY,
+                          backgroundColor: COLORS.PRIMARY,
                         boxShadow: "0 8px 24px rgba(52, 96, 183, 0.25)",
                       },
                     }}

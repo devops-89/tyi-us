@@ -3,7 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import { Box, Container, Grid, Typography, Stack } from "@mui/material";
-import { Colors, CONSTANTS } from "@/utils/enum";
+import { COLORS, CONSTANTS } from "@/utils/enum";
 import { poppins, ibmPlexSans } from "@/utils/fonts";
 import { WEBSITE_DATA } from "@/utils/website";
 import { ASSETS } from "@/utils/assets";
@@ -14,7 +14,7 @@ const { youngMinds } = WEBSITE_DATA.challenge;
 const YoungMindsSection = () => {
   return (
     <Box
-      sx={{py: { xs: 4, lg: 6 }, backgroundColor: Colors.WHITE,
+      sx={{py: { xs: 4, lg: 6 }, backgroundColor: COLORS.WHITE,
         position: "relative",
         overflow: "hidden"}}
     >
@@ -53,7 +53,7 @@ const YoungMindsSection = () => {
               fontFamily: poppins.style.fontFamily,
               fontWeight: 500,
               fontSize: { xs: "22px", sm: "28px", lg: "45px" },
-              color: Colors.BLACK,
+              color: COLORS.BLACK,
               lineHeight: { xs: 1.25, lg: 1.2 },
               mb: 1,
               textAlign: { xs: "center", lg: "left" },
@@ -87,7 +87,7 @@ const YoungMindsSection = () => {
               fontFamily: ibmPlexSans.style.fontFamily,
               fontSize: { xs: "14px", lg: "16px" },
                   lineHeight: { xs: 1.2, lg: 1.4 },
-              color: Colors.TEXT_MUTED,
+              color: COLORS.TEXT_MUTED,
               
               textAlign: { xs: "center", lg: "left" },
               maxWidth: { xs: "100%", lg: "900px" },
@@ -107,7 +107,7 @@ const YoungMindsSection = () => {
                   right: { xs: -4, lg: 0 },
                   width: { xs: 80, lg: 110 },
                   height: { xs: 100, lg: 140 },
-                  backgroundImage: `radial-gradient(${Colors.SECONDARY} 15%, transparent 15%)`,
+                  backgroundImage: `radial-gradient(${COLORS.SECONDARY} 15%, transparent 15%)`,
                   backgroundSize: { xs: "18px 18px", lg: "22px 22px" },
                   opacity: 0.8,
                   zIndex: 0,

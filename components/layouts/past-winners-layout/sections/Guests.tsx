@@ -5,20 +5,20 @@ import Image from "next/image";
 import { Box, Container, Grid, Stack, Typography, IconButton } from "@mui/material";
 import { Globe, Instagram, Linkedin } from "lucide-react";
 
-import { Colors, CONSTANTS } from "@/utils/enum";
+import { COLORS, CONSTANTS } from "@/utils/enum";
 import { poppins, ibmPlexSans } from "@/utils/fonts";
 import { WEBSITE_DATA } from "@/utils/website";
 
 const PastWinnersGuestsSection = () => {
   const { guests } = WEBSITE_DATA.pastWinners;
   return (
-    <Box sx={{py: { xs: 4, md: 6 }, backgroundColor: Colors.WHITE}}>
+    <Box sx={{py: { xs: 4, md: 6 }, backgroundColor: COLORS.WHITE}}>
       <Container maxWidth={false} sx={{ maxWidth: CONSTANTS.MAX_WIDTH }}>
         <Stack spacing={2} alignItems="center" sx={{ mb: {xs: 4, md: 6 } }}>
-          <Typography sx={{ fontFamily: poppins.style.fontFamily, fontWeight: 700, fontSize: { xs: 28, md: 32 }, color: Colors.BLACK }}>
+          <Typography sx={{ fontFamily: poppins.style.fontFamily, fontWeight: 700, fontSize: { xs: 28, md: 32 }, color: COLORS.BLACK }}>
             {guests.title}
           </Typography>
-          <Typography sx={{ fontFamily: ibmPlexSans.style.fontFamily, fontSize: 16, color: Colors.TEXT_MUTED, textAlign: "center", maxWidth: 720 }}>
+          <Typography sx={{ fontFamily: ibmPlexSans.style.fontFamily, fontSize: 16, color: COLORS.TEXT_MUTED, textAlign: "center", maxWidth: 720 }}>
             {guests.description}
           </Typography>
         </Stack>
@@ -36,7 +36,7 @@ const PastWinnersGuestsSection = () => {
                     fontFamily: poppins.style.fontFamily, 
                     fontWeight: 700, 
                     fontSize: 22, 
-                    color: Colors.BLACK,
+                    color: COLORS.BLACK,
                     textAlign: { xs: "center", md: "left" } 
                   }}
                 >
@@ -46,7 +46,7 @@ const PastWinnersGuestsSection = () => {
                   sx={{ 
                     fontFamily: ibmPlexSans.style.fontFamily, 
                     fontSize: 16, 
-                    color: Colors.TEXT_MUTED,
+                    color: COLORS.TEXT_MUTED,
                     textAlign: { xs: "center", md: "left" } 
                   }}
                 >
@@ -57,13 +57,13 @@ const PastWinnersGuestsSection = () => {
                   spacing={1} 
                   justifyContent={{ xs: "center", md: "flex-start" }} 
                 >
-                  <IconButton size="small" sx={{ border: `1px solid ${Colors.BORDER}` }}>
+                  <IconButton size="small" sx={{ border: `1px solid ${COLORS.BORDER}` }}>
                     <Linkedin size={18} />
                   </IconButton>
-                  <IconButton size="small" sx={{ border: `1px solid ${Colors.BORDER}` }}>
+                  <IconButton size="small" sx={{ border: `1px solid ${COLORS.BORDER}` }}>
                     <Instagram size={18} />
                   </IconButton>
-                  <IconButton size="small" sx={{ border: `1px solid ${Colors.BORDER}` }}>
+                  <IconButton size="small" sx={{ border: `1px solid ${COLORS.BORDER}` }}>
                     <Globe size={18} />
                   </IconButton>
                 </Stack>
