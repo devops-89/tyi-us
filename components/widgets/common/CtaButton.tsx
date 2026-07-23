@@ -53,7 +53,7 @@ export const CtaButton: React.FC<CtaButtonProps> = ({
         fontWeight: 600,
         fontSize: fontSize,
         textTransform: "none",
-        boxShadow: variant === "contained" ? "0px 10px 30px rgba(220, 29, 64, 0.15)" : "none",
+        boxShadow: variant === "contained" ? "Colors.BUTTON_SHADOW" : "none",
         "& .MuiButton-endIcon svg": { 
           width: { xs: 18, md: 22 },
           height: { xs: 18, md: 22 }

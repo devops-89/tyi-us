@@ -56,7 +56,7 @@ const HowToParticipateSection = () => {
                 lineHeight: { xs: 1.25, md: 1, lg: 1.2 },
                 
                 textAlign: "center", 
-                "@media (min-width: 768px)": {
+                "@media (min-width: 1024px)": {
                   textAlign: "left", 
                 }
               }}
@@ -76,7 +76,7 @@ const HowToParticipateSection = () => {
                 maxWidth: 600,
                 mx: { xs: "auto", md: 0 },
                 textAlign: "center", 
-                "@media (min-width: 768px)": {
+                "@media (min-width: 1024px)": {
                   textAlign: "left", 
                 }
               }}
@@ -96,7 +96,7 @@ const HowToParticipateSection = () => {
                 gap: 1,
                 cursor: "pointer",
                 "&:hover": { color: Colors.PRIMARY },
-                "@media (min-width: 768px)": {
+                "@media (min-width: 1024px)": {
                   justifyContent: "flex-start", 
                 }
               }}

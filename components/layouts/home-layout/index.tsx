@@ -9,7 +9,8 @@ import Footer from "@/components/widgets/Footer";
 import ParticipationJourneySection from "./sections/ParticipationJourney";
 import WhyParticipateSection from "./sections/WhyParticipate";
 import PartnersSection from "./sections/Partners";
-import FaqSection from "./sections/Faq";
+import CommonFaqSection from "@/components/widgets/common/CommonFaqSection";
+import { WEBSITE_DATA } from "@/utils/website";
 
 import JoinCTA from "./sections/JoinCTA";
 import AnimationWrapper from "@/components/widgets/common/AnimationWrapper";
@@ -23,7 +24,7 @@ const HomeLayout = () => {
       <AnimationWrapper><ParticipationJourneySection /></AnimationWrapper>
       <AnimationWrapper><WhyParticipateSection /></AnimationWrapper>
       <AnimationWrapper><JoinCTA /></AnimationWrapper>
-      <AnimationWrapper><FaqSection /></AnimationWrapper>
+      <AnimationWrapper><CommonFaqSection data={WEBSITE_DATA.common.faqs} /></AnimationWrapper>
       <AnimationWrapper><PartnersSection /></AnimationWrapper>
       <Footer />
     </Box>
