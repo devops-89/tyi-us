@@ -8,6 +8,7 @@ import YoungMindsSection from "./sections/YoungMinds";
 import AwardsSection from "./sections/Awards";
 import RulesSection from "./sections/Rules";
 import ScoreBreakdownSection from "./sections/ScoreBreakdown";
+import SchoolAwardsSection from "./sections/SchoolAwards";
 import CommonFaqSection from "@/components/widgets/common/CommonFaqSection";
 import { WEBSITE_DATA } from "@/utils/website";
 import ChallengeCtaSection from "./sections/Cta";
@@ -20,8 +21,10 @@ const ChallengeLayout = () => {
       <AnimationWrapper><ChallengeHeroSection /></AnimationWrapper>
       <AnimationWrapper><YoungMindsSection /></AnimationWrapper>
       <AnimationWrapper><AwardsSection /></AnimationWrapper>
+      <AnimationWrapper><SchoolAwardsSection /></AnimationWrapper>
       <AnimationWrapper><RulesSection /></AnimationWrapper>
       <AnimationWrapper><ScoreBreakdownSection /></AnimationWrapper>
+      
       <AnimationWrapper>
         <CommonFaqSection 
           data={{ 

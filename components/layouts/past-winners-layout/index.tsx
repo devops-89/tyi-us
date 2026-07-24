@@ -10,6 +10,7 @@ import PastWinnersGuestsSection from "./sections/Guests";
 import PastWinnersWinnerSection from "./sections/Winner";
 import Footer from "@/components/widgets/Footer";
 import AnimationWrapper from "@/components/widgets/common/AnimationWrapper";
+import GallerySection from "./sections/Gallery";
 
 const PastWinnersLayout = () => {
   return (
@@ -19,6 +20,9 @@ const PastWinnersLayout = () => {
       <AnimationWrapper><PastWinnersInnovationSection /></AnimationWrapper>
       <AnimationWrapper><PastWinnersGuestsSection /></AnimationWrapper>
       <AnimationWrapper><PastWinnersWinnerSection /></AnimationWrapper>
+         <AnimationWrapper>
+  <GallerySection />
+</AnimationWrapper>
       <Footer />
     </Box>
   );

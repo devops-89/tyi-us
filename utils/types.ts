@@ -215,6 +215,15 @@ export interface IWebsiteData {
       title: string;
       description: string;
     };
+    schoolAwards: {
+      title: string;
+      description: string;
+      items: {
+        title: string;
+        description: string;
+        image: any;
+      }[];
+    };
   };
   contact: {
     sparkle: string;

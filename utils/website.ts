@@ -307,6 +307,37 @@ To help participants bring their ideas to life, we’ve partnered with one of th
       title: "Frequently Asked Questions",
       description: "Find answers to the most common questions about participating in the challenge.",
     },
+    schoolAwards: {
+      title: "Awards for the Schools",
+      description: "Honoring schools that inspire young minds through innovation, creativity, and real-world learning.",
+      items: [
+        {
+          title: "Innovation Excellence Award",
+          description: "Awarded to the school of the winner of UAE’s Top Young Innovator, recognizing their commitment to innovation excellence.",
+          image: ASSETS.IMAGES.ABOUT_GLOBAL_UAE
+        },
+        {
+          title: "Innovation Spirit Award",
+          description: "Honors the school with the highest number of participation entries, acknowledging their dedication and passion for cultivating a culture of innovation.",
+          image: ASSETS.IMAGES.ABOUT_YOUNG_STUDENTS
+        },
+        {
+          title: "Leading School for Girl Innovators",
+          description: "Honors schools that empower and support female innovators and have the highest number of female entries in the competition.",
+          image: ASSETS.IMAGES.ABOUT_GROUP_LAPTOP
+        },
+        {
+          title: "AI/ML Trailblazer Award",
+          description: "Awarded to the school with the highest number of innovative entries focused on Artificial Intelligence and Machine Learning.",
+          image: ASSETS.IMAGES.ABOUT_CLOSE_UP
+        },
+        {
+          title: "Sustainability Champion Award",
+          description: "Awarded to the school with the highest number of innovative entries focused on the United Nation’s Sustainable Development Goals (UNSDG).",
+          image: ASSETS.IMAGES.PATENT_GLOBAL
+        }
+      ]
+    },
   },
   contact: {
     sparkle: "Get In Touch",

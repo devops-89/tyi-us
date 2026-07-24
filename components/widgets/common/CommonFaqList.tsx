@@ -51,7 +51,7 @@ export default function CommonFaqList({ items, showNumbers = false }: CommonFaqL
                 sx={{
                   fontFamily: poppins.style.fontFamily,
                   fontWeight: 400,
-                  fontSize: { xs: 18, sm: 22, md: 22, lg: 28 },
+                  fontSize: { xs: 18, sm: 22, md: 22, lg: 24 },
                   color: Colors.BLACK,
                   lineHeight: { xs: "28px", md: "40px", lg: "40px" },
                   flex: 1,

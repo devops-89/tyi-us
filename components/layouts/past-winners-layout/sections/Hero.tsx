@@ -83,6 +83,7 @@ const PastWinnersHeroSection = () => {
                   justifyContent: "center",
                   "&:hover": { 
                     borderColor: Colors.PRIMARY, 
+                     color: Colors.PRIMARY,
                     backgroundColor: "rgba(227, 24, 55, 0.1)" 
                   },
                 }}
