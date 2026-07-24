@@ -365,6 +365,72 @@ To help participants bring their ideas to life, we’ve partnered with one of th
       details: "Selected from an exceptional pool of entries spanning the USA and UAE, Hisham’s groundbreaking invention—a revolutionary system that autonomously disinfects door handles—tackles a leading cause of germ transmission. With its capacity to prevent future pandemics and reduce hospital-acquired infections, which are among the leading causes of death among the elderly, this innovation stands as a monumental leap in public health and safety.",
       image: ASSETS.IMAGES.PAST_WINNERS_WINNER,
     },
+    
+    CategoryAwards: {
+      sparkle: "Celebrating Innovation",
+      title: "America’s Top Young Innovators 2024 Making Global Headlines",
+     
+      items: [
+        { 
+          index: "01", 
+          labelTop: "Win The Prestigious Title of ", 
+          labelMain: "INDIA'S TOP YOUNG INNOVATORS", 
+          Icon: ASSETS.IMAGES.ICON_CROWN 
+        },
+        { 
+          index: "02", 
+          labelTop: "Cash Prize Worth", 
+          labelMain: "USD 3,000", 
+          labelBottom: " for the winning individual/ team", 
+          Icon: ASSETS.IMAGES.ICON_CASH 
+        },
+        { 
+          index: "03", 
+          labelTop: "Filing of a", 
+          labelMain: "US PATENT", 
+          labelBottom: "for your Innovation", 
+          Icon: ASSETS.IMAGES.ICON_PATENT 
+        },
+        { 
+          index: "04", 
+          labelMain: "Awards", 
+          labelBottom: "for the Winners in Different Categories", 
+          Icon: ASSETS.IMAGES.ICON_TROPHY 
+        },
+      ],
+    },
+  faqs: {
+      sparkle: "FAQs",
+      title: "Category Awards",
+      description: "Find answers to the most common questions about participating in the challenge.",
+    
+      items: [
+        {
+          question: "Most Human-Centric Innovation Award",
+          answer: "Hajer Janabi & Jumana Janabi were conferred with the prestigious Most Human-Centric Innovation award for their groundbreaking system that understands and predicts human behaviours using peer-to-peer feedback and life events as key indicators. By putting human experience at the centre of their innovation, the duo has created a transformative tool that empowers early intervention and holistic support, redefining how we view human interaction and mental well-being.",
+        },
+        { 
+          question: "Best Innovation in Biotechnology Category",
+          answer: "The coveted Best Innovation in Biotechnology Category award was presented to Abdullah Kabeer, Nithyashri Ramesh, Isha Agrawal, Nakshatra Piduri, Tarik Syed, and Zaynab Khan for developing a visionary solution that enables colour-blind individuals to identify colours, offering newfound clarity and inclusivity to their world. This remarkable innovation, recently patented in the United States, demonstrates the team’s commitment to enhancing the lives of millions of people globally."
+        },
+        { 
+          question: "Best Innovation in AI & Robotics Category",
+          answer: "The competition was honoured by the presence of Ali Humaid Ali Alloghani Al-Ali, who travelled from Dubai, UAE, to attend as a finalist. Affectionately known as the ‘Wonder Kid of the UAE,’ Ali clinched the award for Best Innovation in Robotics Category for his AI-powered robotic doctor designed to revolutionise early patient diagnosis. This invention is a testament to his visionary approach to healthcare, providing a glimpse into the future of medical innovation."
+        },
+        { 
+          question: "Best Innovation in Neurotechnology & Brain-Computer Interface",
+          answer: "The Best Innovation in Neurotechnology & Brain-Computer Interface Category was awarded to Avaneesh Jakkireddy, Gautam Rao, Iliyan Mithani, Raj Kusumakar, Vihan Yerubandi, and Nihal Yerubandi for their life-altering solution for ALS patients. Their patented innovation allows individuals with ALS to communicate clearly, easily, and effectively, restoring hope and offering a renewed quality of life. This breakthrough represents a pivotal advancement in neurotechnology and healthcare."
+        },
+        { 
+          question: "Best Innovation in Mental Health Category",
+          answer: "In the rapidly evolving field of mental health, Anusha Nigam, Raisha Bhojani, and Meher Saanvi Singh were recognised with the Best Innovation in Mental Health Category award. Their pioneering technology, which predicts the onset of mental health challenges among teenagers, provides an invaluable opportunity for early intervention, addressing one of the most critical issues facing youth today and shaping a healthier, more resilient generation."
+        },
+        { 
+          question: "Best Innovation in Fitness Category",
+          answer: "Sparsh Kamdar received the Best Innovation in Fitness Category award for his revolutionary system that ensures optimal hydration by automatically monitoring an individual’s water consumption. This solution showcases the powerful role technology can play in supporting personal well-being and long-term health."
+        },
+      ],
+    },
     innovation: {
       sparkle: "Recognizing Youth Innovation",
       title: "Honoring the Brightest",
@@ -414,7 +480,9 @@ To help participants bring their ideas to life, we’ve partnered with one of th
         },
       ],
     },
+     
   },
+  
   services: {
     hero: {
       sparkle: {

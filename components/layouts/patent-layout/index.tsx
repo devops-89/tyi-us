@@ -12,7 +12,8 @@ import NurturingYoungInventorsSection from "./sections/Nurturing";
 import PatentServiceSection from "./sections/patentservices";
 import CaseStudiesSection from "./sections/CaseStudy";
 import SuccessStoriesSection from "./sections/SuccessStory";
-import FaqSection from "./sections/Faq";
+import CommonFaqSection from "@/components/widgets/common/CommonFaqSection";
+import { WEBSITE_DATA } from "@/utils/website";
 import ProtectIdeaSection from "./sections/Contact";
 
 
@@ -45,7 +46,7 @@ const GetPatent = () => {
         <SuccessStoriesSection/>
       </AnimationWrapper>
      <AnimationWrapper>
-        <FaqSection/>
+        <CommonFaqSection data={WEBSITE_DATA.patent.PatentFaq} />
       </AnimationWrapper>
      <AnimationWrapper>
         <ProtectIdeaSection/>

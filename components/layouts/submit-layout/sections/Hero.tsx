@@ -3,7 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import { Box, Container, Stack, Typography } from "@mui/material";
-import { COLORS, CONSTANTS } from "@/utils/enum";
+import { COLORS,  CONSTANTS } from "@/utils/enum";
 import { poppins, ibmPlexSans } from "@/utils/fonts";
 import { WEBSITE_DATA } from "@/utils/website";
 import { DualCta } from "@/components/widgets/common/CtaButton";
@@ -15,8 +15,8 @@ const SubmitHeroSection = () => {
     <Box
       sx={{
         backgroundColor: COLORS.WHITE,
-        pt: { xs: 1, md: 12 },
-        pb: { xs: 4, md: 12 },
+        pt: { xs: 1, md: 6 },
+        pb: { xs: 4, md: 6 },
       }}
     >
       <Container
@@ -36,13 +36,16 @@ const SubmitHeroSection = () => {
               flex: 1,
               width: "100%",
               textAlign: { xs: "center", md: "left" },
+              "@media (min-width: 768px)": {
+                textAlign: "left",
+              },
             }}
           >
             <Typography
               sx={{
                 fontFamily: poppins.style.fontFamily,
                 fontWeight: 500,
-                fontSize: { xs: "30px", sm: "36px", md: "45px" },
+                fontSize: { xs: "28px", sm: "32px", md: "45px" },
                 color: COLORS.BLACK,
                 lineHeight: { xs: 1.25, md: 1.15 },
                 letterSpacing: "-0.4px",
@@ -60,7 +63,7 @@ const SubmitHeroSection = () => {
                   lineHeight: { xs: 1.2, md: 1.4 },
                 fontWeight: 400,
                 color: COLORS.TEXT_MUTED,
-                textAlign: { xs: "justify", md: "left" },
+                textAlign: { xs: "justify", lg: "left" },
                 letterSpacing: "0.2px",
                 whiteSpace: "pre-line",
                 maxWidth: { xs: "100%", md: 554 },
@@ -75,6 +78,9 @@ const SubmitHeroSection = () => {
               sx={{
                 display: "flex",
                 justifyContent: { xs: "center", md: "flex-start" },
+                "@media (min-width: 768px)": {
+                  justifyContent: "flex-start",
+                },
               }}
             >
               <DualCta
@@ -99,7 +105,7 @@ const SubmitHeroSection = () => {
                 position: "relative",
                 width: "100%",
                 maxWidth: { xs: "100%", sm: 560, md: 650 },
-                height: { xs: 260, sm: 360, md: 480 },
+                height: { xs: 260, sm: 360, md: 400 },
                 borderRadius: { xs: "18px", md: "20px" },
                 overflow: "hidden",
               }}
@@ -118,7 +124,6 @@ const SubmitHeroSection = () => {
       </Container>
     </Box>
   );
-
 };
 
 export default SubmitHeroSection;

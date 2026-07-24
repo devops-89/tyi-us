@@ -6,12 +6,14 @@ import { Box } from "@mui/material";
 
 import ChallengeHeroSection from "./sections/Hero";
 import YoungMindsSection from "./sections/YoungMinds";
-import AwardsSection from "./sections/Awards";
+
 import RulesSection from "./sections/Rules";
 import ScoreBreakdownSection from "./sections/ScoreBreakdown";
-import ChallengeFaqSection from "./sections/Faq";
+import CommonFaqSection from "@/components/widgets/common/CommonFaqSection";
+import { WEBSITE_DATA } from "@/utils/website";
 import ChallengeCtaSection from "./sections/Cta";
 import Footer from "@/components/widgets/Footer";
+import CommonIconGridSection from "@/components/widgets/common/Award";
 
 const ChallengeLayout = () => {
   return (
@@ -21,7 +23,9 @@ const ChallengeLayout = () => {
         <YoungMindsSection />
       </AnimationWrapper>
       <AnimationWrapper>
-        <AwardsSection />
+         <CommonIconGridSection 
+      data={WEBSITE_DATA.challenge.awards} 
+    />
       </AnimationWrapper>
       <AnimationWrapper>
         <RulesSection />
@@ -30,7 +34,7 @@ const ChallengeLayout = () => {
         <ScoreBreakdownSection />
       </AnimationWrapper>
       <AnimationWrapper>
-        <ChallengeFaqSection />
+        <CommonFaqSection data={{ ...WEBSITE_DATA.challenge.faq, items: WEBSITE_DATA.common.faqs.items }} showNumbers={true} />
       </AnimationWrapper>
       <AnimationWrapper>
         <ChallengeCtaSection />

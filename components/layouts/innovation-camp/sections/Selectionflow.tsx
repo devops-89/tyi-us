@@ -94,8 +94,8 @@ const SelectionFlowSection = () => {
         }}
       >
     
-        <Stack alignItems="center" textAlign="center" sx={{ mb: { xs: 6, md: 8 } }}>
-          <Box sx={{ mb: 2, py: { xs: 4, md: 6 } }}>
+        <Stack alignItems="center" textAlign="center" sx={{ mb: { xs: 2, md: 4 } }}>
+          <Box sx={{ mb: 2  }}>
             <SparkleLabel
               text="Selection Flow"
               fontSize={{ xs: "16px", md: "18px" }}
@@ -110,7 +110,7 @@ const SelectionFlowSection = () => {
               fontSize: { xs: "28px", sm: "36px", md: "42px" },
               color: COLORS.BLACK,
               lineHeight: 1.2,
-              mb: 2.5,
+              mb: 2,
               maxWidth: 800,
             }}
           >

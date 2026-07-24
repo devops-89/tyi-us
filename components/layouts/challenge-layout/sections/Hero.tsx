@@ -19,7 +19,7 @@ const ChallengeHeroSection = () => {
       sx={{
         backgroundColor: COLORS.WHITE,
         pt: { xs: 0, md: 4 },
-        pb: { xs: 4, md: 10 },
+        pb: { xs: 4, md: 6 },
       }}
     >
       <Container
@@ -29,7 +29,7 @@ const ChallengeHeroSection = () => {
           px: { xs: 2, sm: 3, md: 4 },
         }}
       >
-        <Box sx={{ maxWidth: 1180, mx: "auto", pt: { xs: 2, md: 4 } }}>
+        <Box sx={{ maxWidth: 1180, mx: "auto", pt: { xs: 2, md: 1} }}>
           <Box sx={{ display: "flex", justifyContent: "center", mb: 3 }}>
             <SparkleLabel text={hero.sparkle} type="red-star" fontSize={{ xs:"16px", md:"18px"}} sparkleSize={35}
  />

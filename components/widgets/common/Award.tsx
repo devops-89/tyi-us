@@ -6,17 +6,30 @@ import { Box, Container, Grid, Stack, Typography } from "@mui/material";
 
 import { COLORS, CONSTANTS } from "@/utils/enum";
 import { poppins, ibmPlexSans } from "@/utils/fonts";
-import { WEBSITE_DATA } from "@/utils/website";
-import { ASSETS } from "@/utils/assets";
 import SparkleLabel from "@/components/widgets/common/SparkleLabel";
 
-const { awards } = WEBSITE_DATA.challenge;
+export interface IconGridItem {
+  index?: string | number; 
+  labelTop?: string;
+  labelMain: string;
+  labelBottom?: string;
+  Icon: any;
+}
 
-const AwardsSection = () => {
+export interface IconGridData {
+  sparkle?: string;
+  title: string;
+  description?: string;
+  items: IconGridItem[];
+}
+
+interface CommonIconGridSectionProps {
+  data: IconGridData;
+}
+
+export default function CommonIconGridSection({ data }: CommonIconGridSectionProps) {
   return (
-    <Box
-      sx={{py: { xs: 4, md: 6 }, backgroundColor: COLORS.WHITE}}
-    >
+    <Box sx={{ py: { xs: 4, md: 6 }, backgroundColor: COLORS.WHITE }}>
       <Container
         maxWidth={false}
         sx={{
@@ -25,32 +38,32 @@ const AwardsSection = () => {
         }}
       >
         <Box sx={{ maxWidth: 1454, mx: "auto", position: "relative" }}>
-          <Box sx={{ mb: 2, display: "flex", justifyContent: "center" }}>
-            <Stack
-              direction="row"
-              spacing={1.5}
-              alignItems="center"
-              sx={{ px: { xs: 1, md: 3 }, py: 0.5 }}
-            >
-             <Box
-                sx={{
-                  maxWidth: { xs: "300px", sm: "100%" },
-                  textAlign: { xs: "center", md: "left" },
-                }}
+          
+          {data.sparkle && (
+            <Box sx={{ mb: 2, display: "flex", justifyContent: "center" }}>
+              <Stack
+                direction="row"
+                spacing={1.5}
+                alignItems="center"
+                sx={{ px: { xs: 1, md: 3 }, py: 0.5 }}
               >
-                <SparkleLabel
-                  text={awards.sparkle}
-                  fontSize={{ xs:"16px", md:"18px"}}
-                  type="blue-star"
-                  sparklePosition="both"
-                  sparkleSize={35}
-                  
-                />
-              </Box>
-
-             
-            </Stack>
-          </Box>
+                <Box
+                  sx={{
+                    maxWidth: { xs: "300px", sm: "100%" },
+                    textAlign: { xs: "center", md: "left" },
+                  }}
+                >
+                  <SparkleLabel
+                    text={data.sparkle}
+                    fontSize={{ xs: "16px", md: "18px" }}
+                    type="blue-star"
+                    sparklePosition="both"
+                    sparkleSize={35}
+                  />
+                </Box>
+              </Stack>
+            </Box>
+          )}
 
           <Typography
             sx={{
@@ -60,29 +73,31 @@ const AwardsSection = () => {
               color: COLORS.BLACK,
               textAlign: "center",
               lineHeight: { xs: 1.25, md: 1.2 },
-              mb: 1,
+              mb: data.description ? 1 : { xs: 5, md: 8 },
             }}
           >
-            {awards.title}
+            {data.title}
           </Typography>
 
-          <Typography
-            sx={{
-              fontFamily: ibmPlexSans.style.fontFamily,
-              fontSize: { xs: "14px", md: "16px" },
-                  lineHeight: { xs: 1.2, md: 1.4 },
-              color: COLORS.TEXT_MUTED,
-              textAlign: "center",
-             mb: { xs: 5, md: 8 },
-              maxWidth: 800,
-              mx: "auto",
-            }}
-          >
-            {awards.description}
-          </Typography>
+          {data.description && (
+            <Typography
+              sx={{
+                fontFamily: ibmPlexSans.style.fontFamily,
+                fontSize: { xs: "14px", md: "16px" },
+                lineHeight: { xs: 1.2, md: 1.4 },
+                color: COLORS.TEXT_MUTED,
+                textAlign: "center",
+                mb: { xs: 5, md: 8 },
+                maxWidth: 800,
+                mx: "auto",
+              }}
+            >
+              {data.description}
+            </Typography>
+          )}
 
           <Grid container spacing={{ xs: 3, md: 4 }} justifyContent="center" alignItems="stretch">
-            {awards.items.map(
+            {data.items.map(
               ({ index, labelTop, labelMain, labelBottom, Icon }, i) => (
                 <Grid key={i} size={{ xs: 12, sm: 6, md: 3 }}>
                   <Box
@@ -115,32 +130,6 @@ const AwardsSection = () => {
                       },
                     }}
                   >
-                    
-                    <Box
-                      sx={{
-                        backgroundColor: "#F4F7FC",
-                        px: 2.5,
-                        py: 0.8,
-                        borderRadius: "20px",
-                        mb: 4,
-                      }}
-                    >
-                      <Typography
-                        sx={{
-                          fontFamily: poppins.style.fontFamily,
-                          fontWeight: 600,
-                          fontSize: "13px",
-                          color: "#1B3E8C",
-                          textTransform: "uppercase",
-                          letterSpacing: "0.5px",
-                        }}
-                      >
-                        {String(index).toUpperCase().includes("AWARD") 
-                          ? index 
-                          : `AWARD ${String(index).padStart(2, '0')}`}
-                      </Typography>
-                    </Box>
-
                     
                     <Box
                       className="icon-circle"
@@ -176,7 +165,7 @@ const AwardsSection = () => {
                         >
                           <Image
                             src={Icon}
-                            alt="award"
+                            alt="icon"
                             fill
                             style={{ objectFit: "contain" }}
                           />
@@ -189,7 +178,6 @@ const AwardsSection = () => {
                         />
                       )}
                     </Box>
-
                     
                     <Stack spacing={0.8} sx={{ px: { xs: 0, md: 1 } }}>
                       {labelTop && (
@@ -242,6 +230,4 @@ const AwardsSection = () => {
       </Container>
     </Box>
   );
-};
-
-export default AwardsSection;
+}
