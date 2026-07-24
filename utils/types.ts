@@ -261,6 +261,27 @@ export interface IWebsiteData {
       details: string;
       image: any;
     };
+
+    CategoryAwards: {
+      sparkle: string;
+      title: string;
+      description?: string;
+      items: { 
+        index: string; 
+        labelTop?: string; 
+        labelMain: string; 
+        labelBottom?: string; 
+        Icon: any 
+      }[];
+    };
+
+      faqs: {
+      sparkle: string;
+      title: string;
+      description: string;
+      buttonText?: string;
+      items: { question: string; answer?: string }[];
+    };
     innovation: {
       sparkle: string;
       title: string;
@@ -305,6 +326,12 @@ export interface IWebsiteData {
       subtitle: string;
       items: { id: number | string; title: string; description: string; icon: string }[];
     };
+
+
+
+
+
+
   };
 
   innovation: {

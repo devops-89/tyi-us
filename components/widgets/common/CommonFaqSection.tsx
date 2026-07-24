@@ -21,7 +21,7 @@ interface CommonFaqSectionProps {
   showNumbers?: boolean;
 }
 
-export default function CommonFaqSection({ data, showNumbers = false }: CommonFaqSectionProps) {
+export default function CommonFaqSection({ data, showNumbers = true }: CommonFaqSectionProps) {
   return (
     <Box
       sx={{
