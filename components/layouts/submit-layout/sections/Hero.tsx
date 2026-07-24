@@ -15,8 +15,8 @@ const SubmitHeroSection = () => {
     <Box
       sx={{
         backgroundColor: Colors.WHITE,
-        pt: { xs: 1, md: 12 },
-        pb: { xs: 4, md: 12 },
+        pt: { xs: 1, md: 6 },
+        pb: { xs: 4, md: 6 },
       }}
     >
       <Container
@@ -36,6 +36,9 @@ const SubmitHeroSection = () => {
               flex: 1,
               width: "100%",
               textAlign: { xs: "center", md: "left" },
+              "@media (min-width: 768px)": {
+                textAlign: "left",
+              },
             }}
           >
             <Typography
@@ -60,7 +63,7 @@ const SubmitHeroSection = () => {
                   lineHeight: { xs: 1.2, md: 1.4 },
                 fontWeight: 400,
                 color: Colors.TEXT_MUTED,
-                textAlign: { xs: "justify", md: "left" },
+                textAlign: { xs: "justify", lg: "left" },
                 letterSpacing: "0.2px",
                 whiteSpace: "pre-line",
                 maxWidth: { xs: "100%", md: 554 },
@@ -75,6 +78,9 @@ const SubmitHeroSection = () => {
               sx={{
                 display: "flex",
                 justifyContent: { xs: "center", md: "flex-start" },
+                "@media (min-width: 768px)": {
+                  justifyContent: "flex-start",
+                },
               }}
             >
               <DualCta
@@ -99,7 +105,7 @@ const SubmitHeroSection = () => {
                 position: "relative",
                 width: "100%",
                 maxWidth: { xs: "100%", sm: 560, md: 650 },
-                height: { xs: 260, sm: 360, md: 480 },
+                height: { xs: 260, sm: 360, md: 400 },
                 borderRadius: { xs: "18px", md: "20px" },
                 overflow: "hidden",
               }}
