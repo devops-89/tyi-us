@@ -140,7 +140,7 @@ const ParticipationJourneySection = () => {
                   '&:hover': {
                     borderColor: Colors.SECONDARY,
                     transform: 'translateY(-10px)', 
-                    boxShadow: Colors.BUTTON_SHADOW,
+                    boxShadow: `0 4px 14px ${Colors.BUTTON_SHADOW}`,
                     
                     '& .step-badge': {
                       backgroundColor: Colors.SECONDARY,

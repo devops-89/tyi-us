@@ -1,8 +1,9 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import Image from "next/image";
 import { Box, Container, Grid, Stack, Typography } from "@mui/material";
+import { useInView, motion } from "framer-motion";
 
 import { Colors } from "@/utils/enum";
 import { poppins, ibmPlexSans } from "@/utils/fonts";
@@ -13,6 +14,8 @@ const { innovation } = WEBSITE_DATA.pastWinners;
 
 const CountUp = ({ value }: { value: string | number }) => {
   const [count, setCount] = useState(0);
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-50px" });
 
   const numericValue =
     typeof value === "number"
@@ -22,7 +25,7 @@ const CountUp = ({ value }: { value: string | number }) => {
   const suffix = typeof value === "string" ? value.replace(/[0-9]/g, "") : "";
 
   useEffect(() => {
-    if (Number.isNaN(numericValue)) return;
+    if (!isInView || Number.isNaN(numericValue)) return;
 
     let start = 0;
     const duration = 2000;
@@ -40,13 +43,13 @@ const CountUp = ({ value }: { value: string | number }) => {
     }, 16);
 
     return () => clearInterval(timer);
-  }, [numericValue]);
+  }, [numericValue, isInView]);
 
   return (
-    <>
+    <span ref={ref}>
       {count}
       {suffix}
-    </>
+    </span>
   );
 };
 
@@ -55,42 +58,55 @@ const PastWinnersInnovationSection = () => {
     <Box sx={{py: { xs: 4, md: 6 }, backgroundColor: Colors.WHITE}}>
       <Container maxWidth={false} sx={{ maxWidth: 1920 }}>
         <Box sx={{ maxWidth: 1454, mx: "auto" }}>
-          <Box sx={{ mb: 2 }}>
-            <SparkleLabel text={innovation.sparkle} fontSize={{ xs:"16px", md:"18px"}} />
-          </Box>
-
-          <Typography
-            sx={{
-              fontFamily: poppins.style.fontFamily,
-              fontWeight: 700,
-              fontSize: { xs: 30, md: 34, lg: 40 }, 
-              color: Colors.BLACK,
-              lineHeight: { xs: 1, md: 1.4 }, 
-
-              mb: 1,
-            }}
+          <Box
+            component={motion.div}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.6 }}
           >
-            {innovation.title}{" "}
-            <Box component="span" sx={{ color: Colors.SECONDARY }}>
-              {innovation.titleAccent}
+            <Box sx={{ mb: 2 }}>
+              <SparkleLabel text={innovation.sparkle} fontSize={{ xs:"16px", md:"18px"}} />
             </Box>
-          </Typography>
 
-          <Typography
-            sx={{
-              fontFamily: ibmPlexSans.style.fontFamily,
-              fontSize: { xs: "14px", md: "16px" },
-                  lineHeight: { xs: 1.2, md: 1.4 },
-              color: Colors.TEXT_MUTED,
-              mb: { xs: 3, md: 6 },
-            }}
-          >
-            {innovation.description}
-          </Typography>
+            <Typography
+              sx={{
+                fontFamily: poppins.style.fontFamily,
+                fontWeight: 700,
+                fontSize: { xs: 30, md: 34, lg: 40 }, 
+                color: Colors.BLACK,
+                lineHeight: { xs: 1, md: 1.4 }, 
+
+                mb: 1,
+              }}
+            >
+              {innovation.title}{" "}
+              <Box component="span" sx={{ color: Colors.SECONDARY }}>
+                {innovation.titleAccent}
+              </Box>
+            </Typography>
+
+            <Typography
+              sx={{
+                fontFamily: ibmPlexSans.style.fontFamily,
+                fontSize: { xs: "14px", md: "16px" },
+                    lineHeight: { xs: 1.2, md: 1.4 },
+                color: Colors.TEXT_MUTED,
+                mb: { xs: 3, md: 6 },
+              }}
+            >
+              {innovation.description}
+            </Typography>
+          </Box>
 
           {innovation.cards.map((card, idx) => (
             <Grid
               key={idx}
+              component={motion.div}
+              initial={{ opacity: 0, x: idx % 2 === 0 ? -50 : 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.7, delay: idx * 0.2 }}
               container
               spacing={{ xs: 3, md: 6 }}
               alignItems="center"
@@ -108,6 +124,10 @@ const PastWinnersInnovationSection = () => {
                     borderRadius: "32px",
                     overflow: "hidden",
                     backgroundColor: "#EDEDed",
+                    transition: "transform 0.4s ease",
+                    "&:hover": {
+                      transform: "scale(1.02)",
+                    }
                   }}
                 >
                   <Image
@@ -165,6 +185,11 @@ const PastWinnersInnovationSection = () => {
           ))}
 
           <Stack
+            component={motion.div}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.6 }}
             direction={{ xs: "column", sm: "row" }}
             justifyContent="center"
             alignItems="center"

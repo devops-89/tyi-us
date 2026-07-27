@@ -267,13 +267,13 @@ const JoinCTA = () => {
                     sx={{
                       position: "relative",
                       width: { 
-                        xs: 10, 
+                        xs: 15, 
                         sm: 48, 
                         md: 36, 
                         lg: 74.58 
                       },
                       height: { 
-                        xs: 10, 
+                        xs: 15, 
                         sm: 48, 
                         md: 36, 
                         lg: 74.58 
@@ -282,7 +282,7 @@ const JoinCTA = () => {
                     }}
                   >
                     <Image
-                      src={ASSETS.IMAGES.ICON_GLOBE_HANDS}
+                      src={ASSETS.IMAGES.ICON_GLOBE_HAND}
                       alt=""
                       fill
                       style={{ objectFit: "contain" }}

@@ -224,7 +224,7 @@ const RulesSection = () => {
                       fontWeight: 600,
                       fontSize: { xs: 14, md: 16, lg: 18 }, 
                       textTransform: "none",
-                       boxShadow: Colors.BUTTON_SHADOW,
+                      boxShadow: `0 4px 14px ${Colors.BUTTON_SHADOW}`,
                     
                       "&:hover": {
                         backgroundColor: Colors.PRIMARY,

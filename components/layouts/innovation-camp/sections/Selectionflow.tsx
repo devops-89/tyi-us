@@ -94,8 +94,8 @@ const SelectionFlowSection = () => {
         }}
       >
     
-        <Stack alignItems="center" textAlign="center" sx={{ mb: { xs: 6, md: 8 } }}>
-          <Box sx={{ mb: 2, py: { xs: 4, md: 6 } }}>
+        <Stack alignItems="center" textAlign="center" sx={{ mt: { xs: 3, md: 6 } , mb: { xs: 3, md: 6 }}}>
+           <Box sx={{ mb: 2, }}>
             <SparkleLabel
               text="Selection Flow"
               fontSize={{ xs: "16px", md: "18px" }}
@@ -151,7 +151,7 @@ const SelectionFlowSection = () => {
                   '&:hover': {
                     borderColor: Colors.SECONDARY,
                     transform: 'translateY(-10px)', 
-                    boxShadow: Colors.BUTTON_SHADOW,
+                    boxShadow: `0 4px 14px ${Colors.BUTTON_SHADOW}`,
                     
                     '& .step-badge': {
                       backgroundColor: Colors.SECONDARY,

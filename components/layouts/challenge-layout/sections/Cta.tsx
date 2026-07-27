@@ -135,7 +135,7 @@ const ChallengeCtaSection = () => {
                   fontWeight: 600,
                   fontSize: { xs: "14px", md: "18px" }, 
                   textTransform: "none",
-                  boxShadow: "0px 10px 30px rgba(227, 24, 55, 0.2)",
+                  boxShadow: `0 4px 14px ${Colors.BUTTON_SHADOW}`,
                   "&:hover": {
                     backgroundColor: "#c61530",
                     boxShadow: "0px 15px 40px rgba(227, 24, 55, 0.3)",
